@@ -25,6 +25,7 @@
         padding: 0;
   margin: 0;
       .navLink {
+       
         font-weight: 500;
         font-size: 14px;
         line-height: 35px;
@@ -32,7 +33,14 @@
         transition: color 0.3s ease;
         text-decoration: none;
         color: #fff;
-
+display: inline-flex;
+gap:5px;
+align-items: center;
+.navLink-icon {
+  display: inline-flex;
+gap:5px;
+align-items: center;
+}
         &:hover,
         &:focus {
           text-decoration: underline;
@@ -46,7 +54,13 @@
       gap: 20px;
     }
   }
-
+.social-icons {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
   /* Newsletter Input Group */
   .newsletter-input {
     padding-bottom: 36px;

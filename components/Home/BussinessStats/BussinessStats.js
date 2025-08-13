@@ -4,7 +4,7 @@ import styles from "../../../styles/BussinessStats.module.scss";
 const stats = [
   { icon: "/images/icons/products.svg", value: "1000+", label: "Products" },
   { icon: "/images/icons/brands.svg", value: "10+", label: "Brands" },
-  { icon: "/images/icons/experience.svg", value: "60", label: "Years of experience" },
+  { icon: "/images/icons/experience.svg", value: "65+", label: "Years of experience" },
   { icon: "/images/icons/locations.svg", value: "16", label: "Locations" },
 ];
 

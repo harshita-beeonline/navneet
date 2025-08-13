@@ -100,7 +100,7 @@ const Investors = () => {
                     NSE
                   </div>
                 </div>
-                <div className={styles["right-annual-card-price"]}>$142.84</div>
+                <div className={styles["right-annual-card-price"]}>₹ 142.25</div>
               </div>
             </div>
           </div>

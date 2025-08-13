@@ -14,8 +14,9 @@ const Header = () => {
   const slides = [
     {
       image: banner,
-      title: "Enhance your learning experience with Navneet",
-      text: "We focus on serving the regional teaching along with fulfilling the student's learning needs with the supplemental digital solutions",
+      title1: "Colour Blindness",
+      title2:"Detection Book",
+      text: "Because, some children see colours differently.",
     },
     {
       image: banner,
@@ -110,7 +111,8 @@ const Header = () => {
             <div className={styles["banner-content"]}>
               <div className={styles["heading-wrapper"]}>
                 <div className={styles["heading-line"]}></div>
-                <h1>{slide.title}</h1>
+                <h1>{slide.title1}</h1>
+                 <h2>{slide.title2}</h2>
               </div>
               <p>{slide.text}</p>
               <a href="#" className={styles["btn"]}>
@@ -156,13 +158,13 @@ const Header = () => {
           <div className={styles["price"]}>
             {stockType === "BSE" ? (
               <p className={styles["bse-price"]}>
-                ₹ 112.75
+                ₹ 142.25
                 <br />
                 <span>+0.20 (0.18%)</span>
               </p>
             ) : (
               <p className={styles["nse-price"]}>
-                ₹ 2,520
+                ₹ 142.25
                 <br />
                 <span>+0.20 (0.18%)</span>
               </p>

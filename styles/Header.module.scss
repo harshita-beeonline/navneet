@@ -70,10 +70,10 @@
       width: 50%;
 
       .heading-wrapper {
-        display: flex;
-        align-items: stretch;
+        // display: flex;
+        // align-items: stretch;
         gap: 12px;
-        margin-left: -30px;
+        // margin-left: -30px;
 
         .heading-line {
           width: 8px;
@@ -85,11 +85,20 @@
           margin: 0;
           line-height: 1.2;
           font-size: 50px;
+          text-transform: uppercase;
+          font-weight: 900;
+        }
+         h2 {
+          margin: 0;
+          line-height: 1.2;
+          font-size: 50px;
+          text-transform:capitalize;
+          font-weight: 500;
         }
       }
 
       p {
-        font-size: 18px;
+        font-size: 25px;
         margin: 40px 0;
       }
 
