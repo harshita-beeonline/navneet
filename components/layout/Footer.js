@@ -102,7 +102,7 @@ inquiry@navneet.com</div></Link></li>
               
           <div className={styles["social-icons"]}>
             {social.map((icon, index) => (
-              <div className={styles["social-icons-item"]}>
+              <div className={styles["social-icons-item"]} key={index}>
                 {icon.icon}
 </div>
             ))}
