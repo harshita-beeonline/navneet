@@ -1,0 +1,210 @@
+"use client"
+import { Fragment, useRef, useState, useEffect } from "react";
+import Image from "next/image";
+import styles from "../../styles/Header.module.scss";
+import logo from "../../public/images/Logo-Navneet-1.png";
+import banner from "../../public/images/banner5.jpg";
+
+const Header = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const [stockType, setStockType] = useState("BSE");
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // <-- new state
+
+  const slides = [
+    {
+      image: banner,
+      title: "Enhance your learning experience with Navneet",
+      text: "We focus on serving the regional teaching along with fulfilling the student's learning needs with the supplemental digital solutions",
+    },
+    {
+      image: banner,
+      title: "Enhance your learning experience with Navneet",
+      text: "We focus on serving the regional teaching along with fulfilling the student's learning needs with the supplemental digital solutions",
+    },
+  ];
+
+  // SCROLL LISTENER
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const showPrev = () => {
+    setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const showNext = () => {
+    setSlideIndex((prev) => (prev + 1) % slides.length);
+  };
+
+  return (
+    <Fragment>
+      {/* HEADER */}
+      <header
+        className={`${styles["site-header"]} ${
+          scrolled ? styles["scrolled"] : ""
+        }`}
+      >
+        <div className={styles["logo"]}>
+          <Image src={logo} alt="Logo" />
+        </div>
+
+        <div
+          className={styles["menu-toggle"]}
+          onClick={() => setMenuOpen(true)}
+        >
+          &#9776;
+        </div>
+
+        <nav
+          className={`${styles["nav-menu"]} ${
+            menuOpen ? styles["active"] : ""
+          }`}
+        >
+          <div
+            className={styles["close-menu"]}
+            onClick={() => setMenuOpen(false)}
+          >
+            &times;
+          </div>
+
+          <a href="#">Home</a>
+          <a href="#">Company</a>
+          <a href="#">Investor</a>
+          <a href="#">Our Businesses</a>
+          <a href="#">Responsibility</a>
+          <a href="#">EHS</a>
+          <a href="#">Media & Updates</a>
+          <a href="#">Shop Now</a>
+          <a href="#">Navneet AI</a>
+          <a href="#">Career</a>
+          <a href="#">Contact</a>
+        </nav>
+      </header>
+
+      {/* SLIDER */}
+      <section className={styles["banner-slider"]}>
+        {slides.map((slide, idx) => (
+          <div
+            key={idx}
+            className={`${styles["slide"]} ${
+              idx === slideIndex ? styles["active"] : ""
+            }`}
+            style={{
+              backgroundImage: `url(${slide.image.src})`,
+              left: `${(idx - slideIndex) * 100}%`,
+            }}
+          >
+            <div className={styles["banner-content"]}>
+              <div className={styles["heading-wrapper"]}>
+                <div className={styles["heading-line"]}></div>
+                <h1>{slide.title}</h1>
+              </div>
+              <p>{slide.text}</p>
+              <a href="#" className={styles["btn"]}>
+                Explore Now
+              </a>
+            </div>
+          </div>
+        ))}
+
+        <div
+          className={`${styles["arrow"]} ${styles["prev"]}`}
+          onClick={showPrev}
+        >
+          &#10094;
+        </div>
+        <div
+          className={`${styles["arrow"]} ${styles["next"]}`}
+          onClick={showNext}
+        >
+          &#10095;
+        </div>
+
+        <div className={`${styles["stock-box"]} ${styles["desktop-only"]}`}>
+          <h3>Stock Price</h3>
+          <div className={styles["toggle"]}>
+            <button
+              className={`${styles["bse"]} ${
+                stockType === "BSE" ? styles["active"] : ""
+              }`}
+              onClick={() => setStockType("BSE")}
+            >
+              BSE
+            </button>
+            <button
+              className={`${styles["nse"]} ${
+                stockType === "NSE" ? styles["active"] : ""
+              }`}
+              onClick={() => setStockType("NSE")}
+            >
+              NSE
+            </button>
+          </div>
+          <div className={styles["price"]}>
+            {stockType === "BSE" ? (
+              <p className={styles["bse-price"]}>
+                ₹ 112.75
+                <br />
+                <span>+0.20 (0.18%)</span>
+              </p>
+            ) : (
+              <p className={styles["nse-price"]}>
+                ₹ 2,520
+                <br />
+                <span>+0.20 (0.18%)</span>
+              </p>
+            )}
+          </div>
+        </div>
+      </section>
+
+      <div className={`${styles["stock-box"]} ${styles["mobile-only"]}`}>
+        <h3>Stock Price</h3>
+        <div className={styles["toggle"]}>
+          <button
+            className={`${styles["bse"]} ${
+              stockType === "BSE" ? styles["active"] : ""
+            }`}
+            onClick={() => setStockType("BSE")}
+          >
+            BSE
+          </button>
+          <button
+            className={`${styles["nse"]} ${
+              stockType === "NSE" ? styles["active"] : ""
+            }`}
+            onClick={() => setStockType("NSE")}
+          >
+            NSE
+          </button>
+        </div>
+        <div className={styles["price"]}>
+          {stockType === "BSE" ? (
+            <p className={styles["bse-price"]}>
+              ₹ 142.25
+              <br />
+              <span>+0.20 (0.18%)</span>
+            </p>
+          ) : (
+            <p className={styles["nse-price"]}>₹ 142.25</p>
+          )}
+        </div>
+      </div>
+    </Fragment>
+  );
+};
+
+export default Header;

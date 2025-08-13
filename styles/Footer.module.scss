@@ -1,0 +1,282 @@
+.footer {
+  background: #2F6DB2;
+  color: #FFFFFF;
+  padding: 70px 80px;
+  height: 500px;
+  .footer-top {
+    
+    // margin-bottom: 50px;
+    .footer-grid {
+      display: flex;
+      justify-content: space-between;
+      // border: 1px solid black;
+      margin-bottom: 30px;
+    }
+    .footer-title {
+      font-weight: 600;
+      font-size: 17px;
+      margin: 0;
+      margin-bottom: 15px;
+      font-family: "Montserrat";
+    }
+
+    .footer-links {
+       list-style: none;
+        padding: 0;
+  margin: 0;
+      .navLink {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 35px;
+        letter-spacing: 0.3px;
+        transition: color 0.3s ease;
+        text-decoration: none;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .brands-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  }
+
+  /* Newsletter Input Group */
+  .newsletter-input {
+    padding-bottom: 36px;
+    display: flex;
+
+    .email-input {
+      padding: 20px;
+      border: 1px solid var(--color-very-light-grey) !important;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.37);
+      font-weight: 400;
+      font-size: 14px;
+      border-radius: 36px 0 0 36px;
+      border-right: none !important;
+      width: 326px;
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.37);
+      }
+
+      &:focus {
+        border-color: var(--color-white);
+        background-color: transparent;
+        outline: none;
+      }
+    }
+
+    .subscribe-btn {
+   
+      border: 1px solid var(--color-very-light-grey) !important;
+      border-left: none !important;
+      border-radius: 0 36px 36px 0;
+      color: var(--color-white);
+      font-size: 16px;
+      background: none;
+      cursor: pointer;
+      padding: 0 20px;
+    }
+  }
+
+  /* Contact Info */
+  .contact-info {
+    .contact-info-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      color: var(--color-white);
+
+      span {
+        font-weight: 500;
+        font-size: 14px;
+      }
+
+      .contact-icon {
+        font-size: 16px;
+      }
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+
+      .social-link {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  /* Footer Bottom */
+  .footer-bottom {
+    border-top: 1px solid #79A4D3;
+    // border-top: 1px solid;
+    // padding-top: 36px;
+    text-align: center;
+  
+
+    p {
+      color: var(--color-white);
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 35px;
+    }
+  }
+}
+
+/* Chat Icon */
+.chat-container {
+  position: relative;
+
+  .chat-icon {
+    position: absolute;
+    bottom: 59px;
+    right: -53px;
+
+    .chat-bubble {
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-yellow);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+  .footer {
+    .contact-info-wrapper {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    .footer-top {
+      > div {
+        margin-bottom: 20px;
+      }
+    }
+
+    .title-parent {
+      padding-top: 36px;
+      border-top: 1px solid #79a4d3;
+    }
+
+    .brands-grid {
+      margin-top: 20px;
+    }
+
+    .newsletter-input {
+      border-bottom: 1px solid #79a4d3;
+    }
+
+    .contact-info-wrapper {
+      margin-top: 20px;
+    }
+
+    .social-links {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .footer-title {
+      font-size: 16px;
+      margin-bottom: 12px;
+      padding-top: 30px;
+    }
+
+    .footer-bottom {
+      padding-top: 22px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  .chat-container {
+    .chat-icon {
+      bottom: -16px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 0 10px;
+  height: 100%;
+    .footer-top {
+      > div {
+        margin-bottom: 0px;
+       
+      }
+       .footer-grid {
+        flex-wrap: wrap;
+        }
+        .newsletter-input {
+      border-bottom:none;
+    }
+    }
+  }
+
+  .chat-container {
+    .chat-bubble {
+      width: 50px;
+      height: 50px;
+
+      img {
+        width: 23px;
+      }
+    }
+
+    .chat-icon {
+      bottom: -10px;
+      right: 20px;
+    }
+  }
+}
+
+@media (max-width: 376px) {
+  .chat-container {
+    .chat-icon {
+      display: none;
+    }
+  }
+}

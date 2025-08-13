@@ -1,0 +1,169 @@
+.journey-section {
+  width: 100%;
+ padding: 70px 0;
+  margin: 0;
+ 
+  .journey-section-background {
+    background: #DCF0FD;
+    border-radius: 10px;
+    margin: 0;
+      padding: 70px 80px;
+      display: flex;
+      gap:80px;
+      .journey-section-left {
+  width: 40%;
+  }
+
+  }
+
+
+
+  .text-primary-title {
+   font-family: Montserrat;
+font-weight: 600;
+font-size: 20px;
+leading-trim: NONE;
+line-height: 100%;
+letter-spacing: 0%;
+color: #2F6DB2;
+  }
+
+  .text-Building-title {
+    margin: 0;
+    font-size: 45px;
+    line-height: 55px;
+    font-weight: 700;
+    font-family: "Montserrat";
+    margin-bottom: 30px;
+    width: 98%;
+    &-blue {
+     color: #2F6DB2;
+    }
+  }
+
+  .text-para {
+   font-family: Montserrat;
+font-weight: 500;
+font-size: 15px;
+leading-trim: NONE;
+line-height: 26px;
+letter-spacing: -2%;
+color: #1E1E20;
+margin-bottom: 60px;
+  }
+
+  .journey-image {
+    width: 100%;
+    height: 100%;
+ 
+    object-fit: cover;
+  }
+
+  .journey-title-wrapper {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -20px;
+  
+      top: 4px;
+      width: 6px;
+      height: 240px;
+      background-color: #2f6db2;
+      border-radius: 2px;
+    }
+  }
+
+  .btn-read-more {
+    color: #FFFFFf;
+    background: #2F6DB2;
+    font-size: 17px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    padding: 22px 40px;
+    border-radius: 36px;
+    border: none;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 992px) {
+    .journey-section{
+        padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .journey-section{
+        padding: 0 10px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    & {
+    padding: 10px 20px; /* ✅ mobile padding applied correctly */
+  }
+
+  .journey-section-background {
+   padding: 0; /* ✅ inner spacing inside the card */
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px; /* reduced gap for mobile */
+      .journey-section-left {
+
+  width: 100%;
+  }
+.journey-title-wrapper {
+      padding: 0 10px;
+
+      &::before { // ✅ correct targeting
+        display: none;
+      }
+    }
+  
+
+  .text-primary-title {
+
+font-weight: 600;
+font-size: 16.67px;
+
+line-height: 25.01px;
+letter-spacing: -2%;
+
+  }
+
+  .text-Building-title {
+
+font-weight: 700;
+font-size: 23.97px;
+
+line-height: 31.26px;
+letter-spacing: -2%;
+margin-bottom: 0;
+  
+  }
+
+  .text-para {
+padding: 0 10px;
+
+font-weight: 500;
+font-size: 13.55px;
+
+line-height: 20.84px;
+letter-spacing: -2%;
+
+
+margin-bottom: 20px;
+  }
+  .btn-read-more {
+  margin: 0 10px;
+    font-size: 13px;
+
+    font-weight: 600;
+    padding: 10px 20px;
+
+    margin-bottom: 20px;
+  }
+  }
+  }
+}

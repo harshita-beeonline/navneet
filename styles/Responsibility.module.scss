@@ -1,0 +1,333 @@
+.giving-section {
+  // border-bottom: 1px solid #b0b0b0;
+  padding: 20px 80px;
+  margin-bottom: 70px;
+  .image-box {
+    background: url("../public/images/Responsibility.png") no-repeat center
+      center / cover;
+    padding: 60px 40px;
+    border-radius: 12px;
+    position: relative;
+    margin: 0;
+    width: 90%;
+    .content-wrapper {
+      position: relative;
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+
+      .main-content {
+        flex: 1;
+        max-width: 600px;
+
+        .header-wrapper {
+          position: relative;
+          margin-bottom: 30px;
+          padding: 0 50px;
+          &::before {
+            content: "";
+            background-color: var(--color-white);
+            width: 6px;
+            height: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 10px;
+          }
+
+          .logo {
+            width: 160px;
+            margin-bottom: 20px;
+          }
+
+          .responsibility {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #1e1e20;
+          }
+
+          h2 {
+            margin: 0;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 45px;
+            leading-trim: NONE;
+            line-height: 55px;
+            letter-spacing: 0%;
+            color: #2f6db2;
+          }
+        }
+
+        .desc {
+          font-family: Montserrat;
+          font-weight: 500;
+          font-size: 17px;
+          leading-trim: NONE;
+          line-height: 28px;
+          letter-spacing: -2%;
+          color: #1e1e20;
+          padding: 0 50px;
+          width: 90%;
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          margin-top: 50px;
+          gap: 40px;
+          //   flex-wrap: wrap;
+          padding: 0 50px;
+          .btn-blue {
+            color: #ffffff;
+            background: #2f6db2;
+            font-size: 17px;
+            font-family: "Montserrat";
+            font-weight: 600;
+            // padding: 22px 40px;
+            border-radius: 36px;
+            border: none;
+            // margin-top: 20px;
+            height: 66px;
+            width: 173px;
+          }
+          .watch-video {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 17px;
+            leading-trim: NONE;
+            line-height: 100%;
+            letter-spacing: 0%;
+            color: #2f6db2;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+
+            &:hover {
+              color: #2f6db2;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
+      .initiatives-box.desktop-only {
+        position: absolute;
+        right: -14%;
+        top: -15px;
+        background-color: var(--color-blue);
+        padding: 70px 60px;
+        color: var(--color-white);
+        min-width: 376px;
+        min-height: 466px;
+        border-radius: 10px;
+        box-shadow: -30px 30px 0 var(--color-yellow);
+        display: block;
+      }
+    }
+  }
+
+  .initiatives-box.mobile-only {
+    background-color: var(--color-blue);
+    padding: 20px 30px;
+    color: var(--color-white);
+    // border-radius: 10px;
+    box-shadow: -15px 15px 0 var(--color-yellow);
+    margin-top: -50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: none;
+    z-index: 999;
+    position: relative;
+   
+  }
+
+  .initiatives-box {
+    h5 {
+      font-weight: 600;
+      font-size: 30px;
+      padding-bottom: 37px;
+      margin-bottom: 0;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      padding: 0;
+      margin: 0;
+
+      li {
+        font-weight: 500;
+        font-size: 17px;
+      }
+    }
+  }
+
+  /* Tablet Styles */
+  @media (max-width: 1200px) {
+    .initiatives-box {
+      h5 {
+        font-size: 26px;
+        padding-bottom: 30px;
+      }
+
+      ul {
+        gap: 25px;
+      }
+    }
+    .header-wrapper h2 {
+      width: 86%;
+    }
+  }
+
+  /* Mobile and Small Tablet Styles */
+  @media (max-width: 992px) {
+    .image-box .content-wrapper {
+      flex-direction: column;
+    }
+
+    .main-content {
+      max-width: 100%;
+    }
+
+    .header-wrapper h2 {
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+    .header-wrapper .logo {
+      width: 140px;
+    }
+
+    .buttons {
+      gap: 20px;
+    }
+
+    .initiatives-box .desktop-only {
+      display: none;
+    }
+
+    .initiatives-box.mobile-only {
+      display: block;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-bottom: 60px;
+
+    .header-wrapper h2 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    .header-wrapper .responsibility {
+      font-size: 18px;
+    }
+
+    .header-wrapper .logo {
+      width: 120px;
+    }
+
+    .desc {
+      font-size: 15px;
+      max-width: 100%;
+    }
+
+    .initiatives-box h5 {
+      font-size: 24px;
+      padding-bottom: 25px;
+    }
+
+    .initiatives-box ul {
+      gap: 20px;
+
+      li {
+        font-size: 16px;
+      }
+    }
+  }
+
+  /* Mobile XS Styles */
+@media (max-width: 576px) {
+  padding: 0px 20px;
+
+  .image-box {
+    width: 100%;
+    padding: 50px 10px;
+
+    // Hide desktop version
+    .initiatives-box.desktop-only {
+      display: none !important;
+    }
+
+    // Show mobile version
+    .initiatives-box.mobile-only {
+      display: block !important;
+    }
+
+    .content-wrapper {
+      .main-content {
+        .header-wrapper {
+          padding: 0 10px;
+
+          &::before {
+            display: none;
+          }
+
+          .logo {
+            display: none;
+          }
+
+          .responsibility {
+            font-family: "Montserrat", sans-serif;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 100%;
+            color: #1e1e20;
+          }
+
+          h2 {
+            margin: 0;
+            font-family: Montserrat;
+            font-weight: 700;
+            font-size: 23px;
+            line-height: 28px;
+          }
+        }
+
+        .desc {
+          padding: 0 10px;
+          font-size: 13px;
+          line-height: 23px;
+          width: 70%;
+        }
+
+        .buttons {
+          display: flex;
+          align-items: center;
+          margin: 50px 0;
+          gap: 30px;
+          padding: 0 10px;
+
+          .btn-blue {
+            font-size: 13px;
+            height: 52px;
+            width: 127px;
+          }
+
+          .watch-video {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}
+}
+
+          
