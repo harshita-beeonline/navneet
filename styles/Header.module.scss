@@ -267,7 +267,7 @@
     a {
       padding: 15px 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
+      color: #fff !important;
     }
   }
 
@@ -337,12 +337,54 @@
     }
   }
 }
- @media (max-width: 576px) { 
-  .logo img{
+@media (max-width: 576px) { 
+  .logo img {
     width: auto;
     height: 50px;
   }
-  .nav-menu a {
+.site-header {
+   &.scrolled {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+    .nav-menu a {
       color: #fff !important;
     }
- }
+
+    .menu-toggle {
+      color: #fff;
+    }
+  }
+}
+.banner-slider {
+
+  .slide {
+    padding-left: 5%;
+    .banner-content {
+      // margin-top: 250px;
+      width: 90%;
+      .heading-wrapper {
+        h1 {
+          font-size: 30px !important;
+        }
+        h2 {
+          font-size: 30px !important;
+        }
+      }
+
+      p {
+        margin: 10px 0 !important;
+        font-size: 22px !important;
+      }
+
+      .btn {
+        margin-top: 20px;
+        padding: 10px 20px !important;
+      }
+    }
+  }
+  .arrow {
+    display: none;
+  }
+}
+}
