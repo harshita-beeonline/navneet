@@ -18,10 +18,11 @@ const Header = () => {
       title2:"Detection Book",
       text: "Because, some children see colours differently.",
     },
-    {
+   {
       image: banner,
-      title: "Enhance your learning experience with Navneet",
-      text: "We focus on serving the regional teaching along with fulfilling the student's learning needs with the supplemental digital solutions",
+      title1: "Colour Blindness",
+      title2:"Detection Book",
+      text: "Because, some children see colours differently.",
     },
   ];
 
