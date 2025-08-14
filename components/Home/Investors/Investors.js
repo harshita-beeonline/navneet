@@ -57,14 +57,19 @@ const Investors = () => {
 
             <div className={styles["grid-item"]}>
               <div className={`${styles["investor-card"]} ${styles["blue"]}`}>
-                <p className={styles["blue-card-type"]}>Annual Report 2020</p>
+                <p className={styles["blue-card-type"]}>Annual Report 2024</p>
                 <h5 className={styles["blue-card-title"]}>
-                  Our digital capabilities helped increase client relevance, we
-                  built business model...
+                  Creating Value Through Learning, Adapting & Progress
+
                 </h5>
-                <Link href="#" className={styles["blue-card-link"]}>
-                  Read letter to stakeholder
-                </Link>
+                             <a
+  href="https://navneet.com/annual-report-23-24.pdf"
+  className={styles["blue-card-link"]}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+                  Read report
+                </a>
               </div>
             </div>
 

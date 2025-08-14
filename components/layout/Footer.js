@@ -52,15 +52,69 @@ const Footer = () => {
             {/* About Navneet Section */}
             <div className={styles["footer-col"]}>
               <h3 className={styles["footer-title"]}>About Navneet</h3>
-              <ul className={styles["footer-links"]}>
-                <li><Link href="#all-about" className={styles["navLink"]}>All About Navneet</Link></li>
-                <li><Link href="#leadership" className={styles["navLink"]}>Leadership</Link></li>
-                <li><Link href="#customers" className={styles["navLink"]}>Customers</Link></li>
-                <li><Link href="#diversity" className={styles["navLink"]}>Diversity</Link></li>
-                <li><Link href="#careers" className={styles["navLink"]}>Careers</Link></li>
-                <li><Link href="#press" className={styles["navLink"]}>Press</Link></li>
-                <li><Link href="#investor" className={styles["navLink"]}>Investor Relations</Link></li>
-              </ul>
+            <ul className={styles["footer-links"]}>
+  <li>
+    <a
+      href="https://navneet.com/about/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      All About Navneet
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/board-of-directors"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Leadership
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://www.navneet.com/pdfs/Corporate_Governance_Policies/Policy%20on%20Board%20Diversity.pdf"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Diversity
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/careers/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Careers
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/press-release/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Press
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/investors/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Investor Relations
+    </a>
+  </li>
+</ul>
+
             </div>
 
             {/* Our Brands Section */}
@@ -68,16 +122,69 @@ const Footer = () => {
               <h3 className={styles["footer-title"]}>Our Brands</h3>
             
                 <div>
-                  <ul className={styles["footer-links"]}>
-                    <li><Link href="#navneet" className={styles["navLink"]}>Navneet Digi Book</Link></li>
-                       <li><Link href="#grafalco" className={styles["navLink"]}>Grafalco</Link></li>
-                    <li><Link href="#youva" className={styles["navLink"]}>YouVa</Link></li>
-                    <li><Link href="#vikas" className={styles["navLink"]}>Vikas</Link></li>
-                    <li><Link href="#children-book" className={styles["navLink"]}>TopTech</Link></li>
-                    <li><Link href="#general-book" className={styles["navLink"]}>Navneet AI</Link></li>
-               
-                 
-                  </ul>
+                <ul className={styles["footer-links"]}>
+  <li>
+    <a
+      href="https://smartdigibook.com/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Navneet Digi Book
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/grafalco/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Grafalco
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://www.navneetstore.com/pages/youva"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      YouVa
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/vikas/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Vikas
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneet.com/navneet-toptech/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      TopTech
+    </a>
+  </li>
+  <li>
+    <a
+      href="https://navneetedu.ai/"
+      className={styles["navLink"]}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Navneet AI
+    </a>
+  </li>
+</ul>
+
                 </div>
               
           
