@@ -1,6 +1,8 @@
+'use client'
 import React from "react";
 import styles from "../../../styles/BussinessStats.module.scss";
-
+import { useInView } from "react-intersection-observer";
+import 'animate.css';
 const stats = [
   { icon: "/images/icons/products.svg", value: "1000+", label: "Products" },
   { icon: "/images/icons/brands.svg", value: "10+", label: "Brands" },
@@ -9,6 +11,10 @@ const stats = [
 ];
 
 const LeaderSection = () => {
+    const { ref, inView } = useInView({
+    triggerOnce: false, // runs every time in view
+    threshold: 0.2,     // trigger when 20% visible
+  });
   return (
     <div className={styles["businessStatsSection-container"]}>
       <div className={styles["businessStatsSection"]}>
@@ -21,9 +27,15 @@ const LeaderSection = () => {
           </p>
         </div>
 
-        <div className={styles["statContainer"]}>
+        <div className={styles["statContainer"]} ref={ref}>
           {stats.map((stat, index) => (
-            <div key={index} className={styles["statBox"]}>
+            <div      key={index}
+          className={`${styles["statBox"]} ${
+            inView ? "animate__animated animate__fadeInUp" : ""
+          }`}
+          style={{
+            animationDelay: inView ? `${index * 0.3}s` : "0s",
+          }}>
               <div className={styles["icon"]}>
                 <img
                   src={stat.icon}
