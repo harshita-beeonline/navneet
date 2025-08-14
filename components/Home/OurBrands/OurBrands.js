@@ -45,7 +45,7 @@ const brands = [
   {
     title: "21 MLQ Sets",
     desc: "Question Paper Sets are specially prepared to help students appearing for the Board Exams (X & XII).",
-    img: "/images/brand5.png",
+    img: "/images/21mcq.png",
   },
 ];
 
