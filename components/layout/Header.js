@@ -42,7 +42,12 @@ const Header = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+useEffect(() => {
+  const interval = setInterval(() => {
+    setSlideIndex((prev) => (prev + 1) % slides.length);
+  }, 3000);
+  return () => clearInterval(interval);
+}, [slides.length]);
   const showPrev = () => {
     setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
   };
@@ -50,6 +55,29 @@ const Header = () => {
   const showNext = () => {
     setSlideIndex((prev) => (prev + 1) % slides.length);
   };
+const touchStartX = useRef(0);
+const touchEndX = useRef(0);
+
+const handleTouchStart = (e) => {
+  touchStartX.current = e.changedTouches[0].screenX;
+};
+
+const handleTouchEnd = (e) => {
+  touchEndX.current = e.changedTouches[0].screenX;
+  handleSwipe();
+};
+
+const handleSwipe = () => {
+  const distance = touchStartX.current - touchEndX.current;
+  const threshold = 50; // minimum swipe distance
+  if (distance > threshold) {
+    // swipe left
+    setSlideIndex((prev) => (prev + 1) % slides.length);
+  } else if (distance < -threshold) {
+    // swipe right
+    setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
+  }
+};
 
   return (
     <Fragment>
@@ -97,7 +125,8 @@ const Header = () => {
       </header>
 
       {/* SLIDER */}
-      <section className={styles["banner-slider"]}>
+      <section className={styles["banner-slider"]}  onTouchStart={handleTouchStart}
+  onTouchEnd={handleTouchEnd}>
         {slides.map((slide, idx) => (
           <div
             key={idx}

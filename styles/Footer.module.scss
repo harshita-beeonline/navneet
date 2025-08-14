@@ -239,6 +239,7 @@ align-items: center;
       padding-top: 22px;
 
       p {
+        margin: 0;
         font-size: 13px;
       }
     }
@@ -255,7 +256,7 @@ align-items: center;
 @media (max-width: 576px) {
   .footer {
     padding: 0 10px;
-  height: 100%;
+  height: auto;
     .footer-top {
       > div {
         margin-bottom: 0px;

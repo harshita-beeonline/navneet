@@ -209,11 +209,17 @@
 
     .brandCard {
       padding: 25px;
-      height: 416px !important;
+      height: auto !important;
 
-      .card-image {
-        height: 246px;
-      }
+      .trendingProductsSection .brandCard .card-image {
+    height: auto; /* container adjusts to image height */
+  }
+
+  .trendingProductsSection .brandCard .card-image img {
+    width: 100%;
+    height: auto; /* maintain aspect ratio */
+    object-fit: contain; /* show full image */
+  }
       h6 {
         font-size: 14px;
         line-height: 23px;

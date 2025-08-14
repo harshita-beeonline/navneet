@@ -26,9 +26,15 @@ const Investors = () => {
                   Navneet announces fourth quarter and annual results on April
                   14, 2021
                 </h5>
-                <Link href="#" className={styles["card-link"]}>
-                  View more
-                </Link>
+                <a
+  href="https://www.business-standard.com/markets/capital-market-news/navneet-education-consolidated-net-profit-declines-77-67-in-the-june-2025-quarter-125080701267_1.html"
+  className={styles["card-link"]}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  View more
+</a>
+
               </div>
             </div>
 
@@ -38,9 +44,14 @@ const Investors = () => {
                 <h5 className={styles["blue-card-title"]}>
                   Download Annual Report 2021
                 </h5>
-                <Link href="#" className={styles["blue-card-link"]}>
-                  Download
-                </Link>
+               <a
+  href="https://navneet.com/annual-report-23-24.pdf"
+  className={styles["blue-card-link"]}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+ Download
+</a>
               </div>
             </div>
 
@@ -64,9 +75,14 @@ const Investors = () => {
                   View the complete financial highlights for the last three
                   years
                 </h5>
-                <Link href="#" className={styles["card-link"]}>
-                  View more
-                </Link>
+               <a
+  href="https://www.moneycontrol.com/news/business/earnings/navneet-education-q4-pat-seen-up-7-8-yoy-to-rs-51-7-cr-pl-capital-12994250.html"
+  className={styles["card-link"]}
+  target="_blank"
+  rel="noopener noreferrer"
+>
+ View more
+</a>
               </div>
             </div>
           </div>
