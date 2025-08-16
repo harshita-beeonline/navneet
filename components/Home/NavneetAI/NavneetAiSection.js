@@ -22,7 +22,7 @@ const NavneetAiSection = () => {
         <div className={styles["navneet-ai-right-content"]}>
           <div className={styles["navneet-ai-video"]}>
             <video
-              src="/navneetai.mp4" //  <-- just use path, no import
+              src="https://navneetedu.ai/images/Navneet%20AI_Final%20Product%20Video%202.mp4" //  <-- just use path, no import
               autoPlay
               muted
               loop
