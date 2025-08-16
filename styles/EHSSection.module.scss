@@ -1,6 +1,6 @@
 .ehs-section-page-content {
-  margin-top: 50px;
-  background: #dcf0fd;
+  margin-top: 20px;
+  background: #d0f0ce;
   padding: 50px 80px;
   .ehs-section-left-right-part {
     display: flex;
@@ -85,7 +85,8 @@
 }
 @media (max-width: 768px) {
   .ehs-section-page-content {
-    padding: 15px 15px 80px 15px;
+    margin-top: 5px;
+    padding: 15px 15px 40px 15px;
     .ehs-section-left-right-part {
       flex-direction: column;
       .ehs-section-left-part {

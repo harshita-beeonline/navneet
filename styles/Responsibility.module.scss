@@ -1,7 +1,6 @@
 .giving-section {
-  // border-bottom: 1px solid #b0b0b0;
   padding: 20px 80px;
-  margin-bottom: 70px;
+  margin-bottom: 5px;
   .image-box {
     background: url("../public/images/Responsibility.png") no-repeat center
       center / cover;
@@ -219,7 +218,7 @@
 
   @media (max-width: 768px) {
     padding-bottom: 60px;
-
+      
     .header-wrapper h2 {
       font-size: 28px;
       line-height: 36px;

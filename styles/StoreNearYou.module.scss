@@ -1,7 +1,6 @@
 .store-section-content {
   width: 100%;
-  padding: 0px 80px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   .image-with-text-content {
     background-image: url("../public/images/storeimage.png");
     background-position: center;
@@ -63,7 +62,7 @@
 }
 @media (max-width:768px) {
 .store-section-content {
-  padding: 0px 15px;
+  margin-top: 40px;
     margin-bottom: 15px;
   .image-with-text-content {
     height: 250px;
