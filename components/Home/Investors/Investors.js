@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState ,useEffect} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../../../styles/Investors.module.scss";
@@ -7,10 +7,20 @@ import { useInView } from "react-intersection-observer";
 import "animate.css";
 const Investors = () => {
   const [activeExchange, setActiveExchange] = useState("BSE");
+  const [stockPrice, setStockPrice] = useState(null);
   const { ref, inView } = useInView({
     triggerOnce: false,
     threshold: 0.1,
   });
+useEffect(() => {
+  const fetchStockPrice = async () => {
+    const res = await fetch(`/api/stock-price?type=${activeExchange}`);
+    const data = await res.json();
+    setStockPrice(data.price);
+  };
+
+  fetchStockPrice();
+}, [activeExchange]);
 
   return (
     <div className={styles["investors-section-main"]}>
@@ -161,7 +171,7 @@ const Investors = () => {
                   </div>
                 </div>
                 <div className={styles["right-annual-card-price"]}>
-                  ₹ 142.25
+                    ₹ {stockPrice ? stockPrice : "loading..."}
                 </div>
               </div>
             </div>

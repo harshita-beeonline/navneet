@@ -266,7 +266,6 @@ import Banner3Mobile from "../../public/images/banner1mobile.jpg";
 
 const Header = () => {
   const [slideIndex, setSlideIndex] = useState(0);
-  const [stockType, setStockType] = useState("BSE");
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -332,7 +331,8 @@ const Header = () => {
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
 
-  const handleTouchStart = (e) => (touchStartX.current = e.changedTouches[0].screenX);
+  const handleTouchStart = (e) =>
+    (touchStartX.current = e.changedTouches[0].screenX);
   const handleTouchEnd = (e) => {
     touchEndX.current = e.changedTouches[0].screenX;
     if (touchStartX.current - touchEndX.current > 50) {
@@ -342,6 +342,25 @@ const Header = () => {
       setSlideIndex((prev) => (prev - 1 + slides.length) % slides.length);
     }
   };
+const [stockType, setStockType] = useState("BSE");
+const [stockPrice, setStockPrice] = useState(null);
+
+useEffect(() => {
+  const fetchStockPrice = async () => {
+    try {
+      const res = await fetch(
+        `/api/stock-price?type=${stockType}`
+      );
+      const data = await res.json();
+      setStockPrice(data?.price);
+    } catch (error) {
+      console.error("Error fetching stock price:", error);
+    }
+  };
+
+  fetchStockPrice();
+}, [stockType]);
+
 
   return (
     <Fragment>
@@ -437,7 +456,7 @@ const Header = () => {
               NSE
             </button>
           </div>
-          <p>₹ 142.25</p>
+          <p>₹ {stockPrice ? stockPrice : "loading..."}</p>
         </div>
       </section>
 
