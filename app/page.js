@@ -7,6 +7,9 @@ import EHSSection from "@/components/Home/EHSInitiatives/EHSSection";
 import InternationalBusiness from "@/components/Home/InternationalBusiness/InternationalBusiness";
 import StoreNearYou from "@/components/Home/StoreNearYou/StoreNearYou";
 import TrendingProducts from "../components/Home/OurTrendingProducts/TrendingProducts";
+import NavneetAiSection from "@/components/Home/NavneetAI/NavneetAiSection";
+import DigibookSection from "@/components/Home/Digibook/DigibookSection";
+import NavneetCBSESection from "@/components/Home/NavneetCBSE/NavneetCBSESection";
 
 export default  function Page() {
 
@@ -14,6 +17,9 @@ export default  function Page() {
     <>
      <LeaderSection />
      <OurBrands />
+     <NavneetAiSection />
+     <DigibookSection />
+     <NavneetCBSESection />
      <TrendingProducts />
      <JourneySection />
      <Investors />

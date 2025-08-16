@@ -1,10 +1,9 @@
 .footer {
-  background: #2F6DB2;
-  color: #FFFFFF;
-  padding: 70px 80px;
-  height: 500px;
+  background: #2f6db2;
+  color: #ffffff;
+  height: auto;
+  padding: 70px 80px 20px 80px;
   .footer-top {
-    
     // margin-bottom: 50px;
     .footer-grid {
       display: flex;
@@ -21,11 +20,10 @@
     }
 
     .footer-links {
-       list-style: none;
-        padding: 0;
-  margin: 0;
+      list-style: none;
+      padding: 0;
+      margin: 0;
       .navLink {
-       
         font-weight: 500;
         font-size: 14px;
         line-height: 35px;
@@ -33,14 +31,14 @@
         transition: color 0.3s ease;
         text-decoration: none;
         color: #fff;
-display: inline-flex;
-gap:5px;
-align-items: center;
-.navLink-icon {
-  display: inline-flex;
-gap:5px;
-align-items: center;
-}
+        display: inline-flex;
+        gap: 5px;
+        align-items: center;
+        .navLink-icon {
+          display: inline-flex;
+          gap: 5px;
+          align-items: center;
+        }
         &:hover,
         &:focus {
           text-decoration: underline;
@@ -54,18 +52,19 @@ align-items: center;
       gap: 20px;
     }
   }
-.social-icons {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
+  .social-icons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+  }
   /* Newsletter Input Group */
   .newsletter-input {
     padding-bottom: 36px;
     display: flex;
-
     .email-input {
       padding: 20px;
       border: 1px solid var(--color-very-light-grey) !important;
@@ -88,7 +87,6 @@ align-items: center;
     }
 
     .subscribe-btn {
-   
       border: 1px solid var(--color-very-light-grey) !important;
       border-left: none !important;
       border-radius: 0 36px 36px 0;
@@ -144,11 +142,10 @@ align-items: center;
 
   /* Footer Bottom */
   .footer-bottom {
-    border-top: 1px solid #79A4D3;
+    border-top: 1px solid #79a4d3;
     // border-top: 1px solid;
-    // padding-top: 36px;
+    padding-top: 10px;
     text-align: center;
-  
 
     p {
       color: var(--color-white);
@@ -236,8 +233,8 @@ align-items: center;
     }
 
     .footer-bottom {
-      padding-top: 22px;
-
+      padding-top: 30px;
+      padding-bottom: 60px;
       p {
         margin: 0;
         font-size: 13px;
@@ -256,18 +253,17 @@ align-items: center;
 @media (max-width: 576px) {
   .footer {
     padding: 0 10px;
-  height: auto;
+    height: auto;
     .footer-top {
       > div {
         margin-bottom: 0px;
-       
       }
-       .footer-grid {
+      .footer-grid {
         flex-wrap: wrap;
-        }
-        .newsletter-input {
-      border-bottom:none;
-    }
+      }
+      .newsletter-input {
+        border-bottom: none;
+      }
     }
   }
 

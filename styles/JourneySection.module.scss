@@ -98,7 +98,7 @@
 
   @media (max-width: 576px) {
     & {
-      padding: 0px 20px; /* ✅ mobile padding applied correctly */
+      padding: 0px 0px; /* ✅ mobile padding applied correctly */
     }
 
     .journey-section-background {

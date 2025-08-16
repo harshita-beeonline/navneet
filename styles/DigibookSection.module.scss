@@ -1,0 +1,130 @@
+.digibook-section-content {
+  margin-top: 20px;
+  background: linear-gradient(180deg, #b6ffa6 0%, #82ebb5 50%, #3dc6c2 100%);
+  width: 100%;
+  padding: 30px 40px 20px 40px;
+//   background-image: url("../public/images/zig2.png"),
+//     url("../public/images/cross.png"),
+//     linear-gradient(180deg, #b6ffa6 0%, #82ebb5 50%, #3dc6c2 100%);
+//   background-repeat: no-repeat,no;
+//   background-size: 60px 60px, cover;
+//   background-position: left center;
+  .digi-logo {
+    width: 162px;
+    height: 56px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .digibook-left-right-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+    .digibook-left-content {
+      .digibook-image {
+        width: 554px;
+        height: 454px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    .digibook-right-content {
+      .text-with-icon {
+        h2 {
+          margin: 0;
+          font-family: Montserrat;
+          font-weight: 700;
+          font-style: Bold;
+          font-size: 45px;
+          leading-trim: NONE;
+          line-height: 100%;
+          letter-spacing: 0%;
+          color: #2f6db2;
+          width: 85%;
+          margin-top: -16px;
+          padding-left: 25px;
+        }
+      }
+      p {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-style: Medium;
+        font-size: 16px;
+        leading-trim: NONE;
+        line-height: 26px;
+        letter-spacing: 0%;
+        color: #484845;
+        margin: 0;
+        margin-top: 30px;
+        padding-left: 25px;
+        width: 85%;
+      }
+      button {
+        margin-top: 10px;
+        background: #2f6db2;
+        width: 188px;
+        height: 66px;
+        border: none;
+        border-radius: 36px;
+        font-family: Montserrat;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        color: #ffffff;
+        cursor: pointer;
+        margin-left: 25px;
+      }
+    }
+  }
+}
+@media (max-width:768px) {
+.digibook-section-content {
+  padding: 20px;
+  .digi-logo {
+    width: 102px;
+    height: 35px;
+  }
+  .digibook-left-right-content {
+    flex-direction: column;
+    gap: 0px;
+    .digibook-left-content {
+      .digibook-image {
+        width: 275px;
+        height:281px;
+      }
+    }
+    .digibook-right-content {
+      .text-with-icon {
+        .icon-type-image{
+          display: none;
+        }
+        h2 {
+          font-size: 24px;
+          width:100%;
+          margin-top: 0px;
+          padding-left: 0px;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin-top: 10px;
+        padding-left: 0px;
+        width: 100%;
+      }
+      button {
+        margin-top: 20px;
+        width: 164px;
+        height: 48px;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+}
