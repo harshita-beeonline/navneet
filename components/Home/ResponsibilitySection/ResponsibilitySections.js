@@ -27,9 +27,11 @@ const ResponsibilitySection = () => {
               and nurturing the lives of fellow beings
             </p>
             <div className={styles["buttons"]}>
+              <Link href={"https://navneetfoundation.in/"}>
               <button className={styles["btn-blue"]}>
                 Read more
               </button>
+              </Link>
               <Link href="#" className={styles["watch-video"]}>
                 <IoPlayOutline size={20} className={styles["thick-icon"]} /> &nbsp; Watch video
               </Link>

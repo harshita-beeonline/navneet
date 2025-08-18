@@ -150,6 +150,18 @@
 }
 
 /* Media Queries */
+@media (max-width: 1280px) {
+  .ourBrandsSection {
+    // margin: 15px 0;
+    padding: 25px 40px 25px 40px;
+    p {
+      width: 80%;
+    }
+    .brandCard {
+      height: 350px !important;
+    }
+  }
+}
 @media (max-width: 1200px) {
   .ourBrandsSwiper.swiper-horizontal > .swiper-scrollbar {
     width: calc(100% - 9 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
@@ -164,7 +176,6 @@
   .ourBrandsSection .brandCard {
     box-sizing: border-box;
   }
-
   .ourBrandsSwiper.swiper-horizontal > .swiper-scrollbar {
     width: calc(
       100% - 11 * var(--swiper-scrollbar-sides-offset, 1%)
@@ -192,8 +203,7 @@
   }
 
   .ourBrandsSection {
-    // margin: 50px 0;
-    padding: 0px 15px;
+    padding: 20px 15px;
 
     h4 {
       font-size: 24px;

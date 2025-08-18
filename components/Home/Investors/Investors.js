@@ -103,7 +103,7 @@ useEffect(() => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Read report
+                 Read letter to stakeholder
                 </a>
               </div>
             </div>

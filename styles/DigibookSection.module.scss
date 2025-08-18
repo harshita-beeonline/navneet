@@ -84,6 +84,22 @@
     }
   }
 }
+@media (max-width:1280px) {
+.digibook-section-content {
+  .digibook-left-right-content {
+    .digibook-right-content {
+      .text-with-icon {
+        h2 {
+          width: 100%;
+        }
+      }
+      p {
+        width: 100%;
+      }
+    }
+  }
+}
+}
 @media (max-width:768px) {
 .digibook-section-content {
   padding: 20px;

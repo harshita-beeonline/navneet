@@ -8,9 +8,24 @@ import styles from "../../../styles/OurBrands.module.scss";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const brands = [
   {
+    title: "Navneet ai",
+    desc: "India’s first custom AI-powered education model offering personalized, adaptive, & innovative learning experiences for students",
+    img: "/images/brand2.png",
+  },
+  {
+    title: "Navneet Digest",
+    desc: "Navneet Digest is a one-stop resource for students, offering all textbook-relevant content in a clear, easy-to-understand format",
+    img: "/images/brand4.png",
+  },
+  {
     title: "Navneet Digibook",
     desc: "Navneet DigiBook is the smart version of your favourite Navneet Books. It is a web based platform/app.",
     img: "/images/Navneet-Digibook.svg",
+  },
+  {
+    title: "21 MLQ Sets",
+    desc: "Question Paper Sets are specially prepared to help students appearing for the Board Exams (X & XII).",
+    img: "/images/21mcq.png",
   },
   {
     title: "Youva",
@@ -28,24 +43,9 @@ const brands = [
     img: "/images/brand6.png",
   },
   {
-    title: "Navneet ai",
-    desc: "India’s first custom AI-powered education model offering personalized, adaptive, & innovative learning experiences for students",
-    img: "/images/brand2.png",
-  },
-  {
     title: "Vikas",
     desc: "Vikas, trusted by students and teachers, offers smart study companions during exams to help achieve outstanding marks.",
     img: "/images/brand3.png",
-  },
-  {
-    title: "Navneet Digest",
-    desc: "Navneet Digest is a one-stop resource for students, offering all textbook-relevant content in a clear, easy-to-understand format",
-    img: "/images/brand4.png",
-  },
-  {
-    title: "21 MLQ Sets",
-    desc: "Question Paper Sets are specially prepared to help students appearing for the Board Exams (X & XII).",
-    img: "/images/21mcq.png",
   },
 ];
 

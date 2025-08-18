@@ -70,6 +70,24 @@
     }
   }
 }
+@media (max-width:1280px) {
+.store-section-content-desktop {
+  .store-section-left-right-part {
+    gap: 30px;
+    .store-left-part {
+      width: 700px;
+      height: 550px;
+    }
+    .store-right-part {
+      .image-with-text-content {
+        h2 {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+}
+}
 .store-section-content {
   display: none;
   width: 100%;

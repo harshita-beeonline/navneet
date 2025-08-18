@@ -163,29 +163,43 @@
 }
 
 /* Media Queries */
+@media (max-width: 1280px) {
+  .trendingProductsSection {
+    margin: 40px 0;
+    padding: 0px 40px;
+    p {
+      width: 100%;
+    }
+  }
+}
 @media (max-width: 1200px) {
   .trendingProductsSwiper.swiper-horizontal > .swiper-scrollbar {
     width: calc(100% - 9 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
   }
-  .trendingProductsSwiper :global(.swiper-scrollbar.swiper-scrollbar-horizontal) {
+  .trendingProductsSwiper
+    :global(.swiper-scrollbar.swiper-scrollbar-horizontal) {
     width: calc(100% - 9 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
   }
 }
-
 @media (max-width: 992px) {
   .trendingProductsSwiper.swiper-horizontal > .swiper-scrollbar {
-    width: calc(100% - 11 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
+    width: calc(
+      100% - 11 * var(--swiper-scrollbar-sides-offset, 1%)
+    ) !important;
   }
-  .trendingProductsSwiper :global(.swiper-scrollbar.swiper-scrollbar-horizontal) {
-    width: calc(100% - 11 * var(--swiper-scrollbar-sides-offset, 1%)) !important;
+  .trendingProductsSwiper
+    :global(.swiper-scrollbar.swiper-scrollbar-horizontal) {
+    width: calc(
+      100% - 11 * var(--swiper-scrollbar-sides-offset, 1%)
+    ) !important;
   }
 }
-
 @media (max-width: 768px) {
   .trendingProductsSwiper.swiper-horizontal > .swiper-scrollbar {
     display: none;
   }
-  .trendingProductsSwiper :global(.swiper-scrollbar.swiper-scrollbar-horizontal) {
+  .trendingProductsSwiper
+    :global(.swiper-scrollbar.swiper-scrollbar-horizontal) {
     display: none;
   }
   .swiperWrapperCustom .customArrow {
@@ -212,14 +226,14 @@
       height: auto !important;
 
       .trendingProductsSection .brandCard .card-image {
-    height: auto; /* container adjusts to image height */
-  }
+        height: auto; /* container adjusts to image height */
+      }
 
-  .trendingProductsSection .brandCard .card-image img {
-    width: 100%;
-    height: auto; /* maintain aspect ratio */
-    object-fit: contain; /* show full image */
-  }
+      .trendingProductsSection .brandCard .card-image img {
+        width: 100%;
+        height: auto; /* maintain aspect ratio */
+        object-fit: contain; /* show full image */
+      }
       h6 {
         font-size: 14px;
         line-height: 23px;
@@ -237,7 +251,6 @@
     padding-bottom: 10px;
   }
 }
-
 @media (max-width: 576px) {
   .trendingProductsSection {
     margin: 25px 0;

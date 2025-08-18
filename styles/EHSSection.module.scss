@@ -83,6 +83,25 @@
     }
   }
 }
+@media (max-width:1280px) {
+.ehs-section-page-content {
+  padding: 50px 40px;
+    .ehs-section-left-right-part {
+    .ehs-section-left-part {
+      .faqContainer {
+        .faqItem {
+          .faqQuestion {
+            width: 500px;
+          }
+          .faqAnswer {
+            width: 500px;
+          }
+        }
+      }
+    }
+  }
+}
+}
 @media (max-width: 768px) {
   .ehs-section-page-content {
     margin-top: 5px;

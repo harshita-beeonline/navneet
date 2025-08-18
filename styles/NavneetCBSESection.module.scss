@@ -48,6 +48,41 @@
     }
   }
 }
+@media (max-width:1280px) {
+.navneet-cbse-section-content {
+  padding: 0px 0px 0px 40px;
+  .cbse-section-left-right-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .cbse-section-left-content {
+      h2,
+      p {
+        margin: 0;
+      }
+      h2 {
+        font-size: 42px;
+        line-height: 40px;
+      }
+      p {
+        margin-top: 30px;
+        width: 85%;
+      }
+    }
+    .cbse-section-right-content {
+      .cbse-image {
+        width: 714px;
+        height: 500px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+      }
+    }
+  }
+}
+}
 @media (max-width:768px) {
 .navneet-cbse-section-content {
   margin-bottom: 20px;

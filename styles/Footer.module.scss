@@ -3,6 +3,9 @@
   color: #ffffff;
   height: auto;
   padding: 70px 80px 20px 80px;
+  @media (max-width:1280px) {
+  padding: 60px 40px 20px 40px;
+  }
   .footer-top {
     // margin-bottom: 50px;
     .footer-grid {
@@ -97,7 +100,6 @@
       padding: 0 20px;
     }
   }
-
   /* Contact Info */
   .contact-info {
     .contact-info-wrapper {
@@ -139,7 +141,6 @@
       }
     }
   }
-
   /* Footer Bottom */
   .footer-bottom {
     border-top: 1px solid #79a4d3;
@@ -155,7 +156,6 @@
     }
   }
 }
-
 /* Chat Icon */
 .chat-container {
   position: relative;
@@ -184,7 +184,6 @@
     }
   }
 }
-
 /* Media Queries */
 @media (max-width: 992px) {
   .footer {
