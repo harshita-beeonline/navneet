@@ -45,8 +45,7 @@ useEffect(() => {
               >
                 <p className={styles["card-type"]}>Quartely Report</p>
                 <h5 className={styles["card-title"]}>
-                  Navneet announces fourth quarter and annual results on April
-                  14, 2021
+                 Navneet Education consolidated net profit declines 77.67% in the June 2025 quarter
                 </h5>
                 <a
                   href="https://www.business-standard.com/markets/capital-market-news/navneet-education-consolidated-net-profit-declines-77-67-in-the-june-2025-quarter-125080701267_1.html"
@@ -71,7 +70,7 @@ useEffect(() => {
               >
                 <p className={styles["blue-card-type"]}>Annual Report</p>
                 <h5 className={styles["blue-card-title"]}>
-                  Download Annual Report 2021
+                  Download Annual Report 2023-24
                 </h5>
                 <a
                   href="https://navneet.com/annual-report-23-24.pdf"
@@ -93,9 +92,9 @@ useEffect(() => {
                   animationDelay: inView ? `0.3s` : "0s",
                 }}
               >
-                <p className={styles["blue-card-type"]}>Annual Report 2024</p>
+                <p className={styles["blue-card-type"]}>Annual Report 2020</p>
                 <h5 className={styles["blue-card-title"]}>
-                  Creating Value Through Learning, Adapting & Progress
+                  Our digital capabilities helped increase client relevance, we built business model...
                 </h5>
                 <a
                   href="https://navneet.com/annual-report-23-24.pdf"
@@ -119,8 +118,7 @@ useEffect(() => {
               >
                 <p className={styles["card-type"]}>Financial & Filings</p>
                 <h5 className={styles["card-title"]}>
-                  View the complete financial highlights for the last three
-                  years
+                 Navneet Education Q4 PAT seen up 7.8% YoY to Rs. 51.7 cr: PL Capital
                 </h5>
                 <a
                   href="https://www.moneycontrol.com/news/business/earnings/navneet-education-q4-pat-seen-up-7-8-yoy-to-rs-51-7-cr-pl-capital-12994250.html"
