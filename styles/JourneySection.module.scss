@@ -108,9 +108,10 @@
     }
 
     .journey-section-background {
-      padding: 0; /* ✅ inner spacing inside the card */
+      padding: 10; /* ✅ inner spacing inside the card */
       display: flex;
-      flex-direction: column-reverse;
+      flex-direction: column;
+      // flex-direction: column-reverse;
       gap: 10px; /* reduced gap for mobile */
       .journey-section-left {
         width: 100%;
