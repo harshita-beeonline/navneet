@@ -108,7 +108,7 @@
     }
 
     .journey-section-background {
-      padding: 10; /* ✅ inner spacing inside the card */
+      padding: 0; /* ✅ inner spacing inside the card */
       display: flex;
       flex-direction: column;
       // flex-direction: column-reverse;
@@ -124,7 +124,9 @@
           display: none;
         }
       }
-
+  .journey-image {
+    padding: 12px;
+  }
       .text-primary-title {
         font-weight: 600;
         font-size: 16.67px;
