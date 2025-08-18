@@ -96,8 +96,40 @@
     }
   }
 }
-
-/* ✅ Media queries */
+@media (max-width: 1180px) {
+  .businessStatsSection-container {
+    .businessStatsSection {
+      .title {
+        font-size: 38px;
+        line-height: 51px;
+      }
+      .description {
+        font-size: 14px;
+        line-height: 22px;
+        width: 90%;
+      }
+      .statContainer {
+        gap: 40px; /* space between each stat */
+      }
+      .statBox {
+        margin-top: 60px;
+        .statValue {
+          font-size: 36px;
+        }
+        .statLabel {
+          font-size: 14px;
+          line-height: 20px;
+        }
+        .statImage {
+          height: 31px;
+          width: 26px;
+          font-size: 2rem;
+          display: block;
+        }
+      }
+    }
+  }
+}
 @media (max-width: 1280px) {
   .businessStatsSection-container {
     padding: 60px 40px;
@@ -123,7 +155,6 @@
     }
   }
 }
-
 @media (max-width: 768px) {
   .businessStatsSection-container {
     padding: 40px 20px;
