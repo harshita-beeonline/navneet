@@ -23,8 +23,8 @@ export default  function Page() {
      <TrendingProducts />
      <JourneySection />
      <Investors />
-     <EHSSection />
-     <InternationalBusiness />
+     {/* <EHSSection />
+     <InternationalBusiness /> */}
      <ResponsibilitySection />
      <StoreNearYou />
     </>

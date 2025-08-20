@@ -397,17 +397,27 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding: 20px 50px;
+  padding: 2px 50px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: transparent;
+  // background-color: #fff;
+  // opacity: 0.8;
+  // background-color: rgba(255, 255, 255, 0.5);
+    &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: -1;
+  }
 
   &.scrolled {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-    .nav-menu a {
-      color: #000 !important;
-    }
+    opacity: 1;
+    // .nav-menu a { 
+    //   color: #000 !important;
+    // }
     .menu-toggle svg path {
       fill: #000; // <—— this makes the hamburger icon black
     }
@@ -428,12 +438,16 @@
   }
 
   .nav-menu a {
-    color: #fff;
+    // color: #fff;
+    color: #000;
     text-decoration: none;
     margin-left: 20px;
     font-weight: 300;
     transition: color 0.3s ease;
   }
+      .menu-toggle svg path {
+      fill: #000; // <—— this makes the hamburger icon black
+    }
 }
 
 /* BANNER SLIDER */
@@ -594,7 +608,7 @@
 /* --- RESPONSIVE --- */
 @media (max-width: 1280px) {
   .site-header {
-    padding: 10px 30px;
+    padding: 6px 30px;
     justify-content: space-between;
 
     &.scrolled .menu-toggle {
@@ -637,7 +651,7 @@
     a {
       padding: 15px 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff;
+      color: #fff !important;
     }
   }
 

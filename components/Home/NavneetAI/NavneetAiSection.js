@@ -16,7 +16,14 @@ const NavneetAiSection = () => {
         <div className={styles["navneet-ai-left-content"]}>
           <h2>ELEVATING Learning, ENHANCING TRUST</h2>
           <p>{paratext}</p>
-          <button>Explore Navneet AI</button>
+          <a
+            href="https://navneetedu.ai/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{textDecoration:"none"}}
+          >
+            <button>Explore Navneet AI</button>
+          </a>
         </div>
 
         <div className={styles["navneet-ai-right-content"]}>

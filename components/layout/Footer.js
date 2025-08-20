@@ -41,7 +41,7 @@ const social = [
         />
       </svg>
     ),
-    link: "#instagram.com",
+    link: "https://www.instagram.com/#",
   },
   {
     icon: (
@@ -58,7 +58,7 @@ const social = [
         />
       </svg>
     ),
-    link: "#facebook.com",
+    link: "https://www.facebook.com/Navneet.India/",
   },
   {
     icon: (
@@ -77,7 +77,7 @@ const social = [
         />
       </svg>
     ),
-    link: "#twitter.com",
+    link: "#https://x.com/navneet_edu",
   },
   {
     icon: (
@@ -100,7 +100,7 @@ const social = [
         />
       </svg>
     ),
-    link: "#youtube.com",
+    link: "https://www.youtube.com/@navneetindia?feature=shared",
   },
   {
     icon: (
@@ -121,7 +121,7 @@ const social = [
         />
       </svg>
     ),
-    link: "#linkedIn.com",
+    link: "https://www.linkedin.com/company/navneet-education-ltd-/",
   },
   {
     icon: (
@@ -158,7 +158,7 @@ const social = [
         </defs>
       </svg>
     ),
-    link: "#whatsap.com",
+    link: "/",
   },
 ];
 
@@ -379,7 +379,7 @@ const Footer = () => {
             <div className={styles["social-icons"]}>
               {social.map((icon, index) => (
                 <div className={styles["social-icons-item"]} key={index}>
-                  {icon.icon}
+                 <Link href={icon.link}> {icon.icon}</Link>
                 </div>
               ))}
             </div>

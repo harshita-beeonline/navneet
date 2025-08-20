@@ -242,11 +242,11 @@ import styles from "../../styles/Header.module.scss";
 import logo from "../../public/images/LogoNavneet.png";
 import Banner1Desktop from "../../public/images/Banner1Desktop.jpg";
 import Banner2Desktop from "../../public/images/Banner2Desktop.jpg";
-import Banner3Desktop from "../../public/images/banner3desktop.jpg";
+import Banner3Desktop from "../../public/images/newbannerdesktop3.jpg";
 
 import Banner1Mobile from "../../public/images/banner1mobile.jpg";
 import Banner2Mobile from "../../public/images/Banner2Mobile.jpg";
-import Banner3Mobile from "../../public/images/banner3mobile.jpg";
+import Banner3Mobile from "../../public/images/newbannermobile3.jpg";
 export default function HomePage() {
   const [index, setIndex] = useState(0);
 
@@ -446,11 +446,11 @@ export default function HomePage() {
           >
             <path
               d="M23.5293 1.59953C23.5293 1.09111 23.1171 0.678955 22.6087 0.678955H1.52369C1.01527 0.678955 0.603113 1.09111 0.603113 1.59953C0.603113 2.10795 1.01527 2.52011 1.52369 2.52011H22.6087C23.1171 2.52011 23.5293 2.10795 23.5293 1.59953Z"
-              fill="white"
+              fill="#000"
             />
             <path
               d="M23.5303 8.96403C23.5303 8.45561 23.1181 8.04346 22.6097 8.04346H7.77726C7.26884 8.04346 6.85669 8.45561 6.85669 8.96403C6.85669 9.47246 7.26884 9.88461 7.77726 9.88461H22.6097C23.1181 9.88461 23.5303 9.47246 23.5303 8.96403Z"
-              fill="white"
+              fill="#000"
             />
           </svg>
         </div>

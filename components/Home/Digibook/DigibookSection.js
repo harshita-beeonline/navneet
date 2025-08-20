@@ -47,7 +47,13 @@ const DigibookSection = () => {
             interactive features & digital resources which are designed to make
             learning fun & you SMARTER.
           </p>
+                             <a
+            href="https://smartdigibook.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
           <button>Explore now</button>
+          </a>
         </div>
       </div>
     </div>
