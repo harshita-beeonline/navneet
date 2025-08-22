@@ -8,7 +8,7 @@ import styles from "../../../styles/OurBrands.module.scss";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 const brands = [
   {
-    title: "Navneet ai",
+    title: "NavneetAI",
     desc: "India’s first custom AI-powered education model offering personalized, adaptive, & innovative learning experiences for students",
     img: "/images/brand2.png",
   },
@@ -20,7 +20,7 @@ const brands = [
   {
     title: "Navneet Digibook",
     desc: "Navneet DigiBook is the smart version of your favourite Navneet Books. It is a web based platform/app.",
-    img: "/images/Navneet-Digibook.svg",
+    img: "/images/smartdigibook.png",
   },
   {
     title: "21 MLQ Sets",
@@ -39,7 +39,7 @@ const brands = [
   },
   {
     title: "TOPTECH",
-    desc: "The learn on the go application for students to learn through interactive videos, read and revise using Navneet guides.",
+    desc: "Among India’s top EdTech firms, it rapidly leads in LMS software, offering digital solutions to schools.",
     img: "/images/brand6.png",
   },
   {
@@ -60,8 +60,8 @@ const OurBrands = () => {
       <h4>Our Brands</h4>
       <p>
         Over the years, Navneet Education has been the pioneer in the
-        Publication and Stationery Sector. The other brands of Navneet too have
-        been the highlights and have been trusted all over India.
+        Publication, Stationery & EdTech Sector. The other brands of Navneet too
+        have been the highlights and have been trusted all over India.
       </p>
 
       <div className={styles.swiperWrapperCustom}>

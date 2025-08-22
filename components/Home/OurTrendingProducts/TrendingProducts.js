@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/scrollbar";
 import styles from "../../../styles/TrendingProducts.module.scss"; // ✅ Changed file name for clarity
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Link from "next/link";
 
 const brands = [
   {
@@ -13,72 +14,56 @@ const brands = [
     desc: "INR 214.00",
     img: "/images/trend1.png",
     bgColor: "#EEFAE4",
+    link: "https://www.navneetstore.com/collections/maharashtra-board?usf_sort=bestselling",
   },
   {
     title: "CBSE Board Practice Paper",
     desc: "INR 400.00",
     img: "/images/trend2.png",
     bgColor: "#F7DACC",
+    link: "https://www.navneetstore.com/collections/cbse-board?usf_sort=bestselling&uff_cbwuat_tags=Boards%20Exam%20Preparation%20Book",
   },
   {
     title: "MY STUDY BUDDY - NCERT Digest - CBSE Board",
     desc: "INR 304.00",
     img: "/images/trend3.png",
     bgColor: "#FBF3C4",
+    link:" https://www.navneetstore.com/collections/cbse-board?usf_sort=bestselling&uff_cbwuat_tags=NCERT%20Digest"
   },
   {
     title: "Navneet Books - Gujarat State Board",
     desc: "INR 927.00",
     img: "/images/trend4.png",
     bgColor: "#C4EBE6",
+    link:"https://www.navneetstore.com/pages/gujarat-board"
   },
-  {
+    {
     title: "Navneet Digest - Maharashtra State Board",
     desc: "INR 214.00",
     img: "/images/trend1.png",
     bgColor: "#EEFAE4",
+    link: "https://www.navneetstore.com/collections/maharashtra-board?usf_sort=bestselling",
   },
   {
     title: "CBSE Board Practice Paper",
     desc: "INR 400.00",
     img: "/images/trend2.png",
     bgColor: "#F7DACC",
+    link: "https://www.navneetstore.com/collections/cbse-board?usf_sort=bestselling&uff_cbwuat_tags=Boards%20Exam%20Preparation%20Book",
   },
   {
     title: "MY STUDY BUDDY - NCERT Digest - CBSE Board",
     desc: "INR 304.00",
     img: "/images/trend3.png",
     bgColor: "#FBF3C4",
+    link:" https://www.navneetstore.com/collections/cbse-board?usf_sort=bestselling&uff_cbwuat_tags=NCERT%20Digest"
   },
   {
     title: "Navneet Books - Gujarat State Board",
     desc: "INR 927.00",
     img: "/images/trend4.png",
     bgColor: "#C4EBE6",
-  },
-  {
-    title: "Navneet Digest - Maharashtra State Board",
-    desc: "INR 214.00",
-    img: "/images/trend1.png",
-    bgColor: "#EEFAE4",
-  },
-  {
-    title: "CBSE Board Practice Paper",
-    desc: "INR 400.00",
-    img: "/images/trend2.png",
-    bgColor: "#F7DACC",
-  },
-  {
-    title: "Navneet Digest - Maharashtra State Board",
-    desc: "INR 214.00",
-    img: "/images/trend1.png",
-    bgColor: "#EEFAE4",
-  },
-  {
-    title: "CBSE Board Practice Paper",
-    desc: "INR 400.00",
-    img: "/images/trend2.png",
-    bgColor: "#F7DACC",
+    link:"https://www.navneetstore.com/pages/gujarat-board"
   },
 ];
 
@@ -118,7 +103,7 @@ const TrendingProducts = () => {
           breakpoints={{
             0: { slidesPerView: 1.2 },
             540: { slidesPerView: 1.6 },
-            576: { slidesPerView: 2},
+            576: { slidesPerView: 2 },
             768: { slidesPerView: 2.3 },
             992: { slidesPerView: 3 },
             1280: { slidesPerView: 3.6 },
@@ -127,6 +112,7 @@ const TrendingProducts = () => {
         >
           {brands.map((brand, idx) => (
             <SwiperSlide key={idx}>
+             <Link href={brand.link} style={{textDecoration:"none"}}>
               <div
                 className={styles.brandCard}
                 style={{ backgroundColor: brand.bgColor }}
@@ -138,6 +124,7 @@ const TrendingProducts = () => {
                 <p>{brand.desc}</p>
                 <button>Buy now</button>
               </div>
+             </Link>
             </SwiperSlide>
           ))}
         </Swiper>
