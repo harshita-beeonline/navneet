@@ -3,19 +3,23 @@
   background: linear-gradient(180deg, #b6ffa6 0%, #82ebb5 50%, #3dc6c2 100%);
   width: 100%;
   padding: 30px 40px 20px 40px;
-//   background-image: url("../public/images/zig2.png"),
-//     url("../public/images/cross.png"),
-//     linear-gradient(180deg, #b6ffa6 0%, #82ebb5 50%, #3dc6c2 100%);
-//   background-repeat: no-repeat,no;
-//   background-size: 60px 60px, cover;
-//   background-position: left center;
+  //   background-image: url("../public/images/zig2.png"),
+  //     url("../public/images/cross.png"),
+  //     linear-gradient(180deg, #b6ffa6 0%, #82ebb5 50%, #3dc6c2 100%);
+  //   background-repeat: no-repeat,no;
+  //   background-size: 60px 60px, cover;
+  //   background-position: left center;
   .digi-logo {
     width: 160px;
     height: 66px;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    // img {
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    // }
+    svg{
+        width: 160px;
+    height: 66px;
     }
   }
   .digibook-left-right-content {
@@ -84,63 +88,65 @@
     }
   }
 }
-@media (max-width:1280px) {
-.digibook-section-content {
-  .digibook-left-right-content {
-    .digibook-right-content {
-      .text-with-icon {
-        h2 {
+@media (max-width: 1280px) {
+  .digibook-section-content {
+    .digibook-left-right-content {
+      .digibook-right-content {
+        .text-with-icon {
+          h2 {
+            width: 100%;
+          }
+        }
+        p {
           width: 100%;
         }
       }
-      p {
-        width: 100%;
-      }
     }
   }
 }
-}
-@media (max-width:768px) {
-.digibook-section-content {
-  padding: 20px;
-  .digi-logo {
-    width: 102px;
-    height: 35px;
-  }
-  .digibook-left-right-content {
-    flex-direction: column;
-    gap: 0px;
-    .digibook-left-content {
-      .digibook-image {
-        width: 275px;
-        height:281px;
+@media (max-width: 768px) {
+  .digibook-section-content {
+    padding: 20px;
+    .digi-logo {
+      svg {
+        width: 102px;
+        height: 35px;
       }
     }
-    .digibook-right-content {
-      .text-with-icon {
-        .icon-type-image{
-          display: none;
+    .digibook-left-right-content {
+      flex-direction: column;
+      gap: 0px;
+      .digibook-left-content {
+        .digibook-image {
+          width: 275px;
+          height: 281px;
         }
-        h2 {
-          font-size: 24px;
-          width:100%;
-          margin-top: 20px;
+      }
+      .digibook-right-content {
+        .text-with-icon {
+          .icon-type-image {
+            display: none;
+          }
+          h2 {
+            font-size: 24px;
+            width: 100%;
+            margin-top: 20px;
+            padding-left: 0px;
+          }
+        }
+        p {
+          font-size: 14px;
+          margin-top: 10px;
           padding-left: 0px;
+          width: 100%;
         }
-      }
-      p {
-        font-size: 14px;
-        margin-top: 10px;
-        padding-left: 0px;
-        width: 100%;
-      }
-      button {
-        margin-top: 20px;
-        width: 164px;
-        height: 48px;
-        margin-left: 0px;
+        button {
+          margin-top: 20px;
+          width: 164px;
+          height: 48px;
+          margin-left: 0px;
+        }
       }
     }
   }
-}
 }

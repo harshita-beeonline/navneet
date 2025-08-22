@@ -2,7 +2,7 @@
 import React from "react";
 import styles from "../../../styles/DigibookSection.module.scss";
 import digibookimage from "../../../public/images/digibook2image.png";
-import digilogo from "../../../public/images/newsmartbook.png";
+import digilogo from "../../../public/images/svgsmartbook.svg";
 import texticon from "../../../public/images/texticon.png";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
