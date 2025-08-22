@@ -240,12 +240,14 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/Header.module.scss";
 import logo from "../../public/images/LogoNavneet.png";
+import NewBannerDesktop1 from "../../public/images/newbannerdesktop1.jpg";
 import Banner1Desktop from "../../public/images/Banner1Desktop.jpg";
-import Banner2Desktop from "../../public/images/Banner2Desktop.jpg";
+import Banner2Desktop from "../../public/images/newbannerdesktop2.jpg";
 import Banner3Desktop from "../../public/images/newbannerdesktop3.jpg";
 
+import NewBannerMobile1 from "../../public/images/newbannermobile1.jpg";
 import Banner1Mobile from "../../public/images/banner1mobile.jpg";
-import Banner2Mobile from "../../public/images/Banner2Mobile.jpg";
+import Banner2Mobile from "../../public/images/newbannermobile2.jpg";
 import Banner3Mobile from "../../public/images/newbannermobile3.jpg";
 export default function HomePage() {
   const [index, setIndex] = useState(0);
@@ -366,16 +368,34 @@ export default function HomePage() {
     setIndex(newIndex);
     showSlide(newIndex);
   };
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const slides = getVisibleSlides();
-      const newIndex = (index + 1) % slides.length;
-      setIndex(newIndex);
-      showSlide(newIndex);
-    }, 4000); // change slide every 4 seconds
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     const slides = getVisibleSlides();
+  //     const newIndex = (index + 1) % slides.length;
+  //     setIndex(newIndex);
+  //     showSlide(newIndex);
+  //   }, 4000); // change slide every 4 seconds
 
-    return () => clearInterval(interval);
-  }, [index]);
+  //   return () => clearInterval(interval);
+  // }, [index]);
+useEffect(() => {
+  let timer;
+
+  // Check if current slide is the "special" banner
+  const isSpecialSlide = index === 0; // both desktop & mobile first slide are index 0
+
+  const delay = isSpecialSlide ? 10000 : 4000; // 10s for first, 4s for others
+
+  timer = setTimeout(() => {
+    const slides = getVisibleSlides();
+    const newIndex = (index + 1) % slides.length;
+    setIndex(newIndex);
+    showSlide(newIndex);
+  }, delay);
+
+  return () => clearTimeout(timer);
+}, [index]);
+
   useEffect(() => {
     const header = document.querySelector(`.${styles["site-header"]}`);
     console.log("header =>", header);
@@ -480,8 +500,13 @@ export default function HomePage() {
       </header>
 
       <section className={styles["banner-slider"]}>
-        <div
+            <div
           className={`${styles["slide"]} ${styles["desktop-banner"]} ${styles["active"]}`}
+        >
+          <Image src={NewBannerDesktop1} fill alt="Banner Desktop 1" />
+        </div>
+        <div
+          className={`${styles["slide"]} ${styles["desktop-banner"]} `}
         >
           <Image src={Banner1Desktop} fill alt="Banner Desktop 1" />
         </div>
@@ -491,7 +516,11 @@ export default function HomePage() {
         <div className={`${styles["slide"]} ${styles["desktop-banner"]}`}>
           <Image src={Banner3Desktop} fill alt="Banner Desktop 3" />
         </div>
-
+  <div
+          className={`${styles["slide"]} ${styles["mobile-banner"]} `}
+        >
+          <Image src={NewBannerMobile1} fill alt="Banner Mobile 1" />
+        </div>
         <div
           className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}
         >
