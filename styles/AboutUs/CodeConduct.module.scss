@@ -1,0 +1,137 @@
+.codeConduct {
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px;
+
+  .container {
+    max-width: 1300px;
+    width: 100%;
+    background: #dbdbdb;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+
+  /* Left Section */
+  .left {
+    flex: 1;
+    padding: 24px 20px;
+
+    @media (min-width: 768px) {
+      padding: 40px 40px;
+    }
+
+    .headingWrapper {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    /* Vertical Bar - Desktop Only */
+    .verticalBar {
+      display: none;
+
+      @media (min-width: 1024px) {
+        display: block;
+        width: 6px;
+        height: 150px; // Final height as per Figma
+        background-color: #2f6db2;
+        border-radius: 3px;
+        margin-top: 2px;
+        flex-shrink: 0;
+      }
+    }
+
+    /* Heading */
+    .heading {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 700;
+      color: #2f6db2;
+
+      /* Desktop */
+      @media (min-width: 1024px) {
+        font-size: 35px;
+        line-height: 45px;
+        max-width: 400px;
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: 28px;
+        line-height: 38px;
+        max-width: 350px;
+      }
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        font-size: 23px;
+        line-height: 30px;
+        max-width: 302px;
+      }
+    }
+
+    /* Paragraph */
+    .para {
+      margin-top: 16px;
+      color: #4b5563;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+
+      /* Desktop */
+      @media (min-width: 1024px) {
+        font-size: 15px;
+        line-height: 26px;
+        max-width: 417px;
+      }
+
+      /* Tablet */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: 14px;
+        line-height: 24px;
+        max-width: 380px;
+      }
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        font-size: 13px;
+        line-height: 20px;
+        max-width: 302px;
+      }
+    }
+  }
+
+  /* Right Section */
+  .right {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @media (min-width: 768px) {
+      max-height: 100%;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media (min-width: 768px) {
+        height: auto;
+        max-height: 100%;
+      }
+    }
+  }
+}

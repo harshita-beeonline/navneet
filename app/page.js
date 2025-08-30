@@ -10,11 +10,13 @@ import TrendingProducts from "../components/Home/OurTrendingProducts/TrendingPro
 import NavneetAiSection from "@/components/Home/NavneetAI/NavneetAiSection";
 import DigibookSection from "@/components/Home/Digibook/DigibookSection";
 import NavneetCBSESection from "@/components/Home/NavneetCBSE/NavneetCBSESection";
+import HomeBanner from "@/components/Home/HomeBanner/HomeBanner";
 
 export default  function Page() {
 
   return (
     <>
+    <HomeBanner/>
      <LeaderSection />
      <OurBrands />
      <NavneetAiSection />

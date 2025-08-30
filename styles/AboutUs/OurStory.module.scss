@@ -1,0 +1,251 @@
+:root {
+  /* Colors per Figma */
+  --bg: #2d6aaf;
+  --baseline: rgba(255, 255, 255, 0.35);
+  --white: #ffffff;
+  --accent: #fadb61;
+
+  /* Dimensions that keep the marker center exactly on the line */
+  --outer-pad: clamp(16px, 4vw, 40px);
+  --outer-margin: clamp(16px, 4vw, 80px);
+
+  --timeline-pad: clamp(20px, 5vw, 48px); /* padding-block on the .timeline */
+  --scroller-pad: 28px; /* padding-block on the .scroller */
+
+  --year-row: clamp(70px, 10vw, 100px);
+  --marker-row: 100px;
+  --line-h: 6px;
+
+  --gap-x: clamp(32px, 7vw, 120px);
+}
+
+/* Section wrapper */
+.section {
+  background: var(--bg);
+  padding: var(--outer-pad);
+  margin: var(--outer-margin);
+  border-radius: 12px;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Intro */
+.header {
+  display: grid;
+  grid-template-columns: 6px 1fr;
+  gap: 16px;
+  // padding: clamp(20px, 4vw, 40px);
+  padding: clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px) 0;
+}
+
+.bar {
+  background: var(--white);
+  border-radius: 4px;
+  width: 6px;
+  height: clamp(80px, 14vw, 160px);
+}
+
+.copy .hint {
+  display: inline-block;
+  color: var(--white);
+  font-weight: 700;
+  font-size: clamp(20px, 2.4vw, 28px);
+  margin-bottom: 8px;
+}
+
+.copy .text {
+  margin: 0;
+  color: var(--white);
+  font-weight: 500;
+  line-height: 1.6;
+  font-size: clamp(14px, 1.4vw, 16px);
+  max-width: 70ch;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding-block: var(--timeline-pad);
+}
+
+/* Single baseline line that must cross the center of every marker */
+.baseline {
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  /* CRUCIAL FIX: include scroller's top padding so the line aligns with the marker row center */
+  top: calc(
+    var(--timeline-pad) + /* .timeline padding-top */ var(--scroller-pad) +
+      /* .scroller padding-top */ var(--year-row) + /* full year row height */
+      (var(--marker-row) / 2) - /* center of marker row */ (var(--line-h) / 2)
+      /* center the line thickness */
+  );
+
+  height: var(--line-h);
+  background: var(--baseline);
+  border-radius: 999px;
+  z-index: 0; /* markers sit above this */
+}
+
+/* Horizontal scroller */
+.scroller {
+  position: relative;
+  display: flex;
+  gap: var(--gap-x);
+  padding: var(--scroller-pad) 12px var(--scroller-pad);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  z-index: 1;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Item uses a 3-row grid so marker row never moves/scales */
+.item {
+  min-width: clamp(140px, 18vw, 200px);
+  scroll-snap-align: center;
+
+  display: grid;
+  grid-template-rows: var(--year-row) var(--marker-row) auto;
+  text-align: center;
+}
+
+/* Row 1: year */
+.yearRow {
+  position: relative;
+  display: grid;
+  place-items: end center;
+  // padding-bottom: 6px;
+}
+
+.yearText {
+  color: var(--white);
+  font-weight: 700;
+  font-size: clamp(12px, 1.5vw, 16px);
+  margin: 0;
+}
+
+.yearPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--accent);
+  color: #1f4f86;
+  font-weight: 800;
+  font-size: clamp(12px, 1.5vw, 16px);
+}
+
+/* Thin connector from pill down to the marker center (only on active) */
+.connector {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 100%;
+  width: 2px;
+  height: calc(var(--marker-row) / 2);
+  background: var(--accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+/* Row 2: marker row (marker center must sit on baseline) */
+.markerRow {
+  position: relative;
+  display: grid;
+  place-items: center;
+  height: var(--marker-row);
+}
+
+.marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg); /* hollow dot */
+  border: 3px solid var(--white);
+  z-index: 2; /* above baseline */
+  transition: width 0.2s ease, height 0.2s ease, background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* Row 3: card */
+.cardRow {
+  margin-top: clamp(16px, 2.5vw, 24px);
+}
+
+.card {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+}
+
+.thumb {
+  position: relative;
+  width: clamp(100px, 12vw, 150px);
+  height: clamp(100px, 12vw, 150px);
+  border-radius: 8px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.img {
+  object-fit: contain; /* keeps aspect ratio */
+  object-position: center;
+  background: transparent; /* no background color */
+}
+
+.title {
+  margin: 0;
+  color: var(--white);
+  font-weight: 500;
+  line-height: 1.4;
+  font-size: clamp(12px, 1.5vw, 14px);
+  max-width: 22ch;
+}
+
+/* Active state */
+.item[data-active="true"] {
+  .connector {
+    opacity: 1;
+  }
+}
+
+.item[data-active="true"] .marker {
+  width: 18px;
+  height: 18px;
+  background: var(--accent);
+  border: 4px solid #fadb6133; /* faded yellow border */
+  box-shadow: 0 0 0 6px #fadb6133; /* extra faded ring around */
+}
+
+/* Gradient from bottom → up on the image of the active item */
+.item[data-active="true"] .card::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* cover the image area */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+  border-radius: inherit; /* match the thumb’s rounded corners */
+  pointer-events: none;
+  z-index: 1; /* ensure it sits over the <Image> */
+  bottom: -50px;
+  left: -10px;
+  right: -10px;
+}
+
+.item[data-active="true"] .title {
+  font-weight: 600;
+  z-index: 9;
+}
+/* Small screens */
+@media (max-width: 480px) {
+  .scroller {
+    gap: 28px;
+  }
+}

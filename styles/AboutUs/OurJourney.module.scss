@@ -1,0 +1,209 @@
+:root {
+  --navneet-blue: #2f6db2;
+  --text-dark: #1a1a1a;
+  --muted: #263238;
+  --card-bg: #e8f6ff;
+}
+
+.ourjourney-section {
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: clamp(16px, 4vw, 32px);
+  padding-bottom: clamp(16px, 4vw, 32px);
+  font-family: "Montserrat", sans-serif;
+  background: var(--card-bg);
+  border-radius: 12px;
+  width: 100%;
+
+  /* ✅ Inner layout */
+  .ourjourney-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ✅ Left text section */
+  .ourjourney-section-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1 1 48%;
+
+    > * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .vertical-bar {
+      /* ✅ unified vertical bar */
+      width: 6px;
+      background: var(--navneet-blue);
+      margin-top: 4px;
+      border-radius: 0;
+      height: clamp(96px, 14vw, 160px);
+
+      @media (max-width: 1024px) {
+        height: 140px;
+      }
+      @media (max-width: 768px) {
+        height: 56px;
+        margin-top: 0;
+      }
+      @media (max-width: 480px) {
+        display: none;
+      }
+    }
+
+    .text-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .ourjourney-subheading {
+      font-weight: 600;
+      font-size: 20px;
+      color: var(--navneet-blue);
+      margin-bottom: 10px;
+    }
+
+    .ourjourney-heading {
+      font-weight: 700;
+      font-size: clamp(26px, 4vw, 48px);
+      line-height: clamp(36px, 5vw, 56px);
+      color: var(--text-dark);
+      max-width: 520px;
+      letter-spacing: -0.02em;
+      margin-top: 10px;
+    }
+
+    .accent {
+      color: var(--navneet-blue);
+      display: inline-block;
+    }
+    .accent-dark {
+      color: #0f1720;
+    }
+
+    .ourjourney-para {
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 500;
+      color: var(--muted);
+      max-width: 520px;
+      margin-top: 6px;
+    }
+
+    .ourjourney-button {
+      margin-top: 12px;
+      background: var(--navneet-blue);
+      color: #fff;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 18px rgba(47, 109, 178, 0.12);
+    }
+  }
+
+  /* ✅ Right image section */
+  .imageWrapper {
+    flex: 0 0 auto;
+    width: 745px;
+    aspect-ratio: 745 / 534;
+    max-width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: sepia(0.35) saturate(0.85) contrast(0.95);
+    }
+  }
+
+  /* ✅ Breakpoints */
+  @media (max-width: 1280px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  @media (max-width: 1024px) {
+    padding-left: 40px;
+    padding-right: 40px;
+    .ourjourney-inner {
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .ourjourney-inner {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 18px;
+    }
+
+    .imageWrapper {
+      order: -1;
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .ourjourney-section-content {
+      flex-direction: row;
+      gap: 16px;
+
+      .ourjourney-heading {
+        font-size: 26px;
+        line-height: 34px;
+        max-width: 100%;
+      }
+
+      .ourjourney-para {
+        font-size: 15px;
+        line-height: 24px;
+        max-width: 100%;
+      }
+
+      .ourjourney-button {
+        padding: 10px 20px;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 480px) {
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .imageWrapper {
+      aspect-ratio: 16 / 12;
+    }
+
+    .ourjourney-section-content {
+      .ourjourney-heading {
+        font-size: 22px;
+        line-height: 30px;
+      }
+      .ourjourney-para {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+  }
+}
