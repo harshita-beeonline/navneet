@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useState ,useCallback } from "react";
 import Image from "next/image";
 import styles from "../../../styles/Header.module.scss";
 import NewBannerDesktop1 from "../../../public/images/newbannerdesktop1.jpg";
@@ -25,12 +25,12 @@ const HomeBanner = () => {
   };
 
   // Show slide
-  const showSlide = (i) => {
-    const slides = getVisibleSlides();
-    slides.forEach((slide, idx) => {
-      slide.style.left = (idx - i) * 100 + "%";
-    });
-  };
+const showSlide = useCallback((i) => {
+  const slides = getVisibleSlides();
+  slides.forEach((slide, idx) => {
+    slide.style.left = (idx - i) * 100 + "%";
+  });
+}, []);
 
   // Handle scroll (header transparent → white)
   // useEffect(() => {
@@ -68,7 +68,7 @@ const HomeBanner = () => {
 
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [index]);
+  }, [index,showSlide]);
 
   // STOCK PRICE TOGGLE
   useEffect(() => {
@@ -147,7 +147,7 @@ const HomeBanner = () => {
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [index]);
+  }, [index,showSlide]);
 
   useEffect(() => {
     const header = document.querySelector(`.${styles["site-header"]}`);
