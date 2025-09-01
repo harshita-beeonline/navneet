@@ -32,6 +32,28 @@ html, body {
   --color-gray: #787878;
   --color-very-light-grey: #efebeb;
   --color-medium-light-blue: #79a4d3;
+    --navneet-blue: #2f6db2;
+  --text-dark: #1a1a1a;
+  --page-max: 1200px;
+    --muted: #263238;
+  --card-bg: #e8f6ff;
+    --bg: #2d6aaf;
+  --baseline: rgba(255, 255, 255, 0.35);
+  --white: #ffffff;
+  --accent: #fadb61;
+
+  /* Dimensions that keep the marker center exactly on the line */
+  --outer-pad: clamp(16px, 4vw, 40px);
+  --outer-margin: clamp(16px, 4vw, 80px);
+
+  --timeline-pad: clamp(20px, 5vw, 48px); /* padding-block on the .timeline */
+  --scroller-pad: 28px; /* padding-block on the .scroller */
+
+  --year-row: clamp(70px, 10vw, 100px);
+  --marker-row: 100px;
+  --line-h: 6px;
+
+  --gap-x: clamp(32px, 7vw, 120px);
 }
 @media (min-width: 320px) and (max-width: 435px) {
   * {

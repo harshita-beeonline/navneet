@@ -1,23 +1,23 @@
-:root {
-  /* Colors per Figma */
-  --bg: #2d6aaf;
-  --baseline: rgba(255, 255, 255, 0.35);
-  --white: #ffffff;
-  --accent: #fadb61;
+// :root {
+//   /* Colors per Figma */
+//   --bg: #2d6aaf;
+//   --baseline: rgba(255, 255, 255, 0.35);
+//   --white: #ffffff;
+//   --accent: #fadb61;
 
-  /* Dimensions that keep the marker center exactly on the line */
-  --outer-pad: clamp(16px, 4vw, 40px);
-  --outer-margin: clamp(16px, 4vw, 80px);
+//   /* Dimensions that keep the marker center exactly on the line */
+//   --outer-pad: clamp(16px, 4vw, 40px);
+//   --outer-margin: clamp(16px, 4vw, 80px);
 
-  --timeline-pad: clamp(20px, 5vw, 48px); /* padding-block on the .timeline */
-  --scroller-pad: 28px; /* padding-block on the .scroller */
+//   --timeline-pad: clamp(20px, 5vw, 48px); /* padding-block on the .timeline */
+//   --scroller-pad: 28px; /* padding-block on the .scroller */
 
-  --year-row: clamp(70px, 10vw, 100px);
-  --marker-row: 100px;
-  --line-h: 6px;
+//   --year-row: clamp(70px, 10vw, 100px);
+//   --marker-row: 100px;
+//   --line-h: 6px;
 
-  --gap-x: clamp(32px, 7vw, 120px);
-}
+//   --gap-x: clamp(32px, 7vw, 120px);
+// }
 
 /* Section wrapper */
 .section {
