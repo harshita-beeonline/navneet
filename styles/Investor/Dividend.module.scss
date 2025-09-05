@@ -1,0 +1,104 @@
+.dividend {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 80px 80px; // ✅ Same as Demat desktop padding
+  max-width: 1301px;
+  margin: 0 auto;
+  align-items: flex-start;
+  font-family: "Montserrat", sans-serif;
+
+  .text {
+    h2 {
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 50px;
+      letter-spacing: 0;
+      margin-bottom: 1rem;
+      color: #1e1e20;
+    }
+
+    p {
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 26px;
+      letter-spacing: -0.02em;
+      color: #1e1e20;
+      max-width: 565px;
+    }
+  }
+
+  .tableWrapper {
+    background: #f8f8f8;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+
+      th,
+      td {
+        padding: 0.85rem 1rem;
+        text-align: left;
+        color: #1e1e20;
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      th {
+        background: #f8f8f8;
+        color: #777777;
+        font-weight: 600;
+        font-size: 11px;
+        border-bottom: 1px solid #0000001a;
+        text-transform: uppercase;
+      }
+
+      tr:not(:last-child) td {
+        border-bottom: 1px solid #0000001a;
+      }
+    }
+  }
+
+  /* ✅ Responsive */
+  @media (max-width: 992px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 60px 20px; // ✅ Same as Demat mobile padding
+
+    .text {
+      h2 {
+        font-size: 28px;
+      }
+      p {
+        margin: 0 auto;
+      }
+    }
+
+    .tableWrapper {
+      table {
+        th,
+        td {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .text {
+      h2 {
+        font-size: 22px;
+        line-height: 27.5px;
+        letter-spacing: -0.02em;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 24px;
+      }
+    }
+  }
+}

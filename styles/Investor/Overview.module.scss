@@ -1,0 +1,149 @@
+/* Section */
+.overview {
+  background: #2f6db2;
+  color: #fff;
+  padding: 40px 20px 64px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+.inner {
+  max-width: 1325px;
+  margin: 0 auto;
+}
+
+/* Title & Subtitle */
+.title {
+  font-size: clamp(26px, 3vw, 35px);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: clamp(13px, 1.2vw, 16px);
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 28px;
+}
+
+/* Growth Boxes */
+.growthRow {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+  padding: 0 8px;
+}
+
+.growthBox {
+  flex: 0 0 406px;
+  max-width: 100%;
+  min-height: 257px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 22px 20px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.growthHeading {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.growthBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 auto;
+}
+
+.percentage {
+  font-size: clamp(28px, 3.5vw, 36px);
+  font-weight: 800;
+  color: #FADB61;
+  line-height: 1;
+}
+
+.separator {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 2px;
+}
+
+.growthNote {
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+//   margin-top: auto;
+}
+
+/* Divider */
+.divider {
+  height: 4px;
+  background: #4E83BE;
+  margin: 28px 0;
+}
+
+/* Chart Section */
+.chartSection {
+  display: flex;
+  justify-content: center;
+}
+
+.chartCard {
+  width: 100%;
+  max-width: 1100px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 12px;
+  text-align: left;
+}
+
+.chartTitle {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 700;
+  color: #4b2a72;
+  margin-bottom: 16px;
+}
+
+.chartImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  object-fit: contain;
+}
+
+/* Responsive */
+@media (max-width: 899px) {
+  .growthBox {
+    flex: 1 1 100%;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .chartCard {
+    padding: 14px;
+  }
+
+  .chartTitle {
+    font-size: 14px;
+    margin-bottom: 12px;
+  }
+}

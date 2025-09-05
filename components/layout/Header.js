@@ -114,7 +114,7 @@ export default function HomePage() {
 
           <Link href="/">Home</Link>
           <Link href="/aboutus">Company</Link>
-          <Link href="#">Investor</Link>
+          <Link href="/investor">Investor</Link>
           <Link href="#">Our Businesses</Link>
           <Link href="#">Responsibility</Link>
           <Link href="#">EHS</Link>

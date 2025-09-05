@@ -1,0 +1,116 @@
+.financialsSection {
+  padding: 60px 20px;
+font-family: "Montserrat", sans-serif;
+
+
+  .title {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 50px;
+    margin-bottom: 12px;
+    color: #111;
+  }
+
+  .tagline {
+    text-align: center;
+    font-size: 15px;
+    color: #1e1e20;
+    max-width: 700px;
+    font-weight: 500;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+  }
+
+  .card {
+    border-radius: 10px;
+    padding: 32px;
+    margin: 0 auto;
+    overflow-x: auto;
+    max-width: 1282px;
+    width: 100%;
+  }
+
+  .cardTitle {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #222;
+  }
+
+  .tableWrap {
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+    background: #f8f8f8; // ✅ only table bg
+
+    th {
+      text-align: left;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #777777; // ✅ heading text color
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px;
+      font-size: 14px;
+      color: #1e1e20; // ✅ table data text color
+      border-bottom: 1px solid #eee;
+      text-align: left;
+    }
+
+    // ✅ make highlight override td color
+    td.highlight {
+      color: #0066cc !important;
+      font-weight: 600;
+    }
+  }
+
+  .labelCol {
+    width: 260px;
+    text-align: left !important;
+  }
+
+  .label {
+    font-weight: 500;
+    color: #1e1e20;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    padding: 40px 15px;
+
+    .title {
+      font-size: 24px;
+      line-height: 34px;
+      text-align: left;
+    }
+
+    .tagline {
+      text-align: left;
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
+
+    .card {
+      padding: 0;
+      max-width: 100%;
+    }
+
+    .table {
+      font-size: 12px;
+      min-width: 600px; // keeps horizontal scroll
+    }
+
+    .labelCol {
+      width: 180px;
+    }
+  }
+}

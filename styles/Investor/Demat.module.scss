@@ -1,0 +1,73 @@
+.demat-section {
+  background: #2f6db2;
+  color: #ffffff;
+  padding: 80px 80px; // Desktop padding
+  font-family: "Montserrat", sans-serif;
+
+  .demat-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .demat-title {
+    h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin: 0;
+    }
+  }
+
+  .demat-card {
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    padding: 0 20px;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  .card-heading {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .card-text {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .label {
+    font-weight: 600;
+  }
+
+  /* ========== Responsive ========== */
+  @media (max-width: 992px) {
+    padding: 60px 20px; // Mobile padding
+
+    .demat-container {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    .demat-card {
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    .demat-title {
+      margin-bottom: 20px;
+
+      h2 {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+  }
+}
