@@ -4,6 +4,7 @@ $card-bg: #f6f6f6;
 $primary: #2f6db2;
 $text: #1e1e20;
 $muted: #777777;
+$primary-hover: lighten($primary, 15%);
 
 .awards-section {
   background: $bg;
@@ -116,6 +117,9 @@ $muted: #777777;
     border-radius: 36px;
     border: none;
     cursor: pointer;
+    &:hover {
+      background-color: $primary-hover;
+    }
   }
 }
 
