@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import styles from "../../../styles/AboutUs/Awards.module.scss";
 import Award1 from "../../../public/images/awards/image_1.png";
@@ -5,6 +6,7 @@ import Award2 from "../../../public/images/awards/image_2.png";
 import Award3 from "../../../public/images/awards/image_3.png";
 import Award4 from "../../../public/images/awards/image_4.png";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const awardsData = [
   {
@@ -38,6 +40,11 @@ const awardsData = [
 ];
 
 const Awards = () => {
+
+   const router = useRouter();
+    const handleClick = () => {
+    router.push('/award'); 
+  };
   return (
     <section
       className={styles["awards-section"]}
@@ -84,6 +91,7 @@ const Awards = () => {
           <button
             className={styles["awards-section-button"]}
             aria-label="View more awards"
+             onClick={handleClick}
           >
             View more
           </button>
