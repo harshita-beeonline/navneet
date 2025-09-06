@@ -62,18 +62,24 @@
     }
   }
 
-  /* ✅ Responsive */
+  /* ✅ Tablet */
   @media (max-width: 992px) {
     grid-template-columns: 1fr;
     gap: 2rem;
     padding: 60px 20px; // ✅ Same as Demat mobile padding
 
     .text {
+      text-align: left; /* keep heading + paragraph left */
+      margin: 0;
+
       h2 {
         font-size: 28px;
       }
+
       p {
-        margin: 0 auto;
+        margin: 0; /* 🔑 remove auto-centering */
+        max-width: 100%; /* let it flow full width */
+        text-align: left; /* force left alignment */
       }
     }
 
@@ -81,7 +87,7 @@
       table {
         th,
         td {
-          text-align: center;
+          text-align: left;
         }
       }
     }

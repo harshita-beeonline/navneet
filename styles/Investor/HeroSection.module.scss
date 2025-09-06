@@ -4,7 +4,6 @@
   padding-right: 80px;
   padding-top: clamp(16px, 4vw, 32px);
   padding-bottom: clamp(16px, 4vw, 32px);
-  background: #fff;
   font-family: "Montserrat", sans-serif;
 
   .container {
@@ -48,44 +47,34 @@
     }
   }
 
-  /* ✅ Images row */
+  /* ✅ Images row with GRID */
   .imagesRow {
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* stock card = 1 col, team card = 2 cols */
     gap: 2rem;
 
     @media (max-width: 768px) {
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
+      grid-template-columns: 1fr; /* only 1 col on mobile */
     }
   }
 
   /* ✅ Stock Card */
   .stockCard {
-    width: 406px;
-
-    @media (max-width: 1024px) {
-      width: 100%;
-      max-width: 380px;
-    }
-
-    @media (max-width: 768px) {
-      width: 100%;
-      max-width: 100%; /* ✅ full width on mobile */
-    }
+    display: flex;
+    flex-direction: column;
 
     .cardImage {
+      flex: 1;
       position: relative;
-      width: 100%;
       border-radius: 10px;
       overflow: hidden;
+      height: 100%;
 
       img {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
         display: block;
-        object-fit: cover; /* ensures clean scaling */
       }
 
       .overlay {
@@ -126,20 +115,18 @@
     }
   }
 
-  /* ✅ Team card (hidden on mobile) */
+  /* ✅ Team card */
   .teamCard {
-    flex: 1;
-
     img {
       width: 100%;
       height: 100%;
-      max-height: 504px;
       object-fit: cover;
       border-radius: 10px;
+      display: block;
     }
 
     @media (max-width: 768px) {
-      display: none;
+      display: none; /* hide on mobile */
     }
   }
 
@@ -161,12 +148,7 @@
   }
 
   @media (max-width: 576px) {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  @media (max-width: 480px) {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
