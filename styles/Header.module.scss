@@ -367,3 +367,21 @@
     display: block;
   }
 }
+
+/* HEADER FIX for 1280px–1460px */
+@media (max-width: 1460px) and (min-width: 1280px) {
+  .site-header {
+    padding: 6px 40px; // reduce left/right padding
+    justify-content: space-between;
+
+    .logo-image {
+      width: 110px;   // scale logo down a bit
+      height: auto;
+    }
+
+    .nav-menu a {
+      margin-left: 20px; // less spacing between links
+      font-size: 14px;   // slightly smaller font
+    }
+  }
+}
