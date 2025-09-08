@@ -45,7 +45,7 @@
     font-size: 15px;
     line-height: 100%;
     letter-spacing: 0%;
-    color: #1E1E1E;
+    color: #1e1e1e;
     transition: color 0.3s ease;
   }
   .menu-toggle svg path {
@@ -371,17 +371,25 @@
 /* HEADER FIX for 1280px–1460px */
 @media (max-width: 1460px) and (min-width: 1280px) {
   .site-header {
-    padding: 6px 40px; // reduce left/right padding
-    justify-content: space-between;
+    padding: 6px 20px; // tighter padding
+    display: flex;
+    align-items: center;
+    justify-content: center; // upadted to center
 
     .logo-image {
-      width: 110px;   // scale logo down a bit
+      width: 110px;
       height: auto;
+      margin-right: 30px; // small gap between logo and menu
     }
 
-    .nav-menu a {
-      margin-left: 20px; // less spacing between links
-      font-size: 14px;   // slightly smaller font
+    .nav-menu {
+      display: flex;
+      align-items: center;
+
+      a {
+        margin: 0 12px; // even spacing between links
+        font-size: 15px;
+      }
     }
   }
 }
