@@ -200,6 +200,12 @@
     scroll-snap-align: start;
     min-height: 380px;
   }
+
+  /* ✅ Special fix for Surface Duo (540px) */  
+  @media (max-width: 560px) {
+    flex: 0 0 65%;
+    max-width: 50%;
+  }
 }
 
 /* ---------------- Image ---------------- */
