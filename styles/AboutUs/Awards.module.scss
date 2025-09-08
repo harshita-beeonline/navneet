@@ -50,7 +50,7 @@ $primary-hover: lighten($primary, 15%);
       background: $card-bg;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
       padding: 22px;
       border-radius: 10px;
       min-height: 420px;
@@ -75,7 +75,9 @@ $primary-hover: lighten($primary, 15%);
 
       /* Text Data */
       .award-data {
-        text-align: start;
+        align-self: stretch;
+        text-align: left;
+        padding: 0 16px;
 
         .award-title {
           font-weight: 600;
