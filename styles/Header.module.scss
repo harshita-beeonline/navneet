@@ -368,8 +368,8 @@
   }
 }
 
-/* HEADER FIX for 1280px–1460px */
-@media (max-width: 1460px) and (min-width: 1280px) {
+/* HEADER FIX for 1280px–1460px */  //change header to 1280 to 1281 for small icon bug
+@media (max-width: 1460px) and (min-width: 1281px) {
   .site-header {
     padding: 6px 20px; // tighter padding
     display: flex;

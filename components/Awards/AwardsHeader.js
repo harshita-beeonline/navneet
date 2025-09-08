@@ -1,48 +1,87 @@
 "use client";
-import React, { useState } from "react";
-import { FaBars, FaChevronDown } from "react-icons/fa";
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import vectorBar from "../../public/images/awards/Vector.svg";
+import { FaChevronDown } from "react-icons/fa";
 import { useAwards } from "./AwardsContext";
-import styles from "../../styles/awards.module.scss";
+import styles from "../../styles/Award/AwardPage.module.scss";
 
 export default function AwardsHeader() {
-  const { sortOrder, setSortOrder } = useAwards(); 
+  const { sortOrder, setSortOrder } = useAwards();
   const [open, setOpen] = useState(false);
 
-  const handleSelect = (order) => {
-   
-    if (order !== sortOrder || sortOrder === "initial") {
-      setSortOrder(order);
-    }
-    setOpen(false);
-  };
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (!e.target.closest(`.${styles.sortWrapper}`)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  }, []);
 
-
-  const getSortDisplayText = () => {
-    if (sortOrder === "initial") return "Sort by (Default)"; 
-    return `Sort by (${sortOrder === "asc" ? "Ascending" : "Descending"})`;
-  };
+  const label =
+    sortOrder === "asc"
+      ? "Sort by"
+      : sortOrder === "desc"
+      ? "Sort by"
+      : "Sort by";
 
   return (
     <header className={styles.headerSection}>
-      <div className={styles.headerLeft}>
-        <p className={styles.subHeading}>Lorem Ipsum</p>
+      <div>
+        <p className={styles.subHeading}>Awards</p>
         <h1 className={styles.mainHeading}>Awards & accolades</h1>
         <p className={styles.description}>
-          Our Awards, our pride – The awards section determines the goodwill of Navneet and its products. It shows the year-by-year Navneet’s progress. 
+          Our Awards, our pride – The awards section determines the goodwill of
+          Navneet and its products. It shows the year-by-year Navneet’s
+          progress.
         </p>
       </div>
+
       <div className={styles.sortWrapper}>
-        <div className={styles.sortBy} onClick={() => setOpen((prev) => !prev)}>
-          <FaBars className={styles.sortIcon} />
-          <span className={styles.sortText}> {getSortDisplayText()} </span>
-          <FaChevronDown className={styles.sortArrow} />
-        </div>
+        <button
+          type="button"
+          className={styles.sortBy}
+          onClick={() => setOpen((p) => !p)}
+          aria-expanded={open}
+          aria-haspopup="listbox"
+        >
+          {/* Replace FaBars with Vector icon */}
+          <Image
+            src={vectorBar}
+            alt="Sort Icon"
+            className={styles.sortIcon}
+            width={16}
+            height={16}
+          />
+          <span>{label}</span>
+          <FaChevronDown
+            className={`${styles.sortArrow} ${open ? styles.open : ""}`}
+          />
+        </button>
+
         {open && (
-          <div className={styles.sortDropdown}>
-            <div className={styles.sortOption} onClick={() => handleSelect("asc")}>
+          <div className={styles.sortDropdown} role="listbox">
+            <div
+              className={styles.sortOption}
+              role="option"
+              onClick={() => {
+                setSortOrder("asc");
+                setOpen(false);
+              }}
+            >
               Ascending
             </div>
-            <div className={styles.sortOption} onClick={() => handleSelect("desc")}>
+            <div
+              className={styles.sortOption}
+              role="option"
+              onClick={() => {
+                setSortOrder("desc");
+                setOpen(false);
+              }}
+            >
               Descending
             </div>
           </div>

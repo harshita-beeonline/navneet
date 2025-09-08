@@ -1,13 +1,7 @@
 /* Awards.module.scss */
-$bg: #dcf0fd;
-$card-bg: #f6f6f6;
-$primary: #2f6db2;
-$text: #1e1e20;
-$muted: #777777;
-$primary-hover: lighten($primary, 15%);
 
 .awards-section {
-  background: $bg;
+  background: #dcf0fd;
   padding: clamp(24px, 6vw, 80px) 24px;
   font-family: "Montserrat", sans-serif;
 
@@ -25,7 +19,7 @@ $primary-hover: lighten($primary, 15%);
       font-size: clamp(28px, 3.8vw, 40px);
       font-weight: 700;
       line-height: 1.2;
-      color: $text;
+      color: #1e1e20;
       margin-bottom: 10px;
     }
 
@@ -33,7 +27,7 @@ $primary-hover: lighten($primary, 15%);
       font-size: 15px;
       font-weight: 500;
       line-height: 1.7;
-      color: $text;
+      color: #1e1e20;
       opacity: 0.9;
       margin: 0;
     }
@@ -47,7 +41,7 @@ $primary-hover: lighten($primary, 15%);
     padding-top: 20px;
 
     .award {
-      background: $card-bg;
+      background: #f6f6f6;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
@@ -83,19 +77,19 @@ $primary-hover: lighten($primary, 15%);
           font-weight: 600;
           font-size: 16px;
           line-height: 1.5;
-          color: $text;
+          color: #1e1e20;
           margin-bottom: -10px;
         }
 
         .award-year {
-          color: $primary;
+          color: #2f6db2;
           font-weight: 600;
           font-size: 14px;
           text-decoration: none;
         }
 
         .award-name {
-          color: $muted;
+          color: #777777;
           font-size: 14px;
         }
       }
@@ -110,7 +104,7 @@ $primary-hover: lighten($primary, 15%);
   }
 
   .awards-section-button {
-    background: $primary;
+    background: #2f6db2;
     color: #fff;
     font-size: 16px;
     font-weight: 600;
@@ -120,7 +114,7 @@ $primary-hover: lighten($primary, 15%);
     border: none;
     cursor: pointer;
     &:hover {
-      background-color: $primary-hover;
+      background-color: lighten(#2f6db2, 15%);
     }
   }
 }

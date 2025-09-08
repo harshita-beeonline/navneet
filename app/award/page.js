@@ -1,17 +1,13 @@
 "use client";
-import React from "react";
-import AwardsHeader from "../../components/Awards/AwardsHeader";
-import AwardsGrid from "../../components/Awards/AwardsGrid";
-import { AwardsProvider } from "../../components/Awards/AwardsContext";
-import styles from "../../styles/awards.module.scss";
+import AwardsHeader from "@/components/Awards/AwardsHeader";
+import { AwardsProvider } from "@/components/Awards/AwardsContext";
+import AwardsGrid from "@/components/Awards/AwardsGrid";
 
 export default function AwardsPage() {
   return (
-    <AwardsProvider>
-      <div className={styles.pageWrapper}>
+      <AwardsProvider>
         <AwardsHeader />
         <AwardsGrid />
-      </div>
-    </AwardsProvider>
+      </AwardsProvider>
   );
 }

@@ -1,26 +1,19 @@
 "use client";
-import React, { createContext, useState, useContext } from "react";
+import { createContext, useContext, useState } from "react";
 
-const AwardsContext = createContext();
+const Ctx = createContext(null);
 
 export function AwardsProvider({ children }) {
-  const [sortOrder, setSortOrder] = useState("initial"); 
-
-  const toggleSortOrder = () => {
-
-    setSortOrder((prev) => {
-      if (prev === "initial") return "asc";
-      return prev === "asc" ? "desc" : "asc";
-    });
-  };
-
+  const [sortOrder, setSortOrder] = useState("initial"); // "initial" | "asc" | "desc"
   return (
-    <AwardsContext.Provider value={{ sortOrder, setSortOrder, toggleSortOrder }}>
+    <Ctx.Provider value={{ sortOrder, setSortOrder }}>
       {children}
-    </AwardsContext.Provider>
+    </Ctx.Provider>
   );
 }
 
 export function useAwards() {
-  return useContext(AwardsContext);
+  const ctx = useContext(Ctx);
+  if (!ctx) return { sortOrder: "initial", setSortOrder: () => {} };
+  return ctx;
 }
