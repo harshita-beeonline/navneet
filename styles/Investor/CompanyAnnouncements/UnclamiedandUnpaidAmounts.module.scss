@@ -1,0 +1,268 @@
+/* =========
+   PAGE WRAPPER
+   ========= */
+.section {
+  margin-top: 100px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media (max-width: 1024px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: 0 20px;
+  }
+  @media (max-width: 576px) {
+    padding: 0 15px;
+  }
+}
+
+/* =========
+   BREADCRUMB
+   ========= */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .crumb,
+  .crumbStrong {
+    font-size: 18px;
+    color: #2f6db2;
+  }
+  .crumbStrong {
+    font-weight: 600;
+  }
+  .crumb {
+    font-weight: 400;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .dot {
+      display: none;
+    }
+    .crumb,
+    .crumbStrong {
+      font-size: 16px;
+    }
+  }
+}
+
+/* =========
+   PAGE TITLE
+   ========= */
+.pageTitle {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  color: #1a1a1a;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  @media (max-width: 480px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+/* =========
+   TWO-COLUMN GRID
+   ========= */
+.lists {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========
+   MAIN LISTS (custom dots; keep list-style: none)
+   ========= */
+.list,
+.listSingle {
+  list-style: none; /* keep default bullets OFF */
+  margin: 0;
+  padding: 0;
+}
+
+/* Top-level rows */
+.item {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 16px 0;
+}
+
+/* Clickable header row */
+.itemButton {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+/* For keyboard users */
+.itemButton:focus-visible {
+  outline: 2px solid #2f6db2;
+  outline-offset: 2px;
+}
+
+/* Left: bullet + text */
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Custom bullet (grey dot) */
+.bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #a7a7a7;
+  flex-shrink: 0;
+}
+
+/* Top-level heading text (uppercase, medium) */
+.itemText {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: #1a1a1a;
+  transition: color 0.2s ease;
+}
+
+/* Active = blue heading (matches your screenshot) */
+.active .itemText {
+  color: #2f6db2;
+}
+
+/* Arrow icon on the right */
+.arrow {
+  font-size: 22px;
+  color: #9a9a9a;
+  transition: color 0.2s ease;
+}
+/* Arrow turns blue when open (no rotation because we swap icons) */
+.arrowActive {
+  color: #2f6db2;
+}
+
+/* =========
+   SUB-LIST (animated open/close)
+   ========= */
+.subListWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.subListWrapper.open {
+  max-height: 500px; /* big enough for content; adjust if needed */
+}
+
+.subList {
+  margin: 10px 0 0 20px; /* indent under parent */
+  padding: 0;
+  list-style: none; /* keep native bullets off */
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.subItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Smaller custom bullet for sub-items */
+.bulletSmall {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #a7a7a7;
+  flex-shrink: 0;
+}
+
+/* Children links — your exact style */
+.subText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.02em; /* -2% */
+  color: #1a1a1a;
+  text-decoration: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #2f6db2;
+  }
+}
+
+/* =========
+   BOTTOM BLOCKS
+   ========= */
+.block {
+  margin-top: 20px;
+}
+
+/* Block headings — semibold 20px, not underlined */
+.blockTitle {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #1a1a1a;
+  margin-bottom: 6px;
+}
+
+/* Each bottom-row item (no border, same custom bullet) */
+.itemSingle {
+  padding: 6px 0;
+}
+
+/* Bottom block link text — same as subText style */
+.itemTextSingle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: -0.02em;
+  color: #1a1a1a;
+  text-decoration: underline; /* keep default underline only */
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: #2f6db2;
+  }
+}

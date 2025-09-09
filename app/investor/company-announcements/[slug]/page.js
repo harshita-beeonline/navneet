@@ -18,12 +18,10 @@ export default function AnnouncementPage({ params }) {
           <div className={styles["dot"]}></div>
           <p className={styles["sub-heading"]}>Company Announcements</p>
           <div className={styles["dot"]}></div>
-          <p className={styles["data"]}>Submissions under Regulation 30</p>
+          <p className={styles["data"]}>{data.title}</p>
         </div>
 
-        <div className={styles["data-heading"]}>
-          Submissions under Regulation 30
-        </div>
+        <div className={styles["data-heading"]}>{data.title}</div>
 
         <AnnouncementList items={data.items} />
       </section>
