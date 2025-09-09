@@ -201,8 +201,8 @@
     min-height: 380px;
   }
 
-  /* ✅ Special fix for Surface Duo (540px) */  
-  @media (max-width: 560px) {
+  /* ✅ Special fix for Surface Duo (540px) */
+  @media (width: 540px) {
     flex: 0 0 65%;
     max-width: 50%;
   }
