@@ -186,4 +186,9 @@ export const announcementData = {
     title: "Result of e-Voting and Poll at AGM",
     items: [],
   },
+
+  "buyback-2024": {
+    title: "Corporate Announcement – Buyback 2024",
+    items: [],
+  },
 };
