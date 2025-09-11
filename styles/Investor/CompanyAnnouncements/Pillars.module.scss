@@ -1,0 +1,112 @@
+.pillarsSection {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+/* Top Box */
+.topBox {
+  display: inline-block;
+  border: 2px solid #2f6db2;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+//   margin-bottom: 40px;
+  position: relative;
+}
+
+/* Vertical connector below heading */
+.connector {
+  width: 2px;
+  height: 40px;
+  background: #2f6db2;
+  margin: 0 auto;
+}
+
+/* Pillars grid */
+.pillarsWrapper {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+  position: relative;
+
+  /* Horizontal line connecting pillars */
+  &:before {
+    content: "";
+    position: absolute;
+    top: -20px; /* connects to vertical line */
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #2f6db2;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.pillar {
+  background: #2f6db2;
+  color: #fff;
+  padding: 20px 16px;
+  border-radius: 8px;
+  max-width: 200px;
+  margin: 0 auto;
+  position: relative;
+
+  /* Vertical line from horizontal connector */
+  &:before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 20px;
+    background: #2f6db2;
+  }
+}
+
+.pillar h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.pillar p {
+  font-size: 14px;
+  margin: 0;
+}
+
+/* 📱 Responsive */
+
+/* Tablets (≤1024px) */
+@media (max-width: 1024px) {
+  .pillarsWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobiles (≤768px) */
+@media (max-width: 768px) {
+  .pillarsWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Mobiles (≤480px) */
+@media (max-width: 480px) {
+  .pillarsWrapper {
+    grid-template-columns: 1fr;
+  }
+  .pillarsWrapper:before {
+    display: none; /* hide horizontal line */
+  }
+  .pillar:before {
+    display: none; /* hide vertical connectors */
+  }
+}

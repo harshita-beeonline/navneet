@@ -1,0 +1,101 @@
+.card-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-bottom: 40px; // default bottom padding
+}
+
+.card {
+  max-width: 399px;
+  min-height: 330px;
+  border: 1px solid #2f6db2;
+  border-radius: 10px;
+  padding: 24px;
+  background: #fff;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.highlight {
+  background: #2f6db2;
+  color: #fff;
+  border: none;
+}
+
+.card-heading {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 50px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.card-data {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+/* 📱 Responsive */
+
+/* Medium screens (770px–1200px) → 2 top cards + 1 bottom centered */
+@media (max-width: 1200px) and (min-width: 770px) {
+  .card-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "card1 card2"
+      "card3 card3";
+    padding-bottom: 60px; // extra space for 2+1 layout
+  }
+
+  .card:nth-child(1) {
+    grid-area: card1;
+  }
+  .card:nth-child(2) {
+    grid-area: card2;
+  }
+  .card:nth-child(3) {
+    grid-area: card3;
+    justify-self: center; // keeps third card centered
+    max-width: 399px;
+    width: 100%;
+  }
+}
+
+/* Tablets & small screens (≤768px) → stack vertically */
+@media (max-width: 768px) {
+  .card-section {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3";
+  }
+  .card {
+    max-width: 100%;
+  }
+}
+
+/* Small phones (≤480px) */
+@media (max-width: 480px) {
+  .card {
+    padding: 16px;
+  }
+  .card-heading {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .card-data {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
