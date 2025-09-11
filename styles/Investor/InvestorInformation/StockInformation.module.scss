@@ -1,0 +1,157 @@
+.stockSection {
+  margin-top: 100px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+
+  /* ===== Breadcrumb ===== */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .crumb,
+    .crumbStrong {
+      font-size: 16px;
+      color: #2f6db2;
+      margin: 0;
+    }
+
+    .crumbStrong {
+      font-weight: 600;
+    }
+
+    .crumb {
+      font-weight: 400;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #d9d9d9;
+      margin: 0 4px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+
+      .dot {
+        display: none;
+      }
+
+      .crumb,
+      .crumbStrong {
+        font-size: 14px;
+      }
+    }
+  }
+
+  /* ===== Title ===== */
+  .pageTitle {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    color: #1a1a1a;
+
+    @media (max-width: 1024px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    @media (max-width: 480px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  /* ===== Company Info ===== */
+  .companyInfo {
+    font-size: 18px;
+    color: #1a1a1a;
+    margin: 0;
+
+    span {
+      font-weight: 600;
+      color: #2f6db2;
+    }
+
+    .symbol {
+      font-weight: 700;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 16px;
+    }
+  }
+
+  /* ===== Table ===== */
+  /* ===== Table ===== */
+  .tableWrapper {
+    overflow-x: auto; /* responsive scroll on small screens */
+  }
+
+  .infoTable {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 750px;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #e5e5e5;
+
+    tr {
+      border-bottom: 1px solid #e5e5e5;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      padding: 14px 18px;
+      text-align: left;
+      border-right: 1px solid #e5e5e5;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    .label {
+      color: #555;
+      font-weight: 500;
+    }
+
+    .value {
+      color: #1a1a1a;
+      font-weight: 600;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+
+      td {
+        padding: 12px;
+      }
+    }
+  }
+}

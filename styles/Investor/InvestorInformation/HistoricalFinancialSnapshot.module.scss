@@ -1,0 +1,162 @@
+.hfs-section {
+  margin-top: 100px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+}
+
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  .crumb,
+  .crumbStrong {
+    font-size: 18px;
+    color: #2f6db2;
+  }
+  .crumbStrong {
+    font-weight: 600;
+  }
+  .crumb {
+    font-weight: 400;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    .dot {
+      display: none;
+    }
+    .crumb,
+    .crumbStrong {
+      font-size: 16px;
+    }
+  }
+}
+
+/* Page title */
+.pageTitle {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  color: #1a1a1a;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  @media (max-width: 480px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+/* Card wrapper */
+.card {
+  border-radius: 10px;
+  padding: 0;
+  margin: 0 auto;
+  background: #f8f8f8; /* ✅ full card background */
+  overflow-x: auto;
+  max-width: 1282px;
+  width: 100%;
+  border: 1px solid #eee;
+}
+
+/* Table heading inside card */
+.tableHeader {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 16px 20px;
+  color: #222;
+  background: #f8f8f8; /* ✅ matches card background */
+  text-transform: uppercase;
+}
+
+/* Table */
+.tableWrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 700px;
+  background: #f8f8f8; /* ✅ table also matches card bg */
+}
+
+.table th {
+  text-align: left;
+  padding: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #555;
+  background: #f8f8f8; /* ✅ consistent header bg */
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 12px;
+  font-size: 14px;
+  color: #1e1e20;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  background: #f8f8f8; /* ✅ all rows with same bg */
+}
+
+.labelCol {
+  width: 260px;
+}
+
+.label {
+  font-weight: 500;
+  color: #1e1e20;
+}
+
+.highlight {
+  color: #2f6db2;
+  font-weight: 600;
+}
+
+.value {
+  text-align: left;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .table {
+    font-size: 12px;
+    min-width: 600px; /* keep horizontal scroll */
+  }
+  .labelCol {
+    width: 180px;
+  }
+}
