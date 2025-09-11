@@ -1,0 +1,55 @@
+.commitmentSection {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 50px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.list {
+  list-style-type: disc;
+  padding-left: 20px;
+
+  li {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+    color: #333;
+  }
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  .list li {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heading {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .list li {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
