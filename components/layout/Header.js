@@ -117,10 +117,10 @@ export default function HomePage() {
           <Link href="/investor">Investor</Link>
           <Link href="#">Our Businesses</Link>
           <Link href="#">Responsibility</Link>
-          <Link href="#">EHS</Link>
+          <Link href="https://navneet.com/ehs/">EHS</Link>
           <Link href="#">Media & Updates</Link>
-          <Link href="#">Shop Now</Link>
-          <Link href="#">Navneet AI</Link>
+          <Link href="https://www.navneetstore.com/">Shop Now</Link>
+          <Link href="https://navneetedu.ai/">Navneet AI</Link>
           <Link href="#">Career</Link>
           <Link href="#">Contact</Link>
         </nav>
