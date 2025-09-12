@@ -1,0 +1,186 @@
+/* -------------------- BoardDirectorsCommittee.module.scss -------------------- */
+
+.board-section {
+  margin-top: 100px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  color: #1a1a1a;
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+  @media (max-width: 576px) {
+    padding: clamp(12px, 4vw, 16px) 15px;
+  }
+
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    .crumb,
+    .crumbStrong {
+      font-size: 16px;
+      color: #2f6db2;
+      margin: 0;
+    }
+
+    .crumbStrong {
+      font-weight: 600;
+    }
+
+    .crumb {
+      font-weight: 400;
+    }
+
+    .dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: #d9d9d9;
+      margin: 0 4px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+
+      .dot {
+        display: none;
+      }
+
+      .crumb,
+      .crumbStrong {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .pageTitle {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    color: #1a1a1a;
+    margin: 4px 0 8px 0;
+
+    @media (max-width: 1024px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    @media (max-width: 480px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    font-weight: 600;
+    margin: 18px 0 12px 0;
+
+    @media (max-width: 768px) {
+      font-size: 22px;
+    }
+  }
+
+  .tableWrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  .infoTable {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 1100px;
+    font-size: 16px;
+    background: #fff;
+    border: 1px solid #e9e9e9;
+    margin-bottom: 24px;
+
+    th,
+    td {
+      padding: 14px 18px;
+      text-align: left;
+      border-right: 1px solid #f1f1f1;
+      vertical-align: middle;
+      border-bottom: 1px solid #f3f3f3;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: none;
+    }
+
+    th {
+      background: #fff;
+      font-weight: 700;
+      color: #1a1a1a;
+      text-align: left;
+    }
+
+    tr {
+      border-bottom: 1px solid #f3f3f3;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+
+    td {
+      color: #1a1a1a;
+      font-weight: 400;
+    }
+
+    .srno {
+      width: 80px;
+      text-align: center;
+    }
+
+    .name {
+      width: 50%;
+    }
+
+    .designation {
+      width: 40%;
+    }
+
+    @media (max-width: 576px) {
+      font-size: 14px;
+
+      th,
+      td {
+        padding: 10px 12px;
+      }
+
+      .srno {
+        width: 48px;
+      }
+    }
+  }
+
+  .committeeBlock {
+    margin-bottom: 28px;
+  }
+
+  .tableCaption {
+    caption-side: top;
+    text-align: left;
+    padding-bottom: 8px;
+    font-weight: 700;
+    color: #1a1a1a;
+    font-size: 14px;
+  }
+}
