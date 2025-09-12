@@ -1,4 +1,3 @@
-import Link from "next/link";
 import styles from "../../../styles/Investor/Contact/Contact.module.scss";
 
 export default function Contact() {

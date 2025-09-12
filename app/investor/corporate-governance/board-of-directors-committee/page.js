@@ -65,7 +65,6 @@ function InfoTable({ headers = [], rows = [], caption = "" }) {
   return (
     <div className={styles.tableWrapper}>
       <table className={styles.infoTable}>
-        {/* {caption && <caption className={styles.tableCaption}>{caption}</caption>} */}
         <thead>
           <tr>
             {headers.map((h, idx) => (
