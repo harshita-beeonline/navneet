@@ -1,0 +1,158 @@
+/* ==================== Section Wrapper ==================== */
+.contact-section {
+  margin-top: 100px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+
+  /* ==================== Breadcrumb ==================== */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+
+    p {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1;
+      color: #2f6db2;
+    }
+
+    .crumbStrong {
+      font-weight: 600;
+      color: #2f6db2;
+    }
+
+    .crumb {
+      font-weight: 400;
+      color: #2f6db2;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #d9d9d9;
+    }
+
+    @media (max-width: 768px) {
+      gap: 6px;
+    }
+
+    @media (max-width: 576px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+
+      .dot {
+        display: none;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.2;
+      }
+    }
+  }
+
+  /* ==================== Page Title ==================== */
+  .pageTitle {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 55px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+
+    @media (max-width: 1024px) {
+      font-size: 36px;
+      line-height: 44px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 22px;
+      line-height: 30px;
+    }
+  }
+
+  /* ==================== Contact Sections ==================== */
+  > div {
+    margin-bottom: 40px;
+
+    /* Section Heading */
+    > div {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 55px;
+      margin-bottom: 15px;
+      color: #1a1a1a;
+
+      @media (max-width: 1024px) {
+        font-size: 32px;
+        line-height: 44px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 26px;
+        line-height: 34px;
+      }
+
+      @media (max-width: 480px) {
+        font-size: 22px;
+        line-height: 30px;
+      }
+    }
+
+    /* Section Content */
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+      color: #777777;
+
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+
+    a {
+      color: #2f6db2;
+      text-decoration: underline;
+
+      &:hover {
+        color: #1a4c85;
+      }
+    }
+  }
+}
