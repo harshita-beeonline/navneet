@@ -67,6 +67,7 @@ export default function AwardsHeader() {
             <div
               className={styles.sortOption}
               role="option"
+              aria-selected={sortOrder === "asc"}
               onClick={() => {
                 setSortOrder("asc");
                 setOpen(false);
@@ -77,6 +78,7 @@ export default function AwardsHeader() {
             <div
               className={styles.sortOption}
               role="option"
+              aria-selected={sortOrder === "desc"}
               onClick={() => {
                 setSortOrder("desc");
                 setOpen(false);

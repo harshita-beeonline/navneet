@@ -7,7 +7,7 @@ export default function Contact() {
       <div className={styles["breadcrumb"]}>
         <p className={styles["crumbStrong"]}>Investor</p>
         <span className={styles["dot"]}></span>
-        <p className={styles["crumb"]}>Investor's Contact</p>
+        <p className={styles["crumb"]}>Investor&apos;s Contact</p>
         <span className={styles["dot"]}></span>
         <p className={styles["crumbStrong"]}>Contact</p>
       </div>
