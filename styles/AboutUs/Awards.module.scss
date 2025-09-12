@@ -114,7 +114,7 @@
     border: none;
     cursor: pointer;
     &:hover {
-      background-color: lighten(#2f6db2, 15%);
+      background-color: color.adjust(#2f6db2, $lightness: 15%);
     }
   }
 }
