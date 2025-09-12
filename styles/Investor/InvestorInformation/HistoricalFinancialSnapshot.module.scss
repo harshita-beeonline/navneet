@@ -1,10 +1,11 @@
+/* ==================== Section Wrapper ==================== */
 .hfs-section {
   margin-top: 100px;
   padding: clamp(16px, 4vw, 32px) 80px;
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px; /* tighter than 32px for better breadcrumb–title balance */
 
   @media (max-width: 1024px) {
     padding: clamp(16px, 4vw, 32px) 40px;
@@ -18,16 +19,21 @@
   }
 }
 
-/* Breadcrumb */
+/* ==================== Breadcrumb ==================== */
 .breadcrumb {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
 
+  p {
+    margin: 0; /* removes default p spacing */
+  }
+
   .crumb,
   .crumbStrong {
     font-size: 18px;
+    line-height: 1;
     color: #2f6db2;
   }
   .crumbStrong {
@@ -42,23 +48,28 @@
     height: 8px;
     border-radius: 50%;
     background: #d9d9d9;
+    flex-shrink: 0;
   }
 
   @media (max-width: 576px) {
     flex-direction: column;
     align-items: flex-start;
+    gap: 2px;
+
     .dot {
       display: none;
     }
     .crumb,
     .crumbStrong {
       font-size: 16px;
+      line-height: 1.2;
     }
   }
 }
 
-/* Page title */
+/* ==================== Page Title ==================== */
 .pageTitle {
+  margin: 0; /* remove default h1 margin */
   font-weight: 700;
   font-size: 45px;
   line-height: 55px;

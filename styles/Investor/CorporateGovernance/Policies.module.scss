@@ -5,24 +5,21 @@
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  gap: 20px;
+  color: #1a1a1a;
 
   @media (max-width: 1280px) {
     padding: clamp(16px, 4vw, 32px) 60px;
   }
-
   @media (max-width: 1024px) {
     padding: clamp(16px, 4vw, 32px) 40px;
   }
-
   @media (max-width: 768px) {
     margin-top: 60px;
     padding: clamp(16px, 4vw, 32px) 20px;
   }
-
   @media (max-width: 576px) {
-    padding: clamp(16px, 4vw, 32px) 15px;
+    padding: clamp(12px, 4vw, 16px) 15px;
   }
 
   /* ==================== Breadcrumb ==================== */
@@ -31,9 +28,9 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-    margin-bottom: 20px;
 
-    p {
+    .crumb,
+    .crumbStrong {
       margin: 0;
       font-size: 18px;
       line-height: 1;
@@ -42,12 +39,10 @@
 
     .crumbStrong {
       font-weight: 600;
-      color: #2f6db2;
     }
 
     .crumb {
       font-weight: 400;
-      color: #2f6db2;
     }
 
     .dot {
@@ -55,6 +50,7 @@
       height: 8px;
       border-radius: 50%;
       background: #d9d9d9;
+      flex-shrink: 0;
     }
 
     @media (max-width: 768px) {
@@ -70,7 +66,8 @@
         display: none;
       }
 
-      p {
+      .crumb,
+      .crumbStrong {
         font-size: 16px;
         line-height: 1.2;
       }
@@ -82,19 +79,17 @@
     font-weight: 700;
     font-size: 45px;
     line-height: 55px;
-    margin-bottom: 30px;
     color: #1a1a1a;
+    margin: 0 0 30px 0;
 
     @media (max-width: 1024px) {
       font-size: 36px;
       line-height: 44px;
     }
-
     @media (max-width: 768px) {
       font-size: 28px;
       line-height: 36px;
     }
-
     @media (max-width: 480px) {
       font-size: 22px;
       line-height: 30px;

@@ -1,24 +1,31 @@
-// others section
+/* ==================== Section Wrapper ==================== */
 .others-section {
   margin-top: 100px;
   padding: clamp(16px, 4vw, 32px) 80px;
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 20px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
 
   @media (max-width: 1024px) {
-    padding: 0 40px;
+    padding: clamp(16px, 4vw, 32px) 40px;
   }
+
   @media (max-width: 768px) {
     margin-top: 60px;
-    padding: 0 20px;
+    padding: clamp(16px, 4vw, 32px) 20px;
   }
+
   @media (max-width: 576px) {
-    padding: 0 15px;
+    padding: clamp(16px, 4vw, 32px) 15px;
   }
 }
-// breadcrum
+
+/* ==================== Breadcrumb ==================== */
 .breadcrumb {
   display: flex;
   align-items: center;
@@ -27,12 +34,16 @@
 
   .crumb,
   .crumbStrong {
+    margin: 0;
     font-size: 18px;
+    line-height: 1;
     color: #2f6db2;
   }
+
   .crumbStrong {
     font-weight: 600;
   }
+
   .crumb {
     font-weight: 400;
   }
@@ -44,21 +55,30 @@
     background: #d9d9d9;
   }
 
+  @media (max-width: 768px) {
+    gap: 6px;
+  }
+
   @media (max-width: 576px) {
     flex-direction: column;
     align-items: flex-start;
+    gap: 2px;
+
     .dot {
       display: none;
     }
+
     .crumb,
     .crumbStrong {
       font-size: 16px;
+      line-height: 1.2;
     }
   }
 }
 
-// page title
+/* ==================== Section Title ==================== */
 .pageTitle {
+  margin: 0;
   font-weight: 700;
   font-size: 45px;
   line-height: 55px;
@@ -68,10 +88,12 @@
     font-size: 36px;
     line-height: 44px;
   }
+
   @media (max-width: 768px) {
     font-size: 28px;
     line-height: 36px;
   }
+
   @media (max-width: 480px) {
     font-size: 22px;
     line-height: 30px;
