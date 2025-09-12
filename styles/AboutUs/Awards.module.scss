@@ -113,9 +113,9 @@
     border-radius: 36px;
     border: none;
     cursor: pointer;
-    &:hover {
-      background-color: color.adjust(#2f6db2, $lightness: 15%);
-    }
+    // &:hover {
+    //   background-color: color.adjust(#2f6db2, $lightness: 15%);
+    // }
   }
 }
 
