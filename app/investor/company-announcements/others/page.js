@@ -2,6 +2,7 @@ import CardSection from "@/components/Investor/CompanyAnnouncement/Others/CardSe
 import styles from "../../../../styles/Investor/CompanyAnnouncements/Others.module.scss";
 import Pillars from "@/components/Investor/CompanyAnnouncement/Others/Pillars/Pillars";
 import Commitment from "@/components/Investor/CompanyAnnouncement/Others/Commitment/Commitment";
+import Content from "@/components/Investor/CompanyAnnouncement/Others/Content/Content";
 
 export default function Others() {
   return (
@@ -19,6 +20,7 @@ export default function Others() {
       <h1 className={styles["pageTitle"]}>EHS - Environment Health Safety</h1>
 
       <CardSection/>
+      <Content/>
       <Pillars/>
       <Commitment/>
     </section>

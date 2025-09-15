@@ -1,0 +1,61 @@
+/* ==================== Section Wrapper ==================== */
+.content-section {
+//   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ==================== Policy Grid ==================== */
+.policy-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  .policy-img {
+    width: 100%;
+    height: 100%; /* keep original aspect ratio */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* stack on mobile */
+  }
+}
+
+/* ==================== Certificates ==================== */
+.certificates {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+
+  .certificate-img {
+    width: auto;
+    height: 600px; /* fixed height for desktop */
+    flex-shrink: 0;
+  }
+
+  /* Scrollable on smaller screens */
+  @media (max-width: 1200px) {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    .certificate-img {
+      height: 500px; /* scale down */
+      scroll-snap-align: start;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .certificate-img {
+      height: 400px; /* smaller but full readable */
+    }
+  }
+
+  @media (max-width: 500px) {
+    .certificate-img {
+      height: 320px;
+    }
+  }
+}
