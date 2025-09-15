@@ -2114,11 +2114,61 @@ export const announcementData = {
 
   "result-of-evoting-and-poll": {
     title: "Result of e-Voting and Poll at AGM",
-    items: [],
+    items: [
+      {
+        text: "Regulation – 44(3) Voting Result At AGM Dated 29th September, 2021",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Regulation%20-%2044%283%29%20Voting%20Result%20At%20AGM%20Dated%2029th%20September%2C%202021.pdf",
+      },
+      {
+        text: "Regulation – 44(3) Voting Result At AGM Dated 28th September, 2020",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Regulation-%2044(3)-Voting-Result%20-At%20AGM-Dated-28thSeptember,%202020.pdf",
+      },
+      {
+        text: "Regulation- 44(3) Voting Results at AGM Dated 24th July,2019",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Reg_44(3)_240719.pdf",
+      },
+      {
+        text: "Regulation -44(3) Voting results at agm dated 24th July,2018",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/BSE_44(3)_32agm_240718.pdf",
+      },
+      {
+        text: "Clause 35A – Voting results at agm dated 23RD August,2016",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Voting%20Result23082016.pdf",
+      },
+      {
+        text: "Clause 35A – Voting results at agm dated 28TH September,2015",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Clause%20-35%20A%20VOTING%20RESULTS%20AGM%20DATED%2028TH%20SEPTEMBER,2015.pdf",
+      },
+      {
+        text: "Clause 35A – Voting results at agm dated 29th September,2014",
+        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Clause-35-A-AGM-dated-29th-September-2014.pdf",
+      },
+    ],
   },
 
   "buyback-2024": {
     title: "Corporate Announcement – Buyback 2024",
-    items: [],
+    items: [
+      {
+        text: "Public Announcement for the Buyback of Equity Shares",
+        link: "https://navneet.com/wp-content/uploads/2024/08/Investor-corporate-announcement-buyback-2024.pdf",
+      },
+      {
+        text: "NAVNEET EDUCATION LIMITED – LOF",
+        link: "https://navneet.com/wp-content/uploads/2024/08/NAVNEET-EDUCATION-LIMITED-LOF.pdf",
+      },
+      {
+        text: "Navneet LOF – Tender Form – Physical Shares",
+        link: "https://navneet.com/wp-content/uploads/2024/08/Navneet-LOF-Tender-Form-Physical-Shares.pdf",
+      },
+      {
+        text: "Navneet LOF – Tender Form – Demat Shares",
+        link: "https://navneet.com/wp-content/uploads/2024/08/Navneet-LOF-Tender-Form-Demat-Shares.pdf",
+      },
+      {
+        text: "Navneet LOF – Tender Form – Physical Shares",
+        link: "https://navneet.com/wp-content/uploads/2024/08/Navneet-LOF-Form-SH-4.pdf",
+      },
+    ],
   },
 };
