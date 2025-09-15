@@ -1,0 +1,153 @@
+/* ==================== Section Wrapper ==================== */
+.investor-section {
+  margin-top: 100px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 60px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+}
+
+/* ==================== Breadcrumb ==================== */
+.heading-data {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+
+  p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1;
+    color: #2f6db2;
+  }
+
+  .heading,
+  .data {
+    font-weight: 600;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #d9d9d9;
+  }
+
+  @media (max-width: 768px) {
+    gap: 6px;
+  }
+
+  @media (max-width: 576px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+
+    .dot {
+      display: none;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.2;
+    }
+  }
+}
+
+/* ==================== Section Title ==================== */
+.data-heading {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  color: #1a1a1a;
+
+  @media (max-width: 1024px) {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+/* ==================== Table Wrapper (Existing Styling) ==================== */
+.tableWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-left: 2rem;
+
+  @media (max-width: 1024px) {
+    margin-left: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+}
+
+.table {
+  width: 1280px;
+  min-width: 600px;
+  border-collapse: collapse;
+  background: #ffffff;
+
+  td {
+    border: 1px solid #edededde;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    font-size: 14px;
+    color: #1e1e20;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .blackText {
+    color: #1e1e20;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  a {
+    color: #0606ff;
+    font-weight: 700;
+    text-decoration: solid underline;
+
+    &:hover {
+      color: #1a4d80;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+}
