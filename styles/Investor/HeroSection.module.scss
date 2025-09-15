@@ -52,6 +52,7 @@
     display: grid;
     grid-template-columns: 1fr 2fr; /* stock card = 1 col, team card = 2 cols */
     gap: 2rem;
+    align-items: stretch;
 
     @media (max-width: 768px) {
       grid-template-columns: 1fr; /* only 1 col on mobile */
@@ -60,6 +61,8 @@
 
   /* ✅ Stock Card */
   .stockCard {
+    height: 420px; /* set the same fixed height for both */
+    max-height: 420px;
     display: flex;
     flex-direction: column;
 
@@ -73,8 +76,7 @@
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-        display: block;
+        object-fit: cover; /* keeps clarity */
       }
 
       .overlay {
@@ -117,12 +119,13 @@
 
   /* ✅ Team card */
   .teamCard {
+    height: 420px; /* set the same fixed height for both */
+    max-height: 420px;
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: cover; /* keeps clarity */
       border-radius: 10px;
-      display: block;
     }
 
     @media (max-width: 768px) {
