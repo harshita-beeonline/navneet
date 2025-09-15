@@ -2,7 +2,7 @@
 import React from "react";
 
 // import Header from "@/components/layout/Header";
-import "../app/globals.css"
+import "../app/globals.css";
 // import Footer from "@/components/layout/Footer";
 import ReduxProvider from "@/components/redux/redux-provider";
 import store from "@/redux/store";
@@ -18,14 +18,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         {" "}
-      <ReduxProvider>
+        <ReduxProvider>
           <Header />
-         
+
           {children}
-       
+
           <Footer />
-            </ReduxProvider>
-       
+        </ReduxProvider>
       </body>
     </html>
   );
