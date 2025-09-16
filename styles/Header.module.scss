@@ -48,11 +48,25 @@
     color: #1e1e1e;
     transition: color 0.3s ease;
   }
+  .dropdownParent {
+    position: relative;
+    display: inline-block;
+  }
+  .dropdown-open {
+    display: none;
+    position: absolute;
+    top: 100%; // below parent
+    left: 0;
+    z-index: 2000;
+    &.show {
+      display: flex; // or block
+    }
+  }
+
   .menu-toggle svg path {
     fill: #000; // <—— this makes the hamburger icon black
   }
 }
-
 /* BANNER SLIDER */
 .banner-slider {
   position: relative;
@@ -176,7 +190,6 @@
     }
   }
 }
-
 /* Hamburger Menu */
 .menu-toggle {
   display: none;
@@ -184,7 +197,6 @@
   cursor: pointer;
   color: #fff;
 }
-
 .close-menu {
   display: none;
   font-size: 28px;
@@ -194,7 +206,6 @@
   top: 15px;
   right: 15px;
 }
-
 /* Stock boxes */
 .desktop-only {
   display: block;
@@ -202,12 +213,10 @@
 .mobile-only {
   display: none;
 }
-
 .extra {
   height: 100vh;
   background-color: #000;
 }
-
 /* --- RESPONSIVE --- */
 @media (max-width: 1280px) {
   .site-header {
@@ -368,7 +377,7 @@
   }
 }
 
-/* HEADER FIX for 1280px–1460px */  //change header to 1280 to 1281 for small icon bug
+/* HEADER FIX for 1280px–1460px */ //change header to 1280 to 1281 for small icon bug
 @media (max-width: 1460px) and (min-width: 1281px) {
   .site-header {
     padding: 6px 20px; // tighter padding

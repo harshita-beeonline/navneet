@@ -1,19 +1,10 @@
 "use client";
-
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/Header.module.scss";
 import logo from "../../public/images/LogoNavneet.png";
 import Link from "next/link";
-// import NewBannerDesktop1 from "../../public/images/newbannerdesktop1.jpg";
-// import Banner1Desktop from "../../public/images/Banner1Desktop.jpg";
-// import Banner2Desktop from "../../public/images/newbannerdesktop2.jpg";
-// import Banner3Desktop from "../../public/images/newbannerdesktop3.jpg";
-
-// import NewBannerMobile1 from "../../public/images/newbannermobile1.jpg";
-// import Banner1Mobile from "../../public/images/banner1mobile.jpg";
-// import Banner2Mobile from "../../public/images/newbannermobile2.jpg";
-// import Banner3Mobile from "../../public/images/newbannermobile3.jpg";
+import HeaderDropdown from "./HeaderDropdown";
 export default function HomePage() {
   const [index, setIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
@@ -72,6 +63,7 @@ export default function HomePage() {
       closeMenu.removeEventListener("click", close);
     };
   }, []);
+  const [openInvestor, setOpenInvestor] = useState(false);
   return (
     <>
       <header
@@ -82,7 +74,6 @@ export default function HomePage() {
         <div className={styles["logo-image"]}>
           <Image src={logo} alt="" />
         </div>
-
         <div className={styles["menu-toggle"]} id="menu-toggle">
           <svg
             width="24"
@@ -101,7 +92,6 @@ export default function HomePage() {
             />
           </svg>
         </div>
-
         <nav
           className={`${styles["nav-menu"]} ${
             isMenuOpen ? styles["active"] : ""
@@ -111,10 +101,25 @@ export default function HomePage() {
           <div className={styles["close-menu"]} id="close-menu">
             &times;
           </div>
-
           <Link href="/">Home</Link>
           <Link href="/aboutus">Company</Link>
-          <Link href="/investor">Investor</Link>
+          <div
+            className={styles.dropdownParent}
+            onMouseEnter={() => setOpenInvestor(true)}
+            onMouseLeave={() => setOpenInvestor(false)}
+          >
+            <Link href="/investor" className={styles.dropdownToggle}>
+              Investors
+            </Link>
+            <div
+              className={`${styles["dropdown-open"]} ${
+                openInvestor ? styles.show : ""
+              }`}
+            >
+              <HeaderDropdown />
+            </div>
+          </div>
+
           <Link href="#">Our Businesses</Link>
           <Link href="#">Responsibility</Link>
           <Link href="https://navneet.com/ehs/">EHS</Link>
