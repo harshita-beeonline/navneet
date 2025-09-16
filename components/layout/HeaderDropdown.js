@@ -25,7 +25,6 @@ const HeaderDropdown = () => {
           label: "Earnings Call Transcripts",
           href: "/investor/financials/transcripts-of-earnings",
         },
-        { label: "Investors Contact", href: "#" },
       ],
     },
     {
@@ -51,7 +50,7 @@ const HeaderDropdown = () => {
           label: "Result of e-Voting and Polling at AGM ",
           href: "/investor/company-announcements/result-of-evoting-and-poll",
         },
-        { label: "EGM Details", href: "/" },
+        { label: "EGM Details", href: "/investor/company-announcements/egm-details" },
         {
           label: "Unclaimed and Unpaid Amounts",
           href: "/investor/company-announcements/unclaimed-and-unpaid-amounts",

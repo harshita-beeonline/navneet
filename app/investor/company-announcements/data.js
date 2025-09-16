@@ -2112,6 +2112,11 @@ export const announcementData = {
     ],
   },
 
+  "egm-details": {
+    title: "EGM Details",
+    items: [],
+  },
+
   "result-of-evoting-and-poll": {
     title: "Result of e-Voting and Poll at AGM",
     items: [

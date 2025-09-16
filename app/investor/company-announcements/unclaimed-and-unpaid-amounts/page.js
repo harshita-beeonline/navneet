@@ -222,7 +222,7 @@ export default function UnclamiedandUnpaidAmounts() {
         <span className={styles["dot"]} />
         <span className={styles["crumb"]}>Company Announcements</span>
         <span className={styles["dot"]} />
-        <span className={styles["crumbStrong"]}>EGM Details</span>
+        <span className={styles["crumbStrong"]}>Unclaimed and Unpaid Amounts</span>
       </nav>
 
       {/* Page heading */}
