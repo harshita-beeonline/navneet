@@ -4,10 +4,13 @@ import Image from "next/image";
 import styles from "../../styles/Header.module.scss";
 import logo from "../../public/images/LogoNavneet.png";
 import Link from "next/link";
-import HeaderDropdown from "./HeaderDropdown";
+import BusinessDropdown from "./BusinessDropdown";
+import InvestorDropdown from "./InvestorDropdown";
+
 export default function HomePage() {
   const [index, setIndex] = useState(0);
   const [scrolled, setScrolled] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -15,6 +18,7 @@ export default function HomePage() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
   // MOBILE MENU
   useEffect(() => {
     const menuToggle = document.getElementById("menu-toggle");
@@ -32,6 +36,7 @@ export default function HomePage() {
       closeMenu.removeEventListener("click", close);
     };
   }, []);
+
   useEffect(() => {
     const header = document.querySelector(`.${styles["site-header"]}`);
     console.log("header =>", header);
@@ -47,7 +52,9 @@ export default function HomePage() {
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const menuToggle = document.getElementById("menu-toggle");
     const closeMenu = document.getElementById("close-menu");
@@ -63,7 +70,13 @@ export default function HomePage() {
       closeMenu.removeEventListener("click", close);
     };
   }, []);
-  const [openInvestor, setOpenInvestor] = useState(false);
+
+  // for header states
+  // const [openInvestor, setOpenInvestor] = useState(false);
+  // const [openBusiness, setOpenBusiness] = useState(false);
+
+  const [openDropdown, setOpenDropdown] = useState(null);
+
   return (
     <>
       <header
@@ -103,24 +116,41 @@ export default function HomePage() {
           </div>
           <Link href="/">Home</Link>
           <Link href="/aboutus">Company</Link>
+
           <div
             className={styles.dropdownParent}
-            onMouseEnter={() => setOpenInvestor(true)}
-            onMouseLeave={() => setOpenInvestor(false)}
+            onMouseEnter={() => setOpenDropdown("investor")}
+            onMouseLeave={() => setOpenDropdown(null)}
           >
             <Link href="/investor" className={styles.dropdownToggle}>
               Investors
             </Link>
             <div
               className={`${styles["dropdown-open"]} ${
-                openInvestor ? styles.show : ""
+                openDropdown === "investor" ? styles.show : ""
               }`}
             >
-              <HeaderDropdown />
+              <InvestorDropdown />
             </div>
           </div>
 
-          <Link href="#">Our Businesses</Link>
+          <div
+            className={styles.dropdownParent}
+            onMouseEnter={() => setOpenDropdown("business")}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
+            <Link href="/our-business" className={styles.dropdownToggle}>
+              Our Businesses
+            </Link>
+            <div
+              className={`${styles["dropdown-open"]} ${
+                openDropdown === "business" ? styles.show : ""
+              }`}
+            >
+              <BusinessDropdown />
+            </div>
+          </div>
+
           <Link href="#">Responsibility</Link>
           <Link href="https://navneet.com/ehs/">EHS</Link>
           <Link href="#">Media & Updates</Link>
