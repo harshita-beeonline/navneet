@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import { announcementData } from "../data";
 import styles from "../../../../styles/Investor/CompanyAnnouncements/AnnouncementSection.module.scss";
-import AnnouncementList from "@/components/Investor/CompanyAnnouncement/AnnouncementList";
+import AnnouncementList from "@/components/Investor/CompanyAnnouncement/AnnouncementList/AnnouncementList";
 
 export default function AnnouncementPage({ params }) {
   const data = announcementData[params.slug];
