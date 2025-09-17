@@ -76,7 +76,7 @@ export default function TopScorer() {
           principals and school owners. Assignments in the form of videos,
           documents, essays or worksheets can be offered to students with the
           TopScorer application. Teachers can assign them anytime and anywhere
-          from the app and use those assignments to measure their students'
+          from the app and use those assignments to measure their students
           performance.
         </p>
       </section>
@@ -85,7 +85,7 @@ export default function TopScorer() {
       <section className={styles.featureStrip}>
         <div className={styles.featureWrap}>
           <h3 className={styles.featureHeading}>
-            It’s a treat for teachers and school admins with
+            Its a treat for teachers and school admins with
           </h3>
 
           <div className={styles.featureGrid}>
