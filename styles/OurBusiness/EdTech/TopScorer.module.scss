@@ -1,0 +1,348 @@
+/* File: TopScorer.module.scss */
+$brand-blue: #1776c8;
+$text-dark: #233447;
+$muted-blue: #e6f3ff;
+$bg-light: #f7fbff;
+$panel-shadow: rgba(17, 24, 39, 0.06);
+
+/* Base container */
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #fff;
+  color: $text-dark;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* HERO */
+.hero {
+  width: 100%;
+  position: relative;
+  margin-top: 48px;
+  padding: clamp(12px, 4vw, 32px) 80px;
+
+  .desktopHero {
+    display: block;
+    position: relative;
+    height: clamp(360px, 33vw, 520px);
+  }
+
+  .heroFill {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .heroImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .mobileHero {
+    display: none;
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(12px, 4vw, 28px) 40px;
+    .desktopHero {
+      height: clamp(300px, 38vw, 420px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: clamp(10px, 4vw, 20px);
+    margin-top: 20px;
+    .desktopHero {
+      display: none;
+    }
+    .mobileHero {
+      display: block;
+    }
+  }
+}
+
+/* LOGO */
+.logoWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+/* INTRO */
+.intro {
+  margin: 20px auto 0;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  text-align: center;
+
+  @media (max-width: 1024px) {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (max-width: 768px) {
+    padding: clamp(12px, 4vw, 20px);
+  }
+}
+
+.description {
+  margin: 0 auto;
+  font-size: clamp(14px, 1.6vw, 18px);
+  line-height: clamp(20px, 2.2vw, 28px);
+  color: #666666;
+  text-align: left;
+}
+
+/* ------------------------ FEATURE STRIP ------------------------ */
+/* light block with white cards and dot bullets */
+.featureStrip {
+  width: 100%;
+  padding: 48px 20px;
+  background: $muted-blue;
+  margin-bottom: 50px;
+}
+
+/* center wrapper */
+.featureWrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* heading */
+.featureHeading {
+  font-size: clamp(18px, 2.2vw, 28px);
+  font-weight: 600;
+  color: #2f6db2;
+  margin-bottom: 24px;
+}
+
+/* grid: two columns on desktop, single on small screens */
+.featureGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 28px;
+  align-items: center;
+}
+
+/* card */
+.featureCard {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-weight: 700;
+  color: $text-dark;
+  box-shadow: 0 8px 24px $panel-shadow;
+  min-height: 56px;
+}
+
+/* the special 'Exciting AR Content' spans both columns and is narrower */
+.full {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 60%;
+  @media (max-width: 768px) {
+    width: 100%;
+    grid-column: auto;
+  }
+}
+
+/* DOT bullet (teachers/admins) */
+.bullet {
+  font-size: 22px;
+  line-height: 1;
+  color: #000;
+  flex: 0 0 auto;
+}
+
+/* feature text - prevents wrapping weirdness */
+.featureText {
+  display: block;
+  font-size: clamp(14px, 1.6vw, 18px);
+  line-height: 1.15;
+}
+
+/* Visit Website button (outlined pill) */
+.visitBtn {
+  display: inline-block;
+  padding: 10px 44px;
+  border-radius: 28px;
+  border: 2px solid $brand-blue;
+  color: $brand-blue;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  background: transparent;
+  box-shadow: none;
+  margin-top: 8px;
+}
+
+.visitBtn:hover,
+.visitBtn:focus {
+  background: $brand-blue;
+  color: #fff;
+  outline: none;
+}
+
+/* responsive adjustments for feature grid */
+@media (max-width: 1024px) {
+  .featureGrid {
+    gap: 14px;
+  }
+  .full {
+    width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
+  .featureCard {
+    padding: 12px 14px;
+  }
+  .full {
+    width: 100%;
+  }
+  .visitBtn {
+    padding: 9px 28px;
+  }
+}
+
+/* ------------------------ BLUE BAR (students) ------------------------ */
+.blueBar {
+  width: 100%;
+  background: $brand-blue;
+  color: #ffffff;
+  text-align: center;
+  padding: 28px 20px;
+  margin-bottom: 50px;
+}
+
+.blueInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blueTitle {
+  font-size: clamp(18px, 2.2vw, 24px);
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+
+/* student items are inline, centered, wrap */
+.studentList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 26px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* each student item: icon (circle) + text */
+.studentItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: clamp(14px, 1.6vw, 16px);
+}
+
+/* checkmark inside white circular badge */
+/* student checkmark icon already styled via .icon */
+.icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  img {
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+}
+
+/* ------------------------ CTA ------------------------ */
+/* full-width light block with phone and email button */
+.cta {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background: $muted-blue;
+  text-align: center;
+  padding: 48px 20px;
+  margin-bottom: 100px;
+}
+
+.ctaText {
+  font-weight: 700;
+  font-size: clamp(18px, 2.4vw, 28px);
+  margin-bottom: 18px;
+  color: $text-dark;
+}
+
+.phone {
+  color: $brand-blue;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+/* CTA email button similar to visitBtn, slightly larger */
+.emailBtn {
+  display: inline-block;
+  padding: 10px 56px;
+  border: 2px solid $brand-blue;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: clamp(13px, 1.4vw, 16px);
+  color: $brand-blue;
+  text-decoration: none;
+  transition: all 0.18s ease;
+  background: transparent;
+}
+
+.emailBtn:hover,
+.emailBtn:focus {
+  background: $brand-blue;
+  color: #fff;
+  outline: none;
+}
+
+/* ------------------------ small screens ------------------------ */
+@media (max-width: 480px) {
+  .main {
+    font-size: 15px;
+  }
+
+  .title {
+    font-size: clamp(18px, 5vw, 26px);
+    padding: 0 6px;
+  }
+
+  .description {
+    font-size: clamp(13px, 3.5vw, 15px);
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .visitBtn {
+    padding: 8px 20px;
+  }
+
+  .emailBtn {
+    padding: 8px 28px;
+  }
+}

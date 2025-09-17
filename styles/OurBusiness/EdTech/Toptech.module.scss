@@ -1,0 +1,397 @@
+$brand-blue: #1776c8;
+$muted-blue: #e6f3ff;
+$dark-blue: #0d4e7a;
+$text-dark: #233447;
+$card-bg: #f7f9fb;
+
+.mainsection {
+  display: flex;
+  flex-direction: column;
+  gap: 32px; /* spacing between hero and text */
+  font-family: "Montserrat", sans-serif;
+}
+
+/* HERO */
+.heroWrapper {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+
+  .desktopHero {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .heroFill {
+      position: relative; /* required for next/image fill */
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .mobileHero {
+    display: none;
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .heroImage {
+    object-fit: cover;
+    object-position: center;
+  }
+
+  @media (max-width: 1024px) {
+    height: 360px;
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    .desktopHero {
+      display: none;
+    }
+    .mobileHero {
+      display: block;
+    }
+  }
+
+  /* Section padding for HERO */
+  padding: clamp(16px, 4vw, 32px) 80px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+}
+
+/* INTRO */
+.intro {
+  margin: 0 auto;
+  text-align: center;
+
+  p {
+    text-align: left;
+    margin-bottom: 1rem;
+    line-height: 1.65;
+    color: #777777;
+  }
+
+  .visitBtn {
+    display: inline-block;
+    padding: 12px 100px;
+    background: $brand-blue;
+    color: #fff;
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    align-items: center;
+  }
+
+  /* Section padding for INTRO */
+  padding: clamp(16px, 4vw, 32px) 80px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+}
+
+/* STATS STRIP */
+.statsWrapper {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  .infoBg {
+    position: absolute !important;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+    z-index: 0;
+  }
+
+  .statsCard {
+    position: relative;
+    z-index: 2;
+    width: min(1000px, 95%);
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem; // increase gap for desktop
+    padding: 20px 16px; // increase padding for desktop
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(22, 40, 64, 0.1);
+    align-items: center;
+    justify-content: space-between;
+
+    .stat {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 4px 6px;
+
+      .number {
+        font-size: 2rem; // make desktop numbers bigger
+        font-weight: 700;
+        color: $brand-blue;
+      }
+      .label {
+        font-size: 1rem; // bigger label on desktop
+        margin-top: 4px;
+        color: darken($text-dark, 18%);
+      }
+    }
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 1024px) {
+    .statsCard {
+      gap: 0.5rem;
+      padding: 12px 10px;
+
+      .stat {
+        .number {
+          font-size: clamp(14px, 4.5vw, 20px); // smaller numbers for tablet
+        }
+        .label {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    min-height: 140px;
+
+    .statsCard {
+      gap: 0.4rem;
+      padding: 8px 6px;
+
+      .stat {
+        .number {
+          font-size: clamp(12px, 5vw, 18px);
+        }
+        .label {
+          font-size: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+/* ===== improved responsive cards & full-bleed call ===== */
+.cardsSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: clamp(24px, 5vw, 60px) 80px;
+  align-items: stretch; /* make grid items equal height */
+
+  .card {
+    border-radius: 12px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    height: 100%; /* ensure equal-height when grid-row aligns */
+    min-height: 320px;
+
+    .cardHeader {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 24px;
+
+      h3 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        font-size: 40px; /* desktop */
+        line-height: 26px;
+        margin: 0;
+      }
+
+      /* Next/Image will render an <img> with this class */
+      .cardLogo {
+        display: block;
+        max-width: 279px;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 20px; /* desktop */
+      line-height: 30px;
+      color: inherit;
+      margin: 0 0 20px 0;
+    }
+
+    .knowMore {
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-block;
+    }
+  }
+
+  .blueCard {
+    background: $brand-blue;
+    color: #fff;
+
+    .knowMore {
+      color: #fff;
+    }
+  }
+
+  .whiteCard {
+    background: #fff;
+    color: $text-dark;
+
+    .knowMore {
+      color: $brand-blue;
+    }
+  }
+
+  /* ---------------- tablet / small-laptop (landscape tablets) ---------------- */
+  @media (max-width: 1199px) and (min-width: 769px) {
+    gap: 24px;
+    padding: clamp(20px, 4vw, 48px) 60px;
+
+    .card {
+      padding: 28px;
+      min-height: 300px;
+
+      .cardHeader {
+        h3 {
+          font-size: 28px; /* scaled down for tablets */
+          line-height: 34px;
+        }
+        .cardLogo {
+          max-width: 220px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  /* ---------------- small-tablet / mobile portrait (stacked) ---------------- */
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+
+    .card {
+      padding: 20px;
+      min-height: auto;
+
+      .cardHeader {
+        h3 {
+          font-size: 16px; /* mobile heading */
+          line-height: 26px;
+        }
+        .cardLogo {
+          max-width: 153px; /* mobile logo size */
+        }
+      }
+
+      p {
+        font-size: 14px; /* mobile paragraph */
+        line-height: 20px;
+      }
+    }
+  }
+}
+
+/* ===== full-bleed CALL SECTION (spans full viewport width) ===== */
+.callSection {
+  /* full-bleed within a centered page: */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
+  background: $muted-blue;
+  text-align: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; /* semi-bold */
+    font-size: 40px; /* desktop */
+    line-height: 100%;
+    margin: 0 0 16px;
+    color: $text-dark;
+  }
+
+  .phone {
+    color: $brand-blue;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .emailBtn {
+    display: inline-block;
+    padding: 8px 100px;
+    background: transparent;
+    border: 2px solid $brand-blue;
+    border-radius: 30px;
+    font-weight: 600;
+    color: $brand-blue;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $brand-blue;
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 16px;
+
+    p {
+      font-size: 20px; /* mobile */
+    }
+  }
+}
