@@ -1,0 +1,96 @@
+.pageWrapper {
+    margin-top: 60px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+
+  @media (max-width: 768px) {
+      padding: clamp(16px, 4vw, 32px) 15px;
+    margin: 0;
+    padding: 0;
+    gap: 0;   
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 10px;
+  }
+}
+/* ---------- Hero ---------- */
+.heroDesktop {
+  display: block;
+}
+.heroWrapperDesktop {
+  width: 100%;
+  position: relative;
+  height: 400px; /* desktop */
+  overflow: hidden; /* removed border-radius */
+}
+
+.heroMobile {
+  display: none;
+}
+.heroWrapperMobile {
+   width: 335px;
+  position: relative;
+  height: 349px; /* mobile */
+  overflow: hidden; 
+ 
+}
+/* swap at mobile breakpoint */
+@media (max-width: 768px) {
+  .heroDesktop {
+    display: none;
+  }
+  .heroMobile {
+    display: block;
+  }
+
+  .heroWrapperDesktop {
+    height: 300px;
+  }
+    .intro {
+    margin-top: 20px; 
+    padding: 0 15px; /* side padding mobile */
+  }
+}
+
+/* Tablet height adjustment */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .heroWrapperDesktop {
+    height: 300px;
+  }
+}
+.intro {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+  
+}
+
+.title {
+  color: #2f6db2;
+  font-weight: 600;
+  font-size: clamp(20px, 2.2vw, 28px);
+  
+}
+
+.desc {
+  text-align: left;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Mobile hero full width, no top/side space */

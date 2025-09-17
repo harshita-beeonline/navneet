@@ -1,0 +1,236 @@
+$primary: #2f6db2;
+$text-dark: #1f3a57;
+$muted: #777777;
+$card-light: #d8eefc;
+
+/* ---------- Page Wrapper ---------- */
+.pageWrapper {
+  margin-top: 60px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: clamp(16px, 4vw, 32px) 0;
+    margin: 0;
+    gap: 0;
+
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+}
+
+/* ---------- Hero ---------- */
+.heroDesktop {
+  display: block;
+}
+.heroWrapperDesktop {
+  width: 100%;
+  position: relative;
+  height: 400px; /* desktop */
+  overflow: hidden;
+}
+
+.heroMobile {
+  display: none;
+}
+.heroWrapperMobile {
+  width: 335px;
+  position: relative;
+  height: 349px; /* mobile */
+  overflow: hidden;
+}
+
+/* swap hero on mobile */
+@media (max-width: 768px) {
+  .heroDesktop {
+    display: none;
+  }
+  .heroMobile {
+    display: block;
+  }
+  .heroWrapperDesktop {
+    height: 300px;
+  }
+}
+
+/* Tablet height adjustment */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .heroWrapperDesktop {
+    height: 300px;
+  }
+}
+
+/* ---------- Intro ---------- */
+.intro {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: center;
+
+  .title {
+    color: $primary;
+    font-weight: 600;
+    font-size: clamp(22px, 2.4vw, 32px);
+    margin: 0;
+     @media (max-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  .desc {
+    text-align: left;
+    color: $muted;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+
+/* ---------- Buttons Section / School Solutions ---------- */
+.buttonsSection {
+  width: 100%;
+  margin-top: 32px;
+
+  .title {
+    font-size: clamp(20px, 2.2vw, 28px);
+    font-weight: 600;
+    color: $primary;
+    text-align: center;
+    margin-bottom: 24px;
+     @media (max-width: 768px) {
+      text-align: left;
+    }
+  }
+
+  /* 2-column grid for desktop */
+  .buttonsGrid {
+    display: flex; 
+    gap: 24px;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+      flex-direction: column; // 1 column on mobile
+    }
+
+    .csrColumn {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .buttonItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 4px;
+      border: 1px solid rgba(47, 109, 178, 0.06);
+      box-shadow: 0 4px 12px rgba(47, 109, 178, 0.04);
+      font-size: 15px;
+      font-weight: 500;
+      color: $text-dark;
+      cursor: pointer;
+      position: relative;
+      text-align: left;
+
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #000; // black bullet
+        flex: 0 0 auto;
+        margin-top: 6px; // vertical align
+      }
+    }
+  }
+
+  /* Centered remaining button below columns */
+  .centerButton {
+    display: flex;
+    justify-content: center;  // centers horizontally
+    margin-top: 24px;
+
+    .buttonItem {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: #ffffff;
+      padding: 12px 18px;
+      border-radius: 4px;
+      border: 1px solid rgba(47, 109, 178, 0.06);
+      box-shadow: 0 4px 12px rgba(47, 109, 178, 0.04);
+      font-size: 15px;
+      font-weight: 500;
+      color: $text-dark;
+      cursor: pointer;
+      position: relative;
+      text-align: left;
+
+      &::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #000; // black bullet
+        flex: 0 0 auto;
+        margin-top: 6px;
+      }
+    }
+  }
+}
+
+/* ---------- Bottom Spacer ---------- */
+.bottomSpacer {
+  height: 48px;
+}
+
+.blueBgSection {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%); // break out of pageWrapper padding
+  background-image: url("/Management/bluebg-desktop.png"); // desktop image
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $primary;
+  padding: 32px 80px;
+  border-radius: 0;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: left;
+
+  @media (max-width: 1024px) {
+    padding: 24px 40px;
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  @media (max-width: 768px) {
+    background-image: url("/Management/bluebg-mobile.png"); // swap image
+    padding: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    text-align: left;
+  }
+
+  @media (max-width: 576px) {
+    padding: 16px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}

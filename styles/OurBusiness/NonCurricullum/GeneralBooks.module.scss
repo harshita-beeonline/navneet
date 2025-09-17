@@ -1,0 +1,156 @@
+.pageWrapper {
+  margin-top: 60px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+
+  @media (max-width: 768px) {
+    
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: clamp(16px, 4vw, 32px) 15px;
+  }
+}
+
+/* ---------- Hero ---------- */
+.heroDesktop {
+  display: block;
+}
+.heroWrapperDesktop {
+  width: 100%;
+  position: relative;
+  height: 400px; /* desktop */
+  overflow: hidden; /* removed border-radius */
+}
+
+.heroMobile {
+  display: none;
+}
+.heroWrapperMobile {
+  width: 100%;
+  position: relative;
+  height: 300px; /* mobile */
+  overflow: hidden; /* removed border-radius */
+}
+/* swap at mobile breakpoint */
+@media (max-width: 768px) {
+  .heroDesktop {
+    display: none;
+  }
+  .heroMobile {
+    display: block;
+  }
+
+  .heroWrapperDesktop {
+    height: 300px;
+  }
+}
+
+/* Tablet height adjustment */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .heroWrapperDesktop {
+    height: 300px;
+  }
+}
+
+/* ---------- Book Section ---------- */
+.bookSection {
+  background: #fff;
+  border-radius: 12px;
+  
+}
+
+.desc {
+  text-align: left;
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.7;
+  color:  #2F6DB2;
+  margin-bottom: 32px;
+ 
+}
+
+
+
+/* Layout wrapper */
+.contentWrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+/* Left image */
+.imageWrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.bookImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Right list */
+.listWrapper {
+  flex: 1;
+  margin-top: 20px;;
+}
+
+.listWrapper ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.listWrapper li {
+  margin-bottom: 10px;
+  color: #777777;
+}
+
+/* ---------- Desktop: 2-column list ---------- */
+@media (min-width: 769px) {
+  .listWrapper ul {
+    column-count: 2;       /* 2 columns */
+    column-gap: 40px;      /* gap between columns */
+    padding-left: 0;       /* remove default padding */
+    list-style-position: inside; /* keep bullets inside columns */
+  }
+}
+
+/* ---------- Mobile Responsive ---------- */
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imageWrapper,
+  .listWrapper {
+    flex: unset;
+    width: 100%;
+  }
+}
+.heroTitle {
+       /* just in case */
+  position: absolute; /* position over the hero image */
+  top: 20%;          /* adjust vertically as needed */
+  left: 60%;
+  transform: translate(-50%, -50%); /* center */
+  color:#1E1E20;    /* or whatever color */
+  font-size: clamp(20px, 4vw, 32px);
+  text-align: right;
+  font-weight: 700;
+}
+

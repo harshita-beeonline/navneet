@@ -14,11 +14,11 @@ const menuItems = [
       },
       {
         label: "Navneet Digest & 21 MLQ Sets",
-        href: "/our-business/state-board-curriculum/navneet-digest-21mlq",
+        href: "/our-business/state-board-curriculum/navneet-digest-21mlq-sets",
       },
       {
         label: "Vikas Workbooks",
-        href: "/our-business/state-board-curriculum/vikas-workbooks",
+        href: "/our-business/state-board-curriculum/vikas-workbook",
       },
     ],
   },
@@ -79,7 +79,7 @@ const menuItems = [
     subMenu: [
       {
         label: "K12, School Management Business",
-        href: "/our-business/others/k12-school-management-business",
+        href: "/our-business/others-k12/school-management-bussiness",
       },
     ],
   },
