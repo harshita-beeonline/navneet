@@ -29,7 +29,7 @@ const studentItems = [
 export default function TopScorer() {
   return (
     <main className={styles.main}>
-      {/* HERO */}
+      {/* HERO
       <section className={styles.hero} aria-hidden="true">
         <div className={styles.desktopHero}>
           <div className={styles.heroFill}>
@@ -54,7 +54,33 @@ export default function TopScorer() {
             sizes="100vw"
           />
         </div>
-      </section>
+      </section> */}
+
+      {/* HERO */}
+        <div className={styles.heroWrapper}>
+          <div className={styles.desktopHero}>
+            <div className={styles.heroFill}>
+              <Image
+                src={top_scorer_hero_dekstop}
+                alt="TopClass hero desktop"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 1600px"
+                className={styles.heroImage}
+              />
+            </div>
+          </div>
+          <div className={styles.mobileHero}>
+            <Image
+              src={top_scorer_hero_mobile}
+              alt="TopClass hero mobile"
+              width={1200}
+              height={800}
+              priority
+              sizes="100vw"
+            />
+          </div>
+        </div>
 
       {/* BRAND LOGO */}
       <div className={styles.logoWrap} aria-hidden>
@@ -140,19 +166,18 @@ export default function TopScorer() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className={styles.cta} aria-labelledby="contact-head">
-        <p id="contact-head" className={styles.ctaText}>
-          For a Free Demo call :{" "}
-          <a href="tel:18002666676" className={styles.phone}>
-            1800 266 6676
+       {/* CALL TO ACTION */}
+        <div className={styles.callSection}>
+          <p>
+            For a Free Demo call :{" "}
+            <a href="tel:18002666676" className={styles.phone}>
+              1800 266 6676
+            </a>
+          </p>
+          <a href="mailto:info@navneet.com" className={styles.emailBtn}>
+            Email Us
           </a>
-        </p>
-
-        <a href="mailto:info@navneet.com" className={styles.emailBtn}>
-          Email Us
-        </a>
-      </section>
+        </div>
     </main>
   );
 }

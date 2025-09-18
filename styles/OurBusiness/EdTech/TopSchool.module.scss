@@ -231,18 +231,23 @@ $muted-blue: #e6f3ff;
   }
 }
 
-/* CALL SECTION */
+/* ===== full-bleed CALL SECTION (spans full viewport width) ===== */
 .callSection {
+  /* full-bleed within a centered page: */
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+
   background: $muted-blue;
   text-align: center;
-  padding: 48px 20px;
+  padding: 60px 20px;
+  box-sizing: border-box;
 
   p {
-    font-weight: 600;
-    font-size: 36px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; /* semi-bold */
+    font-size: 40px; /* desktop */
+    line-height: 100%;
     margin: 0 0 16px;
     color: $text-dark;
   }
@@ -255,33 +260,26 @@ $muted-blue: #e6f3ff;
 
   .emailBtn {
     display: inline-block;
-    padding: 8px 80px;
+    padding: 8px 100px;
+    background: transparent;
     border: 2px solid $brand-blue;
     border-radius: 30px;
     font-weight: 600;
     color: $brand-blue;
     text-decoration: none;
     transition: all 0.2s ease;
-  }
 
-  .emailBtn:hover {
-    background: $brand-blue;
-    color: #fff;
+    &:hover {
+      background: $brand-blue;
+      color: #fff;
+    }
   }
 
   @media (max-width: 768px) {
-    padding: 28px 14px;
+    padding: 30px 16px;
 
     p {
-      font-size: 20px;
-    }
-    .emailBtn {
-      padding: 8px 36px;
+      font-size: 20px; /* mobile */
     }
   }
 }
-
-// /* small accessibility tweak */
-// :global(a) {
-//   color: inherit;
-// }

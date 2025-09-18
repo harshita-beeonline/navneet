@@ -167,7 +167,7 @@ export default function TopClass() {
 
         {/* CALL TO ACTION */}
         <div className={styles.callSection}>
-          <p className={styles.callText}>
+          <p>
             For a Free Demo call :{" "}
             <a href="tel:18002666676" className={styles.phone}>
               1800 266 6676

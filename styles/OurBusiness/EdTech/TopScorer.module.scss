@@ -16,45 +16,100 @@ $panel-shadow: rgba(17, 24, 39, 0.06);
   -webkit-font-smoothing: antialiased;
 }
 
+// /* HERO */
+// .hero {
+//   width: 100%;
+//   position: relative;
+//   margin-top: 48px;
+//   padding: clamp(12px, 4vw, 32px) 80px;
+
+//   .desktopHero {
+//     display: block;
+//     position: relative;
+//     height: clamp(360px, 33vw, 520px);
+//   }
+
+//   .heroFill {
+//     position: relative;
+//     width: 100%;
+//     height: 100%;
+//   }
+
+//   .heroImage {
+//     object-fit: cover;
+//     object-position: center;
+//   }
+
+//   .mobileHero {
+//     display: none;
+//     width: 100%;
+//   }
+
+//   @media (max-width: 1024px) {
+//     padding: clamp(12px, 4vw, 28px) 40px;
+//     .desktopHero {
+//       height: clamp(300px, 38vw, 420px);
+//     }
+//   }
+
+//   @media (max-width: 768px) {
+//     padding: clamp(10px, 4vw, 20px);
+//     margin-top: 20px;
+//     .desktopHero {
+//       display: none;
+//     }
+//     .mobileHero {
+//       display: block;
+//     }
+//   }
+// }
+
 /* HERO */
-.hero {
-  width: 100%;
+.heroWrapper {
+  margin-top: 60px;
   position: relative;
-  margin-top: 48px;
-  padding: clamp(12px, 4vw, 32px) 80px;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  padding: clamp(16px, 4vw, 32px) 80px;
 
   .desktopHero {
     display: block;
-    position: relative;
-    height: clamp(360px, 33vw, 520px);
-  }
-
-  .heroFill {
-    position: relative;
     width: 100%;
     height: 100%;
-  }
+    position: relative;
 
-  .heroImage {
-    object-fit: cover;
-    object-position: center;
+    .heroFill {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+
+    .heroImage {
+      object-fit: cover;
+      object-position: center;
+    }
   }
 
   .mobileHero {
     display: none;
     width: 100%;
-  }
 
-  @media (max-width: 1024px) {
-    padding: clamp(12px, 4vw, 28px) 40px;
-    .desktopHero {
-      height: clamp(300px, 38vw, 420px);
+    img {
+      width: 100%;
+      height: auto;
     }
   }
 
+  @media (max-width: 1024px) {
+    height: 420px;
+    padding: clamp(16px, 4vw, 28px) 40px;
+  }
+
   @media (max-width: 768px) {
-    padding: clamp(10px, 4vw, 20px);
-    margin-top: 20px;
+    height: auto;
+    padding: clamp(12px, 4vw, 20px);
+
     .desktopHero {
       display: none;
     }
@@ -273,50 +328,60 @@ $panel-shadow: rgba(17, 24, 39, 0.06);
   }
 }
 
-/* ------------------------ CTA ------------------------ */
-/* full-width light block with phone and email button */
-.cta {
+
+/* ===== full-bleed CALL SECTION (spans full viewport width) ===== */
+.callSection {
+  /* full-bleed within a centered page: */
   width: 100vw;
   margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+
   background: $muted-blue;
   text-align: center;
-  padding: 48px 20px;
-  margin-bottom: 100px;
+  padding: 60px 20px;
+  box-sizing: border-box;
+
+  p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600; /* semi-bold */
+    font-size: 40px; /* desktop */
+    line-height: 100%;
+    margin: 0 0 16px;
+    color: $text-dark;
+  }
+
+  .phone {
+    color: $brand-blue;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .emailBtn {
+    display: inline-block;
+    padding: 8px 100px;
+    background: transparent;
+    border: 2px solid $brand-blue;
+    border-radius: 30px;
+    font-weight: 600;
+    color: $brand-blue;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: $brand-blue;
+      color: #fff;
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 30px 16px;
+
+    p {
+      font-size: 20px; /* mobile */
+    }
+  }
 }
 
-.ctaText {
-  font-weight: 700;
-  font-size: clamp(18px, 2.4vw, 28px);
-  margin-bottom: 18px;
-  color: $text-dark;
-}
-
-.phone {
-  color: $brand-blue;
-  font-weight: 800;
-  text-decoration: none;
-}
-
-/* CTA email button similar to visitBtn, slightly larger */
-.emailBtn {
-  display: inline-block;
-  padding: 10px 56px;
-  border: 2px solid $brand-blue;
-  border-radius: 30px;
-  font-weight: 700;
-  font-size: clamp(13px, 1.4vw, 16px);
-  color: $brand-blue;
-  text-decoration: none;
-  transition: all 0.18s ease;
-  background: transparent;
-}
-
-.emailBtn:hover,
-.emailBtn:focus {
-  background: $brand-blue;
-  color: #fff;
-  outline: none;
-}
 
 /* ------------------------ small screens ------------------------ */
 @media (max-width: 480px) {
