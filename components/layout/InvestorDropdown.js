@@ -122,7 +122,7 @@ const InvestorDropdown = () => {
             >
               {item.href ? (
                 <Link href={item.href} className={styles.label}>
-                  {item.label}
+                 {item.label}
                 </Link>
               ) : (
                 <span className={styles.label}>{item.label}</span>
