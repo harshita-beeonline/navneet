@@ -51,8 +51,8 @@
             padding: 0;
             margin: 0;
 
-            a, span {
-              display: block;
+            a,
+            span {
               margin: 0;
               padding: 6px 0px 6px 12px;
               font-family: Montserrat, sans-serif;
@@ -62,9 +62,9 @@
               text-decoration: none;
             }
 
-            // &:hover {
-            //   background: rgba(0,0,0,0.08);
-            // }
+            .arrow {
+              margin-right: 10px;
+            }
 
             .deepMenu {
               position: absolute;

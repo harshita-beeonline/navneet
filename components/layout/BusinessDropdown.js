@@ -55,7 +55,7 @@ const menuItems = [
     label: "EdTech",
     subMenu: [
       {
-        label: "NAVNEET TOPTECH",
+        label: "NAVNEET TOP TECH",
         href: "/our-business/edtech/top-tech",
         subMenu: [
           {
@@ -136,6 +136,25 @@ const BusinessDropdown = () => {
                             <Link href={sub.href}>{sub.label}</Link>
                           ) : (
                             <span>{sub.label}</span>
+                          )}
+
+                          {sub.subMenu && (
+                            <span className={styles.arrow}>
+                              <svg
+                                width="6"
+                                height="8"
+                                viewBox="0 0 6 8"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                              >
+                                <path
+                                  d="M1.33398 6.91602L5.50065 3.99935L1.33398 0.666016"
+                                  stroke="#F9F9F9"
+                                  strokeLinecap="round"
+                                  strokeLinejoin="round"
+                                />
+                              </svg>
+                            </span>
                           )}
 
                           {sub.subMenu && activeSub === sIdx && (
