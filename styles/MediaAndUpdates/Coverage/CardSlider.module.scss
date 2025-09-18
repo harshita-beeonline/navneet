@@ -85,3 +85,39 @@
     padding: 6px 10px;
   }
 }
+
+/* Mobile */
+@media (max-width: 540px) {
+  .slider {
+    gap: 12px;
+  }
+
+  .videoWrapper {
+    width: 80%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .nav {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 400px) {
+  .slider {
+    gap: 5px;
+  }
+
+  .videoWrapper {
+    width: 80%;
+    max-width: 100%;
+    aspect-ratio: 16/9;
+  }
+
+  .nav {
+    font-size: 18px;
+    padding: 6px 10px;
+  }
+}

@@ -44,6 +44,10 @@
     padding-right: 12px;
     gap: 12px; // reduce gap on small screens
   }
+
+  @media (max-width: 540) {
+    justify-content: flex-start; // keep buttons at start
+  }
 }
 
 .btn {
