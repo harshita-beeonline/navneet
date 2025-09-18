@@ -1,0 +1,41 @@
+.dropdown-container-box {
+  position: absolute;
+  top: 0px;
+  z-index: 2000;
+  margin-left: 15px;
+
+  .dropdownWrapper {
+    width: 1000px;
+
+    .leftMenu {
+      list-style: none;
+      width: 254px;
+      background: #696c6e; // same as InvestorDropdown
+      margin: 0;
+      padding: 6px 0;
+      margin-top: 27px;
+
+      li {
+        position: relative;
+        padding: 6px 12px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        font-size: 14px;
+        color: #f9f9f9; // white text
+
+        a {
+          margin: 0px;
+          font-weight: 500;
+          font-size: 14px;
+          color: #f9f9f9;
+          text-align: left;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

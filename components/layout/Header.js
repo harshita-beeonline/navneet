@@ -6,6 +6,7 @@ import logo from "../../public/images/LogoNavneet.png";
 import Link from "next/link";
 import BusinessDropdown from "./BusinessDropdown";
 import InvestorDropdown from "./InvestorDropdown";
+import MediaUpdatesDropdown from "./MediaUpdatesDropdown ";
 
 export default function HomePage() {
   const [index, setIndex] = useState(0);
@@ -139,7 +140,7 @@ export default function HomePage() {
             onMouseEnter={() => setOpenDropdown("business")}
             onMouseLeave={() => setOpenDropdown(null)}
           >
-            <Link href="/our-business" className={styles.dropdownToggle}>
+            <Link href="/" className={styles.dropdownToggle}>
               Our Businesses
             </Link>
             <div
@@ -153,7 +154,24 @@ export default function HomePage() {
 
           <Link href="#">Responsibility</Link>
           <Link href="https://navneet.com/ehs/">EHS</Link>
-          <Link href="#">Media & Updates</Link>
+
+          <div
+            className={styles.dropdownParent}
+            onMouseEnter={() => setOpenDropdown("media&upadtes")}
+            onMouseLeave={() => setOpenDropdown(null)}
+          >
+            <Link href="/" className={styles.dropdownToggle}>
+              Media & Updates
+            </Link>
+            <div
+              className={`${styles["dropdown-open"]} ${
+                openDropdown === "media&upadtes" ? styles.show : ""
+              }`}
+            >
+              <MediaUpdatesDropdown />
+            </div>
+          </div>
+          
           <Link href="https://www.navneetstore.com/">Shop Now</Link>
           <Link href="https://navneetedu.ai/">Navneet AI</Link>
           <Link href="#">Career</Link>
