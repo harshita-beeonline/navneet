@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "../../../../styles/MediaAndUpdates/Coverage/CoverageSection.module.scss";
 import CardSlider from "../CoverageComponents/CardSlider/CardSlider";
+import Articles from "../CoverageComponents/Articles/Articles";
 
 export default function CoverageSection() {
   const [activeButton, setActiveButton] = useState("Videos");
@@ -23,15 +24,9 @@ export default function CoverageSection() {
     "https://youtu.be/Z1-6mi9Tq4o",
   ];
 
-  const contentForTab = {
-    Videos: videos,
-    Interviews: interviews,
-    Articles: [],
-    "Show All": [...videos, ...interviews],
-  };
-
   return (
     <div className={styles.coverageWrapper}>
+      {/* Buttons */}
       <div className={styles.CoverageSection}>
         {buttons.map((btn) => (
           <button
@@ -46,8 +41,29 @@ export default function CoverageSection() {
         ))}
       </div>
 
+      {/* Content */}
       <div>
-        <CardSlider videos={contentForTab[activeButton] || []} />
+        {activeButton === "Videos" && <CardSlider videos={videos} />}
+        {activeButton === "Interviews" && <CardSlider videos={interviews} />}
+        {activeButton === "Articles" && <Articles />}
+        {activeButton === "Show All" && (
+          <div className={styles.showAllWrapper}>
+            <div className={styles.section}>
+              <h2>Videos</h2>
+              <CardSlider videos={videos} />
+            </div>
+
+            <div className={styles.section}>
+              <h2>Interviews</h2>
+              <CardSlider videos={interviews} />
+            </div>
+
+            <div className={styles.section}>
+              <h2>Articles</h2>
+              <Articles />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

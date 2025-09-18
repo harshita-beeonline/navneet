@@ -24,7 +24,7 @@ export default function CardSlider({ videos = [] }) {
 
   return (
     <div className={styles.slider}>
-      <button className={styles.nav} onClick={prev}>
+      <button className={`${styles.nav} ${styles.prev}`} onClick={prev}>
         <SlArrowLeft />
       </button>
 
@@ -38,7 +38,7 @@ export default function CardSlider({ videos = [] }) {
         ></iframe>
       </div>
 
-      <button className={styles.nav} onClick={next}>
+      <button className={`${styles.nav} ${styles.next}`} onClick={next}>
         <SlArrowRight />
       </button>
     </div>

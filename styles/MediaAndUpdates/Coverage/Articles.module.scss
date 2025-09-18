@@ -1,0 +1,203 @@
+/* -------------------- styles/MediaAndUpdates/Coverage/Articles.module.scss -------------------- */
+
+.articlesSection {
+  padding: 0 clamp(4vw, 16px, 64px) 0; // removed top padding
+  background: transparent;
+}
+
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px; // removed top padding
+
+  @media (max-width: 1280px) {
+    padding: 0 40px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 24px;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 0; // removed margin-top
+    padding: 0 20px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0 12px;
+  }
+}
+
+.viewport {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 14px;
+
+  /* Small visual tweaks and focus state */
+  outline: none;
+  cursor: grab;
+}
+
+/* When dragging we switch cursor to grabbing */
+.isDragging {
+  cursor: grabbing !important;
+}
+
+.columns {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 12px 8px;
+  min-width: max-content; /* ensures horizontal scroll works on small screens */
+}
+
+.column {
+  --col-w: 260px;
+  flex: 0 0 var(--col-w);
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(10, 20, 30, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.cardInner {
+  display: block;
+  width: 100%;
+}
+
+/* scrollbar styling */
+.viewport::-webkit-scrollbar {
+  height: 10px;
+}
+.viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+.viewport::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+}
+
+/* progress */
+.progressWrap {
+  margin-top: 12px;
+}
+.progressTrack {
+  height: 4px;
+  background: #eef4ff;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.progressBar {
+  height: 100%;
+  background: #1e88ff;
+  width: 0%;
+  transition: width 180ms linear;
+}
+
+/* Desktop grid layouts: switch to grid so items align nicely on larger screens */
+@media (min-width: 1200px) {
+  .viewport {
+    overflow: visible;
+    padding-bottom: 0;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    justify-content: center;
+    align-items: start;
+    gap: 32px;
+    padding: 0;
+    min-width: 0; /* reset for grid */
+  }
+  .column {
+    flex: none;
+  }
+  .progressWrap {
+    display: none;
+  }
+}
+
+/* Tablet / small desktop: show 3 columns grid so slider doesn't remain active on medium screens */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .viewport {
+    overflow: visible;
+  }
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    justify-content: center;
+    gap: 28px;
+    padding: 0;
+    min-width: 0; /* reset for grid */
+  }
+  .column {
+    flex: none;
+  }
+  .progressWrap {
+    display: none;
+  }
+}
+
+/* Mobile tweaks */
+@media (max-width: 767px) {
+  :root {
+    --col-w: 220px;
+  }
+  .column {
+    gap: 14px;
+  }
+  .columns {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+// Desktop grid
+@media (min-width: 1200px) {
+  .columns {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 32px;
+  }
+}
+
+/* Modal / Lightbox */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modalContent {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  background: #fff;
+  padding: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  line-height: 1;
+}
