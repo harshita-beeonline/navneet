@@ -1,10 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import vectorBar from "../../public/images/awards/Vector.svg";
+import vectorBar from "../../../public/images/awards/Vector.svg";
 import { FaChevronDown } from "react-icons/fa";
 import { useAwards } from "./AwardsContext";
-import styles from "../../styles/Award/AwardPage.module.scss";
+import styles from "../../../styles/MediaAndUpdates/Award/AwardPage.module.scss";
 
 export default function AwardsHeader() {
   const { sortOrder, setSortOrder } = useAwards();

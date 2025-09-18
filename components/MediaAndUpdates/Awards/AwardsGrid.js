@@ -2,23 +2,23 @@
 import Image from "next/image";
 import { useMemo } from "react";
 import { useAwards } from "./AwardsContext";
-import styles from "../../styles/Award/AwardPage.module.scss";
+import styles from "../../../styles/MediaAndUpdates/Award/AwardPage.module.scss";
 
 // Images
-import award1 from "../../public/images/awards/award1.png";
-import award2 from "../../public/images/awards/award2.png";
-import award3 from "../../public/images/awards/award3.png";
-import award4 from "../../public/images/awards/award4.png";
-import award5 from "../../public/images/awards/award5.png";
-import award6 from "../../public/images/awards/award6.png";
-import award7 from "../../public/images/awards/award7.png";
-import award8 from "../../public/images/awards/award8.png";
+import award1 from "../../../public/images/awards/award1.png";
+import award2 from "../../../public/images/awards/award2.png";
+import award3 from "../../../public/images/awards/award3.png";
+import award4 from "../../../public/images/awards/award4.png";
+import award5 from "../../../public/images/awards/award5.png";
+import award6 from "../../../public/images/awards/award6.png";
+import award7 from "../../../public/images/awards/award7.png";
+import award8 from "../../../public/images/awards/award8.png";
 
-import cert1 from "../../public/images/awards/certificate1.png";
-import cert2 from "../../public/images/awards/certificate2.png";
-import cert3 from "../../public/images/awards/certificate3.png";
-import cert4 from "../../public/images/awards/certificate4.png";
-import trophy from "../../public/images/awards/trophy.png";
+import cert1 from "../../../public/images/awards/certificate1.png";
+import cert2 from "../../../public/images/awards/certificate2.png";
+import cert3 from "../../../public/images/awards/certificate3.png";
+import cert4 from "../../../public/images/awards/certificate4.png";
+import trophy from "../../../public/images/awards/trophy.png";
 
 // Data
 const awardsData = [
@@ -53,8 +53,8 @@ function Card({ item }) {
 
       <div className={styles.awardData}>
         <h3 className={styles.awardTitle}>{item.title}</h3>
-        <p className={styles.awardYear}>{item.year}</p>
-        <p className={styles.awardName}>{item.fn}</p>
+        {/* <p className={styles.awardYear}>{item.year}</p>
+        <p className={styles.awardName}>{item.fn}</p> */}
       </div>
     </article>
   );

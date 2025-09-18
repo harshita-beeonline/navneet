@@ -33,7 +33,7 @@
   }
 
   .description {
-    max-width: 500px;
+    max-width: 780px;
     font-size: 16px;
     line-height: 1.5;
   }
@@ -263,9 +263,8 @@
 
 /* ---------------- Text Styling ---------------- */
 .awardData {
-  align-self: stretch;
-  text-align: left;
-  padding: 0 16px;
+  text-align: center;
+  // padding: 0 16px;
 
   .awardTitle {
     font-weight: 600;
@@ -275,14 +274,14 @@
     margin-bottom: -10px;
   }
 
-  .awardYear {
-    color: #2f6db2;
-    font-weight: 600;
-    font-size: 14px;
-  }
+  // .awardYear {
+  //   color: #2f6db2;
+  //   font-weight: 600;
+  //   font-size: 14px;
+  // }
 
-  .awardName {
-    color: #777777;
-    font-size: 14px;
-  }
+  // .awardName {
+  //   color: #777777;
+  //   font-size: 14px;
+  // }
 }
