@@ -1,3 +1,4 @@
+/* === About Page Wrapper === */
 .aboutPage {
   margin-top: 60px;
   padding: clamp(16px, 4vw, 32px) 80px;
@@ -15,9 +16,8 @@
   }
 
   @media (max-width: 768px) {
-     margin-top: 60px;
-  padding: clamp(16px, 4vw, 32px) 20px; /* side padding */
-  gap: 32px;
+    padding: clamp(16px, 4vw, 32px) 20px;
+    gap: 32px;
   }
 
   @media (max-width: 576px) {
@@ -25,28 +25,30 @@
   }
 }
 
-/* ---------- Hero ---------- */
+/* === Hero Section === */
 .heroDesktop {
   display: block;
 }
+
 .heroWrapperDesktop {
-  width: 100% ;
+  width: 100%;
   position: relative;
-height: 400px;
+  height: 400px;
   overflow: hidden;
 }
 
 .heroMobile {
   display: none;
 }
+
 .heroWrapperMobile {
-  width: 100% !important;
+  width: 100%;
   position: relative;
-  height: auto !important; /* match Rise */
+  height: auto; 
   overflow: hidden;
 }
 
-/* swap at mobile breakpoint */
+/* Swap for mobile */
 @media (max-width: 768px) {
   .heroDesktop {
     display: none;
@@ -60,13 +62,14 @@ height: 400px;
   }
 }
 
-
 /* Tablet height adjustment */
 @media (max-width: 1024px) and (min-width: 769px) {
   .heroWrapperDesktop {
     height: 300px;
   }
 }
+
+/* === Intro === */
 .intro {
   width: 100%;
   display: flex;
@@ -75,53 +78,20 @@ height: 400px;
   text-align: left;
 }
 
+/* === Typography === */
+.title, .heading {
+  font-weight: 600;
+  margin: 0;
+}
+
 .title {
   color: #FFFFFF;
-  font-weight: 600;
   font-size: clamp(20px, 2.2vw, 28px);
-  margin: 0;
 }
 
 .heading {
   color: #fff;
-
-  font-weight: 600;
-  font-size: clamp(20px, 2.2vw, 28px);
-  margin: 0;
-}
-
-
-.desc {
-  text-align: left;
-  margin: 0;
-  font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.7;
-  color: #666;
-}
-
-
-
-
-/* overlay flex container */
-.heroContent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;                /* side by side */
-  justify-content: space-between;
-  align-items: center;       /* spacing from edges */
-  z-index: 2;                   /* above bg */
-}
-
-/* left text */
-
-
-.heading {
   font-size: clamp(28px, 3vw, 40px);
-  font-weight: 700;
-  margin: 0;
 }
 
 .subheading {
@@ -131,31 +101,67 @@ height: 400px;
   color: #2f6db2;
 }
 
-/* right books image */
-.booksWrapper {
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.desc {
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.7;
+  margin: 0;
+  color: #666;
+}
+
+/* ===== Hero text and image: Desktop & Tablet ===== */
+@media (min-width: 768px) {
+  /* Hero text container */
+  .heroContent {
+    position: absolute;
+    top: 60px;       
+    left: 80px;      
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    z-index: 2;
+  }
+
+  /* Hero image wrapper: Desktop default */
+  .booksWrapper {
+    position: absolute;
+    left: 700px;    
+    top: 0px;
+    height: 300px;   
+    width: auto;
+    z-index: 2;
+  }
+
+  .booksWrapper img {
+    width: auto;
+    height: 100%;
+    display: block;
+  }
+}
+
+/* ===== Tablet adjustment (768px – 1279px) ===== */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .booksWrapper {
+    left: 400px;     
+    top:0px;
+    height: 250px;  
+  }
 }
 
 
+
+/* === Sections === */
 .section {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* two equal columns on desktop */
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 40px; /* space between image and text */
- 
+  gap: 40px;
 
-
-  /* Mobile stacking */
   @media (max-width: 768px) {
-    grid-template-columns: 1fr; /* single column */
+    grid-template-columns: 1fr;
     gap: 24px;
   }
 }
 
-/* Image container */
 .sectionImage {
   display: flex;
   justify-content: center;
@@ -167,15 +173,14 @@ height: 400px;
   }
 }
 
-/* Text container */
 .sectionText {
   font-family: "Montserrat", sans-serif;
 
   h2 {
-     color:  #2F6DB2;
-  font-weight: 600;
-  font-size: clamp(20px, 2.2vw, 28px);
-  margin: 0;
+    color: #2F6DB2;
+    font-weight: 600;
+    font-size: clamp(20px, 2.2vw, 28px);
+    margin: 0;
   }
 
   p {
@@ -200,35 +205,54 @@ height: 400px;
   }
 }
 
-
-
-
-/* Reverses grid order for desktop */
+/* Reverse order on desktop */
 .reverse {
-  grid-template-columns: 1fr 1fr; /* still two columns */
+  .sectionImage { order: 2; }
+  .sectionText { order: 1; }
 }
 
-.reverse .sectionImage {
-  order: 2; /* image on right */
-}
-.reverse .sectionText {
-  order: 1; /* text on left */
-}
-
-/* On mobile, always stack image first, then text */
+/* Stack on mobile */
 @media (max-width: 768px) {
-  .section {
-    grid-template-columns: 1fr; /* single column */
-    gap: 24px;
-  }
-
-  .sectionImage{
-    order: 1 !important; /* image first */
-  }
-  .sectionText {
-    order: 2 !important;
-    /* reset order for all */
-  }
+  .sectionImage { order: 1 !important; }
+  .sectionText { order: 2 !important; }
 }
 
+/* === Desktop Alignment with Hero === */
+@media (min-width: 1280px) {
+  
+  .intro,
+  .section {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Two-column grid with no gap */
+  .section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0; 
+  }
+
+  /* Align left images */
+  .sectionImage {
+    justify-content: flex-start;
+  }
+
+  /* Align right images */
+  .reverse .sectionImage {
+    justify-content: flex-end;
+  }
+
+  /* Stretch text to fill remaining space */
+  .sectionText {
+    width: 100%;
+    padding-right: 10px; 
+  }
+
+  /* Stretch text on reversed sections */
+  .reverse .sectionText {
+    padding-left: 10px; 
+    padding-right: 0px;
+  }
+}
 

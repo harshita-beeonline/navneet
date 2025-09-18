@@ -31,8 +31,8 @@
 .heroWrapperDesktop {
   width: 100%;
   position: relative;
-  height: 400px; /* desktop */
-  overflow: hidden; /* removed border-radius */
+  height: 400px; 
+  overflow: hidden; 
 }
 
 .heroMobile {
@@ -41,8 +41,8 @@
 .heroWrapperMobile {
   width: 100%;
   position: relative;
-  height: 300px; /* mobile */
-  overflow: hidden; /* removed border-radius */
+  height: 300px; 
+  overflow: hidden; 
 }
 /* swap at mobile breakpoint */
 @media (max-width: 768px) {
@@ -79,6 +79,12 @@
   color:  #2F6DB2;
   margin-bottom: 32px;
  
+}
+@media (min-width: 1025px) {
+  .desc {
+    margin-left: 80px;   
+    margin-right: 80px;  
+  }
 }
 
 
@@ -122,10 +128,10 @@
 /* ---------- Desktop: 2-column list ---------- */
 @media (min-width: 769px) {
   .listWrapper ul {
-    column-count: 2;       /* 2 columns */
-    column-gap: 40px;      /* gap between columns */
-    padding-left: 0;       /* remove default padding */
-    list-style-position: inside; /* keep bullets inside columns */
+    column-count: 2;       
+    column-gap: 40px;      
+    padding-left: 0;       
+    list-style-position: inside; 
   }
 }
 
@@ -143,14 +149,15 @@
   }
 }
 .heroTitle {
-       /* just in case */
-  position: absolute; /* position over the hero image */
-  top: 20%;          /* adjust vertically as needed */
+       
+  position: absolute; 
+  top: 20%;          
   left: 60%;
-  transform: translate(-50%, -50%); /* center */
-  color:#1E1E20;    /* or whatever color */
+  transform: translate(-50%, -50%); 
+  color:#1E1E20;    
   font-size: clamp(20px, 4vw, 32px);
   text-align: right;
   font-weight: 700;
 }
+
 

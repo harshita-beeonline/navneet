@@ -3,7 +3,9 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../../../styles/OurBusiness/Othersk12/Management.module.scss";
 
-import herodesktop from "../../../../public/images/our-business/management-bg.png";
+import herodesktop1 from "../../../../public/images/our-business/management-bg1.png";
+import herodesktop2 from "../../../../public/images/our-business/management-bg2.png";
+import herodesktop3 from "../../../../public/images/our-business/management-bg3.png";
 import heromobile from "../../../../public/images/our-business/management-bg-mobile.png";
 import desktopBg from "../../../../public/images/our-business/bluebg-desktop.png";
 import mobileBg from "../../../../public/images/our-business/bluebg-mobile.png";
@@ -12,19 +14,34 @@ import mobileBg from "../../../../public/images/our-business/bluebg-mobile.png";
 export default function SchoolSolutions() {
   return (
     <section className={styles["pageWrapper"]}>
-      {/* HERO */}
-      <div className={styles["heroDesktop"]}>
-        {/* Desktop Hero */}
-        <div className={styles["heroWrapperDesktop"]}>
-          <Image
-            src={herodesktop}
-            alt="School Solutions - Hero (Desktop)"
-            fill
-            priority
-            style={{ objectFit: "cover" }}
-          />
-        </div>
+      <div className={styles.heroDesktop}>
+    <div className={styles.heroWrapperDesktop}>
+      {/* Three images side by side */}
+      <div className={styles.heroImagesRow}>
+        <Image
+          src={herodesktop1}
+          alt="Hero Image 1"
+          width={346}
+          height={400}
+          priority
+        />
+        <Image
+          src={herodesktop2}
+          alt="Hero Image 2"
+          width={324}
+          height={400}
+          priority
+        />
+        <Image
+          src={herodesktop3}
+          alt="Hero Image 3"
+          width={610}
+          height={400}
+          priority
+        />
       </div>
+    </div>
+  </div>
 
       {/* Mobile Hero */}
       <div className={styles["heroMobile"]}>
@@ -103,6 +120,7 @@ export default function SchoolSolutions() {
 
       {/* BLUE BACKGROUND SECTION */}
       <div className={styles["blueBgSection"]}>
+         <div className={styles["blueBgContent"]}>
         <p>
           The Company provides various safety and security solutions for the
           schools namely installation of CCTV Cameras in the schools and the
@@ -111,6 +129,7 @@ export default function SchoolSolutions() {
           the schools are not compromised; installing of fire extinguishers and
           conducting various sessions for safety evacuation etc.
         </p>
+      </div>
       </div>
 
       <div className={styles["bottomSpacer"]} />

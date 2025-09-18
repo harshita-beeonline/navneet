@@ -15,8 +15,10 @@
   }
 
   @media (max-width: 768px) {
-    margin-top: 60px;
-    padding: clamp(16px, 4vw, 32px) 20px;
+    
+   
+     padding-left: 20px;  
+    padding-right: 20px;
   }
 
   @media (max-width: 576px) {
@@ -30,20 +32,32 @@
 .heroWrapperDesktop {
   width: 100%;
   position: relative;
-  height: 400px; /* desktop */
-  overflow: hidden; /* removed border-radius */
+  height: 400px; 
+  overflow: hidden; 
 }
 
 .heroMobile {
   display: none;
 }
-.heroWrapperMobile {
-  width: 100%;
-  position: relative;
-  height: 300px; /* mobile */
-  overflow: hidden; /* removed border-radius */
+@media (max-width: 768px) {
+  .heroWrapperMobile {
+    width: 100%;
+    position: relative;
+    height: 309px;
+    left:45%;
+    margin-left:-40vw;
+    overflow: hidden;
+  }
+
+  .heroWrapperMobile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
 }
-/* swap at mobile breakpoint */
+
 @media (max-width: 768px) {
   .heroDesktop {
     display: none;
@@ -96,16 +110,12 @@
 }
 
 .heroContent {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;                /* side by side */
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 60px;              /* spacing from edges */
-  z-index: 2;                   /* above bg */
+ position: absolute;
+    top: 80px;       
+    left: 150px;      
+    display: flex;
+    flex-direction: column;
+    gap: 16px;                   
 }
 .heading {
   font-size: clamp(28px, 3vw, 40px);
@@ -139,7 +149,7 @@
 /* Mobile view */
 @media (max-width: 768px) {
   .contentSection {
-    flex-direction: column-reverse; /* Image first, then text */
+    flex-direction: column-reverse;
     text-align: left;
   }
 
@@ -150,8 +160,8 @@
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: center; /* center block horizontally */
-          /* spacing top and bottom */
+  justify-content: center; 
+          
 }
 
 .bgImg {
@@ -167,3 +177,4 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
