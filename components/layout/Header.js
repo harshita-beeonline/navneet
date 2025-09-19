@@ -153,7 +153,7 @@ export default function HomePage() {
           </div>
 
           <Link href="/responsibility">Responsibility</Link>
-          <Link href="https://navneet.com/ehs/">EHS</Link>
+          <Link href="https://navneet.com/ehs/" target="_blank">EHS</Link>
 
           <div
             className={styles.dropdownParent}
@@ -172,8 +172,8 @@ export default function HomePage() {
             </div>
           </div>
           
-          <Link href="https://www.navneetstore.com/">Shop Now</Link>
-          <Link href="https://navneetedu.ai/">Navneet AI</Link>
+          <Link href="https://www.navneetstore.com/" target="_blank">Shop Now</Link>
+          <Link href="https://navneetedu.ai/" target="_blank">Navneet AI</Link>
           <Link href="#">Career</Link>
           <Link href="#">Contact</Link>
         </nav>
