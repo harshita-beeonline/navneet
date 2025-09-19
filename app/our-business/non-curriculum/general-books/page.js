@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "../../../../styles/OurBusiness/NonCurricullum/GeneralBooks.module.scss";
 
@@ -5,8 +6,21 @@ import styles from "../../../../styles/OurBusiness/NonCurricullum/GeneralBooks.m
 import heroBg from "../../../../public/images/our-business/general-bg.png";
 import herobgmobile from "../../../../public/images/our-business/general-bg-mobile.png";
 import beautyBook from "../../../../public/images/our-business/beauty-book.png";
+import { useState } from "react";
+
+const images = [beautyBook, beautyBook, beautyBook];
 
 export default function GeneralBooksPage() {
+  const [current, setCurrent] = useState(0);
+
+  const handlePrev = () => {
+    setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  };
+
+  const handleNext = () => {
+    setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  };
+
   const categories = [
     "Art",
     "Cookery",
@@ -23,64 +37,68 @@ export default function GeneralBooksPage() {
   ];
 
   return (
-    <main className={styles["pageWrapper"]}>
+    <main className={styles.pageWrapper}>
       {/* === Hero Section === */}
       {/* Desktop Hero */}
-      <div className={styles["heroDesktop"]}>
-        <div className={styles["heroWrapperDesktop"]}>
+      <div className={styles.heroDesktop}>
+        <div className={styles.heroWrapperDesktop}>
           <Image
             src={heroBg}
             alt="Hero Background"
             fill
             priority
-            className={styles["heroBg"]}
+            className={styles.heroBg}
           />
         </div>
       </div>
 
       {/* Mobile Hero with Title */}
-      <div className={styles["heroMobile"]}>
-        <div className={styles["heroWrapperMobile"]}>
+      <div className={styles.heroMobile}>
+        <div className={styles.heroWrapperMobile}>
           <Image
             src={herobgmobile}
             alt="Hero Background Mobile"
             fill
             priority
-            className={styles["heroBg"]}
+            className={styles.heroBg}
           />
-          <h1 className={styles["heroTitle"]}>General Book</h1>
+          <h1 className={styles.heroTitle}>General Book</h1>
         </div>
       </div>
 
       {/* === Book Section === */}
-      <section className={styles["bookSection"]}>
-        <p className={styles["desc"]}>
+      <section className={styles.bookSection}>
+        <p className={styles.desc}>
           The general book category will give you an overall view of our
           prestigious publications which are useful in day-to-day life. These
           categories include
         </p>
 
-        <div className={styles["contentWrapper"]}>
-          {/* Left: Image */}
-          <div className={styles["imageWrapper"]}>
-            <Image
-              src={beautyBook}
-              alt="Beauty Recipes"
-              className={styles["bookImage"]}
-              width={518}
-              height={252}
-              priority
-              sizes="(max-width: 768px) 90vw, (max-width: 1200px) 400px, 518px"
-            />
+        <div className={styles.contentWrapper}>
+          {/* Left: Image Carousel */}
+          <div className={styles.imageWrapper}>
+            <div className={styles.carousel}>
+              <button className={styles.prev} onClick={handlePrev}>‹</button>
+              <div className={styles.slide}>
+                <Image
+                  src={images[current]}
+                  alt="Beauty Recipes"
+                  className={styles.bookImage}
+                  width={518}
+                  height={252}
+                  priority
+                  sizes="(max-width: 768px) 90vw, (max-width: 1200px) 400px, 518px"
+                />
+              </div>
+              <button className={styles.next} onClick={handleNext}>›</button>
+            </div>
           </div>
 
           {/* Right: List */}
-          <div className={styles["listWrapper"]}>
-            <ul className={styles["list"]}>
+          <div className={styles.listWrapper}>
+            <ul className={styles.list}>
               {categories.map((item, index) => (
-                <li key={index} className={styles["listItem"]}>
-                  {item}
-                </li>
+                <li key={index} className={styles.listItem}>{item}</li>
               ))}
             </ul>
           </div>

@@ -15,7 +15,6 @@
   }
 
   @media (max-width: 768px) {
-    
     padding: clamp(16px, 4vw, 32px) 20px;
   }
 
@@ -27,41 +26,62 @@
 /* ---------- Hero ---------- */
 .heroDesktop {
   display: block;
-}
-.heroWrapperDesktop {
-  width: 100%;
-  position: relative;
-  height: 400px; 
-  overflow: hidden; 
+
+  .heroWrapperDesktop {
+    width: 100%;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+      height: 300px; /* iPad fix */
+    }
+
+    @media (max-width: 768px) {
+      height: 300px;
+    }
+  }
 }
 
 .heroMobile {
   display: none;
+
+  .heroWrapperMobile {
+    width: 100%;
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+
+    .heroTitle {
+      position: absolute;
+      top: 20%;
+      left: 60%;
+      transform: translate(-50%, -50%);
+      color: #1e1e20;
+      font-size: clamp(20px, 4vw, 32px);
+      text-align: right;
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: block;
+
+    .heroWrapperMobile {
+      .heroTitle {
+        top: 25%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        font-size: clamp(18px, 3.5vw, 28px);
+      }
+    }
+  }
 }
-.heroWrapperMobile {
-  width: 100%;
-  position: relative;
-  height: 300px; 
-  overflow: hidden; 
-}
-/* swap at mobile breakpoint */
+
 @media (max-width: 768px) {
   .heroDesktop {
     display: none;
-  }
-  .heroMobile {
-    display: block;
-  }
-
-  .heroWrapperDesktop {
-    height: 300px;
-  }
-}
-
-/* Tablet height adjustment */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .heroWrapperDesktop {
-    height: 300px;
   }
 }
 
@@ -69,95 +89,166 @@
 .bookSection {
   background: #fff;
   border-radius: 12px;
-  
-}
 
-.desc {
-  text-align: left;
-  font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.7;
-  color:  #2F6DB2;
-  margin-bottom: 32px;
- 
-}
-@media (min-width: 1025px) {
   .desc {
-    margin-left: 80px;   
-    margin-right: 80px;  
+    text-align: left;
+    font-size: clamp(14px, 1.8vw, 16px);
+    line-height: 1.7;
+    color: #2f6db2;
+    margin-bottom: 32px;
   }
-}
 
-
-
-/* Layout wrapper */
-.contentWrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 32px;
-}
-
-/* Left image */
-.imageWrapper {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.bookImage {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Right list */
-.listWrapper {
-  flex: 1;
-  margin-top: 20px;;
-}
-
-.listWrapper ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.listWrapper li {
-  margin-bottom: 10px;
-  color: #777777;
-}
-
-/* ---------- Desktop: 2-column list ---------- */
-@media (min-width: 769px) {
-  .listWrapper ul {
-    column-count: 2;       
-    column-gap: 40px;      
-    padding-left: 0;       
-    list-style-position: inside; 
-  }
-}
-
-/* ---------- Mobile Responsive ---------- */
-@media (max-width: 768px) {
   .contentWrapper {
-    flex-direction: column;
-    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    /* ---------- Carousel Section for GeneralBooks ---------- */
+    .imageWrapper {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+
+      .carousel {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0 auto;
+
+        .slide {
+          flex: 1;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .bookImage {
+            width: 80%;
+            height: auto;
+            max-height: 320px;
+            object-fit: contain;
+          }
+        }
+
+        button {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          background: none;
+          border: none;
+          color: #333;
+          font-size: 1.8rem;
+          cursor: pointer;
+          padding: 0;
+          z-index: 5;
+
+          &.prev {
+            left: 30px;
+          }
+          &.next {
+            right: 30px;
+          }
+        }
+      }
+
+      /* Tablet / iPad adjustments */
+      @media (max-width: 1024px) {
+        .carousel {
+          max-width: 100vw;
+          width: 100vw;
+          margin: 0;
+          padding: 0;
+
+          .slide .bookImage {
+            width: 100vw;
+            height: 60vh;
+            object-fit: contain;
+            border-radius: 0;
+          }
+
+          button.prev {
+            left: 30px;
+          }
+          button.next {
+            right: 30px;
+          }
+        }
+      }
+
+      /* Mobile adjustments */
+      @media (max-width: 560px) {
+        .carousel {
+          max-width: 320px;
+          width: 400px;
+          margin: 0;
+          padding: 0;
+
+          .slide .bookImage {
+            width: 320px;
+            height: 400px;
+            object-fit: contain;
+            border-radius: 8px;
+          }
+
+          button.prev {
+            left: -15px;
+          }
+          button.next {
+            right: -15px;
+          }
+        }
+      }
+    }
+
+    /* ---------- List Section ---------- */
+    .listWrapper {
+      flex: 1;
+      margin-top: 20px;
+
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+
+        li {
+          margin-bottom: 10px;
+          color: #777777;
+        }
+      }
+    }
   }
 
-  .imageWrapper,
-  .listWrapper {
-    flex: unset;
-    width: 100%;
+  /* ---------- Desktop 2-column list ---------- */
+  @media (min-width: 769px) {
+    .listWrapper {
+      ul {
+        column-count: 2;
+        column-gap: 40px;
+        padding-left: 0;
+        list-style-position: inside;
+      }
+    }
+  }
+
+  /* ---------- Tablet / iPad Fix ---------- */
+  @media (max-width: 1024px) {
+    .contentWrapper {
+      flex-direction: column;
+      gap: 20px;
+
+      .imageWrapper {
+        flex: 0 0 55%;
+      }
+
+      .listWrapper {
+        flex: 0 0 45%;
+        margin-top: 0;
+
+        ul {
+          column-gap: 20px;
+        }
+      }
+    }
   }
 }
-.heroTitle {
-       
-  position: absolute; 
-  top: 20%;          
-  left: 60%;
-  transform: translate(-50%, -50%); 
-  color:#1E1E20;    
-  font-size: clamp(20px, 4vw, 32px);
-  text-align: right;
-  font-weight: 700;
-}
-
-
