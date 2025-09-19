@@ -152,7 +152,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <Link href="#">Responsibility</Link>
+          <Link href="/responsibility">Responsibility</Link>
           <Link href="https://navneet.com/ehs/">EHS</Link>
 
           <div

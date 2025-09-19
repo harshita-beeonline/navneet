@@ -1,0 +1,50 @@
+.informationSection {
+  position: relative;
+  width: 100%;
+  min-height: 300px; // instead of fixed height
+  overflow: hidden;
+}
+
+.bgWrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.bgImage {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.textWrapper {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px; // ensures at least 300px, but grows if text is bigger
+  text-align: center;
+  padding: 20px 80px;
+
+  @media (max-width: 1024px) {
+    padding: 20px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 20px 16px;
+  }
+
+  p {
+    color: #111111;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    margin: 0 auto;
+
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
