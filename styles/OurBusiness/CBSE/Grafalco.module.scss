@@ -202,7 +202,6 @@
 .bullets li {
   margin-bottom: 10px;
 }
-
 /* ---------- Responsive tweaks ---------- */
 @media (max-width: 1024px) {
   .grafalcoSection {
@@ -218,6 +217,37 @@
   }
 }
 
+/* ---------- Tablet (769px - 1024px) ---------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .statsInner {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+
+  .statsGraphic,
+  .statsList {
+    width: 100%;
+  }
+
+  .graphImg {
+    max-width: 380px;
+  }
+
+  .crossLeft {
+    left: 18%;
+    bottom: -20px;
+    width: clamp(60px, 7vw, 90px);
+  }
+
+  .crossRight {
+    right: 18%;
+    top: -20px;
+    width: clamp(60px, 7vw, 90px);
+  }
+}
+
+/* ---------- Mobile (≤768px) ---------- */
 @media (max-width: 768px) {
   .statsInner {
     flex-direction: column;
@@ -231,20 +261,37 @@
   }
 
   .graphImg {
-    max-width: 320px;
+    max-width: 300px;
+  }
+
+  .crossLeft {
+    left: 12px;
+    bottom: -12px;
+    width: clamp(48px, 18vw, 70px);
+  }
+
+  .crossRight {
+    right: 12px;
+    top: -12px;
+    width: clamp(48px, 18vw, 70px);
+  }
+}
+
+/* ---------- Small Mobile (≤480px) ---------- */
+@media (max-width: 480px) {
+  .graphImg {
+    max-width: 240px;
   }
 
   .crossLeft {
     left: 8px;
-    bottom: -8px;
+    bottom: 0;
+    width: 44px;
   }
 
   .crossRight {
     right: 8px;
-    top: -8px;
-  }
-
-  .desc {
-    text-align: left;
+    top: 0;
+    width: 44px;
   }
 }
