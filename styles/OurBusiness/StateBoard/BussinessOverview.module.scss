@@ -1,223 +1,110 @@
-/* === Hero Section (Background + Books) === */
-.heroSection {
-  margin-top: 60px;
-  padding: clamp(16px, 4vw, 32px) 80px;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-
-  @media (max-width: 1280px) {
-    padding: clamp(16px, 4vw, 32px) 60px;
-  }
-
-  @media (max-width: 1024px) {
-    padding: clamp(16px, 4vw, 32px) 40px;
-  }
-
-  @media (max-width: 768px) {
-    margin-top: 60px;
-    padding: clamp(16px, 4vw, 32px) 20px;
-    gap: 32px;
-  }
-
-  @media (max-width: 576px) {
-    padding: clamp(16px, 4vw, 32px) 15px;
-  }
-}
-
-/* ---------- Hero ---------- */
-.heroDesktop {
-  display: block;
-}
-
-.heroWrapperDesktop {
+.academicProgress {
   width: 100%;
-  position: relative;
-  
-   height: 400px;
-  overflow: visible;
-}
+  overflow: hidden;
 
-.heroMobile {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .heroWrapperMobile {
-    width: 100%;
-    position: relative;
-    height: 369px;             
-    margin-top: 20px;          
-    overflow: hidden;
-  }
-
-  .heroWrapperMobile img {
-    object-fit: cover;         
-    object-position: center top;  
-  }
-}
-/* Swap at mobile breakpoint */
-@media (max-width: 768px) {
+  /* ========== DESKTOP HERO ========== */
   .heroDesktop {
-    display: none;
+    position: relative;
+    width: 100%;
+    display: none; // hidden by default (mobile-first)
+
+    .heroBg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .heroContent {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      max-width: 1400px;
+      margin: 0 auto;
+      gap: 2rem;
+
+      .textBlock {
+        flex: 1;
+        color: #2F6DB2;
+        font-family: "Montserrat", sans-serif;
+
+        h1 {
+          font-weight: 600;
+          font-style: normal;
+          font-size: clamp(28px, 4vw, 55px);
+          line-height: clamp(36px, 4.5vw, 61px);
+          letter-spacing: -0.02em;
+          margin: 0 0 0.5rem 0;
+        }
+
+        h3 {
+          font-weight: 500;
+          font-style: normal;
+          font-size: clamp(22px, 3.5vw, 48px);
+          line-height: clamp(32px, 4.5vw, 61px);
+          letter-spacing: -0.02em;
+          margin: 0;
+        }
+      }
+
+      .bookImage {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        img {
+          width: clamp(180px, 60vw, 480px);
+          height: auto;
+        }
+      }
+    }
   }
+
+  /* ========== MOBILE HERO ========== */
   .heroMobile {
     display: block;
-  }
-
-  .heroWrapperDesktop {
-    height: 300px;
-  }
-}
-
-/* Tablet height adjustment */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .heroWrapperDesktop {
-    height: 300px;
-  }
-}
-
-/* === Hero Section (Background + Books) Full-Width Adjustment === */
-.heroSection {
-  margin-top: 60px;
-  font-family: "Montserrat", sans-serif;
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-
-  
-  padding: 0;
-
-  @media (max-width: 1280px) {
-    padding: 0; 
-  }
-
-  @media (max-width: 1024px) {
-    padding: 0; 
-  }
-
-  @media (max-width: 768px) {
+    width: 100%;
     margin-top: 60px;
-    padding: 0; 
-  }
-}
 
-/* Intro handles spacing for text */
-.intro {
-  width: 100%;
-  max-width: 1400px; 
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  text-align: left;
-  padding: 0 10px;
-  margin:20px auto 40px;
-  
-     /* spacing below hero bg */
-
-  @media (max-width: 1280px) {
-    padding: 0 30px;
+    .heroBg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
   }
 
-  @media (max-width: 1024px) {
-    padding: 0 40px;
-  }
-
-  @media (max-width: 768px) {
+  /* ========== TEXT AREA ========== */
+  .textArea {
+    max-width: 1250px;
+    margin: 40px auto;
     padding: 0 20px;
-  }
 
-  @media (max-width: 576px) {
-    padding: 0 15px;
-  }
-}
-
-/* Right books image */
-/* Right books image */
-
-/* === Default (mobile safe) === */
-.booksWrapper {
-  position: absolute;
-  bottom: 0;
-  left: 50%;                
-  transform: translateX(-50%);
-  width: 220px;             
-  height: auto;
-  top: auto;
-  opacity: 1;
-  z-index: 2;
-}
-
-.booksWrapper img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-width: none;
-  max-height: none;
-}
-
-/* === Tablet / iPad Portrait & Landscape (769px – 1024px) === */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .booksWrapper {
-    left: 800px;            
-    right: auto;
-    top: 20px;
-    width: auto;
-  }
-
-  .booksWrapper img {
-    height: 300px;         
-    width: auto;
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: clamp(14px, 1.2vw, 18px);
+      line-height: clamp(20px, 2vw, 26px);
+      letter-spacing: -0.02em;
+      color: #777;
+      margin-bottom: 1rem;
+    }
   }
 }
 
-/* === Small Desktop (1025px – 1279px) === */
-@media (min-width: 1025px) and (max-width: 1279px) {
-  .booksWrapper {
-    right: 50px;
-    top: 40px;
-    width: auto;
-  }
-
-  .booksWrapper img {
-    height: 700px;         
-    width: auto;
-  }
-}
-
-
-/* ✅ keep exactly your working desktop code */
-@media (min-width: 1280px) {
-  .booksWrapper {
-    right: 1000px;
-    top: 25px;
-    width: auto;
-  }
-
-  .booksWrapper img {
-    height: 420px;         
-    width: auto;
-    max-width: none;
-    max-height: none;
+/* Show desktop/tablet layout from 541px upward */
+@media (min-width: 541px) {
+  .academicProgress {
+    .heroDesktop {
+      margin-top: 60px;
+      display: block;
+    }
+    .heroMobile {
+      display: none;
+    }
   }
 }
-
-
-/* Typography */
-.desc {
-  text-align: left;
-  margin: 0;
-  font-size: clamp(14px, 1.8vw, 16px);
-  line-height: 1.7;
-  color: #666;
-}
-
-.title {
-  color: #2f6db2;
-  font-weight: 600;
-  font-size: clamp(20px, 2.2vw, 28px);
-  margin: 0;
-}
-
-
