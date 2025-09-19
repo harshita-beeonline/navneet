@@ -212,6 +212,7 @@ $card-light: #d8eefc;
 .bottomSpacer {
   height: 48px;
 }
+
 .blueBgSection {
   // Default: desktop
   width: 100vw;
@@ -237,6 +238,7 @@ $card-light: #d8eefc;
     width: 100%;              // stretch to viewport without overshooting
     margin-left: 0;           // no breakout trick
     background-image: url("/images/our-business/bluebg-mobile.png");
+    margin-top: 20px;
     padding: 20px;
     font-size: 14px;
     line-height: 22px;
@@ -248,6 +250,4 @@ $card-light: #d8eefc;
     line-height: 20px;
   }
 }
-
-
 
