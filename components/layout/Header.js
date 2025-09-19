@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/Header.module.scss";
-import logo from "../../public/images/LogoNavneet.png";
+import logo from "../../public/images/LogoNavneet.svg";
 import Link from "next/link";
 import BusinessDropdown from "./BusinessDropdown";
 import InvestorDropdown from "./InvestorDropdown";
@@ -85,9 +85,9 @@ export default function HomePage() {
           scrolled ? styles["scrolled"] : ""
         }`}
       >
-        <div className={styles["logo-image"]}>
+        <Link href="/" className={styles["logo-image"]}>
           <Image src={logo} alt="" />
-        </div>
+        </Link>
         <div className={styles["menu-toggle"]} id="menu-toggle">
           <svg
             width="24"
