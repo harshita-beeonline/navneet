@@ -73,6 +73,11 @@
   .hero-section {
     padding: 40px;
 
+    .text-wrapper .heading-info {
+      font-size: 32px;
+      line-height: 42px;
+    }
+
     .images-content {
       flex-direction: column;
 
@@ -90,11 +95,6 @@
           aspect-ratio: 4 / 3;
         }
       }
-    }
-
-    .text-wrapper .heading-info {
-      font-size: 32px;
-      line-height: 42px;
     }
   }
 }
