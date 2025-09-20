@@ -11,31 +11,34 @@
   padding: 2px 100px 2px 80px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
+
   &.scrolled {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     opacity: 1;
-    // .nav-menu a {
-    //   color: #000 !important;
-    // }
+
     .menu-toggle svg path {
-      fill: #000; // <—— this makes the hamburger icon black
+      fill: #000; // makes the hamburger icon black
     }
   }
+
   .logo-image {
     width: 126px;
     height: 68.5px;
     overflow: hidden;
+
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
   }
+
   .logo {
     font-size: 24px;
     font-weight: bold;
   }
+
   .nav-menu a {
     text-decoration: none;
     margin-left: 30px;
@@ -48,31 +51,36 @@
     color: #1e1e1e;
     transition: color 0.3s ease;
   }
+
   .dropdownParent {
     position: relative;
     display: inline-block;
   }
+
   .dropdown-open {
     display: none;
     position: absolute;
-    top: 100%; // below parent
+    top: 100%;
     left: 0;
     z-index: 2000;
+
     &.show {
-      display: flex; // or block
+      display: flex;
     }
   }
 
   .menu-toggle svg path {
-    fill: #000; // <—— this makes the hamburger icon black
+    fill: #000; // hamburger icon color
   }
 }
+
 /* BANNER SLIDER */
 .banner-slider {
   position: relative;
   height: 60vh;
   overflow: hidden;
   margin-top: 70px;
+
   .slide {
     position: absolute;
     top: 0;
@@ -111,6 +119,7 @@
     &.prev {
       left: 20px;
     }
+
     &.next {
       right: 20px;
     }
@@ -125,7 +134,7 @@
     color: #000;
     min-width: 190px;
     z-index: 6;
-    // opacity: 90%;
+
     h3 {
       font-size: 13px;
       text-align: left;
@@ -133,45 +142,25 @@
       margin-bottom: 10px;
     }
 
-    // .toggle {
-    //   display: flex;
-    //   border-radius: 17px;
-
-    //   margin-bottom: 10px;
-    //   button {
-    //     background: transparent;
-    //     border: 1px solid transparent;
-    //     color: #000;
-    //     padding: 5px 10px;
-    //     cursor: pointer;
-    //     &.active {
-    //       background: #fff;
-    //       color: #000;
-    //     }
-
-    //     &:first-child,
-    //     &:last-child {
-    //       border-radius: 500px;
-    //     }
-    //   }
-    // }
     .toggle {
       width: 110px;
-      display: flex; // light gray container background
-      border-radius: 50px; // full pill shape
-      overflow: hidden; // hide overlap on borders
+      display: flex;
+      border-radius: 50px;
+      overflow: hidden;
       margin-bottom: 10px;
       background: #dedddd;
+
       button {
-        flex: 1; // both take 50% width
+        flex: 1;
         border: none;
         color: #000;
         padding: 10px 0;
         cursor: pointer;
         font-weight: 500;
         background-color: transparent;
+
         &.active {
-          background: #ffffff; // active one becomes white
+          background: #ffffff;
           color: #000;
           border-radius: 50px;
         }
@@ -190,6 +179,7 @@
     }
   }
 }
+
 /* Hamburger Menu */
 .menu-toggle {
   display: none;
@@ -197,6 +187,7 @@
   cursor: pointer;
   color: #fff;
 }
+
 .close-menu {
   display: none;
   font-size: 28px;
@@ -206,17 +197,21 @@
   top: 15px;
   right: 15px;
 }
+
 /* Stock boxes */
 .desktop-only {
   display: block;
 }
+
 .mobile-only {
   display: none;
 }
+
 .extra {
   height: 100vh;
   background-color: #000;
 }
+
 /* --- RESPONSIVE --- */
 @media (max-width: 1280px) {
   .site-header {
@@ -226,6 +221,7 @@
     &.scrolled .menu-toggle {
       color: #000;
     }
+
     .logo-image {
       width: 88px;
       height: 48px;
@@ -236,13 +232,15 @@
       }
     }
   }
+
   .banner-slider {
     margin-top: 60px;
-  }
-  .banner-slider .arrow {
-    font-size: 20px;
-    height: 30px;
-    width: 30px;
+
+    .arrow {
+      font-size: 20px;
+      height: 30px;
+      width: 30px;
+    }
   }
 
   .nav-menu {
@@ -319,6 +317,7 @@
   .desktop-only {
     display: none;
   }
+
   .mobile-only {
     display: block;
     background: rgba(255, 255, 255, 0.6);
@@ -328,7 +327,6 @@
     border-radius: 12px;
     color: #000;
     min-width: 190px;
-    // margin: 20px auto;
     position: relative;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 
@@ -337,16 +335,18 @@
       width: 112px;
       border-radius: 50px;
       background: #dedddd;
+
       button {
-        flex: 1; // both take 50% width
+        flex: 1;
         border: none;
         color: #000;
         padding: 10px 0;
         cursor: pointer;
         font-weight: 500;
         background-color: transparent;
+
         &.active {
-          background: #ffffff; // active one becomes white
+          background: #ffffff;
           color: #000;
           border-radius: 50px;
         }
@@ -372,23 +372,24 @@
   .desktop-banner {
     display: none;
   }
+
   .mobile-banner {
     display: block;
   }
 }
 
-/* HEADER FIX for 1280px–1460px */ //change header to 1280 to 1281 for small icon bug
+/* HEADER FIX for 1280px–1460px */
 @media (max-width: 1460px) and (min-width: 1281px) {
   .site-header {
-    padding: 6px 20px; // tighter padding
+    padding: 6px 20px;
     display: flex;
     align-items: center;
-    justify-content: center; // upadted to center
+    justify-content: center;
 
     .logo-image {
       width: 110px;
       height: auto;
-      margin-right: 30px; // small gap between logo and menu
+      margin-right: 30px;
     }
 
     .nav-menu {
@@ -396,9 +397,15 @@
       align-items: center;
 
       a {
-        margin: 0 12px; // even spacing between links
+        margin: 0 12px;
         font-size: 15px;
       }
     }
   }
+}
+
+/* ================= ACTIVE LINK STYLING ================= */
+.nav-menu a.activeLink {
+  color: #000 !important;   // black text
+  font-weight: 700 !important; // bold
 }

@@ -1,0 +1,414 @@
+/* Colors / vars */
+$getin-bg: #dcf0fd;
+$text-color: #1e1e20;
+$card-bg: #ffffff;
+
+.getInTouchSection {
+  background: $getin-bg;
+  padding: 60px 10px 100px 10px;
+  text-align: center;
+
+  .title {
+    font-size: 32px;
+    font-weight: 700;
+    color: $text-color;
+    margin-bottom: 32px;
+  }
+    
+  }
+
+
+
+/* === Cards row (desktop) === */
+.cardsWrapper {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* allows wrap on very narrow widths */
+  max-width: 1400px; /* increased max width for more space usage */
+  margin: 0 auto; /* center the wrapper */
+}
+
+/* Card container */
+.card {
+  background: $card-bg;
+  border-radius: 0;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+  padding: 20px;
+  flex: 1 1 48%; /* grow/shrink, take up more space */
+  max-width: 49%; /* allows two cards side by side with minimal gap */
+  display: flex;
+  flex-direction: column; 
+  width: auto; /* let flex handle the width */
+  height: 343px;/* keeps header/content stacked inside card */
+}
+
+/* Inner content of each card: left (info) and right (map) */
+.cardContent {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+}
+
+/* LEFT: Info column */
+.info {
+  flex: 1 1 45%; /* takes ~45% width */
+  min-width: 200px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 6px;
+
+  .city {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text-color;
+    margin: 0;
+  }
+
+  .address {
+    font-style: normal;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  .contactList {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    
+    @media (max-width: 480px) {
+      width: 16px;
+      height: 16px;
+    }
+    
+    @media (max-width: 360px) {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  span {
+    font-size: 15px;
+    color: $text-color;
+    
+    @media (max-width: 768px) {
+      font-size: 14px;
+    }
+    
+    @media (max-width: 480px) {
+      font-size: 13px;
+    }
+    
+    @media (max-width: 360px) {
+      font-size: 12px;
+    }
+  }
+}
+
+.cin {
+  font-size: 13px;
+  color: #666;
+  
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+  
+  @media (max-width: 480px) {
+    font-size: 11px;
+  }
+  
+  @media (max-width: 360px) {
+    font-size: 10px;
+  }
+}
+
+/* RIGHT: Map column */
+.mapWrapper {
+  flex: 1 1 55%; /* takes ~55% width */
+  min-width: 280px;
+  border-radius: 0;
+  overflow: hidden;
+  /* set a sensible height so iframe fills it */
+ width: 293px;  /* desktop width */
+  height: 293px;
+    position: relative;
+
+     iframe, img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fills container without distortion */
+    border: 0;
+  }
+}
+
+/* ===== Large Tablets and Small Desktops ===== */
+@media (max-width: 1200px) {
+  .cardsWrapper {
+    max-width: 1000px;
+    gap: 15px;
+  }
+
+  .card {
+    flex: 1 1 48%;
+    max-width: 49%;
+  }
+}
+
+/* ===== Medium Tablets ===== */
+@media (max-width: 900px) {
+  .getInTouchSection {
+    padding: 50px 0 80px 0;
+  }
+
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 25px;
+    padding: 0 30px;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    flex: none;
+  }
+
+  .cardContent {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .info {
+    flex: 1 1 45%;
+  }
+
+  .mapWrapper {
+    flex: 1 1 55%;
+    width: auto;
+    height: 250px;
+  }
+
+  .title {
+    font-size: 30px;
+    text-align: center;
+  }
+}
+
+/* ===== Tablets ===== */
+@media (max-width: 1024px) {
+  .getInTouchSection {
+    padding: 40px 0 70px 0;
+  }
+
+  .cardsWrapper {
+    gap: 20px;
+    padding: 0 25px;
+  }
+
+  .card {
+    flex: 1 1 48%;
+    max-width: 48%;
+    height: 350px;
+  }
+}
+
+/* ===== Mobile: phones ===== */
+@media (max-width: 768px) {
+  .getInTouchSection {
+    padding: 30px 0 60px 0;
+  }
+
+  .cardsWrapper {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 40px;
+    align-items: center;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .cardContent {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info {
+    text-align: left;
+    align-items: flex-start;
+    gap: 8px;
+
+    .city {
+      font-size: 18px;
+    }
+
+    .address {
+      font-size: 14px;
+    }
+  }
+
+  .mapWrapper {
+    width: 100%;
+    height: 200px;
+    min-width: 0;
+  }
+
+  .title {
+    font-size: 26px;
+    text-align: center;
+  }
+}
+@media (min-width: 1025px) {
+  .getInTouchSection {
+    text-align: left; /* section content left-aligned */
+    
+    .title {
+      text-align: left; /* title left-aligned */
+    }
+  }
+}
+
+/* ===== Small Mobile: phones < 480px ===== */
+@media (max-width: 480px) {
+  .getInTouchSection {
+    padding: 25px 0 50px 0;
+  }
+
+  .cardsWrapper {
+    padding: 0 65px;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  .cardContent {
+    gap: 12px;
+  }
+
+  .info {
+    gap: 6px;
+
+    .city {
+      font-size: 16px;
+    }
+
+    .address {
+      font-size: 13px;
+    }
+
+    .contactItem span {
+      font-size: 13px;
+    }
+  }
+
+  .mapWrapper {
+    height: 180px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
+
+/* ===== Extra Small Mobile: phones < 360px ===== */
+@media (max-width: 360px) {
+  .getInTouchSection {
+    padding: 20px 0 40px 0;
+  }
+
+  .cardsWrapper {
+    padding: 0 30px;
+    gap: 12px;
+  }
+
+  .card {
+    padding: 12px;
+  }
+
+  .info {
+    .city {
+      font-size: 15px;
+    }
+
+    .address {
+      font-size: 12px;
+    }
+
+    .contactItem span {
+      font-size: 12px;
+    }
+  }
+
+  .mapWrapper {
+    height: 160px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
+
+/* ===== White Background Section ===== */
+.whiteBackgroundSection {
+  background: #ffffff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 30px 0;
+  min-height: 40px;
+
+  /* ===== Large Tablets and Small Desktops ===== */
+  @media (max-width: 1200px) {
+    padding: 25px 0;
+  }
+
+  /* ===== Medium Tablets ===== */
+  @media (max-width: 900px) {
+    padding: 20px 0;
+  }
+
+  /* ===== Tablets ===== */
+  @media (max-width: 1024px) {
+    padding: 18px 0;
+  }
+
+  /* ===== Mobile: phones ===== */
+  @media (max-width: 768px) {
+    padding: 15px 0;
+  }
+
+  /* ===== Small Mobile: phones < 480px ===== */
+  @media (max-width: 480px) {
+    padding: 13px 0;
+  }
+
+  /* ===== Extra Small Mobile: phones < 360px ===== */
+  @media (max-width: 360px) {
+    padding: 10px 0;
+  }
+}

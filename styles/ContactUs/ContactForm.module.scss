@@ -1,0 +1,346 @@
+$dark-bg: #2e2e38;
+$text-color: #ffffff;
+
+.contactSection {
+  background: $dark-bg;
+  width: 100vw; /* full viewport width */
+  height: 642px; /* desktop height */
+  margin-left: calc(-50vw + 50%); /* break out of parent container */
+  display: flex;
+  align-items: center;
+  padding: 0;
+
+  .contactWrapper {
+    display: flex;
+    gap: 80px;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    /* LEFT COLUMN */
+    .contactLeft {
+      width: 550px;
+      height: 264px;
+      flex: none;
+      margin-left: -60px;
+      margin-top: -40px;
+
+      h3 {
+        font-family: Montserrat;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 55px;
+        letter-spacing: 0%;
+        color: $text-color;
+        margin-bottom: 16px;
+      }
+
+      p {
+        font-family: Montserrat;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 28px;
+        letter-spacing: -2%;
+        color: $text-color;
+      }
+    }
+
+    /* RIGHT COLUMN: form */
+    .contactRight {
+      width: 517px;
+      height: 447px;
+      flex: none;
+
+      .contactForm {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        border-radius: 0 0 12px 12px;
+        border: none;
+        padding: 20px;
+
+        input {
+          padding: 12px 0;
+          border: none;
+          border-bottom: 1px solid #ffffff;
+          border-radius: 0;
+          font-size: 14px;
+          width: 100%;
+          color: #ffffff !important;
+          background: transparent;
+
+          &::placeholder {
+            color: #ffffff !important;
+            opacity: 0.7;
+          }
+
+          &:focus {
+            color: #ffffff !important;
+            outline: none;
+            border-bottom: 1px solid #ffffff;
+          }
+        }
+
+        button {
+          width: 224px;
+          height: 48px;
+          margin-top: 16px;
+          padding: 10px;
+          gap: 10px;
+          background: #2f6db2;
+          color: #ffffff;
+          font-weight: 600;
+          border: none;
+          border-radius: 30px;
+          cursor: pointer;
+          transition: background 0.3s;
+          opacity: 1;
+
+          &:hover {
+            background: #285a94; // manually darkened #2F6DB2
+          }
+        }
+      }
+    }
+  }
+
+  /* ===== Large Tablets and Small Desktops ===== */
+  @media (max-width: 1200px) {
+    .contactWrapper {
+      max-width: 1000px;
+      gap: 60px;
+
+      .contactLeft {
+        width: 480px;
+        margin-left: -40px;
+      }
+
+      .contactRight {
+        width: 450px;
+      }
+    }
+  }
+
+  /* ===== Medium Tablets ===== */
+  @media (max-width: 900px) {
+    .contactWrapper {
+      flex-direction: column;
+      gap: 25px;
+      padding: 0 25px;
+      align-items: center;
+
+      .contactLeft {
+        width: 100%;
+        max-width: 550px;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: left;
+
+        h3 {
+          font-size: 32px;
+          line-height: 44px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 26px;
+        }
+      }
+
+      .contactRight {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+    }
+  }
+
+  /* ===== Tablets: iPad landscape ===== */
+  @media (max-width: 1024px) {
+    height: auto;
+    padding: 40px 0;
+
+    .contactWrapper {
+      flex-direction: column;
+      gap: 30px;
+      padding: 0 30px;
+      align-items: center;
+
+      .contactLeft {
+        width: 100%;
+        max-width: 600px;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: center;
+      }
+
+      .contactRight {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+      }
+    }
+  }
+
+  /* ===== Mobile: phones ===== */
+  @media (max-width: 768px) {
+    width: 100vw;
+    height: auto;
+    padding: 30px 0;
+    margin-left: calc(-50vw + 50%);
+
+    .contactWrapper {
+      flex-direction: column;
+      gap: 25px;
+      padding: 0 20px;
+      align-items: center;
+
+      .contactLeft {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        margin-left: 0;
+        margin-top: 0;
+        text-align: left;
+
+        h3 {
+          font-size: 28px;
+          line-height: 38px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 24px;
+        }
+      }
+
+      .contactRight {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+
+        .contactForm {
+          border-radius: 0 0 12px 12px;
+          border: none;
+          padding: 20px;
+
+          input {
+            padding: 15px 0;
+            font-size: 16px;
+          }
+
+          button {
+            width: 100%;
+            height: 50px;
+            font-size: 16px;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  /* ===== Small Mobile: phones < 480px ===== */
+  @media (max-width: 480px) {
+    padding: 20px 0;
+
+    .contactWrapper {
+      padding: 0 15px;
+      gap: 20px;
+
+      .contactLeft {
+        h3 {
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        p {
+          font-size: 14px;
+          line-height: 22px;
+        }
+      }
+
+      .contactRight {
+        .contactForm {
+          padding: 15px;
+
+          input {
+            padding: 12px 0;
+            font-size: 14px;
+          }
+
+          button {
+            height: 45px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .contactLeftTitle {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px;
+    letter-spacing: 0%;
+    color: $text-color;
+    margin-bottom: 16px;
+
+    @media (max-width: 900px) {
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 28px;
+      line-height: 38px;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}
+.whiteBackgroundSection {
+  background: #ffffff;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  padding: 30px 0;
+  min-height: 40px;
+
+  /* ===== Large Tablets and Small Desktops ===== */
+  @media (max-width: 1200px) {
+    padding: 25px 0;
+  }
+
+  /* ===== Medium Tablets ===== */
+  @media (max-width: 900px) {
+    padding: 20px 0;
+  }
+
+  /* ===== Tablets ===== */
+  @media (max-width: 1024px) {
+    padding: 18px 0;
+  }
+
+  /* ===== Mobile: phones ===== */
+  @media (max-width: 768px) {
+    padding: 15px 0;
+  }
+
+  /* ===== Small Mobile: phones < 480px ===== */
+  @media (max-width: 480px) {
+    padding: 13px 0;
+  }
+
+  /* ===== Extra Small Mobile: phones < 360px ===== */
+  @media (max-width: 360px) {
+    padding: 10px 0;
+  }
+}
