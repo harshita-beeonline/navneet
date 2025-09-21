@@ -1,28 +1,30 @@
-$dark-bg: #2e2e38;
-$text-color: #ffffff;
+$dark-bg: #2E2E38;
+$text-color: #FFFFFF;
 
 .contactSection {
-  background: $dark-bg;
-  width: 100vw; /* full viewport width */
-  height: 642px; /* desktop height */
+  background: $dark-bg;        
+  width: 100vw;                /* full viewport width */
+  height: 642px;               /* desktop height */
   margin-left: calc(-50vw + 50%); /* break out of parent container */
   display: flex;
-  align-items: center;
-  padding: 0;
+  align-items: center;         
+  padding: 0;   
+         
 
   .contactWrapper {
     display: flex;
-    gap: 80px;
+    gap: 70px;
     width: 100%;
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 0px;
+     
 
     /* LEFT COLUMN */
     .contactLeft {
-      width: 550px;
+      width: 589px;
       height: 264px;
       flex: none;
       margin-left: -60px;
@@ -58,29 +60,29 @@ $text-color: #ffffff;
         display: flex;
         flex-direction: column;
         gap: 12px;
-        border-radius: 0 0 12px 12px;
+        border-radius: 0 0 12px 12px; 
         border: none;
         padding: 20px;
 
         input {
           padding: 12px 0;
           border: none;
-          border-bottom: 1px solid #ffffff;
+          border-bottom: 1px solid #FFFFFF;
           border-radius: 0;
           font-size: 14px;
           width: 100%;
-          color: #ffffff !important;
+          color: #FFFFFF !important;
           background: transparent;
-
+          
           &::placeholder {
-            color: #ffffff !important;
+            color: #FFFFFF !important;
             opacity: 0.7;
           }
-
+          
           &:focus {
-            color: #ffffff !important;
+            color: #FFFFFF !important;
             outline: none;
-            border-bottom: 1px solid #ffffff;
+            border-bottom: 1px solid #FFFFFF;
           }
         }
 
@@ -90,8 +92,8 @@ $text-color: #ffffff;
           margin-top: 16px;
           padding: 10px;
           gap: 10px;
-          background: #2f6db2;
-          color: #ffffff;
+          background: #2F6DB2;
+          color: #FFFFFF;
           font-weight: 600;
           border: none;
           border-radius: 30px;
@@ -100,7 +102,7 @@ $text-color: #ffffff;
           opacity: 1;
 
           &:hover {
-            background: #285a94; // manually darkened #2F6DB2
+            background: darken(#2F6DB2, 10%);
           }
         }
       }
@@ -112,12 +114,12 @@ $text-color: #ffffff;
     .contactWrapper {
       max-width: 1000px;
       gap: 60px;
-
+      
       .contactLeft {
         width: 480px;
         margin-left: -40px;
       }
-
+      
       .contactRight {
         width: 450px;
       }
@@ -172,17 +174,43 @@ $text-color: #ffffff;
 
       .contactLeft {
         width: 100%;
-        max-width: 600px;
+        max-width: 1000px;
         height: auto;
         margin-left: 0;
         margin-top: 0;
-        text-align: center;
+        text-align: left;
+        h3 {
+          font-size: 28px;
+          line-height: 38px;
+        }
+
+        p {
+          font-size: 15px;
+          line-height: 24px;
+        }
       }
 
       .contactRight {
         width: 100%;
-        max-width: 500px;
+        max-width: 1000px;
         height: auto;
+        .contactForm {
+          border-radius: 0 0 12px 12px; 
+          border: none;
+          padding: 12px;
+
+          input {
+            padding: 15px 0;
+            font-size: 16px;
+          }
+
+          button {
+            width: 30%;
+            height: 50px;
+            font-size: 16px;
+            text-align: center;
+          }
+        }
       }
     }
   }
@@ -225,9 +253,9 @@ $text-color: #ffffff;
         height: auto;
 
         .contactForm {
-          border-radius: 0 0 12px 12px;
+          border-radius: 0 0 12px 12px; 
           border: none;
-          padding: 20px;
+          padding: 4px;
 
           input {
             padding: 15px 0;
@@ -235,7 +263,7 @@ $text-color: #ffffff;
           }
 
           button {
-            width: 100%;
+            width: 50%;
             height: 50px;
             font-size: 16px;
             text-align: center;
@@ -267,10 +295,10 @@ $text-color: #ffffff;
 
       .contactRight {
         .contactForm {
-          padding: 15px;
+          padding: 4px;
 
           input {
-            padding: 12px 0;
+            padding: 10px 0;
             font-size: 14px;
           }
 

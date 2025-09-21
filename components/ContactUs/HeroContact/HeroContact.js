@@ -11,14 +11,15 @@ export default function HeroContact() {
       <div className={styles.textContent}>
         <span className={styles.blueText}>Contact Us</span>
         <h1 className={styles.heading}>
-          At Navneet, our purpose is to do what it takes to move the needle and promulgate knowledge.
+          At Navneet, our purpose is to do what it takes to move the needle and
+          promulgate knowledge.
         </h1>
         <button className={styles.ctaButton}>More about our history</button>
       </div>
 
       {/* RIGHT SIDE - Images */}
       <div className={styles.imageContent}>
-        <Image 
+        <Image
           src={bigImage}
           alt="Contact us - Navneet Education"
           width={562}
@@ -26,7 +27,7 @@ export default function HeroContact() {
           className={styles.bigImage}
           priority
         />
-        <Image 
+        <Image
           src={smallImage}
           alt="Educational materials and books"
           width={288}
