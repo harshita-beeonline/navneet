@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -7,11 +7,16 @@ import styles from "../../../../styles/OurBusiness/NonCurricullum/ChildrenBooks.
 // Import images
 import mobilebg from "../../../../public/images/our-business/children-book-bg.png";
 import heroBg from "../../../../public/images/our-business/child-hero-bg.png";
-import booksImg from "../../../../public/images/our-business/child-book.png";
-import youtubeBg from "../../../../public/images/our-business/child-youtube-bg.png";
+import children_books_slider_1 from "../../../../public/images/our-business/children-books-slider-1.jpg";
+import children_books_slider_2 from "../../../../public/images/our-business/children-books-slider-2.jpg";
+import children_books_slider_3 from "../../../../public/images/our-business/children-books-slider-3.jpg";
 import youtubeIcon from "../../../../public/images/our-business/child-youtube-stroke.png";
 
-const images = [booksImg, booksImg, booksImg];
+const images = [
+  children_books_slider_1,
+  children_books_slider_2,
+  children_books_slider_3,
+];
 
 export default function ChildrenBooksPage() {
   const [current, setCurrent] = useState(0);
@@ -118,14 +123,11 @@ export default function ChildrenBooksPage() {
 
       {/* YouTube Section */}
       <section className={styles.youtubeSection}>
-        <Image
-          src={youtubeBg}
-          alt="YouTube background"
+        <video
+          src="/videos/Childrens-book-Navneet-YT-Video.mp4"
+          controls
           className={styles.bgImg}
         />
-        <div className={styles.youtubeOverlay}>
-          <Image src={youtubeIcon} alt="Play Button" />
-        </div>
       </section>
     </div>
   );

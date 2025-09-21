@@ -5,10 +5,11 @@ import styles from "../../../../styles/OurBusiness/NonCurricullum/GeneralBooks.m
 // Import images from /public
 import heroBg from "../../../../public/images/our-business/general-bg.png";
 import herobgmobile from "../../../../public/images/our-business/general-bg-mobile.png";
-import beautyBook from "../../../../public/images/our-business/beauty-book.png";
+import general_books_slider_1 from "../../../../public/images/our-business/general-books-slider_1.jpg";
+import general_books_slider_2 from "../../../../public/images/our-business/general-books-slider_2.jpg";
 import { useState } from "react";
 
-const images = [beautyBook, beautyBook, beautyBook];
+const images = [general_books_slider_1, general_books_slider_2];
 
 export default function GeneralBooksPage() {
   const [current, setCurrent] = useState(0);

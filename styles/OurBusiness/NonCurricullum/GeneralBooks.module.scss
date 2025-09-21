@@ -187,9 +187,8 @@
 
           .slide .bookImage {
             width: 320px;
-            height: 400px;
+            height: fit-content;
             object-fit: contain;
-            border-radius: 8px;
           }
 
           button.prev {

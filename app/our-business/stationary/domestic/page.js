@@ -103,7 +103,7 @@ export default function Domestic() {
         </div>
       </div>
 
-      {/* CORE IMAGE */}
+      {/* CORE VIDEO */}
       <div className={styles.coreSection}>
         <h3 className={styles.sectionTitle}>What’s in our core?</h3>
 
@@ -115,14 +115,15 @@ export default function Domestic() {
           us.
         </p>
 
-        <div className={styles.imageWrap}>
-          <Image
-            src={domesticCore}
-            alt="Youva - core"
-            width={700}
-            height={500}
-            className={styles.coreImage}
-          />
+        <div className={styles.videoWrap}>
+          <iframe
+            src="https://www.youtube.com/embed/O2juCM4DiW0"
+            title="YouTube video player"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className={styles.coreVideo}
+          ></iframe>
         </div>
       </div>
     </section>
