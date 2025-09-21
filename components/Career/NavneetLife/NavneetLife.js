@@ -8,7 +8,7 @@ export default function NavneetLife() {
   return (
     <section className={styles["navneet-life-section"]}>
       <div className={styles["image-wrapper"]}>
-        <Image src={life_at_navneet} className={styles["img"]} />
+        <Image src={life_at_navneet} alt="life_at_navneet" className={styles["img"]} />
       </div>
 
       <div className={styles["content-section"]}>
