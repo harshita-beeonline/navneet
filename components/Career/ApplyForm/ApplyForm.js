@@ -146,7 +146,7 @@ export default function ApplyForm({ jobId }) {
                   Terms & Conditions
                 </a>{" "}
                 -{" "}
-                <a href="/privacy" target="_blank">
+                <a href="/privacy-policy" target="_blank">
                   Privacy Policy
                 </a>
               </span>
