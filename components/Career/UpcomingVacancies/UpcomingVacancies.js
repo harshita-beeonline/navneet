@@ -1,41 +1,99 @@
-import vacanies_finance from "../../../public/images/carrer/vacanies-finance.png";
-import vacanies_legal from "../../../public/images/carrer/vacanies-legal.png";
-import vacanies_manufacturing from "../../../public/images/carrer/vacanies-manufacturing.png";
-import vacanies_supplychain from "../../../public/images/carrer/vacanies-supplychain.png";
-import vacanies_taxation from "../../../public/images/carrer/vacanies-taxation.png";
-import vacanies_publication from "../../../public/images/carrer/vacanies-publication.png";
-import vacanies_marketing from "../../../public/images/carrer/vacanies-marketing.png";
-import vacanies_sales from "../../../public/images/carrer/vacanies-sales.png";
-
-import styles from "../../../styles/Career/UpcomingVacancies.module.scss";
+// components/Career/UpcomingVacancies/UpcomingVacancies.js
+import Link from "next/link";
 import Image from "next/image";
+import styles from "@/styles/Career/UpcomingVacancies.module.scss";
 
-const vacanies = [
-  { id: 1, img: vacanies_legal },
-  { id: 2, img: vacanies_legal },
-  { id: 3, img: vacanies_manufacturing },
-  { id: 4, img: vacanies_supplychain },
-  { id: 5, img: vacanies_taxation },
-  { id: 6, img: vacanies_publication },
-  { id: 7, img: vacanies_marketing },
-  { id: 8, img: vacanies_sales },
+/**
+ * Each vacancy includes:
+ *  - id
+ *  - title (displayed, alt)
+ *  - img (path in /public)
+ *  - category (used to filter jobs list)
+ */
+const vacancies = [
+  {
+    id: 1,
+    title: "Finance & accounts",
+    img: "/images/carrer/vacanies-finance.png",
+    category: "finance",
+  },
+  {
+    id: 2,
+    title: "Legal",
+    img: "/images/carrer/vacanies-legal.png",
+    category: "legal",
+  },
+  {
+    id: 3,
+    title: "Manufacturing",
+    img: "/images/carrer/vacanies-manufacturing.png",
+    category: "manufacturing",
+  },
+  {
+    id: 4,
+    title: "Supply Chain",
+    img: "/images/carrer/vacanies-supplychain.png",
+    category: "supplychain",
+  },
+  {
+    id: 5,
+    title: "Taxation",
+    img: "/images/carrer/vacanies-taxation.png",
+    category: "taxation",
+  },
+  {
+    id: 6,
+    title: "Publication",
+    img: "/images/carrer/vacanies-publication.png",
+    category: "publication",
+  },
+  {
+    id: 7,
+    title: "Marketing",
+    img: "/images/carrer/vacanies-marketing.png",
+    category: "marketing",
+  },
+  {
+    id: 8,
+    title: "Sales",
+    img: "/images/carrer/vacanies-sales.png",
+    category: "sales",
+  },
 ];
 
 export default function UpcomingVacancies() {
   return (
-    <section className={styles["vacanies-section"]}>
-      <div className={styles.heading}>Upcoming Vacancies</div>
+    <section className={styles["vacancies-section"]}>
+      <h2 className={styles.heading}>Upcoming Vacancies</h2>
 
       <div className={styles["vacancy-cards"]}>
-        {vacanies.map((vacany) => (
-          <div key={vacany.id} className={styles.card}>
-            <Image src={vacany.img} alt="vacancy" />
-          </div>
+        {vacancies.map((v) => (
+          <Link
+            key={v.id}
+            href={`/career/jobs?category=${encodeURIComponent(v.category)}`}
+          >
+            <div className={styles.card} title={`View ${v.title} jobs`}>
+              <Image
+                src={v.img}
+                alt={v.title}
+                width={290}
+                height={290}
+                style={{ objectFit: "contain" }}
+                priority={false}
+              />
+              <div className={styles.overlay}>
+                <span className={styles.text}>{v.title}</span>
+                <span className={styles.arrow}>→</span>
+              </div>
+            </div>
+          </Link>
         ))}
       </div>
 
       <div className={styles["button-wrapper"]}>
-        <button className={styles.btn}>Load More</button>
+        <Link href="/career/jobs">
+          <button className={styles.btn}>Load More</button>
+        </Link>
       </div>
     </section>
   );

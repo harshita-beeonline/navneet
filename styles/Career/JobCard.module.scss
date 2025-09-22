@@ -1,0 +1,92 @@
+.card {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; /* Role wider, others equal */
+  align-items: center;
+  gap: 16px;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.role {
+  max-width: 450px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e1e20;
+}
+
+.location {
+  font-size: 14px;
+  font-weight: 500;
+  color: #1e1e20;
+}
+
+.action {
+  display: flex;
+  justify-content: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+
+  .jobType {
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e1e20;
+  }
+
+  .viewBtn {
+    text-decoration: none;
+    padding: 10px 25px;
+    border: none;
+    background: #2f6db2;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    border-radius: 36px;
+
+    &:hover {
+      background: #155a91;
+    }
+  }
+}
+
+/* Adjust for tablets and smaller desktops */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .role,
+  .location {
+    font-size: 13px; /* Slightly smaller text */
+  }
+
+  .action .jobType {
+    font-size: 13px;
+  }
+
+  .action .viewBtn {
+    padding: 8px 16px; /* Slightly smaller button */
+    font-size: 14px;
+  }
+}
+
+/* Responsive: Stack columns on small screens */
+@media (max-width: 600px) {
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .action {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 8px;
+
+    .viewBtn {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,186 @@
+.job-detail-page {
+  margin-top: 60px;
+  padding: clamp(20px, 4vw, 80px);
+  font-family: "Montserrat", sans-serif;
+}
+
+.job-detail-heading-section {
+  .heading {
+    font-weight: 700;
+    font-size: clamp(28px, 4vw, 45px);
+    line-height: clamp(36px, 5vw, 55px);
+    letter-spacing: 0;
+  }
+
+  .back {
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    text-decoration: none;
+
+    .back-text {
+      color: #2f6db2;
+      font-size: 24px;
+      font-weight: 500;
+    }
+  }
+}
+
+// styles for jobDetail Component
+.job-details-content {
+  padding-top: 40px;
+  margin: 0 auto;
+  font-family: "Montserrat", sans-serif;
+  color: #1e1e20;
+  line-height: 1.6;
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 20px 0 10px;
+  }
+
+  p {
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #444;
+  }
+
+  ul {
+    margin-left: 20px;
+    list-style-type: disc;
+
+    li {
+      margin-bottom: 8px;
+      font-size: 15px;
+    }
+  }
+
+  /* Top section */
+  .top-section {
+    text-align: left;
+
+    .job-heading {
+      font-size: 30px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .job-location {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+
+      .location-icon {
+        height: 24px;
+        width: 24px;
+        color: #2f6db2;
+      }
+
+      .locations {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+
+    .apply-btn {
+      border: none;
+      padding: 12px 35px;
+      background-color: #2f6db2;
+      color: #fff;
+      border-radius: 30px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #397ecc;
+      }
+    }
+  }
+
+  /* About Us */
+  .aboutus {
+    p {
+      margin-bottom: 15px;
+    }
+  }
+
+  /* Job Description */
+  .job-description {
+    ul {
+      margin-top: 10px;
+    }
+  }
+
+  /* Job Requirement */
+  .job-requirement {
+    ul {
+      margin-top: 10px;
+    }
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .top-section {
+      .job-heading {
+        font-size: 22px;
+      }
+
+      .locations {
+        font-size: 16px;
+      }
+
+      .apply-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    h2 {
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
+
+    .top-section {
+      .job-heading {
+        font-size: 20px;
+      }
+
+      .locations {
+        font-size: 14px;
+      }
+
+      .apply-btn {
+        font-size: 14px;
+        padding: 10px 25px;
+      }
+    }
+
+    h2 {
+      font-size: 18px;
+    }
+
+    ul li {
+      font-size: 14px;
+    }
+  }
+}

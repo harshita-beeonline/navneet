@@ -1,0 +1,39 @@
+[
+  {
+    "id": "qua00007",
+    "title": "Quality Officer - Stationery Plant (Virar)",
+    "slug": "quality-officer-virar-qua00007",
+    "location": ["Vasai","Virar","Boisar","Bhayandar","Palghar"],
+    "jobType": "Full Time",
+    "category": "manufacturing",
+    "summary": "Requirement of Quality Officer in our Manufacturing – Stationery Plant.",
+    "about": "Navneet Education Limited ...",
+    "description": "Hello,\nWe have Good Opportunity in our Manufacturing – Stationery Plant as Officer.\nDesignation – Quality Officer\nQualification - Any BE / B.Tech / Graduate\nExp. 2-5Yrs",
+    "duties": [
+      "To maintain quality data of Poly file folder",
+      "Adherence of quality standard as per SOP of Poly View ring binder and Poly file folder",
+      "Monitoring defect analysis and actionable improvement on the same"
+    ],
+    "requirements": [
+      "Need to Co-ordinate with Planning Team / Product Development / Productions",
+      "Good in Advanced Excel",
+      "Strong Analytical & Problem Solving Skills"
+    ],
+    "applyEmail": "hr.khaniwade@navneet.com"
+  },
+
+  {
+    "id": "pac00136",
+    "title": "Officer - Packaging Concept Formalizer",
+    "slug": "officer-packaging-concept-formalizer-pac00136",
+    "location": ["Silvassa"],
+    "jobType": "Full Time",
+    "category": "manufacturing",
+    "summary": "Packaging Concept Formalizer role",
+    "about": "Navneet ...",
+    "description": "Job desc here",
+    "duties": ["..."],
+    "requirements": ["..."],
+    "applyEmail": "hr@navneet.com"
+  }
+]

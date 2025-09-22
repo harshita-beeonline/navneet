@@ -1,0 +1,162 @@
+.apply-form-wrapper {
+  margin-top: 40px;
+  max-width: 800px;
+
+  h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #1e1e20;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Upload Box */
+.uploadBox {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .dropzone {
+    border: 2px dashed #d1dbe8;
+    background: #f9fcff;
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+
+    &:hover {
+      border-color: #2f6db2;
+    }
+
+    p {
+      margin: 10px 0 5px;
+      font-size: 14px;
+      color: #333;
+    }
+
+    span {
+      display: block;
+      margin: 5px 0;
+      font-size: 13px;
+      color: #666;
+    }
+
+    .browseBtn {
+      border: 1px solid #2f6db2;
+      background: #fff;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 14px;
+      color: #2f6db2;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background: #2f6db2;
+        color: #fff;
+      }
+    }
+  }
+}
+
+/* Inputs */
+.row {
+  display: flex;
+  gap: 20px;
+
+  .field {
+    flex: 1;
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+      transition: border 0.2s;
+
+      &:focus {
+        outline: none;
+        border-color: #2f6db2;
+      }
+    }
+  }
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+
+  a {
+    color: #2f6db2;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  input {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}
+
+/* Submit Button */
+.submitBtn {
+  align-self: flex-start;
+  padding: 10px 24px;
+  background: #2f6db2;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background: #397ecc;
+  }
+}
+
+/* Errors */
+.error {
+  color: red;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.status {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .submitBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
