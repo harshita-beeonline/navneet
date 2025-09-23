@@ -1,5 +1,5 @@
-import styles from "../../../../styles/Investor/Financials/QuarterlyTable.module.scss"
-import QuarterlyTable from "@/components/Investor/Financials/QuarterlyTable";
+import styles from "../../../../styles/Investor/Financials/QuarterlyTable.module.scss";
+import InvestorTable from "../../../../components/Investor/Financials/InvestorTable";
 
 export default function InvestorPresentationsPage() {
   return (
@@ -17,7 +17,7 @@ export default function InvestorPresentationsPage() {
       <div className={styles["data-heading"]}>Investor Presentations</div>
 
       {/* Table */}
-      <QuarterlyTable
+      <InvestorTable
         title="Investor Presentations"
         breadcrumb={[
           { label: "Investor", href: "#" },
