@@ -1,292 +1,319 @@
+/* styles/Footer.module.scss - final version aligned with Figma & mobile split lists */
+
 .footer {
   background: #2f6db2;
   color: #ffffff;
-  height: auto;
-  padding: 70px 80px 20px 80px;
-  @media (max-width:1280px) {
-  padding: 60px 40px 20px 40px;
+  width: 100%;
+  padding: 64px 80px 28px;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 1280px) {
+    padding: 56px 40px 28px;
   }
+  @media (max-width: 576px) {
+    padding: 28px 14px 24px;
+  }
+
   .footer-top {
-    // margin-bottom: 50px;
     .footer-grid {
-      display: flex;
-      justify-content: space-between;
-      // border: 1px solid black;
-      margin-bottom: 30px;
-    }
-    .footer-title {
-      font-weight: 600;
-      font-size: 17px;
-      margin: 0;
-      margin-bottom: 15px;
-      font-family: "Montserrat";
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) minmax(300px, 420px);
+      gap: 40px 48px;
+      align-items: start;
+      margin-bottom: 26px;
+
+      @media (max-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 28px;
+      }
+
+      @media (max-width: 576px) {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
     }
 
-    .footer-links {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      .navLink {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 35px;
-        letter-spacing: 0.3px;
-        transition: color 0.3s ease;
-        text-decoration: none;
-        color: #fff;
-        display: inline-flex;
-        gap: 5px;
-        align-items: center;
-        .navLink-icon {
-          display: inline-flex;
-          gap: 5px;
-          align-items: center;
+    .footer-col {
+      .footer-title {
+        font-weight: 600;
+        font-size: 17px;
+        margin: 0 0 14px 0;
+        color: #ffffff;
+      }
+
+      /* fallback for regular (desktop) single ul */
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          a.navLink {
+            display: inline-flex;
+            gap: 10px;
+            align-items: center;
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.92);
+            font-size: 14px;
+            line-height: 26px;
+            font-weight: 500;
+            transition: color 0.18s ease;
+
+            &:hover,
+            &:focus {
+              text-decoration: underline;
+              color: #fff;
+            }
+
+            .navLink-icon {
+              display: inline-flex;
+              gap: 8px;
+              align-items: center;
+            }
+          }
         }
-        &:hover,
-        &:focus {
-          text-decoration: underline;
+      }
+
+      /* split-list wrapper: by default stacked vertically (desktop)
+         on mobile it becomes two side-by-side uls */
+      .split-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        ul {
+          margin: 0;
         }
       }
     }
 
-    .brands-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-  }
-  .social-icons {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    gap: 15px;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    justify-content: space-between;
-  }
-  /* Newsletter Input Group */
-  .newsletter-input {
-    padding-bottom: 36px;
-    display: flex;
-    .email-input {
-      padding: 20px;
-      border: 1px solid var(--color-very-light-grey) !important;
-      background: transparent;
-      color: rgba(255, 255, 255, 0.37);
-      font-weight: 400;
-      font-size: 14px;
-      border-radius: 36px 0 0 36px;
-      border-right: none !important;
-      width: 326px;
-      &::placeholder {
-        color: rgba(255, 255, 255, 0.37);
-      }
-
-      &:focus {
-        border-color: var(--color-white);
-        background-color: transparent;
-        outline: none;
-      }
-    }
-
-    .subscribe-btn {
-      border: 1px solid var(--color-very-light-grey) !important;
-      border-left: none !important;
-      border-radius: 0 36px 36px 0;
-      color: var(--color-white);
-      font-size: 16px;
-      background: none;
-      cursor: pointer;
-      padding: 0 20px;
-    }
-  }
-  /* Contact Info */
-  .contact-info {
-    .contact-info-wrapper {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      color: var(--color-white);
-
-      span {
-        font-weight: 500;
-        font-size: 14px;
-      }
-
-      .contact-icon {
-        font-size: 16px;
-      }
-    }
-
-    .social-links {
-      display: flex;
-      gap: 15px;
-
-      .social-link {
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        text-decoration: none;
-        font-size: 14px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-        backdrop-filter: blur(10px);
+    /* Newsletter */
+    .title-parent {
+      .newsletter-input {
+        margin-top: 8px;
         display: flex;
         align-items: center;
-        justify-content: center;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 36px;
+        padding: 6px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: transparent;
 
-        &:hover {
-          transform: translateY(-2px);
+        .email-input {
+          border: none;
+          background: transparent;
+          color: rgba(255, 255, 255, 0.92);
+          font-size: 14px;
+          padding: 12px 14px;
+          width: 100%;
+          outline: none;
+
+          &::placeholder {
+            color: rgba(255, 255, 255, 0.36);
+          }
+        }
+
+        .subscribe-btn {
+          width: 44px;
+          height: 44px;
+          min-width: 44px;
+          border-radius: 50%;
+          border: 2px solid rgba(255, 255, 255, 0.9);
+          background: #ffffff;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          padding: 0;
+          margin-left: 6px;
+
+          svg {
+            width: 18px;
+            height: 18px;
+            /* do not override SVG fills — keep SVG markup colors unmodified */
+          }
+
+      
+        }
+      }
+    }
+
+    /* Contact + Social */
+    .contact-section {
+      margin-top: 18px;
+
+      .contact-title {
+        margin: 6px 0 8px;
+        font-size: 15px;
+        font-weight: 600;
+        color: #fff;
+      }
+
+      .footer-links {
+        margin-bottom: 8px;
+
+        li {
+          a.navLink {
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+
+            .navLink-icon {
+              display: inline-flex;
+              gap: 8px;
+              align-items: center;
+            }
+          }
+        }
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 10px;
+        margin-top: 12px;
+
+        .social-icons-item {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          transition: transform 0.18s ease, box-shadow 0.18s ease;
+          text-decoration: none;
+
+          svg {
+            width: 25px;
+            height: 25px;
+            /* keeping underlying SVG fills untouched */
+          }
         }
       }
     }
   }
-  /* Footer Bottom */
+
+  /* Footer bottom */
   .footer-bottom {
-    border-top: 1px solid #79a4d3;
-    // border-top: 1px solid;
-    padding-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 18px;
     text-align: center;
 
     p {
-      color: var(--color-white);
+      margin: 0;
+      color: rgba(255, 255, 255, 0.92);
       font-weight: 400;
-      font-size: 15px;
-      line-height: 35px;
+      font-size: 14px;
+      line-height: 28px;
     }
   }
 }
-/* Chat Icon */
-.chat-container {
-  position: relative;
 
-  .chat-icon {
-    position: absolute;
-    bottom: 59px;
-    right: -53px;
+/* -------------------------
+   Mobile adjustments (split lists appear side-by-side)
+   ------------------------- */
+@media (max-width: 480px) {
+  .footer {
+    .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
 
-    .chat-bubble {
-      width: 60px;
-      height: 60px;
-      background-color: var(--color-yellow);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    .footer-col {
+      .split-list {
+        /* on mobile show two columns side by side */
+        flex-direction: row;
+        gap: 20px;
 
-      img {
-        max-width: 100%;
+        ul {
+          flex: 1;
+          margin: 0;
+
+          li {
+            a.navLink {
+              font-size: 13px;
+              line-height: 20px;
+              padding: 2px 0;
+              color: rgba(255, 255, 255, 0.92);
+              display: block;
+            }
+          }
+        }
       }
-    }
-  }
-}
-/* Media Queries */
-@media (max-width: 992px) {
-  .footer {
-    .contact-info-wrapper {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
-  }
-}
 
-@media (max-width: 768px) {
-  .footer {
-    .footer-top {
-      > div {
-        margin-bottom: 20px;
+      .footer-title {
+        font-size: 15px;
+        margin-bottom: 10px;
       }
     }
 
     .title-parent {
-      padding-top: 36px;
-      border-top: 1px solid #79a4d3;
+      .newsletter-input {
+        padding: 6px;
+        border-radius: 34px;
+
+        .email-input {
+          padding: 12px 10px;
+          font-size: 13px;
+        }
+
+        .subscribe-btn {
+          width: 40px;
+          height: 40px;
+          margin-left: 6px;
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
     }
 
-    .brands-grid {
-      margin-top: 20px;
-    }
+    .contact-section {
+      margin-top: 12px;
 
-    .newsletter-input {
-      border-bottom: 1px solid #79a4d3;
-    }
+      .social-icons {
+        margin-top: 10px;
 
-    .contact-info-wrapper {
-      margin-top: 20px;
-    }
+        .social-icons-item {
+          width: 34px;
+          height: 34px;
 
-    .social-links {
-      justify-content: flex-start;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .footer-title {
-      font-size: 16px;
-      margin-bottom: 12px;
-      padding-top: 30px;
+          svg {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
     }
 
     .footer-bottom {
-      padding-top: 30px;
-      padding-bottom: 60px;
+      padding-top: 14px;
       p {
-        margin: 0;
         font-size: 13px;
       }
     }
   }
-
-  .chat-container {
-    .chat-icon {
-      bottom: -16px;
-      right: 20px;
-    }
-  }
 }
 
-@media (max-width: 576px) {
+/* very small phones */
+@media (max-width: 360px) {
   .footer {
-    padding: 0 10px;
-    height: auto;
-    .footer-top {
-      > div {
-        margin-bottom: 0px;
-      }
-      .footer-grid {
-        flex-wrap: wrap;
-      }
-      .newsletter-input {
-        border-bottom: none;
-      }
-    }
-  }
+    .footer-col {
+      .split-list {
+        gap: 8px;
 
-  .chat-container {
-    .chat-bubble {
-      width: 50px;
-      height: 50px;
-
-      img {
-        width: 23px;
+        ul {
+          li a.navLink {
+            font-size: 12px;
+          }
+        }
       }
-    }
 
-    .chat-icon {
-      bottom: -10px;
-      right: 20px;
-    }
-  }
-}
-
-@media (max-width: 376px) {
-  .chat-container {
-    .chat-icon {
-      display: none;
+      .footer-title {
+        font-size: 14px;
+      }
     }
   }
 }
