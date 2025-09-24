@@ -86,7 +86,7 @@ export default function HomePage() {
           onMouseLeave={() => setOpenDropdown(null)}
         >
           <Link
-            href="/business"
+            href="/"
             className={`${styles.dropdownToggle} ${pathname.startsWith("/business") ? styles.activeLink : ""}`}
           >
             Our Businesses
@@ -105,7 +105,7 @@ export default function HomePage() {
           onMouseLeave={() => setOpenDropdown(null)}
         >
           <Link
-            href="/media-updates"
+            href="/"
             className={`${styles.dropdownToggle} ${pathname.startsWith("/media-updates") ? styles.activeLink : ""}`}
           >
             Media & Updates
