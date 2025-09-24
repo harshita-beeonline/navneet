@@ -343,7 +343,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/" className={styles["navLink"]}>
+                <Link href="/advertise" className={styles["navLink"]}>
                   Advertise with us
                 </Link>
               </li>

@@ -1,0 +1,29 @@
+.nextSection {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;       // keep original aspect ratio
+    display: block;
+    object-fit: cover;
+  }
+
+  // Desktop banner
+  .desktopBg {
+    display: block;
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  // Mobile banner
+  .mobileBg {
+    display: none;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+}

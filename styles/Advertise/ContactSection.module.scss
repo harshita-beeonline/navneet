@@ -1,0 +1,184 @@
+$brand-blue: #2F6DB2;
+$text-dark: #1a1a1a;
+
+.pageWrapper {
+  margin-top: 10px;
+  padding: clamp(16px, 4vw, 32px) 80px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row; // desktop side-by-side
+  align-items: stretch; // equal height
+  gap: 40px;
+  color: $text-dark;
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column; // stack on mobile
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+  @media (max-width: 576px) {
+    padding: clamp(12px, 4vw, 16px) 15px;
+  }
+}
+
+.leftSide {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.contactHeader {
+  h2 {
+    font-size: 36px;
+    margin: 0 0 10px;
+    font-weight: 600;
+    color: $brand-blue;
+  }
+
+  p {
+    font-size: 16px;
+    margin: 0;
+    color: #777;
+  }
+  @media (max-width: 768px) {
+    h2,
+    p {
+      text-align: center; // center only on mobile
+    }
+  }
+}
+
+.contactBoxes {
+  display: flex;
+gap:20px;
+flex-direction: row;
+
+
+@media (max-width: 768px) {
+    // Mobile: stack vertically
+    flex-direction: column;
+    gap: 10px;
+    align-items: center; 
+  
+  }
+
+  .contactBox {
+    flex: 1;
+    padding: 25px;
+    @media (max-width: 768px) {
+        width: 90%;             // center box with fixed width
+      }
+
+    h4 {
+      font-size: 23px;
+      margin: 0 0 12px;
+      font-weight: 700;
+      color: $text-dark;
+      @media (max-width: 768px) {
+        font-size: 16px;      
+      }
+    }
+    span{
+        color: #1E1E20;
+        font-size: 18px;
+        font-weight: 500;
+
+    }
+  }
+  
+}
+// Divider between boxes
+.divider {
+    margin-top: 50px;
+    background-color: #2F6DB2;
+  
+    width: 2px;
+    height: 80px;
+  
+    @media (max-width: 768px) {
+      // Mobile: horizontal line
+      width: 80%;
+      height: 1px;
+      margin-top: 10px;
+    }
+  }
+  
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+
+  img {
+    width: 20px;
+    height: 20px;
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+}
+
+.rightSide {
+  flex: 1;
+  display: flex;
+
+  .contactImg {
+    width: 100%;
+    height: auto; // fill height equal to left side
+    object-fit: contain;
+    border-radius: 8px;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+    .contactImg {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+
+}
+// iPad Air / iPad Pro
+@media (min-width: 769px) and (max-width: 1180px) {
+    .pageWrapper {
+      flex-direction: column; // stack left side and image vertically
+      align-items: center;
+      gap: 30px; // space between text and image
+    }
+  
+    .leftSide {
+      flex: 1 1 100%;
+      width: 100%;
+      margin-bottom: 0; // already handled by gap
+    }
+  
+    .rightSide {
+      flex: 1 1 100%;
+      width: 100%;
+      justify-content: center;
+  
+      .contactImg {
+        width: 100%; // scale image nicely
+        max-width: 500px; // optional max width for large iPads
+        height: auto;
+        object-fit: contain;
+        display: block;
+      }
+    }
+  }
+  
+  // Full-width image for iPads (iPad Mini / Air / Pro)
+
