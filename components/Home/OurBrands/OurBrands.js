@@ -1,11 +1,12 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar, Autoplay } from "swiper/modules"; // ✅ Import Autoplay
+import { Scrollbar, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/scrollbar";
 import styles from "../../../styles/OurBrands.module.scss";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+
 const brands = [
   {
     title: "NavneetAI",
@@ -51,9 +52,16 @@ const brands = [
 
 const OurBrands = () => {
   const swiperRef = useRef(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const handlePrev = () => swiperRef.current?.slidePrev();
   const handleNext = () => swiperRef.current?.slideNext();
+
+  if (!mounted) return null; // Render nothing on server to avoid hydration mismatch
 
   return (
     <div className={styles.ourBrandsSection}>
@@ -73,14 +81,11 @@ const OurBrands = () => {
         </button>
 
         <Swiper
-          modules={[Scrollbar, Autoplay]} // ✅ Added Autoplay
+          modules={[Scrollbar, Autoplay]}
           slidesPerView={4}
           spaceBetween={30}
           scrollbar={{ draggable: true }}
-          autoplay={{
-            delay: 2000, // Time between slides (ms)
-            disableOnInteraction: false, // Keep autoplay after user interaction
-          }}
+          autoplay={{ delay: 2000, disableOnInteraction: false }}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           breakpoints={{
             0: { slidesPerView: 1.3 },

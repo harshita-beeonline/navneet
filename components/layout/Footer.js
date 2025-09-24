@@ -70,7 +70,7 @@ const social = [
         />
       </svg>
     ),
-    link: "#https://x.com/navneet_edu",
+    link: "https://x.com/navneet_edu",
   },
   {
     icon: (

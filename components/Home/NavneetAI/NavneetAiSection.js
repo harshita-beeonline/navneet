@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import styles from "../../../styles/NavneetAiSection.module.scss";
+import Link from "next/link";
 
 const paratext = ` Navneet AI, from Navneet Education Limited, is India's first custom
             AI education model. It offers “Magic Tools” like auto-generated
@@ -16,14 +17,14 @@ const NavneetAiSection = () => {
         <div className={styles["navneet-ai-left-content"]}>
           <h2>ELEVATING Learning, ENHANCING TRUST</h2>
           <p>{paratext}</p>
-          <a
+          <Link
             href="https://navneetedu.ai/"
             target="_blank"
             rel="noopener noreferrer"
-            style={{textDecoration:"none"}}
+            style={{ textDecoration: "none" }}
           >
             <button>Explore Navneet AI</button>
-          </a>
+          </Link>
         </div>
 
         <div className={styles["navneet-ai-right-content"]}>

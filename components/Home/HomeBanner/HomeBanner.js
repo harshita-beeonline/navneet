@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState ,useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import Image from "next/image";
 import styles from "../../../styles/HomeBanner.module.scss";
 import NewBannerDesktop1 from "../../../public/images/newbannerdesktop1.jpg";
@@ -14,63 +14,49 @@ import Banner3Mobile from "../../../public/images/newbannermobile3.jpg";
 
 const HomeBanner = () => {
   const [index, setIndex] = useState(0);
+  const [mounted, setMounted] = useState(false); // track client mount
+  const [scrolled, setScrolled] = useState(false);
+  const [stockType, setStockType] = useState("BSE");
+  const [stockPrice, setStockPrice] = useState(null);
 
-  // Update slides (desktop or mobile) based on breakpoint
-  const getVisibleSlides = () => {
+  // Mark component as mounted (client-side only)
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const getVisibleSlides = useCallback(() => {
     if (typeof window === "undefined") return [];
-
     return window.innerWidth > 820
       ? document.querySelectorAll(`.${styles["desktop-banner"]}`)
       : document.querySelectorAll(`.${styles["mobile-banner"]}`);
-  };
+  }, []);
 
-  // Show slide
-const showSlide = useCallback((i) => {
-  const slides = getVisibleSlides();
-  slides.forEach((slide, idx) => {
-    slide.style.left = (idx - i) * 100 + "%";
-  });
-}, []);
+  const showSlide = useCallback((i) => {
+    const slides = getVisibleSlides();
+    slides.forEach((slide, idx) => {
+      slide.style.left = (idx - i) * 100 + "%";
+    });
+  }, [getVisibleSlides]);
 
-  // Handle scroll (header transparent → white)
-  // useEffect(() => {
-  //   const header = document.querySelector(".site-header");
-
-  //   const onScroll = () => {
-  //     if (window.scrollY > 50) {
-  //       header.classList.add("scrolled");
-  //     } else {
-  //       header.classList.remove("scrolled");
-  //     }
-  //   };
-
-  //   window.addEventListener("scroll", onScroll);
-  //   return () => window.removeEventListener("scroll", onScroll);
-  // }, []);
-  const [scrolled, setScrolled] = useState(false);
-
+  // Scroll effect for scrolled header
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Show first slide on load + resize
+  // Slide show on load and resize
   useEffect(() => {
     showSlide(index);
-
     const onResize = () => {
       setIndex(0);
       showSlide(0);
     };
-
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [index,showSlide]);
+  }, [index, showSlide]);
 
-  // STOCK PRICE TOGGLE
+  // Stock price toggle buttons
   useEffect(() => {
     const bseBtns = document.querySelectorAll(".bse");
     const nseBtns = document.querySelectorAll(".nse");
@@ -100,24 +86,7 @@ const showSlide = useCallback((i) => {
     };
   }, []);
 
-  // MOBILE MENU
-  useEffect(() => {
-    const menuToggle = document.getElementById("menu-toggle");
-    const navMenu = document.getElementById("nav-menu");
-    const closeMenu = document.getElementById("close-menu");
-
-    const openMenu = () => navMenu.classList.add("active");
-    const close = () => navMenu.classList.remove("active");
-
-    menuToggle.addEventListener("click", openMenu);
-    closeMenu.addEventListener("click", close);
-
-    return () => {
-      menuToggle.removeEventListener("click", openMenu);
-      closeMenu.removeEventListener("click", close);
-    };
-  }, []);
-
+  // Slide navigation
   const handlePrev = () => {
     const slides = getVisibleSlides();
     const newIndex = (index - 1 + slides.length) % slides.length;
@@ -131,13 +100,12 @@ const showSlide = useCallback((i) => {
     setIndex(newIndex);
     showSlide(newIndex);
   };
+
+  // Auto slide effect
   useEffect(() => {
     let timer;
-
-    // Check if current slide is the "special" banner
-    const isSpecialSlide = index === 0; // both desktop & mobile first slide are index 0
-
-    const delay = isSpecialSlide ? 10000 : 4000; // 10s for first, 4s for others
+    const isSpecialSlide = index === 0;
+    const delay = isSpecialSlide ? 10000 : 4000;
 
     timer = setTimeout(() => {
       const slides = getVisibleSlides();
@@ -147,26 +115,20 @@ const showSlide = useCallback((i) => {
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [index,showSlide]);
+  }, [index, showSlide]);
 
+  // Header scroll effect
   useEffect(() => {
     const header = document.querySelector(`.${styles["site-header"]}`);
-    console.log("header =>", header);
-
     const onScroll = () => {
-      if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-      } else {
-        header.classList.remove("scrolled");
-      }
+      if (window.scrollY > 50) header.classList.add("scrolled");
+      else header.classList.remove("scrolled");
     };
-
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
-  const [stockType, setStockType] = useState("BSE");
-  const [stockPrice, setStockPrice] = useState(null);
 
+  // Fetch stock price
   useEffect(() => {
     const fetchStockPrice = async () => {
       try {
@@ -177,36 +139,19 @@ const showSlide = useCallback((i) => {
         console.error("Error fetching stock price:", error);
       }
     };
-
     fetchStockPrice();
   }, [stockType]);
 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // ------------------- JSX -------------------
+  if (!mounted) return null; // only hide rendering on server, hooks remain intact
 
-  useEffect(() => {
-    const menuToggle = document.getElementById("menu-toggle");
-    const closeMenu = document.getElementById("close-menu");
-
-    const openMenu = () => setIsMenuOpen(true);
-    const close = () => setIsMenuOpen(false);
-
-    menuToggle.addEventListener("click", openMenu);
-    closeMenu.addEventListener("click", close);
-
-    return () => {
-      menuToggle.removeEventListener("click", openMenu);
-      closeMenu.removeEventListener("click", close);
-    };
-  }, []);
   return (
     <div>
       <section className={styles["banner-slider"]}>
-        <div
-          className={`${styles["slide"]} ${styles["desktop-banner"]} ${styles["active"]}`}
-        >
+        <div className={`${styles["slide"]} ${styles["desktop-banner"]} ${styles["active"]}`}>
           <Image src={NewBannerDesktop1} fill alt="Banner Desktop 1" />
         </div>
-        <div className={`${styles["slide"]} ${styles["desktop-banner"]} `}>
+        <div className={`${styles["slide"]} ${styles["desktop-banner"]}`}>
           <Image src={Banner1Desktop} fill alt="Banner Desktop 1" />
         </div>
         <div className={`${styles["slide"]} ${styles["desktop-banner"]}`}>
@@ -215,12 +160,10 @@ const showSlide = useCallback((i) => {
         <div className={`${styles["slide"]} ${styles["desktop-banner"]}`}>
           <Image src={Banner3Desktop} fill alt="Banner Desktop 3" />
         </div>
-        <div className={`${styles["slide"]} ${styles["mobile-banner"]} `}>
+        <div className={`${styles["slide"]} ${styles["mobile-banner"]}`}>
           <Image src={NewBannerMobile1} fill alt="Banner Mobile 1" />
         </div>
-        <div
-          className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}
-        >
+        <div className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}>
           <Image src={Banner1Mobile} fill alt="Banner Mobile 1" />
         </div>
         <div className={`${styles["slide"]} ${styles["mobile-banner"]}`}>
@@ -230,67 +173,49 @@ const showSlide = useCallback((i) => {
           <Image src={Banner3Mobile} fill alt="Banner Mobile 3" />
         </div>
 
-        <div
-          className={`${styles["arrow"]} ${styles["prev"]}`}
-          onClick={handlePrev}
-        >
+        <div className={`${styles["arrow"]} ${styles["prev"]}`} onClick={handlePrev}>
           &#10094;
         </div>
-        <div
-          className={`${styles["arrow"]} ${styles["next"]}`}
-          onClick={handleNext}
-        >
+        <div className={`${styles["arrow"]} ${styles["next"]}`} onClick={handleNext}>
           &#10095;
         </div>
 
         <div className={`${styles["stock-box"]} ${styles["desktop-only"]}`}>
           <h3>Stock Price</h3>
-
           <div className={styles["toggle"]}>
             <button
-              className={`${styles["bse"]} ${
-                stockType === "BSE" ? styles["active"] : ""
-              }`}
+              className={`${styles["bse"]} ${stockType === "BSE" ? styles["active"] : ""}`}
               onClick={() => setStockType("BSE")}
             >
               BSE
             </button>
             <button
-              className={`${styles["nse"]} ${
-                stockType === "NSE" ? styles["active"] : ""
-              }`}
+              className={`${styles["nse"]} ${stockType === "NSE" ? styles["active"] : ""}`}
               onClick={() => setStockType("NSE")}
             >
               NSE
             </button>
           </div>
-
           <p>₹ {stockPrice ? stockPrice : "loading..."}</p>
         </div>
       </section>
+
       <div className={`${styles["stock-box"]} ${styles["mobile-only"]}`}>
         <h3>Stock Price</h3>
-
         <div className={styles["toggle"]}>
           <button
-            className={`${styles["bse"]} ${
-              stockType === "BSE" ? styles["active"] : ""
-            }`}
+            className={`${styles["bse"]} ${stockType === "BSE" ? styles["active"] : ""}`}
             onClick={() => setStockType("BSE")}
           >
             BSE
           </button>
-
           <button
-            className={`${styles["nse"]} ${
-              stockType === "NSE" ? styles["active"] : ""
-            }`}
+            className={`${styles["nse"]} ${stockType === "NSE" ? styles["active"] : ""}`}
             onClick={() => setStockType("NSE")}
           >
             NSE
           </button>
         </div>
-
         <p>₹ {stockPrice ? stockPrice : "loading..."}</p>
       </div>
     </div>
