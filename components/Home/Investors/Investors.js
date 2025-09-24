@@ -60,7 +60,6 @@ useEffect(() => {
 
             <div className={styles["grid-item"]}>
               <div
-                c
                 className={`${styles["investor-card"]} ${styles["blue"]} ${
                   inView ? "animate__animated animate__fadeInUp" : ""
                 }`}

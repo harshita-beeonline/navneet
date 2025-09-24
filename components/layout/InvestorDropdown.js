@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import styles from "../../styles/InvestorDropdown.module.scss"; // adjust path
+import styles from "../../styles/InvestorDropdown.module.scss"; 
 
 const investorMenu = [
   {
