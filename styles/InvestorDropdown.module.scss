@@ -1,3 +1,8 @@
+/* ------------------ styles/InvestorDropdown.module.scss ------------------ */
+
+/* ========================
+   🔹 Desktop Dropdown
+======================== */
 .dropdown-container-box {
   position: absolute;
   top: 0px;
@@ -13,7 +18,7 @@
       background: #696c6e; // same as BusinessDropdown
       margin: 0;
       padding: 6px 0;
-      margin-top: 30px;
+      margin-top: 37.5px;
 
       li {
         position: relative;
@@ -29,6 +34,7 @@
 
         a {
           margin: 0px;
+          padding: 0px;
           font-weight: 500;
           font-size: 14px;
           color: #f9f9f9;
@@ -94,6 +100,57 @@
           }
         }
       }
+    }
+  }
+}
+
+/* ========================
+   🔹 Mobile Dropdown
+======================== */
+.mobileContainer {
+  padding: 6px 0;
+}
+
+.mobileSection {
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mobileSectionHeader {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 15px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+.arrow.open {
+  transform: rotate(180deg);
+}
+
+.mobileList {
+  list-style: none;
+  padding: 0 0 8px 12px;
+  margin: 0;
+
+  li {
+    a {
+      display: block;
+      padding: 6px 0;
+      font-size: 14px;
+      color: #fff;
+      text-decoration: none;
+      font-family: Montserrat, sans-serif;
     }
   }
 }

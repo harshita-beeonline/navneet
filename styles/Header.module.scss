@@ -1,178 +1,187 @@
-/* =========================================================
-   HEADER STYLING
-   ========================================================= */
-.site-header {
+/* ------------------ styles/Header.module.scss ------------------ */
+
+.header {
   position: fixed;
-  top: 0;
-  left: 0;
+  inset: 0 0 auto 0;
   width: 100%;
   z-index: 9999;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #fff;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.brandWrap {
+  display: flex;
+  align-items: center;
+}
+.logoLink {
+  display: inline-block;
+}
+
+/* Desktop navigation hidden on mobile */
+.navDesktop {
+  display: none;
+  gap: 18px;
+  align-items: center;
+}
+
+.navDesktop a,
+.navDesktop .dropdownToggle {
+  text-decoration: none;
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1e1e1e;
+  padding: 6px 8px;
+}
+
+.dropdownParent {
+  position: relative;
+}
+.dropdownOpen {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: -20px;
+}
+.dropdownOpen.show {
+  display: block;
+}
+
+.menuToggle {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Mobile menu drawer */
+.navMenu {
+  position: fixed;
+  top: 0;
+  right: -360px;
+  width: 360px;
+  height: 100vh;
+  background: #2f6db2;
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+  padding-left: 18px;
+  transition: right 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
+  z-index: 9999;
+
+  /* ✅ Make drawer scrollable */
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; // smooth scrolling on iOS
+}
+
+.navMenu.active {
+  right: 0;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 32px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 30px;
+}
+.mobileLinks a,
+.mobileLinks button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 12px 6px;
+  background: transparent;
+  border: none;
+  text-align: left;
+}
+
+.mobileAccordion {
+  width: 100%;
+}
+.accordionToggle {
+  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 100px 5px 80px;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  background-color: #fff;
+  padding-right: 8px;
+}
+.accordionPanel {
+  padding-left: 8px;
+}
 
-  &.scrolled {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    opacity: 1;
+.scrolled {
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.08);
+}
 
-    .menu-toggle svg path {
-      fill: #000; // makes the hamburger icon black
-    }
+.activeLink {
+  color: #000 !important;
+  font-weight: 600 !important;
+}
+
+.chev {
+  margin-left: 8px;
+  transition: transform 180ms ease;
+}
+.chev.open {
+  transform: rotate(180deg);
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1300px) {
+  .navDesktop {
+    display: flex;
   }
-
-  .logo-image {
-    width: 126px;
-    height: 68px;
-    overflow: hidden;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-  }
-
-  .nav-menu a {
-    text-decoration: none;
-    margin-left: 30px;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 15px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    color: #1e1e1e;
-    transition: color 0.3s ease;
-  }
-
-  .dropdownParent {
-    position: relative;
-    display: inline-block;
-  }
-
-  .dropdown-open {
+  .menuToggle {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 2000;
-
-    &.show {
-      display: flex;
-    }
   }
-
-  .menu-toggle svg path {
-    fill: #000; // hamburger icon color
+  .navMenu {
+    display: none;
+  }
+  .header {
+    padding: 12px 80px;
   }
 }
 
-/* ================= ACTIVE LINK STYLING ================= */
-.nav-menu a.activeLink {
-  color: #000 !important;   // black text
-  font-weight: 600 !important; // bold
-}
-
-/* ================= HAMBURGER MENU ================= */
-.menu-toggle {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-  color: #fff;
-}
-
-.close-menu {
-  display: none;
-  font-size: 28px;
-  color: #fff;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-/* ================= RESPONSIVE HEADER ================= */
-@media (max-width: 1280px) {
-  .site-header {
-    padding: 8px 18px;
-    justify-content: space-between;
-
-    &.scrolled .menu-toggle {
-      color: #000;
-    }
-
-    .logo-image {
-      width: 88px;
-      height: 48px;
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    right: -250px;
-    height: 100%;
-    width: 250px;
-    background: #2f6db2;
+/* Responsive for 1400px - 1500px */
+@media (min-width: 1300px) and (max-width: 1499px) {
+  .navDesktop {
     display: flex;
-    flex-direction: column;
-    padding-top: 80px;
-    transition: right 0.3s ease-in-out;
-    z-index: 999;
-
-    &.active {
-      right: 0;
-    }
-
-    a {
-      padding: 15px 20px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      color: #fff !important;
-    }
+    gap: 14px; /* slightly smaller gap */
   }
 
-  .menu-toggle,
-  .close-menu {
-    display: block;
+  .header {
+    padding: 12px 60px; /* reduce horizontal padding */
   }
-}
 
-/* HEADER FIX for 1280px–1460px */
-@media (max-width: 1470px) and (min-width: 1281px) {
-  .site-header {
-    padding: 6px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* Make nav text smaller */
+  .navDesktop a,
+  .navDesktop .dropdownToggle {
+    font-size: 13px; /* smaller font */
+    padding: 4px 6px;
+  }
 
-    .logo-image {
-      width: 110px;
-      height: auto;
-      margin-right: 30px;
-    }
-
-    .nav-menu {
-      display: flex;
-      align-items: center;
-
-      a {
-        margin: 0 12px;
-        font-size: 15px;
-      }
-    }
+  /* Dropdown menus */
+  .dropdownOpen {
+    left: -15px;
   }
 }
