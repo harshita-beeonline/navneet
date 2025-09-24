@@ -8,7 +8,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2px 100px 2px 80px;
+  padding: 5px 100px 5px 80px;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: #fff;
 
@@ -24,7 +24,7 @@
 
   .logo-image {
     width: 126px;
-    height: 68.5px;
+    height: 68px;
     overflow: hidden;
 
     img {
@@ -215,7 +215,7 @@
 /* --- RESPONSIVE --- */
 @media (max-width: 1280px) {
   .site-header {
-    padding: 6px 18px;
+    padding: 8px 18px;
     justify-content: space-between;
 
     &.scrolled .menu-toggle {
