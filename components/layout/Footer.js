@@ -2,9 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../../styles/Footer.module.scss";
-import { FaArrowRightLong } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 
-/* --- KEEP ALL SVG ICONS exactly as you had them --- */
 const social = [
   {
     icon: (
@@ -33,7 +32,7 @@ const social = [
         />
       </svg>
     ),
-    link: "https://www.instagram.com/#",
+    link: "https://www.instagram.com/navneet.education/?hl=en",
   },
   {
     icon: (
@@ -156,15 +155,16 @@ const social = [
   },
 ];
 
-const Footer = () => {
+export default function Footer() {
   const [email, setEmail] = useState("");
 
   const handleEmailChange = (e) => setEmail(e.target.value);
 
   const handleSubscribe = () => {
-    console.log("Subscribing email:", email);
-    // keep existing behavior (you can hook API here)
-    setEmail("");
+    if (email.trim()) {
+      alert(`Subscribed with ${email}`);
+      setEmail("");
+    }
   };
 
   return (
@@ -176,64 +176,58 @@ const Footer = () => {
             <h3 className={styles["footer-title"]}>About Navneet</h3>
             <ul className={styles["footer-links"]}>
               <li>
-                <a
+                <Link
                   href="/aboutus"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   All About Navneet
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/investor/corporate-governance/board-of-directors-committee"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Leadership
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://www.navneet.com/pdfs/Corporate_Governance_Policies/Policy%20on%20Board%20Diversity.pdf"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Diversity
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/career"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Careers
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://navneet.com/press-release/"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Press
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/investor"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Investor Relations
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -243,64 +237,58 @@ const Footer = () => {
             <h3 className={styles["footer-title"]}>Our Brands</h3>
             <ul className={styles["footer-links"]}>
               <li>
-                <a
+                <Link
                   href="https://smartdigibook.com/"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Navneet Digi Book
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/our-business/cbse/grafalco"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Grafalco
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://www.navneetstore.com/pages/youva"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   YouVa
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/our-business/state-board-curriculum/vikas-workbook"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Vikas
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/our-business/edtech/top-tech"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   TopTech
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="https://navneetedu.ai/"
                   className={styles["navLink"]}
                   target="_blank"
-                  rel="noopener noreferrer"
                 >
                   Navneet AI
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -310,74 +298,68 @@ const Footer = () => {
             <h3 className={styles["footer-title"]}>Quick Links</h3>
             <ul className={styles["footer-links"]}>
               <li>
-                <a
+                <Link
                   href="/terms-conditions"
-                  target="_blank"
                   className={styles["navLink"]}
+                  target="_blank"
                 >
                   Terms &amp; conditions
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/study-perks-programs"
-                  target="_blank"
                   className={styles["navLink"]}
+                  target="_blank"
                 >
                   Navneet Study Perks Program
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/study-perks-programs-terms-condition-digest"
                   className={styles["navLink"]}
+                  target="_blank"
                 >
                   Navneet Study Perks Program terms and Condition digest
-                </a>
+                </Link>
               </li>
               <li>
-                <a
+                <Link
                   href="/terms-conditions-tr-kit"
                   className={styles["navLink"]}
                 >
                   Terms &amp; conditions for Tr. Kit
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/privacy-policy"
-                  className={styles["navLink"]}
-                >
+                <Link href="/privacy-policy" className={styles["navLink"]}>
                   Privacy Policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
-                  className={styles["navLink"]}
-                >
+                <Link href="/contact" className={styles["navLink"]}>
                   Get in Touch
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="/"
-                  className={styles["navLink"]}
-                >
+                <Link href="/" className={styles["navLink"]}>
                   Advertise with us
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
 
-          {/* Newsletter + Contact (rightmost column) */}
+          {/* Newsletter + Contact */}
           <div className={styles["footer-col"]}>
             <div className={styles["title-parent"]}>
               <h3 className={styles["footer-title"]}>
                 Subscribe to our newsletter
               </h3>
-
-              <div className={styles["newsletter-input"]} aria-label="newsletter">
+              <div
+                className={styles["newsletter-input"]}
+                aria-label="newsletter"
+              >
                 <input
                   type="email"
                   placeholder="Enter your email address"
@@ -391,18 +373,18 @@ const Footer = () => {
                   className={styles["subscribe-btn"]}
                   aria-label="Subscribe"
                 >
-                  <FaArrowRightLong />
+                  <FaArrowRight />
                 </button>
               </div>
             </div>
 
             <div className={styles["contact-section"]}>
               <h4 className={styles["contact-title"]}>Contact Us</h4>
-
               <ul className={styles["footer-links"]}>
                 <li>
-                  <Link href="#navneet" className={styles["navLink"]}>
+                  <Link href="tel:+912266626565" className={styles["navLink"]}>
                     <div className={styles["navLink-icon"]}>
+                      {/* Phone Icon */}
                       <svg
                         width="18"
                         height="19"
@@ -425,8 +407,12 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#vikas" className={styles["navLink"]}>
+                  <Link
+                    href="mailto:inquiry@navneet.com"
+                    className={styles["navLink"]}
+                  >
                     <div className={styles["navLink-icon"]}>
+                      {/* Email Icon */}
                       <svg
                         width="18"
                         height="19"
@@ -459,16 +445,16 @@ const Footer = () => {
 
               <div className={styles["social-icons"]} role="list">
                 {social.map((icon, index) => (
-                  <a
+                  <Link
                     key={index}
-                    className={styles["social-icons-item"]}
                     href={icon.link}
+                    className={styles["social-icons-item"]}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`social-${index}`}
                   >
                     {icon.icon}
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -482,6 +468,4 @@ const Footer = () => {
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

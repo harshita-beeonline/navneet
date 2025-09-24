@@ -18,7 +18,7 @@
   .footer-top {
     .footer-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr) minmax(300px, 420px);
+      grid-template-columns: repeat(3, 1fr) minmax(300px, 450px);
       gap: 40px 48px;
       align-items: start;
       margin-bottom: 26px;
@@ -51,6 +51,7 @@
         li {
           a.navLink {
             display: inline-flex;
+            padding-top: 10px;
             gap: 10px;
             align-items: center;
             text-decoration: none;
@@ -72,18 +73,6 @@
               align-items: center;
             }
           }
-        }
-      }
-
-      /* split-list wrapper: by default stacked vertically (desktop)
-         on mobile it becomes two side-by-side uls */
-      .split-list {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-
-        ul {
-          margin: 0;
         }
       }
     }
@@ -116,12 +105,14 @@
         }
 
         .subscribe-btn {
+          background: transparent;
+          outline: none;
+          border: none;
+          color: #fff;
           width: 44px;
           height: 44px;
           min-width: 44px;
           border-radius: 50%;
-          border: 2px solid rgba(255, 255, 255, 0.9);
-          background: #ffffff;
           display: inline-flex;
           align-items: center;
           justify-content: center;
@@ -132,10 +123,7 @@
           svg {
             width: 18px;
             height: 18px;
-            /* do not override SVG fills — keep SVG markup colors unmodified */
           }
-
-      
         }
       }
     }
@@ -217,27 +205,27 @@
   .footer {
     .footer-grid {
       grid-template-columns: 1fr;
-      gap: 18px;
+      gap: 40px;
     }
 
     .footer-col {
-      .split-list {
-        /* on mobile show two columns side by side */
-        flex-direction: row;
-        gap: 20px;
+      padding-top: 20px;
+      .footer-links {
+        display: grid;
+        grid-template-columns: repeat((2, 1fr));
+      }
 
-        ul {
-          flex: 1;
-          margin: 0;
+      ul {
+        flex: 1;
+        margin: 0;
 
-          li {
-            a.navLink {
-              font-size: 13px;
-              line-height: 20px;
-              padding: 2px 0;
-              color: rgba(255, 255, 255, 0.92);
-              display: block;
-            }
+        li {
+          a.navLink {
+            font-size: 13px;
+            line-height: 20px;
+            padding: 2px 0;
+            color: rgba(255, 255, 255, 0.92);
+            display: block;
           }
         }
       }
@@ -249,6 +237,9 @@
     }
 
     .title-parent {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 18px;
+
       .newsletter-input {
         padding: 6px;
         border-radius: 34px;
@@ -271,6 +262,8 @@
     }
 
     .contact-section {
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 18px;
       margin-top: 12px;
 
       .social-icons {
@@ -301,13 +294,9 @@
 @media (max-width: 360px) {
   .footer {
     .footer-col {
-      .split-list {
-        gap: 8px;
-
-        ul {
-          li a.navLink {
-            font-size: 12px;
-          }
+      ul {
+        li a.navLink {
+          font-size: 12px;
         }
       }
 
