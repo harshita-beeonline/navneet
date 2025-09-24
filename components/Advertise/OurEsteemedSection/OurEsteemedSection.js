@@ -1,9 +1,5 @@
 import React from "react";
 import styles from "../../../styles/Advertise/OurEsteemedSection.module.scss";
-import img1 from "../../../public/images/advertise/imgbox1.png";
-import img2 from "../../../public/images/advertise/imgbox2.png";
-import stationary from "../../../public/images/advertise/stationary-box.png";
-import production from "../../../public/images/advertise/production-box.png";
 
 const OurEsteemedSection = () => {
     return (

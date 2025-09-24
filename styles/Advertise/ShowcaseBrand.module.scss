@@ -1,29 +1,41 @@
 .nextSection {
-  width: 100vw;
-  margin: 0;
-  padding: 0;
+  width: 100%;
   overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  img {
-    width: 100%;
-    height: auto;       // keep original aspect ratio
+  .brandLogo {
+    height: 159px;   // default desktop size
+    width: auto;
+    margin: 0 40px;
+    object-fit: contain;
     display: block;
-    object-fit: cover;
   }
 
-  // Desktop banner
-  .desktopBg {
-    display: block;
-    @media (max-width: 768px) {
-      display: none;
+  // Tablet
+  @media (max-width: 1024px) {
+    .brandLogo {
+      height: 130px;   // slightly smaller
+      margin: 0 30px;
     }
   }
 
-  // Mobile banner
-  .mobileBg {
-    display: none;
-    @media (max-width: 768px) {
-      display: block;
+  // Mobile
+  @media (max-width: 768px) {
+    .brandLogo {
+      height: 100px;   // properly scaled
+      margin: 0 20px;
+    }
+  }
+
+  // Very small screens
+  @media (max-width: 480px) {
+    .brandLogo {
+      height: 80px;    // compact but readable
+      margin: 0 15px;
     }
   }
 }

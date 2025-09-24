@@ -4,8 +4,8 @@ import Image from "next/image";
 // Icons
 import userIcon from "../../../public/images/Advertise/user-icon.png";
 import mailIcon from "../../../public/images/Advertise/mail-icon.png";
-import phoneIcon from "../../../public/images/Advertise/phone-icon.png";
-import contactImg from "../../../public/images/Advertise/contact-image.png";
+import phoneIcon from "../../../public/images/advertise/phone-icon.png";
+import contactImg from "../../../public/images/advertise/contact-image.png";
 
 // Styles
 import styles from "../../../styles/Advertise/ContactSection.module.scss";

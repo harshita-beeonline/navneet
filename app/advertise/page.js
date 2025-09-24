@@ -5,7 +5,8 @@ import AboutNavneetSection from "../../components/Advertise/AboutNavneetSection/
 import WhyAdvertiseSection from "../../components/Advertise/WhyAdvertise/WhyAdvertise";
 import OurEsteemedSection from "../../components/Advertise/OurEsteemedSection/OurEsteemedSection";
 import ProductsSection from "../../components/Advertise/ProductsSection/ProductsSection";
-import ContactSection from "../../components/Advertise/ContactSection/ContactSection";
+import ContactSection from "@/components/Advertise/ContactSection/ContactSection";
+
 const AdvertiseWithUs = () => {
   return (
     <>
