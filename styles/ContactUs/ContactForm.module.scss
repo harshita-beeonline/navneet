@@ -100,10 +100,6 @@ $text-color: #FFFFFF;
           cursor: pointer;
           transition: background 0.3s;
           opacity: 1;
-
-          &:hover {
-            background: darken(#2F6DB2, 10%);
-          }
         }
       }
     }

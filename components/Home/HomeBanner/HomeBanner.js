@@ -31,12 +31,15 @@ const HomeBanner = () => {
       : document.querySelectorAll(`.${styles["mobile-banner"]}`);
   }, []);
 
-  const showSlide = useCallback((i) => {
-    const slides = getVisibleSlides();
-    slides.forEach((slide, idx) => {
-      slide.style.left = (idx - i) * 100 + "%";
-    });
-  }, [getVisibleSlides]);
+  const showSlide = useCallback(
+    (i) => {
+      const slides = getVisibleSlides();
+      slides.forEach((slide, idx) => {
+        slide.style.left = (idx - i) * 100 + "%";
+      });
+    },
+    [getVisibleSlides]
+  );
 
   // Scroll effect for scrolled header
   useEffect(() => {
@@ -54,7 +57,7 @@ const HomeBanner = () => {
     };
     window.addEventListener("resize", onResize);
     return () => window.removeEventListener("resize", onResize);
-  }, [index, showSlide]);
+  }, [index, showSlide, getVisibleSlides]); // added getVisibleSlides
 
   // Stock price toggle buttons
   useEffect(() => {
@@ -115,7 +118,7 @@ const HomeBanner = () => {
     }, delay);
 
     return () => clearTimeout(timer);
-  }, [index, showSlide]);
+  }, [index, showSlide, getVisibleSlides]); // added getVisibleSlides
 
   // Header scroll effect
   useEffect(() => {
@@ -148,7 +151,9 @@ const HomeBanner = () => {
   return (
     <div>
       <section className={styles["banner-slider"]}>
-        <div className={`${styles["slide"]} ${styles["desktop-banner"]} ${styles["active"]}`}>
+        <div
+          className={`${styles["slide"]} ${styles["desktop-banner"]} ${styles["active"]}`}
+        >
           <Image src={NewBannerDesktop1} fill alt="Banner Desktop 1" />
         </div>
         <div className={`${styles["slide"]} ${styles["desktop-banner"]}`}>
@@ -163,7 +168,9 @@ const HomeBanner = () => {
         <div className={`${styles["slide"]} ${styles["mobile-banner"]}`}>
           <Image src={NewBannerMobile1} fill alt="Banner Mobile 1" />
         </div>
-        <div className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}>
+        <div
+          className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}
+        >
           <Image src={Banner1Mobile} fill alt="Banner Mobile 1" />
         </div>
         <div className={`${styles["slide"]} ${styles["mobile-banner"]}`}>
@@ -173,10 +180,16 @@ const HomeBanner = () => {
           <Image src={Banner3Mobile} fill alt="Banner Mobile 3" />
         </div>
 
-        <div className={`${styles["arrow"]} ${styles["prev"]}`} onClick={handlePrev}>
+        <div
+          className={`${styles["arrow"]} ${styles["prev"]}`}
+          onClick={handlePrev}
+        >
           &#10094;
         </div>
-        <div className={`${styles["arrow"]} ${styles["next"]}`} onClick={handleNext}>
+        <div
+          className={`${styles["arrow"]} ${styles["next"]}`}
+          onClick={handleNext}
+        >
           &#10095;
         </div>
 
@@ -184,13 +197,17 @@ const HomeBanner = () => {
           <h3>Stock Price</h3>
           <div className={styles["toggle"]}>
             <button
-              className={`${styles["bse"]} ${stockType === "BSE" ? styles["active"] : ""}`}
+              className={`${styles["bse"]} ${
+                stockType === "BSE" ? styles["active"] : ""
+              }`}
               onClick={() => setStockType("BSE")}
             >
               BSE
             </button>
             <button
-              className={`${styles["nse"]} ${stockType === "NSE" ? styles["active"] : ""}`}
+              className={`${styles["nse"]} ${
+                stockType === "NSE" ? styles["active"] : ""
+              }`}
               onClick={() => setStockType("NSE")}
             >
               NSE
@@ -204,13 +221,17 @@ const HomeBanner = () => {
         <h3>Stock Price</h3>
         <div className={styles["toggle"]}>
           <button
-            className={`${styles["bse"]} ${stockType === "BSE" ? styles["active"] : ""}`}
+            className={`${styles["bse"]} ${
+              stockType === "BSE" ? styles["active"] : ""
+            }`}
             onClick={() => setStockType("BSE")}
           >
             BSE
           </button>
           <button
-            className={`${styles["nse"]} ${stockType === "NSE" ? styles["active"] : ""}`}
+            className={`${styles["nse"]} ${
+              stockType === "NSE" ? styles["active"] : ""
+            }`}
             onClick={() => setStockType("NSE")}
           >
             NSE
