@@ -177,7 +177,7 @@ const Footer = () => {
             <ul className={styles["footer-links"]}>
               <li>
                 <a
-                  href="https://navneet.com/about/"
+                  href="/aboutus"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -187,7 +187,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://navneet.com/board-of-directors"
+                  href="/investor/corporate-governance/board-of-directors-committee"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -207,7 +207,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://navneet.com/careers/"
+                  href="/career"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -227,7 +227,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://navneet.com/investors/"
+                  href="/investor"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -254,7 +254,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://navneet.com/grafalco/"
+                  href="/our-business/cbse/grafalco"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -274,7 +274,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://navneet.com/vikas/"
+                  href="/our-business/state-board-curriculum/vikas-workbook"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -284,7 +284,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://navneet.com/navneet-toptech/"
+                  href="/our-business/edtech/top-tech"
                   className={styles["navLink"]}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -311,7 +311,8 @@ const Footer = () => {
             <ul className={styles["footer-links"]}>
               <li>
                 <a
-                  href="#terms"
+                  href="/terms-conditions"
+                  target="_blank"
                   className={styles["navLink"]}
                 >
                   Terms &amp; conditions
@@ -319,7 +320,8 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#perks"
+                  href="/study-perks-programs"
+                  target="_blank"
                   className={styles["navLink"]}
                 >
                   Navneet Study Perks Program
@@ -327,7 +329,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#perks-terms"
+                  href="/study-perks-programs-terms-condition-digest"
                   className={styles["navLink"]}
                 >
                   Navneet Study Perks Program terms and Condition digest
@@ -335,7 +337,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#tr-kit"
+                  href="/terms-conditions-tr-kit"
                   className={styles["navLink"]}
                 >
                   Terms &amp; conditions for Tr. Kit
@@ -343,7 +345,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#privacy"
+                  href="/privacy-policy"
                   className={styles["navLink"]}
                 >
                   Privacy Policy
@@ -351,7 +353,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#get-in-touch"
+                  href="/"
                   className={styles["navLink"]}
                 >
                   Get in Touch
@@ -359,7 +361,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#advertise"
+                  href="/"
                   className={styles["navLink"]}
                 >
                   Advertise with us
