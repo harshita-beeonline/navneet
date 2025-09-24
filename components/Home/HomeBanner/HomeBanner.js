@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState ,useCallback } from "react";
 import Image from "next/image";
-import styles from "../../../styles/Header.module.scss";
+import styles from "../../../styles/HomeBanner.module.scss";
 import NewBannerDesktop1 from "../../../public/images/newbannerdesktop1.jpg";
 import Banner1Desktop from "../../../public/images/Banner1Desktop.jpg";
 import Banner2Desktop from "../../../public/images/newbannerdesktop2.jpg";

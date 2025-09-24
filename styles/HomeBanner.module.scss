@@ -1,0 +1,238 @@
+/* =========================================================
+   BANNER SLIDER + STOCK BOX
+   ========================================================= */
+.banner-slider {
+  position: relative;
+  height: 60vh;
+  overflow: hidden;
+  margin-top: 70px;
+
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    transition: left 0.6s ease-in-out;
+
+    &.active {
+      left: 0;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.prev {
+      left: 20px;
+    }
+
+    &.next {
+      right: 20px;
+    }
+  }
+
+  .stock-box {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #ffffffcf;
+    padding: 15px 30px;
+    color: #000;
+    min-width: 190px;
+    z-index: 6;
+
+    h3 {
+      font-size: 13px;
+      text-align: left;
+      color: #1e1e20;
+      margin-bottom: 10px;
+    }
+
+    .toggle {
+      width: 110px;
+      display: flex;
+      border-radius: 50px;
+      overflow: hidden;
+      margin-bottom: 10px;
+      background: #dedddd;
+
+      button {
+        flex: 1;
+        border: none;
+        color: #000;
+        padding: 10px 0;
+        cursor: pointer;
+        font-weight: 500;
+        background-color: transparent;
+
+        &.active {
+          background: #ffffff;
+          color: #000;
+          border-radius: 50px;
+        }
+      }
+    }
+
+    .price {
+      font-size: 16px;
+      font-weight: bold;
+
+      span {
+        color: #188038;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+/* Stock boxes */
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.extra {
+  height: 100vh;
+  background-color: #000;
+}
+
+/* Hide/show banners for desktop vs mobile */
+.desktop-banner {
+  display: block;
+}
+
+.mobile-banner {
+  display: none;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 1280px) {
+  .banner-slider {
+    margin-top: 60px;
+
+    .arrow {
+      font-size: 20px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+}
+
+@media (max-width: 1600px) and (min-width: 1441px) {
+  .banner-slider {
+    height: 70vh;
+  }
+}
+
+@media (max-width: 1440px) and (min-width: 1025px) {
+  .banner-slider {
+    height: 76vh;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 837px) {
+  .banner-slider {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 835px) and (min-width: 767px) {
+  .banner-slider {
+    height: 90vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-slider {
+    height: 80vh;
+  }
+}
+
+@media (max-width: 850px) {
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 15px 30px;
+    border-radius: 12px;
+    color: #000;
+    min-width: 190px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+
+    .toggle {
+      display: flex;
+      width: 112px;
+      border-radius: 50px;
+      background: #dedddd;
+
+      button {
+        flex: 1;
+        border: none;
+        color: #000;
+        padding: 10px 0;
+        cursor: pointer;
+        font-weight: 500;
+        background-color: transparent;
+
+        &.active {
+          background: #ffffff;
+          color: #000;
+          border-radius: 50px;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 16px;
+    }
+
+    .price {
+      font-size: 18px;
+      font-weight: bold;
+
+      span {
+        color: #188038;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .desktop-banner {
+    display: none;
+  }
+
+  .mobile-banner {
+    display: block;
+  }
+}
