@@ -1,0 +1,42 @@
+.nextSection {
+  width: 100vw;
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .marqueeInner {
+      display: flex;
+      gap: 40px;
+      animation: scroll 25s linear infinite;
+
+      :global(img) {
+        height: 159px;   // 👈 fixed size for all devices
+        width: auto;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.brandLogo {
+  flex: 0 0 auto;
+  padding: 0 5px;
+  display: flex;
+  align-items: center;
+}
