@@ -7,6 +7,8 @@ File: components/Header/BusinessDropdown.jsx
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../../styles/BusinessDropdown.module.scss";
+import MenuIcon_Arrow from "../../public/images/menuicon-arrow.svg";
+import Image from "next/image";
 
 const businessMenu = [
   {
@@ -108,19 +110,13 @@ const BusinessDropdown = ({ isMobile = false }) => {
               >
                 <span>{section.label}</span>
                 {section.subMenu && (
-                  <svg
+                  <Image
+                    src={MenuIcon_Arrow}
+                    alt="chevron"
+                    width={10}
+                    height={10}
                     className={`${styles.arrow} ${isOpen ? styles.open : ""}`}
-                    width="12"
-                    height="12"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="6 9 12 15 18 9" />
-                  </svg>
+                  />
                 )}
               </button>
 
@@ -179,14 +175,15 @@ const BusinessDropdown = ({ isMobile = false }) => {
               {item.subMenu && (
                 <>
                   <span className={styles.arrow}>
-                    <svg width="6" height="8" viewBox="0 0 6 8" fill="none">
-                      <path
-                        d="M1.33398 6.91602L5.50065 3.99935L1.33398 0.666016"
-                        stroke="#F9F9F9"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
+                    <Image
+                      src={MenuIcon_Arrow}
+                      alt="chevron"
+                      width={10}
+                      height={10}
+                      style={{
+                        transform: "rotate(0deg)",
+                      }}
+                    />
                   </span>
 
                   {activeMenu === idx && (
@@ -201,19 +198,15 @@ const BusinessDropdown = ({ isMobile = false }) => {
 
                           {sub.subMenu && (
                             <span className={styles.arrow}>
-                              <svg
-                                width="6"
-                                height="8"
-                                viewBox="0 0 6 8"
-                                fill="none"
-                              >
-                                <path
-                                  d="M1.33398 6.91602L5.50065 3.99935L1.33398 0.666016"
-                                  stroke="#F9F9F9"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
-                                />
-                              </svg>
+                              <Image
+                                src={MenuIcon_Arrow}
+                                alt="chevron"
+                                width={10}
+                                height={10}
+                                style={{
+                                  transform: "rotate(0deg)",
+                                }}
+                              />
                             </span>
                           )}
 

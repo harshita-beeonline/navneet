@@ -1,3 +1,10 @@
+/* ==================================================
+File: components/Header/Header.jsx
+Description: Accessible, fully responsive header for Next.js (client component).
+Place this file at: components/Header/Header.jsx
+Note: dropdown components live under components/Header/ as separate files. SCSS modules live in /styles.
+================================================== */
+
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -6,9 +13,11 @@ import Link from "next/link";
 import { RiMenu3Line } from "react-icons/ri";
 import styles from "../../styles/Header.module.scss";
 import logo from "../../public/images/LogoNavneet.svg";
+import MenuIcon_Arrow from "../../public/images/menuicon-arrow.svg";
 import BusinessDropdown from "./BusinessDropdown";
 import InvestorDropdown from "./InvestorDropdown";
 import MediaUpdatesDropdown from "./MediaUpdatesDropdown";
+import ContactDropdown from "./ContactDropdown";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -212,12 +221,35 @@ export default function Header() {
         >
           Career
         </Link>
-        <Link
-          href="/contact"
-          className={isActive("/contact") ? styles.activeLink : ""}
+
+        <div
+          className={styles.dropdownParent}
+          onMouseEnter={() => setOpenDropdown("contact")}
+          onMouseLeave={() => setOpenDropdown(null)}
+          onFocus={() => setOpenDropdown("contact")}
+          onBlur={() => setOpenDropdown(null)}
         >
-          Contact
-        </Link>
+          <Link
+            href="/"
+            className={`${styles.dropdownToggle} ${
+              isActive("/contact") ? styles.activeLink : ""
+            }`}
+            aria-haspopup="true"
+            aria-expanded={openDropdown === "contact"}
+          >
+            Contact
+          </Link>
+
+          <div
+            className={`${styles.dropdownOpen} ${
+              openDropdown === "contact" ? styles.show : ""
+            }`}
+            role="menu"
+            aria-hidden={openDropdown !== "contact"}
+          >
+            <ContactDropdown />
+          </div>
+        </div>
       </nav>
 
       {/* Mobile menu button */}
@@ -267,18 +299,12 @@ export default function Header() {
                   mobileDropdownOpen["investor"] ? styles.open : ""
                 }`}
               >
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
+                <Image
+                  src={MenuIcon_Arrow}
+                  alt="chevron"
+                  width={10}
+                  height={10}
+                />
               </span>
             </button>
 
@@ -302,18 +328,12 @@ export default function Header() {
                   mobileDropdownOpen["business"] ? styles.open : ""
                 }`}
               >
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
+                <Image
+                  src={MenuIcon_Arrow}
+                  alt="chevron"
+                  width={10}
+                  height={10}
+                />
               </span>
             </button>
 
@@ -347,18 +367,12 @@ export default function Header() {
                   mobileDropdownOpen["media"] ? styles.open : ""
                 }`}
               >
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <polyline points="6 9 12 15 18 9" />
-                </svg>
+                <Image
+                  src={MenuIcon_Arrow}
+                  alt="chevron"
+                  width={10}
+                  height={10}
+                />
               </span>
             </button>
 
@@ -386,9 +400,34 @@ export default function Header() {
           <Link href="/career" onClick={() => setIsMenuOpen(false)}>
             Career
           </Link>
-          <Link href="/contact" onClick={() => setIsMenuOpen(false)}>
-            Contact
-          </Link>
+
+          <div className={styles.mobileAccordion}>
+            <button
+              className={styles.accordionToggle}
+              onClick={() => toggleMobileDropdown("contact")}
+              aria-expanded={!!mobileDropdownOpen.contact}
+            >
+              Contact
+              <span
+                className={`${styles.chev} ${
+                  mobileDropdownOpen["contact"] ? styles.open : ""
+                }`}
+              >
+                <Image
+                  src={MenuIcon_Arrow}
+                  alt="chevron"
+                  width={10}
+                  height={10}
+                />
+              </span>
+            </button>
+
+            {mobileDropdownOpen["contact"] && (
+              <div className={styles.accordionPanel}>
+                <ContactDropdown isMobile />
+              </div>
+            )}
+          </div>
         </div>
       </aside>
     </header>

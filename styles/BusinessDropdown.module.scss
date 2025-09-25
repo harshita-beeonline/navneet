@@ -18,7 +18,7 @@
       background: #696c6e;
       margin: 0;
       padding: 6px 0;
-      margin-top: 37.5px;
+      margin-top: 35px;
 
       li {
         position: relative;
@@ -66,6 +66,7 @@
             }
 
             .arrow {
+              margin-top: 10px;
               margin-right: 10px;
             }
 
@@ -101,37 +102,41 @@
 /* ========================
    🔹 Mobile Dropdown
 ======================== */
-.mobileContainer {
-  padding: 6px 0;
-}
-
-.mobileSection {
-  margin-bottom: 8px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+/* --------- Mobile Accordion Styles --------- */
 
 .mobileSectionHeader {
-  width: 100%;
+  width: 95%;
   background: transparent;
   border: none;
-  color: #fff;
-  font-size: 15px;
-  font-family: Montserrat, sans-serif;
-  font-weight: 600;
+  color: #f9f9f9;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
   cursor: pointer;
+  line-height: 100%;
+  padding: 0;
 }
 
+.mobileSectionHeader span {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+/* Arrow rotation */
 .arrow {
   transition: transform 0.2s ease;
-}
-.arrow.open {
-  transform: rotate(180deg);
+  transform: rotate(-90deg); // closed: right
 }
 
+.arrow.open {
+  transform: rotate(0deg); // open: down
+}
+
+/* First-level submenu */
 .mobileList {
   list-style: none;
   padding: 0 0 8px 12px;
@@ -142,25 +147,41 @@
     span {
       display: block;
       padding: 6px 0;
-      font-size: 14px;
-      color: #fff;
+      color: #e3d3d3;
+      font-size: 12px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
       text-decoration: none;
-      font-family: Montserrat, sans-serif;
+      line-height: 100%;
     }
   }
+}
 
-  .mobileDeepList {
-    list-style: none;
-    padding: 0 0 8px 12px;
-    margin: 0;
+/* Submenu header for items with nested submenu */
+.mobileSubHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+}
 
-    li {
-      a {
-        display: block;
-        padding: 6px 0;
-        font-size: 14px;
-        color: #f9f9f9;
-      }
+/* Second-level submenu */
+.mobileDeepList {
+  list-style: none;
+  padding-left: 12px;
+  margin: 4px 0 0 0;
+
+  li {
+    a {
+      display: block;
+      padding: 4px 0;
+      color: #d3cfcf;
+      font-size: 11px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 400;
+      text-decoration: none;
+      line-height: 100%;
     }
   }
 }

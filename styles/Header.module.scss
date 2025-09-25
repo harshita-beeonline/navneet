@@ -1,56 +1,67 @@
-/* ------------------ styles/Header.module.scss ------------------ */
-
+/* ---------- Header ---------- */
 .header {
   position: fixed;
-  inset: 0 0 auto 0;
+  top: 0;
   width: 100%;
   z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 18px;
+  padding: 8px 18px;
   background: #fff;
   transition: background-color 200ms ease, box-shadow 200ms ease;
+  font-family: "Montserrat", sans-serif;
+}
+
+.scrolled {
+  background: #fff;
+  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.08);
 }
 
 .brandWrap {
   display: flex;
   align-items: center;
 }
+
 .logoLink {
   display: inline-block;
 }
 
-/* Desktop navigation hidden on mobile */
+/* ---------- Desktop Navigation ---------- */
 .navDesktop {
   display: none;
   gap: 18px;
   align-items: center;
+  font-size: 15px;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
 }
 
 .navDesktop a,
 .navDesktop .dropdownToggle {
   text-decoration: none;
-  font-family: Montserrat, sans-serif;
-  font-size: 15px;
-  font-weight: 500;
   color: #1e1e1e;
-  padding: 6px 8px;
+  font-weight: 400;
+  // padding: 6px 8px;
 }
 
 .dropdownParent {
   position: relative;
 }
+
 .dropdownOpen {
   display: none;
   position: absolute;
   top: 100%;
   left: -20px;
 }
+
 .dropdownOpen.show {
   display: block;
 }
 
+/* ---------- Mobile Menu Button ---------- */
 .menuToggle {
   background: transparent;
   border: none;
@@ -61,24 +72,24 @@
   cursor: pointer;
 }
 
-/* Mobile menu drawer */
+/* ---------- Mobile Drawer ---------- */
 .navMenu {
   position: fixed;
   top: 0;
   right: -360px;
   width: 360px;
   height: 100vh;
-  background: #2f6db2;
+  background: #696c6e;
   display: flex;
   flex-direction: column;
   padding-top: 80px;
   padding-left: 18px;
   transition: right 260ms cubic-bezier(0.2, 0.9, 0.2, 1);
   z-index: 9999;
-
-  /* ✅ Make drawer scrollable */
   overflow-y: auto;
-  -webkit-overflow-scrolling: touch; // smooth scrolling on iOS
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  font-size: 14px; /* ✅ explicit mobile font size */
+  font-family: "Montserrat", sans-serif;
 }
 
 .navMenu.active {
@@ -88,9 +99,9 @@
 .closeBtn {
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 12px;
   font-size: 32px;
-  color: #fff;
+  color: #f9f9f9;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -99,90 +110,101 @@
 .mobileLinks {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   padding-bottom: 30px;
 }
+
 .mobileLinks a,
 .mobileLinks button {
-  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  color: #f9f9f9;
   text-decoration: none;
+  font-size: 14px;
   font-weight: 500;
-  font-size: 16px;
-  padding: 12px 6px;
+  line-height: 1.4;
+  padding: 10px 6px;
+  text-align: left;
   background: transparent;
   border: none;
-  text-align: left;
 }
 
 .mobileAccordion {
   width: 100%;
 }
+
 .accordionToggle {
+  font-family: "Montserrat", sans-serif;
   width: 100%;
+  font-size: 14px;
+  font-weight: 500;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-right: 8px;
+  color: #f9f9f9;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
+
 .accordionPanel {
   padding-left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.scrolled {
-  background: #fff;
-  box-shadow: 0 6px 22px rgba(11, 15, 26, 0.08);
+.chev {
+  display: flex;
+  align-items: center;
+  padding-right: 12px;
 }
 
+// .chev.open {
+//   transform: rotate(90deg);
+//   transition: transform 180ms ease;
+// }
+
+/* ---------- Active Link ---------- */
 .activeLink {
   color: #000 !important;
   font-weight: 600 !important;
 }
 
-.chev {
-  margin-left: 8px;
-  transition: transform 180ms ease;
-}
-.chev.open {
-  transform: rotate(180deg);
-}
-
-/* Desktop breakpoint */
+/* ---------- Responsive Breakpoints ---------- */
 @media (min-width: 1300px) {
   .navDesktop {
     display: flex;
   }
+
   .menuToggle {
     display: none;
   }
+
   .navMenu {
     display: none;
   }
+
   .header {
-    padding: 12px 80px;
+    padding: 8px 80px;
   }
 }
 
-/* Responsive for 1400px - 1500px */
 @media (min-width: 1300px) and (max-width: 1499px) {
   .navDesktop {
-    display: flex;
-    gap: 14px; /* slightly smaller gap */
+    gap: 14px;
   }
 
   .header {
-    padding: 12px 60px; /* reduce horizontal padding */
+    padding: 12px 60px;
   }
 
-  /* Make nav text smaller */
   .navDesktop a,
   .navDesktop .dropdownToggle {
-    font-size: 13px; /* smaller font */
+    font-size: 13px;
     padding: 4px 6px;
   }
 
-  /* Dropdown menus */
   .dropdownOpen {
     left: -15px;
   }
 }
-
