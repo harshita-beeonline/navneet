@@ -117,7 +117,7 @@ const InvestorDropdown = ({ isMobile = false }) => {
                 onClick={() => setActiveMenu(isOpen ? null : i)}
               >
                 {section.href ? (
-                  <Link href={section.href}>{section.label}</Link>
+                  <Link href={section.href} className={styles.sectionLabel}>{section.label}</Link>
                 ) : (
                   <span>{section.label}</span>
                 )}

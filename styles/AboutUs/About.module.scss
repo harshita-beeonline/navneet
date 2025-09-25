@@ -13,6 +13,10 @@
     justify-content: flex-start;
     gap: 1rem; /* consistent spacing */
 
+    @media (max-width: 768px) {
+      margin-top: 30px;
+    }
+
     > * {
       margin: 0; /* remove browser default margins */
       padding: 0;
