@@ -116,7 +116,11 @@ const InvestorDropdown = ({ isMobile = false }) => {
                 className={styles.mobileSectionHeader}
                 onClick={() => setActiveMenu(isOpen ? null : i)}
               >
-                <span>{section.label}</span>
+                {section.href ? (
+                  <Link href={section.href}>{section.label}</Link>
+                ) : (
+                  <span>{section.label}</span>
+                )}
                 {section.subMenu && (
                   <Image
                     src={MenuIcon_Arrow}
