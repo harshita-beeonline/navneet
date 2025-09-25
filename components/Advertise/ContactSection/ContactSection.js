@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-import userIcon from "../../../public/images/Advertise/user-icon.png";
-import mailIcon from "../../../public/images/Advertise/mail-icon.png";
-import phoneIcon from "../../../public/images/Advertise/phone-icon.png";
-import contactImg from "../../../public/images/Advertise/contact-image.png";
+import userIcon from "../../../public/asset/user-icon.png";
+import mailIcon from "../../../public/asset/mail-icon.png";
+import phoneIcon from "../../../public/asset/phone-icon.png";
+import contactImg from "../../../public/asset/contact-image.png";
 
 import styles from "../../../styles/Advertise/ContactSection.module.scss";
 

@@ -3,14 +3,14 @@ import Image from "next/image";
 import styles from "../../../styles/Advertise/ShowcaseBrand.module.scss";
 
 // ✅ Static imports (optimized by Next.js)
-import slide1 from "../../../public/images/advertise/slide1.png";
-import slide2 from "../../../public/images/advertise/slide2.png";
-import slide3 from "../../../public/images/advertise/slide3.png";
-import slide4 from "../../../public/images/advertise/slide4.png";
-import slide5 from "../../../public/images/advertise/slide5.png";
-import slide6 from "../../../public/images/advertise/slide6.png";
-import slide7 from "../../../public/images/advertise/slide7.png";
-import slide8 from "../../../public/images/advertise/slide8.png";
+import slide1 from "../../../public/asset/slide1.png";
+import slide2 from "../../../public/asset/slide2.png";
+import slide3 from "../../../public/asset/slide3.png";
+import slide4 from "../../../public/asset/slide4.png";
+import slide5 from "../../../public/asset/slide5.png";
+import slide6 from "../../../public/asset/slide6.png";
+import slide7 from "../../../public/asset/slide7.png";
+import slide8 from "../../../public/asset/slide8.png";
 
 const brandImages = [
   slide1,

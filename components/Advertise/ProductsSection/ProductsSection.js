@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 // Icons
-import checkIcon from "../../../public/images/our-business/checkmark-icon.svg";
-import checkIconWhite from "../../../public/images/advertise/checkmark-white-icon.png";
+import checkIcon from "../../../public/asset/checkmark-icon.svg";
+import checkIconWhite from "../../../public/asset/checkmark-white-icon.png";
 
 // Styles
 import styles from "../../../styles/Advertise/ProductsSection.module.scss";

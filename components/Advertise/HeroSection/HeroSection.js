@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image"; 
 import styles from "../../../styles/Advertise/HeroSection.module.scss";
-import heroBg from "../../../public/images/advertise/herobg-desktop.png"; 
-import heroBgMobile from "../../../public/images/advertise/herobg-mobile.png"; 
+import heroBg from "../../../public/asset/herobg-desktop.png"; 
+import heroBgMobile from "../../../public/asset/herobg-mobile.png"; 
 
 const HeroSection = () => {
   return (
