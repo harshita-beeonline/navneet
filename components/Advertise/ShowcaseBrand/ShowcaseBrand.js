@@ -32,7 +32,6 @@ const NextSection = () => {
           {brandImages.concat(brandImages).map((img, index) => (
             <div key={index} className={styles.brandLogo}>
               <Image
-              unoptimized
                 src={img}
                 alt={`Brand ${index + 1}`}
                 className={styles.responsiveImage}

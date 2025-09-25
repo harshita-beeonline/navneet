@@ -14,7 +14,6 @@ const HeroSection = () => {
           alt="Advertise with us"
           className={styles.heroDesktop}
           priority // ensures hero image loads fast
-          unoptimized
         />
 
         {/* Mobile Background */}
@@ -22,7 +21,6 @@ const HeroSection = () => {
           src={heroBgMobile}
           alt="Advertise with us mobile"
           className={styles.heroMobile}
-          unoptimized
         />
       </div>
     </section>
