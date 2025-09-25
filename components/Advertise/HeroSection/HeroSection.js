@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image"; 
 import styles from "../../../styles/Advertise/HeroSection.module.scss";
-import heroBg from "../../../public/images/advertise/herobg-desktop.png"; 
-import heroBgMobile from "../../../public/images/advertise/herobg-mobile.png"; 
+// import heroBg from "../../../public/images/advertise/herobg-desktop.png"; 
+// import heroBgMobile from "../../../public/images/advertise/herobg-mobile.png"; 
 
 const HeroSection = () => {
   return (
@@ -10,7 +10,9 @@ const HeroSection = () => {
       <div className={styles.heroSection}>
         {/* Desktop Background */}
         <Image
-          src={heroBg}
+         width={200}
+        height={200}
+          src="/images/advertise/herobg-desktop.png"
           alt="Advertise with us"
           className={styles.heroDesktop}
           priority // ensures hero image loads fast
@@ -18,7 +20,9 @@ const HeroSection = () => {
 
         {/* Mobile Background */}
         <Image
-          src={heroBgMobile}
+        width={200}
+        height={200}
+          src="/images/advertise/herobg-mobile.png"
           alt="Advertise with us mobile"
           className={styles.heroMobile}
         />
