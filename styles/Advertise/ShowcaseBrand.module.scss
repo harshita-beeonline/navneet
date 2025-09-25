@@ -1,0 +1,41 @@
+.nextSection {
+  width: 100vw;
+  overflow: hidden;
+  background: #fff;
+  padding: 20px 0;
+
+  .marquee {
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    .marqueeInner {
+      display: flex;
+      gap: 40px;
+      animation: scroll 25s linear infinite;
+
+      img {
+        height: 159px;       
+        width: auto;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .marquee .marqueeInner img {
+      height: 159px;  
+    }
+  }
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
