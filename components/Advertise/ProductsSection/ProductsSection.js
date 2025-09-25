@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 // Icons
-// import checkIcon from "../../../public/images/our-business/checkmark-icon.svg";
-// import checkIconWhite from "../../../public/images/advertise/checkmark-white-icon.png";
+import checkIcon from "../../../public/images/our-business/checkmark-icon.svg";
+import checkIconWhite from "../../../public/images/advertise/checkmark-white-icon.png";
 
 // Styles
 import styles from "../../../styles/Advertise/ProductsSection.module.scss";
@@ -29,7 +29,7 @@ export default function ProductsSection() {
             {academicBooks.map((text, i) => (
               <li key={i}>
                 <span className={styles.checkIcon}>
-                  <Image src="/images/our-business/checkmark-icon.svg" alt="" width={20} height={20} />
+                  <Image src={checkIcon} alt="" width={20} height={20} />
                 </span>
                 {text}
               </li>
@@ -44,7 +44,7 @@ export default function ProductsSection() {
             {stationery.map((text, i) => (
               <li key={i}>
                 <span className={styles.checkIcon}>
-                  <Image src="/images/advertise/checkmark-white-icon.png" alt="" width={20} height={20} />
+                  <Image src={checkIconWhite} alt="" width={20} height={20} />
                 </span>
                 {text}
               </li>
@@ -59,7 +59,7 @@ export default function ProductsSection() {
             {eLearning.map((text, i) => (
               <li key={i}>
                 <span className={styles.checkIcon}>
-                  <Image src="/images/our-business/checkmark-icon" alt="" width={20} height={20} />
+                  <Image src={checkIcon} alt="" width={20} height={20} />
                 </span>
                 {text}
               </li>

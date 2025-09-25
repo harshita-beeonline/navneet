@@ -2,15 +2,25 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../../styles/Advertise/ShowcaseBrand.module.scss";
 
+// ✅ Static imports (optimized by Next.js)
+import slide1 from "../../../public/images/advertise/slide1.png";
+import slide2 from "../../../public/images/advertise/slide2.png";
+import slide3 from "../../../public/images/advertise/slide3.png";
+import slide4 from "../../../public/images/advertise/slide4.png";
+import slide5 from "../../../public/images/advertise/slide5.png";
+import slide6 from "../../../public/images/advertise/slide6.png";
+import slide7 from "../../../public/images/advertise/slide7.png";
+import slide8 from "../../../public/images/advertise/slide8.png";
+
 const brandImages = [
-  "/images/advertise/slide1.png",
-  "/images/advertise/slide2.png",
-  "/images/advertise/slide3.png",
-  "/images/advertise/slide4.png",
-  "/images/advertise/slide5.png",
-  "/images/advertise/slide6.png",
-  "/images/advertise/slide7.png",
-  "/images/advertise/slide8.png",
+  slide1,
+  slide2,
+  slide3,
+  slide4,
+  slide5,
+  slide6,
+  slide7,
+  slide8,
 ];
 
 const NextSection = () => {
@@ -22,11 +32,9 @@ const NextSection = () => {
           {brandImages.concat(brandImages).map((img, index) => (
             <div key={index} className={styles.brandLogo}>
               <Image
-                src={img} // string path from public
+                src={img}
                 alt={`Brand ${index + 1}`}
                 className={styles.responsiveImage}
-                width={200} // must provide width & height when using string paths
-                height={100}
               />
             </div>
           ))}
