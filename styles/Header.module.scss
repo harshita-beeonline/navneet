@@ -208,3 +208,17 @@
     left: -15px;
   }
 }
+
+// prevent bg touch scroll when menu is open
+/* invisible overlay that blocks background interaction while menu is open */
+.scrim {
+  position: fixed;
+  inset: 0; /* full viewport */
+  background: rgba(0, 0, 0, 0.5); /* dark dimming */
+  z-index: 9998; /* below navMenu, above page */
+}
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}

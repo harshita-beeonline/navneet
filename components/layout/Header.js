@@ -1,10 +1,3 @@
-/* ==================================================
-File: components/Header/Header.jsx
-Description: Accessible, fully responsive header for Next.js (client component).
-Place this file at: components/Header/Header.jsx
-Note: dropdown components live under components/Header/ as separate files. SCSS modules live in /styles.
-================================================== */
-
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
@@ -23,8 +16,8 @@ import { usePathname } from "next/navigation";
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState(null); // desktop hover/focus dropdown key
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState({}); // mobile accordion
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState({});
   const pathname = usePathname();
   const closeBtnRef = useRef(null);
 
@@ -34,18 +27,24 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // close menus on route change
   useEffect(() => {
     setIsMenuOpen(false);
     setMobileDropdownOpen({});
     setOpenDropdown(null);
   }, [pathname]);
 
-  // lock body scroll when mobile menu open
+  // prevent background scroll when menu open
   useEffect(() => {
-    document.body.style.overflow = isMenuOpen ? "hidden" : "";
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
     };
   }, [isMenuOpen]);
 
@@ -63,18 +62,14 @@ export default function Header() {
 
   const isActive = (href) => {
     if (!pathname) return false;
-
-    if (href === "/") {
-      return pathname === "/";
-    }
-
+    if (href === "/") return pathname === "/";
     return pathname === href || pathname.startsWith(href + "/");
   };
 
   const toggleMobileDropdown = (key) => {
     setMobileDropdownOpen((prev) => ({ ...prev, [key]: !prev[key] }));
   };
-
+  
   return (
     <header
       className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}
