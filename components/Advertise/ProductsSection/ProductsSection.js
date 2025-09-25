@@ -29,7 +29,7 @@ export default function ProductsSection() {
             {academicBooks.map((text, i) => (
               <li key={i}>
                 <span className={styles.checkIcon}>
-                  <Image src={checkIcon} alt="" width={20} height={20} />
+                  <Image src={checkIcon} alt="" width={20} height={20} unoptimized/>
                 </span>
                 {text}
               </li>
@@ -44,7 +44,7 @@ export default function ProductsSection() {
             {stationery.map((text, i) => (
               <li key={i}>
                 <span className={styles.checkIcon}>
-                  <Image src={checkIconWhite} alt="" width={20} height={20} />
+                  <Image src={checkIconWhite} alt="" width={20} height={20} unoptimized/>
                 </span>
                 {text}
               </li>
@@ -59,7 +59,7 @@ export default function ProductsSection() {
             {eLearning.map((text, i) => (
               <li key={i}>
                 <span className={styles.checkIcon}>
-                  <Image src={checkIcon} alt="" width={20} height={20} />
+                  <Image src={checkIcon} alt="" width={20} height={20} unoptimized/>
                 </span>
                 {text}
               </li>

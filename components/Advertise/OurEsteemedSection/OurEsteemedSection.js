@@ -22,6 +22,7 @@ const OurEsteemedSection = () => {
             alt="Main Client Image"
             className={styles.responsiveImage}
             priority
+            unoptimized
           />
         </div>
 
@@ -31,6 +32,7 @@ const OurEsteemedSection = () => {
             src={stationary}
             alt="Stationery Clients"
             className={styles.responsiveImage}
+            unoptimized
           />
         </div>
 
@@ -40,6 +42,7 @@ const OurEsteemedSection = () => {
             src={production}
             alt="Publications Clients"
             className={styles.responsiveImage}
+            unoptimized
           />
         </div>
 
@@ -48,6 +51,7 @@ const OurEsteemedSection = () => {
             src={img2}
             alt="Main Client Image 2"
             className={styles.responsiveImage}
+            unoptimized
           />
         </div>
       </div>
