@@ -18,6 +18,10 @@
       padding: 6px 0;
       margin-top: 35px;
 
+      @media (min-width: 1300px) and (max-width: 1500px) {
+        margin-top: 38.5px;
+      }
+
       li {
         position: relative;
         padding: 6px 12px;
@@ -37,6 +41,18 @@
           color: #f9f9f9;
           text-align: left;
           text-decoration: none;
+        }
+      }
+
+      /* ✅ Responsive adjustment for 1300px–1500px */
+      @media (min-width: 1300px) and (max-width: 1500px) {
+        li {
+          font-size: 12.5px; /* shrink text size */
+          padding: 5px 10px;
+
+          a {
+            font-size: 12.5px;
+          }
         }
       }
     }

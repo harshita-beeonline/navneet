@@ -1,8 +1,6 @@
 /* ========================
    🔹 Desktop Dropdown
 ======================== */
-/* styles/BusinessDropdown.module.scss */
-
 .dropdown-container-box {
   position: absolute;
   top: 0px;
@@ -19,6 +17,10 @@
       margin: 0;
       padding: 6px 0;
       margin-top: 35px;
+
+      @media (min-width: 1300px) and (max-width: 1500px) {
+        margin-top: 38.5px;
+      }
 
       li {
         position: relative;
@@ -45,7 +47,7 @@
           background: #696c6e;
           list-style: none;
           width: 267px;
-          display: block; /* we render conditionally, so keep block */
+          display: block;
           margin-left: 15px;
           padding: 10px 0px;
           z-index: 9999;
@@ -56,6 +58,7 @@
 
             a,
             span {
+              display: block;
               margin: 0;
               padding: 6px 0px 6px 12px;
               font-family: Montserrat, sans-serif;
@@ -85,17 +88,46 @@
                 padding: 0;
                 margin: 0;
 
-                a {
+                a,
+                span {
                   display: block;
                   padding: 6px 0px 6px 12px;
+                  font-family: Montserrat, sans-serif;
+                  font-weight: 500;
+                  font-size: 14px;
                   color: #f9f9f9;
+                  text-decoration: none;
                 }
               }
             }
           }
         }
       }
+
+      /* ✅ Responsive adjustment for 1300px–1500px */
+      @media (min-width: 1300px) and (max-width: 1500px) {
+        li {
+          font-size: 12.5px;
+          padding: 5px 10px;
+
+          a,
+          span {
+            font-size: 12.5px;
+          }
+
+          .rightMenu,
+          .rightMenu li a,
+          .rightMenu li span,
+          .rightMenu .deepMenu li a,
+          .rightMenu .deepMenu li span {
+            font-size: 12.5px;
+            padding-left: 10px;
+          }
+        }
+      }
     }
+
+    
   }
 }
 

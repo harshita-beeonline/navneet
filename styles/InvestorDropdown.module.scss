@@ -1,9 +1,9 @@
 /* ========================
-   🔹 Desktop Dropdown
+   🔹 Desktop Dropdown 
 ======================== */
 .dropdown-container-box {
   position: absolute;
-  top: 0px;
+  top: 0;
   z-index: 2000;
   margin-left: 15px;
 
@@ -13,10 +13,14 @@
     .leftMenu {
       list-style: none;
       width: 254px;
-      background: #696c6e; // same as BusinessDropdown
+      background: #696c6e;
       margin: 0;
       padding: 6px 0;
       margin-top: 35px;
+
+      @media (min-width: 1300px) and (max-width: 1500px) {
+        margin-top: 38.5px;
+      }
 
       li {
         position: relative;
@@ -28,15 +32,16 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 14px;
-        color: #f9f9f9; // white text
+        color: #f9f9f9;
 
         a {
-          margin: 0px;
-          padding: 0px;
+          margin: 0;
+          padding: 0;
           font-weight: 500;
           font-size: 14px;
           color: #f9f9f9;
           text-align: left;
+          text-decoration: none;
         }
 
         .arrow {
@@ -49,12 +54,12 @@
           position: absolute;
           top: 10px;
           left: 100%;
-          background: #696c6e; // same gray as BusinessDropdown
+          background: #696c6e;
           list-style: none;
           width: 267px;
-          display: block; /* we render conditionally */
+          display: block;
           margin-left: 15px;
-          padding: 10px 0px;
+          padding: 10px 0;
           z-index: 9999;
 
           li {
@@ -65,10 +70,10 @@
             span {
               display: block;
               margin: 0;
-              padding: 6px 0px 6px 12px;
-              font-family: Montserrat, sans-serif;
+              padding: 6px 0 6px 12px;
+              font-family: "Montserrat", sans-serif;
               font-weight: 500;
-              font-size: 14px;
+              font-size: 14px; /* default font-size */
               color: #f9f9f9;
               text-decoration: none;
             }
@@ -81,7 +86,7 @@
               list-style: none;
               width: 267px;
               margin-left: 15px;
-              padding: 10px 0px;
+              padding: 10px 0;
               z-index: 10000;
 
               li {
@@ -90,11 +95,35 @@
 
                 a {
                   display: block;
-                  padding: 6px 0px 6px 12px;
+                  padding: 6px 0 6px 12px;
+                  font-family: "Montserrat", sans-serif;
+                  font-weight: 500;
+                  font-size: 14px; /* default font-size */
                   color: #f9f9f9;
+                  text-decoration: none;
                 }
               }
             }
+          }
+        }
+      }
+
+      /* ✅ Responsive adjustment for 1300px–1500px */
+      @media (min-width: 1300px) and (max-width: 1500px) {
+        li {
+          font-size: 12.5px;
+          padding: 5px 10px;
+
+          a {
+            font-size: 12.5px;
+          }
+
+          /* Apply font-size to rightMenu and deepMenu links */
+          .rightMenu,
+          .rightMenu li a,
+          .rightMenu .deepMenu li a {
+            font-size: 12.5px;
+            padding-left: 10px;
           }
         }
       }
