@@ -1,7 +1,7 @@
 // components/MediaAndUpdates/Coverage/Articles/Articles.jsx
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState, useMemo } from "react";
 import Image from "next/image";
 import styles from "../../../../../styles/MediaAndUpdates/Coverage/Articles.module.scss";
 
@@ -59,7 +59,14 @@ export default function Articles() {
   const dragStartX = useRef(0);
   const scrollStartX = useRef(0);
   const [progress, setProgress] = useState(0);
+
+  // Modal states
   const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
+  const [modalLoading, setModalLoading] = useState(false);
+
+  const modalRef = useRef(null);
+  const lastFocusedRef = useRef(null);
 
   const columns = [
     [
@@ -117,6 +124,9 @@ export default function Articles() {
     ],
   ];
 
+  // flat list used for modal navigation
+  const allImages = useMemo(() => columns.flat(), [/* columns are static imports */]);
+
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -168,7 +178,7 @@ export default function Articles() {
           left: -Math.round(el.clientWidth * 0.8),
           behavior: "smooth",
         });
-      if (e.key === "Escape") setSelectedImage(null); // close modal with Escape
+      if (e.key === "Escape") closeModal();
     };
 
     const ro = new ResizeObserver(updateProgress);
@@ -192,11 +202,61 @@ export default function Articles() {
     };
   }, []);
 
+  // Open modal with a given image
+  const openModal = (img) => {
+    // remember last focused element to restore focus on close
+    lastFocusedRef.current = document.activeElement;
+    const idx = allImages.indexOf(img);
+    setSelectedIndex(idx >= 0 ? idx : 0);
+    setSelectedImage(img);
+    setModalLoading(true);
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
+    setSelectedIndex(null);
+    setModalLoading(false);
+    // restore focus to the element that had it before opening modal
+    try {
+      lastFocusedRef.current?.focus?.();
+    } catch {}
+  };
+
+  const showNext = () => {
+    if (allImages.length === 0) return;
+    const next = (selectedIndex + 1) % allImages.length;
+    setSelectedIndex(next);
+    setSelectedImage(allImages[next]);
+    setModalLoading(true);
+  };
+
+  const showPrev = () => {
+    if (allImages.length === 0) return;
+    const prev = (selectedIndex - 1 + allImages.length) % allImages.length;
+    setSelectedIndex(prev);
+    setSelectedImage(allImages[prev]);
+    setModalLoading(true);
+  };
+
+  // keyboard navigation for modal
+  useEffect(() => {
+    if (!selectedImage) return;
+
+    const handler = (e) => {
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+    };
+
+    window.addEventListener("keydown", handler);
+    // focus modal container for screen readers / keyboard
+    setTimeout(() => modalRef.current?.focus?.(), 0);
+
+    return () => window.removeEventListener("keydown", handler);
+  }, [selectedImage, selectedIndex]);
+
   return (
-    <section
-      className={styles.articlesSection}
-      aria-label="Media coverage articles"
-    >
+    <section className={styles.articlesSection} aria-label="Media coverage articles">
       <div className={styles.wrapper}>
         <div
           className={styles.viewport}
@@ -212,7 +272,7 @@ export default function Articles() {
                   <article
                     className={styles.card}
                     key={`c-${ci}-${ii}`}
-                    onClick={() => setSelectedImage(img)}
+                    onClick={() => openModal(img)}
                     style={{ cursor: "pointer" }}
                   >
                     <div className={styles.cardInner}>
@@ -237,10 +297,7 @@ export default function Articles() {
 
         <div className={styles.progressWrap} aria-hidden>
           <div className={styles.progressTrack}>
-            <div
-              className={styles.progressBar}
-              style={{ width: `${progress}%` }}
-            />
+            <div className={styles.progressBar} style={{ width: `${progress}%` }} />
           </div>
         </div>
       </div>
@@ -249,26 +306,59 @@ export default function Articles() {
       {selectedImage && (
         <div
           className={styles.modalOverlay}
-          onClick={() => setSelectedImage(null)}
+          onClick={closeModal}
           role="dialog"
           aria-modal="true"
         >
           <div
             className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}
+            ref={modalRef}
+            tabIndex={-1}
+            aria-label="Open article image"
           >
             <button
               className={styles.closeBtn}
-              onClick={() => setSelectedImage(null)}
+              onClick={closeModal}
               aria-label="Close"
             >
               ×
             </button>
-            <Image
-              src={selectedImage}
-              alt="Selected Article"
-              style={{ width: "100%", height: "auto" }}
-            />
+
+            {/* Prev / Next buttons */}
+            <button
+              className={`${styles.navBtn} ${styles.prevBtn}`}
+              onClick={showPrev}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+            <button
+              className={`${styles.navBtn} ${styles.nextBtn}`}
+              onClick={showNext}
+              aria-label="Next image"
+            >
+              ›
+            </button>
+
+            <div className={styles.imageWrap}>
+              {/* Loading spinner */}
+              {modalLoading && (
+                <div className={styles.modalSpinner} role="status" aria-live="polite">
+                  <div className={styles.spinner} />
+                  <span className={styles.srOnly}>Loading image</span>
+                </div>
+              )}
+
+              <Image
+                src={selectedImage}
+                alt="Selected Article"
+                style={{ width: "100%", height: "auto", display: "block" }}
+                onLoadingComplete={() => setModalLoading(false)}
+                priority={true}
+                className={`${styles.modalImage} ${modalLoading ? styles.loading : styles.loaded}`}
+              />
+            </div>
           </div>
         </div>
       )}

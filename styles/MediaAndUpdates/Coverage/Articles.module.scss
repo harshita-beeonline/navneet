@@ -1,3 +1,4 @@
+
 /* -------------------- styles/MediaAndUpdates/Coverage/Articles.module.scss -------------------- */
 
 .articlesSection {
@@ -63,7 +64,6 @@
 
 .card {
   background: #ffffff;
-  border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 6px 18px rgba(10, 20, 30, 0.06);
   border: 1px solid rgba(0, 0, 0, 0.04);
@@ -149,16 +149,6 @@
 
 /* Mobile tweaks */
 @media (max-width: 767px) {
-  // :root {
-  //   --col-w: 220px;
-  // }
-  // .column {
-  //   gap: 14px;
-  // }
-  // .columns {
-  //   padding-left: 12px;
-  //   padding-right: 12px;
-  // }
   .column {
     --col-w: 220px;  // scoped correctly (no :root)
     gap: 14px;
@@ -179,7 +169,7 @@
   }
 }
 
-/* Modal / Lightbox */
+/* Modal / Lightbox (improved, professional) */
 .modalOverlay {
   position: fixed;
   inset: 0;
@@ -188,25 +178,147 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  backdrop-filter: blur(4px);
 }
 
 .modalContent {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  overflow: auto;
-  background: #fff;
+  width: min(1200px, 96%);
+  max-height: 92vh;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02); /* transparent base so image stands out */
   padding: 16px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrap {
+  position: relative;
+  width: 100%;
+  max-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
+.modalImage {
+  max-width: 100%;
+  max-height: calc(88vh - 32px);
+  object-fit: contain;
+  display: block;
+  transition: opacity 260ms ease, transform 260ms ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modalImage.loading {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
+.modalImage.loaded {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* spinner */
+.modalSpinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.12);
+  border-top-color: #ffffff;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.srOnly {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
 }
 
 .closeBtn {
   position: absolute;
   top: 8px;
   right: 12px;
-  background: transparent;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
   border: none;
-  font-size: 32px;
+  font-size: 28px;
   cursor: pointer;
   line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 6;
 }
+
+.navBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  color: #fff;
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 6;
+}
+
+.prevBtn {
+  left: 12px;
+}
+
+.nextBtn {
+  right: 12px;
+}
+
+/* small screens adjustments */
+@media (max-width: 600px) {
+  .modalContent {
+    padding: 10px;
+    border-radius: 6px;
+  }
+  .closeBtn, .navBtn {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+  .spinner { width: 40px; height: 40px; border-width: 3px; }
+}
+
