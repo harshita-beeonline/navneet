@@ -1,0 +1,105 @@
+/* Reuse your global wrapper */
+.pillarsSection {
+    
+    padding: clamp(16px, 4vw, 32px) 80px;
+    font-family: "Montserrat", sans-serif;
+  
+    @media (max-width: 1280px) {
+      padding: clamp(16px, 4vw, 32px) 60px;
+    }
+    @media (max-width: 1024px) {
+      padding: clamp(16px, 4vw, 32px) 40px;
+    }
+    @media (max-width: 768px) {
+      padding: clamp(16px, 4vw, 32px) 20px;
+    }
+    @media (max-width: 576px) {
+      padding: clamp(12px, 4vw, 16px) 15px;
+    }
+  }
+  
+  /* Title for each pillar */
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 40px 0 20px;
+    color:#1E1E20;
+  }
+  
+  /* Pillar block layout */
+  .pillarBlock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    margin-bottom: 64px;
+  
+    .pillarImage {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+  
+      img {
+        width: 85%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: contain;
+      }
+    }
+  
+    .pillarText {
+      flex: 1;
+  
+      h3 {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color:#2F6DB2;
+      }
+  
+      p,
+      li {
+        font-size: 16px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+        color: #25303b;
+      }
+  
+      ul {
+        padding-left: 20px;
+      }
+    }
+  }
+  
+  /* Reverse layout for alternating pillars */
+  .reverse {
+    flex-direction: row-reverse;
+  }
+  
+  @media (max-width: 992px) {
+    .pillarBlock,
+    .reverse {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .pillarText {
+      text-align: left;
+      margin-top: 16px; /* keep some space below image */
+    }
+  
+    .pillarImage img {
+      width: 100%;      /* span full width */
+      max-width: none;  /* no restriction */
+    }
+  }
+  
+  /* Slightly reduce image size for the 4th pillar on desktop */
+  @media (min-width: 993px) {
+    .pillarsSection > div:nth-of-type(4) .pillarImage img {
+      width: 45%;
+    }
+  }
+  

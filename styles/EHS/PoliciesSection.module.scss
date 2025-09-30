@@ -1,0 +1,148 @@
+.pageWrapper {
+ 
+    padding: clamp(16px, 4vw, 1px) 80px;
+    font-family: "Montserrat", sans-serif;
+  
+    @media (max-width: 1280px) {
+      
+      padding: clamp(16px, 4vw, 32px) 60px;
+    }
+    @media (max-width: 1024px) {
+     
+      padding: clamp(16px, 4vw, 32px) 40px;
+    }
+    @media (max-width: 768px) {
+      padding: clamp(16px, 4vw, 32px) 20px;
+    }
+    @media (max-width: 576px) {
+      padding: clamp(12px, 4vw, 16px) 15px;
+    }
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    color:  #2F6DB2;
+    margin-bottom: 30px;
+    @media (max-width: 768px) {
+      font-size: 30px;
+    }
+  /* iPad Air (~820px) */
+/* iPad Air (~820px) */
+@media (min-width: 768px) and (max-width: 833px) {
+
+    text-align: left;
+    font-size: 27px;   /* smaller size for Air */
+  
+}
+
+/* iPad Pro (~834px–1024px) */
+@media (min-width: 834px) and (max-width: 1024px) {
+  
+    text-align: left;
+    font-size: 37px;   /* bigger size for Pro */
+  
+}
+
+
+      
+    }
+    
+ 
+  
+  
+  
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+  
+    @media (max-width: 1024px) {
+      gap: 30px;
+    }
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  
+  .left {
+    flex: 1;
+  
+    @media (max-width: 768px) {
+      order: 2;
+    }
+  }
+  
+  .policyList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+      font-size: 15px;
+      color: #222;
+      background: #fff;
+      border: 1px solid #afd4f1;
+      border-radius: 6px;
+      padding: 10px 14px;
+      box-shadow: 0px 0px 8px 0px #afd4f182;
+      text-align: left;
+  
+      .icon {
+        margin-right: 10px;
+      }
+      @media (max-width: 768px) {
+        width: 100%;          // all boxes full width of container
+        min-height: 70px;     // force same height (adjust value)
+        display: flex;
+        align-items: center;  // vertical centering
+      }
+    }
+  }
+  .right {
+    flex: 0 0 auto;
+    display: flex;
+    justify-content: center;
+    margin-top: -148px;   // 🔹 ~3 inches above the title
+  
+    @media (max-width: 768px) {
+      order: 1;
+      margin-top: 0;      // reset on mobile
+    }
+  
+    .director {
+      border-radius: 12px;
+      object-fit: contain;
+      max-height: 480px;
+      width: auto;
+    }
+  }
+  
+  
+  
+  
+  .subtitle {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #2F6DB2; // same color as title
+    @media (max-width: 768px) {
+      font-size: 26px;
+      text-align:left ;
+    }
+    @media (min-width: 768px) and (max-width: 833px) {
+      font-size: 27px;   /* smaller size for Air */
+    
+  }
+  }
+  

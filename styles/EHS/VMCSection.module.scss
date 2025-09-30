@@ -1,0 +1,70 @@
+.pageWrapper {
+    
+    padding: clamp(16px, 4vw, 32px) 80px;
+    font-family: "Montserrat", sans-serif;
+  
+    @media (max-width: 1280px) {
+      padding: clamp(16px, 4vw, 32px) 60px;
+    }
+    @media (max-width: 1024px) {
+      padding: clamp(16px, 4vw, 32px) 40px;
+    }
+    @media (max-width: 768px) {
+      padding: clamp(16px, 4vw, 32px) 20px;
+    }
+    @media (max-width: 576px) {
+      padding: clamp(12px, 4vw, 16px) 15px;
+    }
+  }
+  
+  .cardGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  
+    @media (max-width: 1024px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .card {
+    background: #ffffff;
+    border: 1px solid #2F6DB2;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 8px;
+  
+    h3 {
+      font-size: clamp(18px, 2vw, 22px);
+      margin-bottom: 12px;
+      font-weight: 700;
+      font-size: 28px;
+      color:#1E1E20;
+    }
+  
+    p {
+      font-size: clamp(14px, 1.5vw, 16px);
+      color: #1E1E20;
+      line-height: 1.6;
+    }
+  
+  
+    /* 🎨 Special style for second card */
+    &:nth-child(2) {
+      background: #2F6DB2;
+      border: none;
+  
+      h3 {
+        color: #fff;
+      }
+      p {
+        color: #f0f0f0;
+      }
+    }
+  }
+  

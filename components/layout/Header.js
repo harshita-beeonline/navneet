@@ -69,7 +69,7 @@ export default function Header() {
   const toggleMobileDropdown = (key) => {
     setMobileDropdownOpen((prev) => ({ ...prev, [key]: !prev[key] }));
   };
-  
+
   return (
     <header
       className={`${styles.header} ${scrolled ? styles.scrolled : ""}`}
@@ -159,13 +159,9 @@ export default function Header() {
           Responsibility
         </Link>
 
-        <a
-          href="https://navneet.com/ehs/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <Link href="/ehs" className={isActive("/ehs") ? styles.activeLink : ""}>
           EHS
-        </a>
+        </Link>
 
         <div
           className={styles.dropdownParent}
@@ -342,13 +338,10 @@ export default function Header() {
           <Link href="/responsibility" onClick={() => setIsMenuOpen(false)}>
             Responsibility
           </Link>
-          <a
-            href="https://navneet.com/ehs/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+
+          <Link href="/ehs" onClick={() => setIsMenuOpen(false)}>
             EHS
-          </a>
+          </Link>
 
           <div className={styles.mobileAccordion}>
             <button

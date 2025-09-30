@@ -1,0 +1,142 @@
+.pillarsSection {
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  padding: clamp(16px, 4vw, 32px) 80px;
+
+
+  @media (max-width: 1280px) {
+    padding: clamp(16px, 4vw, 32px) 60px;
+  }
+  @media (max-width: 1024px) {
+    padding: clamp(16px, 4vw, 32px) 40px;
+  }
+  @media (max-width: 768px) {
+    padding: clamp(16px, 4vw, 32px) 20px;
+  }
+  @media (max-width: 576px) {
+    padding: clamp(12px, 4vw, 16px) 15px;
+  }
+}
+
+
+  
+  /* ==================== Top Box ==================== */
+  .topBox {
+    display: inline-block;
+    border: 2px solid #2f6db2;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  /* ==================== Connector ==================== */
+  .connector {
+    width: 2px;
+    height: 40px;
+    background: #2f6db2;
+    margin: 0 auto;
+  }
+  
+  /* ==================== Pillars Grid ==================== */
+  .pillarsWrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+    position: relative;
+  
+    /* Horizontal line connecting all pillars */
+    &:before {
+      content: "";
+      position: absolute;
+      top: -20px; /* connects to vertical line from heading */
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: #2f6db2;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  
+  .pillar {
+    background: #2f6db2;
+    color: #fff;
+  
+    border-radius: 8px;
+    width: 60%; /* make them stretch equally */
+    min-height: 80px; /* equal height baseline */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  
+    /* Vertical connector from horizontal line */
+    &:before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 20px;
+      background: #2f6db2;
+    }
+  
+    h3 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      text-align: center;
+    }
+  
+    p {
+      font-size: 16px;
+      margin: 0;
+      text-align: center;
+      margin-bottom: 6px;
+    }
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 1024px) {
+    .pillarsWrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .pillarsWrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .pillarsWrapper {
+      grid-template-columns: 1fr;
+    }
+  
+    /* ✅ keep horizontal line & connectors on small screens */
+    .pillarsWrapper:before,
+    .pillar:before {
+      display: block;
+    }
+  
+    /* ✅ adjust so connectors align correctly */
+    .pillarsWrapper:before {
+      top: -16px;
+    }
+  
+    .pillar {
+      min-height: 100px;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+  
+ 
