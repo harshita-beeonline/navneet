@@ -7,6 +7,7 @@ import top_scorer_hero_dekstop from "../../../../../public/images/our-business/t
 import top_scorer_hero_mobile from "../../../../../public/images/our-business/edtech-toptech-mobile-hero.png";
 import edtech_toptech_topclass_logo from "../../../../../public/images/our-business/edtech-toptech-topclass-logo.png";
 import checkmar_icon from "../../../../../public/images/our-business/checkmark-icon.svg";
+import companion_bg from "../../../../../public/images/our-business/companion-bg.png";
 
 // styles
 import styles from "../../../../../styles/OurBusiness/EdTech/TopScorer.module.scss";
@@ -57,30 +58,30 @@ export default function TopScorer() {
       </section> */}
 
       {/* HERO */}
-        <div className={styles.heroWrapper}>
-          <div className={styles.desktopHero}>
-            <div className={styles.heroFill}>
-              <Image
-                src={top_scorer_hero_dekstop}
-                alt="TopClass hero desktop"
-                fill
-                priority
-                sizes="(max-width: 768px) 100vw, 1600px"
-                className={styles.heroImage}
-              />
-            </div>
-          </div>
-          <div className={styles.mobileHero}>
+      <div className={styles.heroWrapper}>
+        <div className={styles.desktopHero}>
+          <div className={styles.heroFill}>
             <Image
-              src={top_scorer_hero_mobile}
-              alt="TopClass hero mobile"
-              width={1200}
-              height={800}
+              src={top_scorer_hero_dekstop}
+              alt="TopClass hero desktop"
+              fill
               priority
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, 1600px"
+              className={styles.heroImage}
             />
           </div>
         </div>
+        <div className={styles.mobileHero}>
+          <Image
+            src={top_scorer_hero_mobile}
+            alt="TopClass hero mobile"
+            width={1200}
+            height={800}
+            priority
+            sizes="100vw"
+          />
+        </div>
+      </div>
 
       {/* BRAND LOGO */}
       <div className={styles.logoWrap} aria-hidden>
@@ -152,12 +153,7 @@ export default function TopScorer() {
             {studentItems.map((item, i) => (
               <li key={i} className={styles.studentItem}>
                 <span className={styles.icon} aria-hidden>
-                  <Image
-                    src={checkmar_icon}
-                    alt=""
-                    width={16}
-                    height={16}
-                  />
+                  <Image src={checkmar_icon} alt="" width={16} height={16} />
                 </span>
                 <span>{item.text}</span>
               </li>
@@ -166,10 +162,14 @@ export default function TopScorer() {
         </div>
       </section>
 
-       {/* CALL TO ACTION */}
-        <div className={styles.callSection}>
+      {/* CALL TO ACTION */}
+      <div
+        className={styles.callSection}
+        style={{ ["--call-bg"]: `url(${companion_bg.src})` }}
+      >
+        <div className={styles.callContent}>
           <p>
-            For a Free Demo call :{" "}
+            For a Free Demo call:{" "}
             <a href="tel:18002666676" className={styles.phone}>
               1800 266 6676
             </a>
@@ -178,6 +178,7 @@ export default function TopScorer() {
             Email Us
           </a>
         </div>
+      </div>
     </main>
   );
 }

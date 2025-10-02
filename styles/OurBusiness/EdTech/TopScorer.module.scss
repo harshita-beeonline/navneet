@@ -328,60 +328,75 @@ $panel-shadow: rgba(17, 24, 39, 0.06);
   }
 }
 
-
 /* ===== full-bleed CALL SECTION (spans full viewport width) ===== */
+//  call to action
 .callSection {
-  /* full-bleed within a centered page: */
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-
-  background: $muted-blue;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: center;
-  padding: 60px 20px;
-  box-sizing: border-box;
+  background-image: var(--call-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  p {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600; /* semi-bold */
-    font-size: 40px; /* desktop */
-    line-height: 100%;
-    margin: 0 0 16px;
-    color: $text-dark;
-  }
+.callContent {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
+}
 
-  .phone {
-    color: $brand-blue;
-    font-weight: 700;
-    text-decoration: none;
-  }
+.callContent p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+  margin: 0 0 16px;
+  color: #233447;
+}
 
-  .emailBtn {
-    display: inline-block;
-    padding: 8px 100px;
-    background: transparent;
-    border: 2px solid $brand-blue;
-    border-radius: 30px;
-    font-weight: 600;
-    color: $brand-blue;
-    text-decoration: none;
-    transition: all 0.2s ease;
+.phone {
+  color: #1776c8;
+  font-weight: 700;
+  text-decoration: none;
+}
 
-    &:hover {
-      background: $brand-blue;
-      color: #fff;
-    }
-  }
+.emailBtn {
+  display: inline-block;
+  padding: 8px 100px;
+  background: transparent;
+  border: 2px solid #1776c8;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #1776c8;
+  text-decoration: none;
+  transition: all 0.2s ease;
 
-  @media (max-width: 768px) {
-    padding: 30px 16px;
-
-    p {
-      font-size: 20px; /* mobile */
-    }
+  &:hover {
+    background: #1776c8;
+    color: #fff;
   }
 }
 
+/* Responsive */
+@media (max-width: 768px) {
+  .callSection {
+    padding: 30px 16px;
+  }
+
+  .callContent p {
+    font-size: 20px;
+  }
+
+  .emailBtn {
+    padding: 8px 40px;
+  }
+}
 
 /* ------------------------ small screens ------------------------ */
 @media (max-width: 480px) {

@@ -2,10 +2,10 @@
   margin-top: 60px;
   display: flex;
   flex-direction: column;
-  gap: 32px; /* spacing between hero and text */
+  gap: 32px;
   font-family: "Montserrat", sans-serif;
 
-  /* HERO */
+  /* ================= HERO ================= */
   .heroWrapper {
     position: relative;
     width: 100%;
@@ -28,6 +28,7 @@
     .mobileHero {
       display: none;
       width: 100%;
+
       img {
         width: 100%;
         height: auto;
@@ -39,12 +40,14 @@
       object-position: center;
     }
 
+    /* Height adjustments */
     @media (max-width: 1024px) {
       height: 360px;
     }
 
     @media (max-width: 768px) {
       height: auto;
+
       .desktopHero {
         display: none;
       }
@@ -53,7 +56,7 @@
       }
     }
 
-    /* Section padding for HERO */
+    /* Padding adjustments */
     padding: clamp(16px, 4vw, 32px) 80px;
 
     @media (max-width: 1280px) {
@@ -73,7 +76,7 @@
     }
   }
 
-  /* INTRO */
+  /* ================= INTRO ================= */
   .intro {
     margin: 0 auto;
     text-align: center;
@@ -96,7 +99,7 @@
       align-items: center;
     }
 
-    /* Section padding for INTRO */
+    /* Padding adjustments */
     padding: clamp(16px, 4vw, 32px) 80px;
 
     @media (max-width: 1280px) {
@@ -116,7 +119,7 @@
     }
   }
 
-  /* STATS STRIP */
+  /* ================= STATS STRIP ================= */
   .statsWrapper {
     position: relative;
     width: 100%;
@@ -142,8 +145,8 @@
       width: min(1000px, 95%);
       margin: 0 auto;
       display: flex;
-      gap: 1rem; // increase gap for desktop
-      padding: 20px 16px; // increase padding for desktop
+      gap: 1rem;
+      padding: 20px 16px;
       background: rgba(255, 255, 255, 0.95);
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(22, 40, 64, 0.1);
@@ -159,19 +162,19 @@
         padding: 4px 6px;
 
         .number {
-          font-size: 2rem; // make desktop numbers bigger
+          font-size: 2rem;
           font-weight: 700;
           color: #1776c8;
         }
 
         .label {
-          font-size: 1rem; // bigger label on desktop
+          font-size: 1rem;
           margin-top: 4px;
         }
       }
     }
 
-    /* Responsive adjustments */
+    /* Responsive */
     @media (max-width: 1024px) {
       .statsCard {
         gap: 0.5rem;
@@ -179,7 +182,7 @@
 
         .stat {
           .number {
-            font-size: clamp(14px, 4.5vw, 20px); // smaller numbers for tablet
+            font-size: clamp(14px, 4.5vw, 20px);
           }
           .label {
             font-size: 0.7rem;
@@ -207,13 +210,13 @@
     }
   }
 
-  /* ===== improved responsive cards & full-bleed call ===== */
+  /* ================= CARDS SECTION ================= */
   .cardsSection {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px;
     padding: clamp(24px, 5vw, 60px) 80px;
-    align-items: stretch; /* make grid items equal height */
+    align-items: stretch;
 
     .card {
       border-radius: 12px;
@@ -221,8 +224,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      box-sizing: border-box;
-      height: 100%; /* ensure equal-height when grid-row aligns */
+      height: 100%;
       min-height: 320px;
 
       .cardHeader {
@@ -233,9 +235,8 @@
         margin-bottom: 24px;
 
         h3 {
-          font-family: "Montserrat", sans-serif;
           font-weight: 500;
-          font-size: 40px; /* desktop */
+          font-size: 40px;
           line-height: 26px;
           margin: 0;
         }
@@ -249,12 +250,10 @@
       }
 
       p {
-        font-family: "Montserrat", sans-serif;
         font-weight: 500;
-        font-size: 20px; /* desktop */
+        font-size: 20px;
         line-height: 30px;
-        color: inherit;
-        margin: 0 0 20px 0;
+        margin: 0 0 20px;
       }
 
       .knowMore {
@@ -264,6 +263,7 @@
       }
     }
 
+    /* Card variations */
     .blueCard {
       background: #1776c8;
       color: #fff;
@@ -282,6 +282,7 @@
       }
     }
 
+    /* Tablet */
     @media (max-width: 1199px) and (min-width: 769px) {
       gap: 24px;
       padding: clamp(20px, 4vw, 48px) 60px;
@@ -292,7 +293,7 @@
 
         .cardHeader {
           h3 {
-            font-size: 28px; /* scaled down for tablets */
+            font-size: 28px;
             line-height: 34px;
           }
           .cardLogo {
@@ -307,6 +308,7 @@
       }
     }
 
+    /* Mobile */
     @media (max-width: 768px) {
       grid-template-columns: 1fr;
       gap: 20px;
@@ -318,71 +320,85 @@
 
         .cardHeader {
           h3 {
-            font-size: 16px; /* mobile heading */
+            font-size: 16px;
             line-height: 26px;
           }
           .cardLogo {
-            max-width: 153px; /* mobile logo size */
+            max-width: 153px;
           }
         }
 
         p {
-          font-size: 14px; /* mobile paragraph */
+          font-size: 14px;
           line-height: 20px;
         }
       }
     }
   }
 
-  /* ===== full-bleed CALL SECTION ===== */
+  /* ================= CALL TO ACTION ================= */
   .callSection {
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-
-    background: #e6f3ff;
+    position: relative;
+    width: 100%;
+    padding: 50px 0;
+    margin: 50px 0;
     text-align: center;
-    padding: 60px 20px;
-    box-sizing: border-box;
+    background-image: var(--call-bg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .callContent {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
 
     p {
-      font-family: "Montserrat", sans-serif;
       font-weight: 600;
       font-size: 40px;
       line-height: 100%;
       margin: 0 0 16px;
       color: #233447;
     }
+  }
 
-    .phone {
-      color: #1776c8;
-      font-weight: 700;
-      text-decoration: none;
+  .phone {
+    color: #1776c8;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .emailBtn {
+    display: inline-block;
+    padding: 8px 100px;
+    background: transparent;
+    border: 2px solid #1776c8;
+    border-radius: 30px;
+    font-weight: 600;
+    color: #1776c8;
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background: #1776c8;
+      color: #fff;
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .callSection {
+      padding: 30px 16px;
+    }
+
+    .callContent p {
+      font-size: 20px;
     }
 
     .emailBtn {
-      display: inline-block;
-      padding: 8px 100px;
-      background: transparent;
-      border: 2px solid #1776c8;
-      border-radius: 30px;
-      font-weight: 600;
-      color: #1776c8;
-      text-decoration: none;
-      transition: all 0.2s ease;
-
-      &:hover {
-        background: #1776c8;
-        color: #fff;
-      }
-    }
-
-    @media (max-width: 768px) {
-      padding: 30px 16px;
-
-      p {
-        font-size: 20px; /* mobile */
-      }
+      padding: 8px 40px;
     }
   }
 }

@@ -1,21 +1,22 @@
-// Toptech.jsx
 import React from "react";
 import Image from "next/image";
 import styles from "../../../../styles/OurBusiness/EdTech/Toptech.module.scss";
+
+// Images
 import edtech_toptech_dekstop_hero from "../../../../public/images/our-business/edtech-toptech-dekstop-hero.png";
 import edtech_toptech_mobile_hero from "../../../../public/images/our-business/edtech-toptech-mobile-hero.png";
 import edtech_toptech_info from "../../../../public/images/our-business/edtech-toptech-info.png";
 import edtech_toptech_topclass_logo from "../../../../public/images/our-business/edtech-toptech-topclass-logo.png";
+import companion_bg from "../../../../public/images/our-business/companion-bg.png";
 
 export default function Toptech() {
   return (
     <main className={styles.mainsection}>
-      <section
-        className={styles.toptechSection}
-        aria-labelledby="toptech-heading"
-      >
-        {/* HERO */}
+      <section className={styles.toptechSection} aria-labelledby="toptech-heading">
+
+        {/* ================= HERO ================= */}
         <div className={styles.heroWrapper}>
+          {/* Desktop Hero */}
           <div className={styles.desktopHero}>
             <div className={styles.heroFill}>
               <Image
@@ -29,6 +30,7 @@ export default function Toptech() {
             </div>
           </div>
 
+          {/* Mobile Hero */}
           <div className={styles.mobileHero}>
             <Image
               src={edtech_toptech_mobile_hero}
@@ -41,7 +43,7 @@ export default function Toptech() {
           </div>
         </div>
 
-        {/* INTRO */}
+        {/* ================= INTRO ================= */}
         <div className={styles.intro}>
           <p>
             NAVNEET TOPTECH is an evolving EdTech committed towards equipping
@@ -65,8 +67,9 @@ export default function Toptech() {
           </a>
         </div>
 
-        {/* STATS STRIP */}
+        {/* ================= STATS STRIP ================= */}
         <div className={styles.statsWrapper} aria-hidden="true">
+          {/* Background */}
           <Image
             src={edtech_toptech_info}
             alt=""
@@ -75,11 +78,8 @@ export default function Toptech() {
             priority
           />
 
-          <div
-            className={styles.statsCard}
-            role="list"
-            aria-label="Key metrics"
-          >
+          {/* Stats */}
+          <div className={styles.statsCard} role="list" aria-label="Key metrics">
             <div className={styles.stat} role="listitem">
               <div className={styles.number}>18000+</div>
               <div className={styles.label}>Schools Reached</div>
@@ -102,8 +102,9 @@ export default function Toptech() {
           </div>
         </div>
 
-        {/* CARDS SECTION */}
+        {/* ================= CARDS ================= */}
         <div className={styles.cardsSection}>
+
           {/* For Schools (Blue card) */}
           <div className={`${styles.card} ${styles.blueCard}`}>
             <div className={styles.cardHeader}>
@@ -122,9 +123,7 @@ export default function Toptech() {
               2020 compliant. The platform comes preloaded with lesson plans,
               curriculum and a self-updating syllabus system.
             </p>
-            <a href="#" className={styles.knowMore}>
-              Know More
-            </a>
+            <a href="#" className={styles.knowMore}>Know More</a>
           </div>
 
           {/* For Students (White card) */}
@@ -145,23 +144,26 @@ export default function Toptech() {
               classroom level. Our goal is to accelerate and simplify both
               learning and teaching for students and educators.
             </p>
-            <a href="#" className={styles.knowMore}>
-              Know More
-            </a>
+            <a href="#" className={styles.knowMore}>Know More</a>
           </div>
         </div>
 
-        {/* CALL TO ACTION */}
-        <div className={styles.callSection}>
-          <p>
-            For a Free Demo call :{" "}
-            <a href="tel:18002666676" className={styles.phone}>
-              1800 266 6676
+        {/* ================= CALL TO ACTION ================= */}
+        <div
+          className={styles.callSection}
+          style={{ ["--call-bg"]: `url(${companion_bg.src})` }}
+        >
+          <div className={styles.callContent}>
+            <p>
+              For a Free Demo call:{" "}
+              <a href="tel:18002666676" className={styles.phone}>
+                1800 266 6676
+              </a>
+            </p>
+            <a href="mailto:info@navneet.com" className={styles.emailBtn}>
+              Email Us
             </a>
-          </p>
-          <a href="mailto:info@navneet.com" className={styles.emailBtn}>
-            Email Us
-          </a>
+          </div>
         </div>
       </section>
     </main>

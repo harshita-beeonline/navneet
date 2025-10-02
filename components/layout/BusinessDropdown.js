@@ -66,11 +66,11 @@ const businessMenu = [
         subMenu: [
           {
             label: "TopSchool",
-            href: "/our-business/edtech/top-tech/top-class",
+            href: "/our-business/edtech/top-tech/top-school",
           },
           {
             label: "TopClass",
-            href: "/our-business/edtech/top-tech/top-school",
+            href: "/our-business/edtech/top-tech/top-class",
           },
           {
             label: "TopScorer",

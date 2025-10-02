@@ -5,6 +5,8 @@ import top_school_hero_mobile from "../../../../../public/images/our-business/ed
 import top_school_info_bg from "../../../../../public/images/our-business/top-school-info-bg.jpg";
 import edtech_toptech_topclass_logo from "../../../../../public/images/our-business/edtech-toptech-topclass-logo.png";
 import checkmar_icon from "../../../../../public/images/our-business/checkmark-icon.svg";
+import companion_bg from "../../../../../public/images/our-business/companion-bg.png";
+
 import styles from "../../../../../styles/OurBusiness/EdTech/TopSchool.module.scss";
 
 export default function TopSchool() {
@@ -176,16 +178,21 @@ export default function TopSchool() {
         </div>
 
         {/* CALL TO ACTION */}
-        <div className={styles.callSection}>
-          <p>
-            For a Free Demo call :{" "}
-            <a href="tel:18002666676" className={styles.phone}>
-              1800 266 6676
+       <div
+          className={styles.callSection}
+          style={{ ["--call-bg"]: `url(${companion_bg.src})` }}
+        >
+          <div className={styles.callContent}>
+            <p>
+              For a Free Demo call:{" "}
+              <a href="tel:18002666676" className={styles.phone}>
+                1800 266 6676
+              </a>
+            </p>
+            <a href="mailto:info@navneet.com" className={styles.emailBtn}>
+              Email Us
             </a>
-          </p>
-          <a href="mailto:info@navneet.com" className={styles.emailBtn}>
-            Email Us
-          </a>
+          </div>
         </div>
       </section>
     </main>
