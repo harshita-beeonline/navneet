@@ -5,9 +5,15 @@ import styles from "../../../styles/Responsibility/Webinar.module.scss";
 
 const videos = [
   "https://www.youtube.com/embed/3mY0KO619rM",
-  "https://www.youtube.com/embed/ACPomoPBlq8",
-  "https://www.youtube.com/embed/ysz5S6PUM-U",
+  "https://www.youtube.com/embed/XSd3pLKwLW8",
+  "https://www.youtube.com/embed/H43RhYzmsgM",
+  "https://www.youtube.com/embed/SZsnNouvzTY",
+  "https://www.youtube.com/embed/TyysDoh67gs",
+  "https://www.youtube.com/embed/FyDIpfZQp28",
+  "https://www.youtube.com/embed/0hNlm9du9Z0",
+  "https://www.youtube.com/embed/co_98fSaZEU",
 ];
+
 
 export default function Webinar() {
   const [current, setCurrent] = useState(0);
