@@ -1,4 +1,3 @@
-
 import styles from "../../../styles/Career/JobsPage.module.scss";
 
 import { getAllJobs, getJobsByCategory } from "../../../lib/jobs";
@@ -15,7 +14,7 @@ export default function JobsPage({ searchParams }) {
         {/* Heading */}
         <div className={styles["job-page-heading"]}>Current Openings</div>
 
-         {/* Interactive area is handled by client component */}
+        {/* Interactive area is handled by client component */}
         <JobsClient initialJobs={jobs} />
       </main>
 
@@ -27,7 +26,9 @@ export default function JobsPage({ searchParams }) {
           you about the new jobs matching your profile and update you if you are
           the best fit for one of our open positions.
         </div>
-        <Link href={"/"} className={styles["btn"]}>Submit resume</Link>
+        <Link href={"/career/jobs/submit-resume"} className={styles["btn"]}>
+          Submit resume
+        </Link>
       </div>
     </>
   );
