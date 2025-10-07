@@ -58,13 +58,10 @@ export default function UnclaimedAndUnpaid() {
               {item.children?.length > 0 && (
                 <ul className={styles["subList"]}>
                   {item.children.map((child, idx) => {
-                    const linkObj = item.link?.[idx];
                     const href =
-                      typeof linkObj === "string"
-                        ? linkObj
-                        : linkObj?.href || "#";
-                    const isDownload =
-                      typeof linkObj === "object" && linkObj?.download;
+                      typeof item.link?.[idx] === "string"
+                        ? item.link[idx]
+                        : item.link?.[idx]?.href || "#";
 
                     return (
                       <li key={idx} className={styles["subItem"]}>
@@ -74,10 +71,9 @@ export default function UnclaimedAndUnpaid() {
                         />
                         <a
                           href={href}
-                          target={isDownload ? "_self" : "_blank"}
-                          rel={!isDownload ? "noopener noreferrer" : undefined}
+                          target="_blank"
+                          rel="noopener noreferrer"
                           className={styles["subText"]}
-                          download={isDownload ? "" : undefined}
                         >
                           {child}
                         </a>
@@ -123,7 +119,12 @@ export default function UnclaimedAndUnpaid() {
         <ul className={styles["listSingle"]}>
           {transferredToIEPF.map((item) => (
             <li key={item.id} className={styles["itemSingle"]}>
-              <a href={item.href} className={styles["itemLink"]}>
+              <a
+                href={item.href}
+                className={styles["itemLink"]}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className={styles["bullet"]} aria-hidden="true" />
                 <span className={styles["itemTextSingle"]}>{item.title}</span>
               </a>
@@ -141,9 +142,8 @@ export default function UnclaimedAndUnpaid() {
               <a
                 href={item.href}
                 className={styles["itemLink"]}
-                download={item.download ? "" : undefined}
-                target={item.download ? "_self" : "_blank"}
-                rel={!item.download ? "noopener noreferrer" : undefined}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <span className={styles["bullet"]} aria-hidden="true" />
                 <span className={styles["itemTextSingle"]}>{item.title}</span>

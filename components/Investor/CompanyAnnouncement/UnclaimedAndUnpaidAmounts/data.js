@@ -15,15 +15,15 @@ export const leftColumn = [
       "Final Dividend 2012-13",
     ],
     link: [
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Final%20Dividend%202007-08.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Interim%20Dividend%202007-08.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Final%20Dividend%202008-09.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Interim%20Dividend%202009-10.pdf",
-      "https://navneet.com/", // this one was already incomplete
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Final%20Dividend%202010-11.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Interim%20Dividend%202011-12.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Final%20Dividend%202011-12.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_March_2014/Final%20Dividend%202012-13.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820220775-Final-Dividend-2007-08.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820356342-Interim-Dividend-2007-08.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820242499-Final-Dividend-2008-09.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820375199-Interim-Dividend-2009-10.pdf",
+      "https://navneet.com/", // this one was already incomplete : not given on actaul site also
+      "https://img.modxcomputers.com/navneetpdf/1759820270991-Final-Dividend-2010-11.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820391934-Interim-Dividend-2011-12.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820320146-Final-Dividend-2011-12.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759820341638-Final-Dividend-2012-13.pdf",
     ],
   },
   {
@@ -41,27 +41,15 @@ export const leftColumn = [
       "Interim Dividend 2015-2016",
     ],
     link: [
-      {
-        href: "/files/23Aug2016/INTERIM DIVIDEND - 2009-10.xls",
-        download: true,
-      },
-      {
-        href: "/files/23Aug2016/INTERIM DIVIDEND - 2010-11.xls",
-        download: true,
-      },
-      { href: "/files/23Aug2016/FINAL DIVIDEND - 2010-11.xls", download: true },
-      {
-        href: "/files/23Aug2016/INTERIM DIVIDEND - 2011-12.xls",
-        download: true,
-      },
-      { href: "/files/23Aug2016/FINAL DIVIDEND - 2011-12.xls", download: true },
-      { href: "/files/23Aug2016/FINAL DIVIDEND - 2012-13.xls", download: true },
-      { href: "/files/23Aug2016/FINAL DIVIDEND - 2013-14.xls", download: true },
-      { href: "/files/23Aug2016/FINAL DIVIDEND - 2014-15.xls", download: true },
-      {
-        href: "/files/23Aug2016/INTERIM DIVIDEND - 2015-16.xls",
-        download: true,
-      },
+      "https://img.modxcomputers.com/navneetpdf/1759820485798-INTERIM-DIVIDEND---2009-10.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759820505341-INTERIM-DIVIDEND---2010-11.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759820455977-FINAL-DIVIDEND---2010-11.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759820555783-INTERIM-DIVIDEND---2011-12.xls",
+      "",
+      "https://img.modxcomputers.com/navneetpdf/1759820594154-FINAL-DIVIDEND---2012-13.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759820610271-FINAL-DIVIDEND---2013-14.xls",
+      "",
+      "https://img.modxcomputers.com/navneetpdf/1759820635751-INTERIM-DIVIDEND---2015-16.xls",
     ],
   },
   {
@@ -78,14 +66,14 @@ export const leftColumn = [
       "Interim Dividend 2015-2016",
     ],
     link: [
-      { href: "/files/03Aug2017/Interim-Dividend-2010-11.xls", download: true },
-      { href: "/files/03Aug2017/Final-Dividend-2010-11.xls", download: true },
-      { href: "/files/03Aug2017/Interim-Dividend-2011-12.xls", download: true },
-      { href: "/files/03Aug2017/Final-Dividend-2011-12.xls", download: true },
-      { href: "/files/03Aug2017/Final-Dividend-2012-13.xls", download: true },
-      { href: "/files/03Aug2017/Final-Dividend-2013-14.xls", download: true },
-      { href: "/files/03Aug2017/Final-Dividend-2014-15.xls", download: true },
-      { href: "/files/03Aug2017/Interim-Dividend-2015-16.xls", download: true },
+      "https://img.modxcomputers.com/navneetpdf/1759821092658-Interim-Dividend-2010-11.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759821109879-Final-Dividend-2010-11.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759821126563-Interim-Dividend-2011-12.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759821145147-Final-Dividend-2011-12.xls",
+      "",
+      "https://img.modxcomputers.com/navneetpdf/1759821177821-Final-Dividend-2013-14.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759822290383-Final-Dividend-2014-15.xls",
+      "https://img.modxcomputers.com/navneetpdf/1759822310586-Interim-Dividend-2015-16.xls",
     ],
   },
   {
@@ -102,14 +90,14 @@ export const leftColumn = [
       "Interim Dividend 2015-2016",
     ],
     link: [
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Final%20Dividend_2010-2011.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Final%20Dividend_2011-2012.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Final%20Dividend_2012-2013.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Final%20Dividend_2013-2014.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Final%20Dividend_2014-2015.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Final%20Dividend_2016-2017.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Interim%20Dividend_2011-2012.pdf",
-      "https://navneet.com/pdfs/Unclalmed_Unpaid_Amount/As_on_31st_march_2018/Interim%20Dividend_2015-2016.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822345726-Final-Dividend_2010-2011.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822361700-Final-Dividend_2011-2012.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822375255-Final-Dividend_2012-2013.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822389775-Final-Dividend_2013-2014.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822407495-Final-Dividend_2014-2015.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822425311-Final-Dividend_2016-2017.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822442621-Interim-Dividend_2011-2012.pdf",
+      "https://img.modxcomputers.com/navneetpdf/1759822458103-Interim-Dividend_2015-2016.pdf",
     ],
   },
   {
@@ -117,10 +105,7 @@ export const leftColumn = [
     title: "Transfer of Shares to IEPF dated 16th February, 2019",
     children: ["Interim Dividend 2011-12"],
     link: [
-      {
-        href: "/files/16Feb2019/Navneet_ IEPF-4_2011-2012-Interim.xls",
-        download: true,
-      },
+      "https://img.modxcomputers.com/navneetpdf/1759822992326-Navneet_-IEPF-4_2011-2012-Interim.xls",
     ],
   },
 ];
@@ -128,7 +113,7 @@ export const leftColumn = [
 export const rightColumn = [
   {
     id: 6,
-    title: "Unclaimed Dividend Amount as on 25th September 2015",
+    title: "Unclaimed Dividend Amount as on 28th September 2015",
     children: [
       "Final Dividend 2008-2009",
       "Interim Dividend 2009-2010",
@@ -140,38 +125,14 @@ export const rightColumn = [
       "Final Dividend 2013-2014",
     ],
     link: [
-      {
-        href: "/files/28Sep2015/Final Dividend 2008-2009.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Interim Dividend 2009-2010.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Interim Dividend 2010-2011.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Final Dividend 2010-2011.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Interim Dividend 2011-2012.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Final Dividend 2011-2012.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Final Dividend 2012-2013.xlsm",
-        download: true,
-      },
-      {
-        href: "/files/28Sep2015/Final Dividend 2013-2014.xlsm",
-        download: true,
-      },
+      "https://img.modxcomputers.com/navneetpdf/1759823127774-Final-Dividend-2008-2009.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823211228-Interim-Dividend-2009-2010.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823228016-Interim-Dividend-2010-2011.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823143926-Final-Dividend-2010-2011.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823244956-Interim-Dividend-2011-2012.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823162348-Final-Dividend-2011-2012.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823175464-Final-Dividend-2012-2013.xlsm",
+      "https://img.modxcomputers.com/navneetpdf/1759823196412-Final-Dividend-2013-2014.xlsm",
     ],
   },
   {
@@ -179,10 +140,7 @@ export const rightColumn = [
     title: "Fractional Bonus Amount for year 2009 as on 31/03/2017",
     children: ["NEL Fractional Bonus 2009 IEPF-1"],
     link: [
-      {
-        href: "/file/Bonus2009/NEL_Fractional-Bonus_2009-IEPF-1.xls",
-        download: true,
-      },
+      "https://img.modxcomputers.com/navneetpdf/1759823330077-NEL_Fractional-Bonus_2009-IEPF-1.xls",
     ],
   },
   {
@@ -190,10 +148,7 @@ export const rightColumn = [
     title: "Transfer of Shares to IEPF dated 12th December 2017",
     children: ["Transfer of Shares to IEPF Dated"],
     link: [
-      {
-        href: "/file/12Dec2017/NAVNEET_Form-IEPF-4.xls",
-        download: true,
-      },
+      "https://img.modxcomputers.com/navneetpdf/1759823349144-NAVNEET_Form-IEPF-4.xls",
     ],
   },
   {
@@ -201,10 +156,7 @@ export const rightColumn = [
     title: "Transfer of Shares to IEPF dated 5th February, 2019",
     children: ["Final Dividend – 10-11"],
     link: [
-      {
-        href: "/file/5Feb2019/Form_IEPF-4_2010-2011_Final_Navneet.xls",
-        download: true,
-      },
+      "https://img.modxcomputers.com/navneetpdf/1759823369112-Form_IEPF-4_2010-2011_Final_Navneet.xls",
     ],
   },
 ];
@@ -213,7 +165,7 @@ export const transferredToIEPF = [
   {
     id: 1,
     title: "Final Dividend 2014-2015",
-    href: "https://navneet.com/pdfs/UDATTI/Final%20Dividend_1415_Unpaid%20Dividend_amount%20_IEPF-1.pdf",
+    href: "https://img.modxcomputers.com/navneetpdf/1759823462584-Final-Dividend_1415_Unpaid-Dividend_amount-_IEPF-1.pdf",
   },
 ];
 
@@ -221,7 +173,6 @@ export const iepf2 = [
   {
     id: 1,
     title: "IEPF 2 – 2023-2024",
-    href: "/files/IEPF2/Form_IEPF-2.xls",
-    download: true,
+    href: "https://img.modxcomputers.com/navneetpdf/1759823413090-Form_IEPF-2.xls",
   },
 ];
