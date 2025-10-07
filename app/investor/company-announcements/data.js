@@ -1479,195 +1479,195 @@ export const announcementData = {
     items: [
       {
         text: "Intimation Of Board Meeting To Be Held On 09th February,2023",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/IntimationofBoardMeeting-as-on-9th-February-2023.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818082592-IntimationofBoardMeeting-as-on-9th-February-2023.pdf",
       },
       {
         text: "Intimation Of Analyst/Institutional Investor Meet To Be Held On 11th November,2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_NSE_091122.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818127725-Intimation-Of-Analyst-Institutional-Investor-Meet-To-Be-Held-On-11th-November,2022.pdf",
       },
       {
         text: "Intimation Of Board Meeting To Be Held On Thursday, 10th November, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818174424-Intimation-Of-Board-Meeting-To-Be-Held-On-Thursday,-10th-November,-2022.pdf",
       },
       {
         text: "Corrigendum To Notice Of 36th Annual General Meeting",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/CORRIGENDUM%20TO%20NOTICE%20OF%20ANNUAL%20GENERAL%20MEETING.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818224131-Corrigendum-To-Notice-Of-36th-Annual-General-Meeting.pdf",
       },
       {
         text: "Intimation Of Analyst/Institutional Investor Meet To Be Held On 03RD August, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Investor%20Relation%20Meeting.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818279220-Intimation-Of-Analyst-Institutional-Investor-Meet-To-Be-Held-On-03RD-August,-2022.pdf",
       },
       {
         text: "Notice of 36th Annual General Meeting",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Notice%20of%2036th%20AGM.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818370260-Notice-of-36th-Annual-General-Meeting.pdf",
       },
       {
         text: "Newspaper Advertisement for Notice of 36th Annual General Meeting of the Company",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Newspaper%20Advertisement.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818426459-Newspaper-Advertisement-for-Notice-of-36th-Annual-General-Meeting-of-the-Company.pdf",
       },
       {
         text: "Intimation of Board Meeting to be held on Tuesday, 02nd August, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Board%20Meeting%20Intimation22.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818465176-Intimation-of-Board-Meeting-to-be-held-on-Tuesday,-02nd-August,-2022.pdf",
       },
       {
         text: "Newspaper Advertisement for for Quarter and Year ended 31st March, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/newsp20220520_11344074.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818503466-Newspaper-Advertisement-for-for-Quarter-and-Year-ended-31st-March,-2022.pdf",
       },
       {
         text: "Press release on Financial Results for Quarter and Year ended 31st March, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/press%20release20220520_11323822.pdf",
+        link: "hhttps://img.modxcomputers.com/navneetpdf/1759818543928-Press-release-on-Financial-Results-for-Quarter-and-Year-ended-31st-March,-2022.pdf",
       },
       {
         text: "Intimation of Analyst/Institutional Investor meet to be held on 19th May, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INVESTOR%20CALL20220517_19424975.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818585974-Intimation-of-Analyst-Institutional-Investor-meet-to-be-held-on-19th-May,-2022.pdf",
       },
       {
         text: "Intimation of Board Meeting to be held on Wednesday, 18th May, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Board%20Meeting%20Intimation.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818629490-Intimation-of-Board-Meeting-to-be-held-on-Wednesday,-18th-May,-2022.pdf",
       },
       {
         text: "Appointment of Company Secretary in eSense Learning Private Limited.",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_eSense%20Appoitment%20of%20CS_05042022.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818671654-Appointment-of-Company-Secretary-in-eSense-Learning-Private-Limited.pdf",
       },
       {
         text: "Investment in Genext Students Private Limited by eSense Learning Pvt Ltd.",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Investment%20by%20eSense%20in%20Genext%20Student%20Pvt%20Ltd.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818708663-Investment-in-Genext-Students-Private-Limited-by-eSense-Learning-Pvt-Ltd.pdf",
       },
       {
         text: "Intimation of Resignation of Shri Mohinder Pal Bansal as Independent Director",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_Resignation_MPB_310322.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818758482-Intimation-of-Resignation-of-Shri-Mohinder-Pal-Bansal-as-Independent-Director.pdf",
       },
       {
         text: "Intimation of Closure of Trading Window for the quarter and year ended 31st March,2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/31st%20March%202022%20intimation%20of%20closure%20of%20trading%20window.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818796596-Intimation-of-Closure-of-Trading-Window-for-the-quarter-and-year-ended-31st-March,2022.pdf",
       },
       {
         text: "Newspaper Advertisement For Quarter and Nine Months ended 31st December, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Newspaper%20Advertisement%20For%20Quarter%20and%20Nine%20Months%20ended%2031st%20December%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818844921-Newspaper-Advertisement-For-Quarter-and-Nine-Months-ended-31st-December,-2021.pdf",
       },
       {
         text: "Press Release on Financial Results for Quarter and Nine Months ended 31st December, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Press%20Release%20on%20Financial%20Results%20for%20Quarter%20and%20Nine%20Months%20ended%2031st%20December%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818890643-Press-Release-on-Financial-Results-for-Quarter-and-Nine-Months-ended-31st-December,-2021.pdf",
       },
       {
         text: "Newspaper Advertisement For Board Meeting on Friday, 31st January, 2022",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Newspaper%20Advertisement%20For%20Board%20Meeting%20on%20Friday%2C%2031st%20January%2C%202022.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818932212-Newspaper-Advertisement-For-Board-Meeting-on-Friday,-31st-January,-2022.pdf",
       },
       {
         text: "Intimation of Board Meeting on Thursday, 27th May, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-of-Board-Meeting-on-Thursday-27th-May-2021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759818983506-Intimation-of-Board-Meeting-on-Thursday,-27th-May,-2021.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Quarter Ending 31st December, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Closure%20Of%20Trading%20Window%20For%20Quarter%20Ending%2031st%20December%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819029382-Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-31st-December,-2021.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Quarter Ending 31st December, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Closure%20Of%20Trading%20Window%20For%20Quarter%20Ending%2031st%20December%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819085186-Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-31st-December,-2021.pdf",
       },
       {
         text: "Related Party Transactions 30th September, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Related%20Party%20Transactions_30th%20September%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819136299-Related-Party-Transactions-30th-September,-2021.pdf",
       },
       {
         text: "Intimation Of Board Meeting On 29th October, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Board%20Meeting%20On%2029th%20October%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819171954-Intimation-Of-Board-Meeting-On-29th-October,-2021.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Quarter Ending 30th September, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Closure%20Of%20Trading%20Window%20For%20Quarter%20Ending%2030th%20September%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819205957-Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-30th-September,-2021.pdf",
       },
       {
         text: "Proceedings of the 35th AGM Dated 29th September, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Proceedings%20of%20the%2035th%20AGM%20Dated%2029th%20September%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819255017-Proceedings-of-the-35th-AGM-Dated-29th-September,-2021.pdf",
       },
       {
         text: "Newspaper Advertisement For Notice Of 35th Annual General Meeting Of The Company",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Newspaper%20Advertisement%20For%20Notice%20Of%2035th%20Annual%20General%20Meeting%20Of%20The%20Company.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819292879-Newspaper-Advertisement-For-Notice-Of-35th-Annual-General-Meeting-Of-The-Company.pdf",
       },
       {
         text: "Intimation Of Board Meeting On Wednesday, 11th August, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Board%20Meeting%20On%20Wednesday%2C%2011th%20August%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819364993-Intimation-Of-Board-Meeting-On-Wednesday,-11th-August,-2021.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Quarter Ending 30th June, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Closure%20Of%20Trading%20Window%20For%20Quarter%20Ending%2030th%20June%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819406900-Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-30th-June,-2021.pdf",
       },
       {
         text: "Recommendation Final Dividend for FY 2020-21",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Recommendation%20Final%20Dividend%20for%20FY%202020-21.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819452461-Recommendation-Final-Dividend-for-FY-2020-21.pdf",
       },
       {
         text: "Intimation Regarding Issuance And Allotment Of Commercial Paper Amounting To Rs. 25 Crore Dated 20-05-2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Regarding%20Issuance%20And%20Allotment%20Of%20Commercial%20Paper%20Amounting%20To%20Rs.%2025%20Crore%20Dated%2020-05-2021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819520390-Intimation-Regarding-Issuance-And-Allotment-Of-Commercial-Paper-Amounting-To-Rs.-25-Crore-Dated-20-05-2021.pdf",
       },
       {
         text: "Intimation of Board Meeting on Thursday, 27th May, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-of-Board-Meeting-on-Thursday-27th-May-2021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819566278-Intimation-of-Board-Meeting-on-Thursday,-27th-May,-2021.pdf",
       },
       {
         text: "Intimation Regarding Issuance And Allotment Of Commercial Paper Amounting To Rs. 25 Crore Dated 20-04-2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Regarding-Issuance-And-Allotment-Of-Commercial-Paper-Amounting-To-Rs-25-Crore-Dated-20-04-2021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819603477-Intimation-Regarding-Issuance-And-Allotment-Of-Commercial-Paper-Amounting-To-Rs.-25-Crore-Dated-20-04-2021.pdf",
       },
       {
         text: "Newspaper Advertisement For Board Meeting on 12th February, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Newspaper-Advertisement_12_February_2021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819649377-Newspaper-Advertisement-For-Board-Meeting-on-12th-February,-2020.pdf",
       },
       {
         text: "Intimation Of Board Meeting On 12th February, 2021",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Of-Board-Meeting_12_February_2021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819682176-Intimation-Of-Board-Meeting-On-12th-February,-2021.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Quarter Ending 31st December, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20Of%20Closure%20Of%20Trading%20Window%20For%20Quarter%20Ending%2031st%20December%2C%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819754526-Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-31st-December,-2020.pdf",
       },
       {
         text: "Proceedings of the 34th AGM dated 28th September, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Proceedings-of-34th-AGM-dated-28th-September%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819802260-Proceedings-of-the-34th-AGM-dated-28th-September,-2020.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Quarter Ending 30th September, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-30th-September,%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819837175-Intimation-Of-Closure-Of-Trading-Window-For-Quarter-Ending-30th-September,-2020.pdf",
       },
       {
         text: "Intimation of Book Closure for AGM 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation%20of%20Book%20Closure%20for%20AGM%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819931557-Intimation-of-Book-Closure-for-AGM-2020.pdf",
       },
       {
         text: "Newspaper Advertisement for Notice of 34th Annual General Meeting of the Company",
-        link: "figma.com/exit?url=http%3A%2F%2Fnavneet.com%2Fpdfs%2FInvestop_Relations_Notice%2FNewspaper%2520Advertisement%2520for%2520Notice%2520of%252034th%2520Annual%2520General%2520Meeting%2520of%2520the%2520Company.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819967036-Newspaper-Advertisement-for-Notice-of-34th-Annual-General-Meeting-of-the-Company.pdf",
       },
       {
         text: "Intimation of Board Meeting on  12th August, 2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20of%20Board%20Meeting%20on%2012th%20August,%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820033884-Intimation-of-Board-Meeting-on-12th-August,-2020.pdf",
       },
       {
         text: "Intimation of Board Meeting on 17th June, 2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20of%20Board%20Meeting%20on%2017th%20June,%202020.PDF",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820067204-Intimation-of-Board-Meeting-on-17th-June,-2020.pdf",
       },
       {
         text: "Intimation regarding issuance and allotment of Commercial Paper amounting to Rs. 50 Crore Dated 04-06-2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20regarding%20issuance%20and%20allotment%20of%20Commercial%20Paper%20amounting%20to%20Rs.%2050%20Crore%20Dated%2004-06-2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820100606-Intimation-regarding-issuance-and-allotment-of-Commercial-Paper-amounting-to-Rs.-50-Crore-Dated-04-06-2020.pdf",
       },
       {
         text: "Disclosure relating to impact of COVID–19 Pandemic Dated 28.05.2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Disclosure%20relating%20to%20impact%20of%20COVID-19%20Pandemic%20Dated%2028.05.2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820160302-Disclosure-relating-to-impact-of-COVID%E2%80%9319-Pandemic-Dated-28.05.2020.pdf",
       },
       {
         text: "Intimation regarding issuance and allotment of Commercial Paper amounting to Rs. 50 Crores Dated 20-05-2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20regarding%20issuance%20and%20allotment%20of%20Commercial%20Paper%20amounting%20to%20Rs.%2050%20Crores%20Dated%2020-05-2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820259129-Intimation-regarding-issuance-and-allotment-of-Commercial-Paper-amounting-to-Rs.-50-Crores-Dated-20-05-2020.pdf",
       },
       {
         text: "Intimation Regarding Redemption Of Commercial Paper Amounting To Rs. 50 Crore Dated 20.05.2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20Regarding%20Redemption%20Of%20Commercial%20Paper%20Amounting%20To%20Rs.%2050%20Crore%20Dated%2020.05.2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820316482-Intimation-Regarding-Redemption-Of-Commercial-Paper-Amounting-To-Rs.-50-Crore-Dated-20.05.2020.pdf",
       },
       {
         text: "Intimation regarding redemption of Commercial Paper amounting to Rs. 50 Crore and Rs. 30 Crore dated 05.05.2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20regarding%20redemption%20of%20Commercial%20Paper%20amounting%20to%20Rs.%2050%20Crore%20and%20Rs.%2030%20Crore%20dated%2005.05.2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820364583-Intimation-regarding-redemption-of-Commercial-Paper-amounting-to-Rs.-50-Crore-and-Rs.-30-Crore-dated-05.05.2020.pdf",
       },
       {
         text: "Intimation regarding Record Date and Redemption Date of Commercial Paper dated 05.05.2020",
-        link: "https://navneet.com/pdfs/Intimation/Intimation%20regarding%20Record%20Date%20and%20Redemption%20Date%20of%20Commercial%20Paper%20dated%2005.05.2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820471830-Intimation-regarding-Record-Date-and-Redemption-Date-of-Commercial-Paper-dated-05.05.2020.pdf",
       },
       {
         text: "Intimation under Regulation 30 of SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 – COVID-19",
@@ -1675,439 +1675,439 @@ export const announcementData = {
       },
       {
         text: "Intimation regarding issuance and allotment of Commercial Paper amounting to Rs. 50 Crore – Dated 18th March 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-regarding-issuance-and-allotment-of-Commercial-Paper-amounting-to-Rs-50-Crore-Dated-18th-March-2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759842895367-Intimation-regarding-issuance-and-allotment-of-Commercial-Paper-amounting-to-Rs-50-Crore-Dated-18th-March-2020.pdf"
       },
       {
         text: "Intimation regarding redemption of Commercial Paper amounting to Rs. 30 Crore",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-regarding-redemption-of-Commercial-Paper-amounting-to-Rs-30-Crore.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820653109-Intimation-regarding-redemption-of-Commercial-Paper-amounting-to-Rs.-50-Crore-and-Rs.-30-Crore-dated-05.05.2020.pdf",
       },
       {
         text: "Declaration Of 2nd Interim Dividend For FY 2019-20",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Declaration-Of-2nd-Interim-Dividend-For-FY-2019-20.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759842935178-Declaration-Of-2nd-Interim-Dividend-For-FY-2019-20.pdf",
       },
       {
         text: "Intimation For Board Meeting Dated 13th March, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-For-Board-Meeting-Dated-13th-March-2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759820837217-Intimation-Of-Trading-Window-For-Board-Meeting-Dated-13th-March-2020.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board Meeting Dated 13th March, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Of-Trading-Window-For-Board-Meeting-Dated%2013th-March-2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759829378327-Intimation-Of-Trading-Window-For-Board-Meeting-Dated-13th-March-2020.pdf",
       },
       {
         text: "Intimation Of Record Date For 2nd Interim Dividend 2019-20",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Of-Record-Date-For-2nd-Interim-Dividend-2019-20.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759829424552-Intimation-Of-Record-Date-For-2nd-Interim-Dividend-2019-20.pdf",
       },
       {
         text: "Intimation Regarding Issuance And Allotment Of Commercial Paper Amounting To Rs. 50 Crore",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Regarding-Issuance-And-Allotment-Of-Commercial-Paper-Amounting-To-Rs-50-Crore.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830601430-Intimation-regarding-issuance-and-allotment-of-Commercial-Paper-amounting-to-Rs.-50-Crore-%E2%80%93-Dated-18th-March-2020.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst Institutional Investor Dated 18th February, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Of-Meeting-With-Analyst-Institutional-Investor-Dated-18th-February-2020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759842996327-Intimation-Of-Meeting-With-Analyst-Institutional-Investor-Dated-18th-February-2020.pdf"
       },
       {
         text: "Intimation regarding issuance and allotment of Commercial Paper amounting to Rs. 30 Crores",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation_regarding_issuance_and_allotment_of_Commercial_Paper_amountingtoRs_30_Crores.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830601430-Intimation-regarding-issuance-and-allotment-of-Commercial-Paper-amounting-to-Rs.-50-Crore-%E2%80%93-Dated-18th-March-2020.pdf",
       },
       {
         text: "Newspaper advertisement for intimation for Board Meeting dated 31st January, 2020",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Newspaper%20advertisement%20for%20intimation%20for%20Board%20Meeting%20dated%2031st%20January,%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830806097-Newspaper-advertisement-for-intimation-for-Board-Meeting-dated-31st-January,-2020.pdf",
       },
       {
         text: "Intimation For Board Meeting Dated 31st January 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-For-Board-Meeting-Dated-31st-January-2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830857848-Intimation-For-Board-Meeting-Dated-31st-January-2019.pdf",
       },
       {
         text: "Intimation Of Closure of Trading Window For Quarter Ending 31st December, 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-Of-Closure-of-Trading-Window-For-Quarter-Ending-31st-December-2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830889996-Intimation-Of-Closure-of-Trading-Window-For-Quarter-Ending-31st-December-2019.pdf",
       },
       {
         text: "Intimation in terms of Regulation 30 of the SEBI (Listing Obligations and Disclosure Requirements) Regulations, 2015 in respect of Credit Rating",
-        link: "https://navneet.com/pdfs/Corporate_Governance_Policies/Intimation_in_terms_of_Regulation_30_of_the%20SEBI_Regulations_2015_in_respect_of_Credit_Rating.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830932459-Intimation_in_terms_of_Regulation_30_of_the-SEBI_Regulations_2015_in_respect_of_Credit_Rating.pdf",
       },
       {
         text: "Intimation of change in the designation of Shri Anil Swarup",
-        link: "https://navneet.com/pdfs/Corporate_Governance_Policies/Intimation_of_change_in_the_designation_of_Shri_Anil_Swarup.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830984245-Intimation_of_change_in_the_designation_of_Shri_Anil_Swarup.pdf",
       },
       {
         text: "Intimation of Resignation of Shri Atul J. Shethia as Whole-time Director",
-        link: "https://navneet.com/pdfs/Corporate_Governance_Policies/Intimation-of-Resignation-of-Shri-Atul-J-Shethia-as-Whole-time-Director.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831022198-Intimation-of-Resignation-of-Shri-Atul-J-Shethia-as-Whole-time-Director.pdf",
       },
       {
         text: "Declaration of Interim Dividend for FY 2019-20",
-        link: "https://navneet.com/pdfs/Corporate_Governance_Policies/Declaration-of-Interim-Dividend-for-FY-2019-20.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843059940-Declaration-of-Interim-Dividend-for-FY-2019-20.pdf",
       },
       {
         text: "Intimation of Record Date for Interim Dividend 2019-20",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/intimation_of_record_date_for_interim_dividend_2019-20.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831138414-intimation_of_record_date_for_interim_dividend_2019-20.pdf",
       },
       {
         text: "Intimation For Board Meeting Dated 13th November 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/intimation_for_board_meeting_dated_13th_november_2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831197792-intimation_for_board_meeting_dated_13th_november_2019.pdf",
       },
       {
         text: "Intimation Of Trading Window For Quarter Ending 30th September 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation_Of_Trading_Window_For_Quarter_Ending_30th_September_2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831234390-Intimation_Of_Trading_Window_For_Quarter_Ending_30th_September_2019.pdf",
       },
       {
         text: "Intimation for Board Meeting Dated 8th August 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831268091-Intimation-for-Board-Meeting-Dated-8th-August-2019.pdf",
       },
       {
         text: "Intimation Of Trading Window For Quarter Ending 30th June 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation_Of_Trading_Window_For_Quarter_Ending_30th_June_2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831303180-Intimation-Of-Trading-Window-For-Quarter-Ending-30th-June-2019.pdf",
       },
       {
         text: "Intimation for Book closure 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-for-Book-closure-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831370274-Intimation-for-Book-closure-19.pdf",
       },
       {
         text: "Intimation for 33rd Annual General Meeting 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation-for-33rd-Annual-General-Meeting-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831407921-Intimation-for-33rd-Annual-General-Meeting-19.pdf",
       },
       {
         text: "Intimation for Public Notice for Board meeting held on 15th May 2019 in News Paper",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_PN_19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831487897-Intimation-for-Public-Notice-for-Board-meeting-held-on-15th-May-2019-in-News-Paper.pdf",
       },
       {
         text: "Notice for board meeting dated 15th May 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_150519.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831529271-Notice-for-board-meeting-dated-15th-May-2019.pdf",
       },
       {
         text: "BSE-19 10th April 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_Reg30_19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831634750-BSE-19-10th-April-2019.pdf",
       },
       {
         text: "Intimation Of Trading Window For Quarter And Financial Year Ended 31st March 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation_Of_Trading_Window_For_Quarter_And_Financial_Year_Ended_31st_March_2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831680234-Intimation-Of-Trading-Window-For-Quarter-And-Financial-Year-Ended-31st-March-2019.pdf",
       },
       {
         text: "Notice for board meeting dated 4th February 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-BM-040219-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831733476-Notice-for-board-meeting-dated-4th-February-2019.pdf",
       },
       {
         text: "Intimation of Trading window for board Meeting dated 4th February 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-TW-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831770546-Intimation-of-Trading-window-for-board-Meeting-dated-4th-February-2019.pdf",
       },
       {
         text: "BSE-18 8th Jan 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-18-01-08-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831816320-BSE-18-8th-Jan-2019.pdf",
       },
       {
         text: "Notice for board meeting dated 15th May 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_150519.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831854716-Notice-for-board-meeting-dated-15th-May-2019.pdf",
       },
       {
         text: "BSE-19 10th April 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_Reg30_19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831899297-BSE-19-10th-April-2019.pdf",
       },
       {
         text: "Intimation Of Trading Window For Quarter And Financial Year Ended 31st March 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/Intimation_Of_Trading_Window_For_Quarter_And_Financial_Year_Ended_31st_March_2019.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831940624-Intimation-Of-Trading-Window-For-Quarter-And-Financial-Year-Ended-31st-March-2019.pdf",
       },
       {
         text: "Notice for board meeting dated 4th February 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-BM-040219-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759831986977-Notice-for-board-meeting-dated-4th-February-2019.pdf",
       },
       {
         text: "Intimation of Trading window for board Meeting dated 4th February 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-TW-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759832025840-Intimation-of-Trading-window-for-board-Meeting-dated-4th-February-2019.pdf",
       },
       {
         text: "BSE-18 8th Jan 2019",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-18-01-08-19.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759832073118-BSE-18-8th-Jan-2019.pdf",
       },
       {
         text: "BSE-18 19th Dec 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE-18-19-12-18.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759832114203-BSE-18-19th-Dec-2018.pdf",
       },
       {
         text: "BSE-18 16th Nov 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_Reg_30_18_2.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833526596-BSE-18-16th-Nov-2018.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 31st October 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_311018.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833571210-Notice-For-Board-Meeting-Dated-31st-October-2018.pdf",
       },
       {
         text: "Intimation of Trading Window For Board Meeting Dated 31st October 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_18_3.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833606869-Intimation-of-Trading-Window-For-Board-Meeting-Dated-31st-October-2018.pdf",
       },
       {
         text: "Intimation of Meeting With Analyst /Institutional Investor Dated 27th September 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_Reg_30_18.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833645166-Intimation-of-Meeting-With-Analyst-Institutional-Investor-Dated-27th-September-2018.pdf",
       },
       {
         text: "Bombay Stock Exchange 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_18.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833690847-Bombay-Stock-Exchange-2018.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 1st August 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_18_2.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833739792-Notice-For-Board-Meeting-Dated-1st-August-2018.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board Meeting, 1st August 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_18_2.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833786816-Intimation-Of-Trading-Window-For-Board-Meeting,-1st-August-2018.pdf",
       },
       {
         text: "Intimation of Trading Window For Board Meeting Dated 10th May 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_18.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833827084-Intimation-of-Trading-Window-For-Board-Meeting-Dated-10th-May-2018.pdf",
       },
       {
         text: "Submission of Q3 FY 18 Presentation Shared With Analysis And Institutional Investors",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_Q3IP_3121217.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833873413-Submission-of-Q3-FY-18-Presentation-Shared-With-Analysis-And-Institutional-Investors.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 07th February 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_18.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833917959-Notice-For-Board-Meeting-Dated-07th-February-2018.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board Meeting Dated 07th February 2018",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_07022018_18.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833959430-Intimation-Of-Trading-Window-For-Board-Meeting-Dated-07th-February-2018.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst/Institutional Investor dated 15th December, 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_17-2.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759833998237-Intimation-Of-Meeting-With-Analyst-Institutional-Investor-dated-15th-December,-2017.pdf",
       },
       {
         text: "Submission of Q2 FY 18 Presentation Shared With Analysis Institutional Investors",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_17-1.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759834044681-Submission-of-Q2-FY-18-Presentation-Shared-With-Analysis-Institutional-Investors.pdf",
       },
       {
         text: "Notice for Board Meeting Dated 8th November 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_081117.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759834082645-Notice-for-Board-Meeting-Dated-8th-November-2017.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board Meeting Dated 8th November 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_081117.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759834118804-Intimation-Of-Trading-Window-For-Board-Meeting-Dated-8th-November-2017.pdf",
       },
       {
         text: "Intimation of Meeting With Representative Of Institutional Investor BY Participating In Annual Global Investor Conference Dated 06th September 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-REPRESNTATIVE-OF-INSISTUTIONAL-INVESTOR-BY-PARTICIPATING-IN-ANNUAL-GLOBAL-INVESTOR-CONFERENCE-DATED-06th-SEPTEMBER2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843088381-INTIMATION-OF-MEETING-WITH-REPRESNTATIVE-OF-INSISTUTIONAL-INVESTOR-BY-PARTICIPATING-IN-ANNUAL-GLOBAL-INVESTOR-CONFERENCE-DATED-06th-SEPTEMBER2017.pdf",
       },
       {
         text: "Intimation Of Meeting With Representative Of Foreign Institutional Investor Dated 02nd September 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-REPRESNTATIVE-OF-FOREIGN-INSISTUTIONAL-INVESTOR-DATED-02ND-SEPTEMBER2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759834451897-Intimation-Of-Meeting-With-Representative-Of-Foreign-Institutional-Investor-Dated-02nd-September-2017.pdf",
       },
       {
         text: "Submission Of Q1 FY 18 Presentation Shared With Analyst And Institutional Investor",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION-OF-Q1FY18-PRESENTATION-SHARED-WITH-ANALYSTS-AND-INSTITUTIONAL-INVESTORS.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759834504835-Submission-Of-Q1-FY-18-Presentation-Shared-With-Analyst-And-Institutional-Investor.pdf",
       },
       {
         text: "Intimation of Meeting with Representative of Institutional Investor Dated 09th August 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-REPRESNTATIVE-OF-INSISTUTIONAL-INVESTOR-DATED-09TH-AUGUST2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843120103-INTIMATION-OF-MEETING-WITH-REPRESNTATIVE-OF-INSISTUTIONAL-INVESTOR-DATED-09TH-AUGUST2017.pdf"
       },
       {
         text: "Notice for board Meeting Dated 09th August 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/NOTICE-FOR-BOARD-MEETING-DATED-09th-August2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843150238-NOTICE-FOR-BOARD-MEETING-DATED-09th-August2017.pdf",
       },
       {
         text: "Intimation of Trading Window For board Meeting dated 09th August 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-TRADING-WINDOW-FOR-BOARD-MEETING-DATED-09th-August2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759836929757-Intimation-of-Trading-Window-For-board-Meeting-dated-09th-August-2017.pdf",
       },
       {
         text: "Intimation of Meeting With Representative Of Foreign Mutual Fund On 28th June 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-REPRESNTATIVE-OF-FOREIGN-MUTUAL-FUND-ON-28TH-JUNE2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759836968407-Intimation-of-Meeting-With-Representative-Of-Foreign-Mutual-Fund-On-28th-June-2017.pdf",
       },
       {
         text: "Intimation of Meeting With Analyst / Institutional Investor dated 23rd June 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-ANALYSTINSTITUTIONAL-INVESTOR-DATED-23rd-JUNE2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837019675-Intimation-of-Meeting-With-Analyst-Institutional-Investor-dated-23rd-June-2017.pdf",
       },
       {
         text: "Intimation of Meeting With Analyst/ Foreign Institutional Investor dated 08th June 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-ANALYST-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-08th-JUNE2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837058469-Intimation-of-Meeting-With-Analyst-Foreign-Institutional-Investor-dated-08th-June-2017.pdf",
       },
       {
         text: "Intimation of Investor Conference With Domestic Institutional Investor Dated 06th June 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-INVESTOR-CONFERENCE-WITH-DOMESTIC-INSTITUTIONAL-INVESTOR-DATED-06TH-JUNE2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837104218-Intimation-of-Investor-Conference-With-Domestic-Institutional-Investor-Dated-06th-June-2017.pdf",
       },
       {
         text: "Submission Of Q4 And Audited Result Of FY 17 Presentation Shared With Analyst And Institutional Investors",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION-OF-Q4-AND-AUDITED-RESULTS-OF-FY-17-PRESENTATION-SHARED-WITH-ANALYSTS-AND-INSTITUTIONAL-INVESTORS.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843178061-SUBMISSION-OF-Q4-AND-AUDITED-RESULTS-OF-FY-17-PRESENTATION-SHARED-WITH-ANALYSTS-AND-INSTITUTIONAL-INVESTORS.pdf"
       },
       {
         text: "Intimation of Meeting With Analyst / Foreign Institutional Investor dated 23rd May 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-ANALYST-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-23RD-MAY2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843205867-INTIMATION-OF-MEETING-WITH-ANALYST-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-23RD-MAY2017.pdf"
       },
       {
         text: "Intimation Under Regulation 30(9) of SEBI (Listing Obligation And Disclosure Requirements) Regulations 2015",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_17.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837274962-Intimation-Under-Regulation-30(9)-of-SEBI-(Listing-Obligation-And-Disclosure-Requirements)-Regulations-2015.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board Meeting Dated 26th May 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-TRADING-WINDOW-FOR-BOARD-MEETING-DATED-26th-MAY2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843249493-INTIMATION-OF-TRADING-WINDOW-FOR-BOARD-MEETING-DATED-26th-MAY2017.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 26th May 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/NOTICE-FOR-BOARD-MEETING-DATED-26th-MAY2017.pdf",
+        link:"https://img.modxcomputers.com/navneetpdf/1759843271449-NOTICE-FOR-BOARD-MEETING-DATED-26th-MAY2017.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst/ Institutional Investor Dated 25th April 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION-OF-MEETING-WITH-ANALYSTINSTITUTIONAL-INVESTOR-DATED-25TH-APRIL2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843296234-INTIMATION-OF-MEETING-WITH-ANALYSTINSTITUTIONAL-INVESTOR-DATED-25TH-APRIL2017.pdf"
       },
       {
         text: "Meeting With Domestic Institutional Investor By Participating In Investor Conference Organised By Prabhudas Liladhar Pvt Ltd",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/MEETING%20WITH%20DOMESTIC%20INSTITUTIONAL%20INVESTORS%20BY%20PARTICIPATING%20IN%20INVESTOR%20CONFERENCE%20ORGANISED%20BY%20PRABHUDAS%20LILADHAR%20PRIVATE%20LTD.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837421508-Meeting-With-Domestic-Institutional-Investor-By-Participating-In-Investor-Conference-Organised-By-Prabhudas-Liladhar-Pvt-Ltd.pdf",
       },
       {
         text: "Intimation of Meeting With Foreign Institutional Investor Dated 20th February 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20FOREIGN%20%20INSTITUTIONAL%20INVESTOR%20DATED%2020th%20%20FEBRUARY%2c2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837463150-INTIMATION-OF-MEETING-WITH-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-20th-FEBRUARY,2017.pdf",
       },
       {
         text: "Intimation of Meeting With Foreign Institutional Investor Dated 16th February 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20FOREIGN%20%20INSTITUTIONAL%20INVESTOR%20DATED%20%2016th%20FEBRUARY%2c2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837511087-INTIMATION-OF-MEETING-WITH-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-16th-FEBRUARY,2017.pdf",
       },
       {
         text: "Intimation of Meeting With Foreign Institutional Investor Dated 15th February 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20FOREIGN%20%20INSTITUTIONAL%20INVESTOR%20DATED%20%2015th%20FEBRUARY%2c2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837556316-INTIMATION-OF-MEETING-WITH-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-15th-FEBRUARY,2017.pdf",
       },
       {
         text: "Intimation of Meeting With Foreign Institutional Investor Dated 10th February 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20FOREIGN%20%20INSTITUTIONAL%20INVESTOR%20DATED%20%2010th%20FEBRUARY%2c2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837601776-INTIMATION-OF-MEETING-WITH-FOREIGN-INSTITUTIONAL-INVESTOR-DATED-10th-FEBRUARY,2017.pdf",
       },
       {
         text: "Submission of Q3 FY 17 Presentation Shared With Analyst And Institutional Investor On UFR For The Quarter Ended 31st December 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION%20OF%20Q3%20FY%2017%20PRESENTATION%20SHARED%20WITH%20ANALYSTS%20AND%20INSISTUTIONAL%20INVESTORS%20%20ON%20UFR%20FOR%20THE%20QUARTER%20ENDED%2031ST%20DECEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837657372-Submission-of-Q3-FY-17-Presentation-Shared-With-Analyst-And-Institutional-Investor-On-UFR-For-The-Quarter-Ended-31st-December-2016.pdf",
       },
       {
         text: "Intimation For Board Meeting Dated 31st January 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20FOR%20BOARD%20MEETING%20DATED%2031012017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837710023-Intimation-For-Board-Meeting-Dated-31st-January-2017.pdf",
       },
       {
         text: "Intimation Of Closure Of Trading Window For Board Meeting Dated 31st January 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20CLOSURE%20OF%20TRADING%20WINDOW%20FOR%20BOARD%20MEETING%2031012017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837748511-Intimation-Of-Closure-Of-Trading-Window-For-Board-Meeting-Dated-31st-January-2017.pdf",
       },
       {
         text: "Intimation About Consell Dated 19th January 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20ABOUT%20CONCELL%20%20DATED-19012017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759837981247-Intimation-About-Consell-Dated-19th-January-2017.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst / Institutional Investor Dated 17th January 2017",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20ANALYST%20%20INSTITUTIONAL%20INVESTOR%20DATED%2017th%20JANUARY%2c2017.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759838028073-Intimation-Of-Meeting-With-Analyst-Institutional-Investor-Dated-17th-January-2017.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst / Institutional Investor Dated 29th December 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20ANALYST%20%20INSTITUTIONAL%20INVESTOR%20DATED%20%2023RD%20%20DECEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759838134753-Intimation-Of-Meeting-With-Analyst-Institutional-Investor-Dated-29th-December-2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst / Institutional Investor Dated 23rd December 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20ANALYST%20%20INSTITUTIONAL%20INVESTOR%20DATED%20%2023RD%20%20DECEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759838179739-Intimation-Of-Meeting-With-Analyst-Institutional-Investor-Dated-23rd-December-2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Institutional Investor Dated 14th December 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20INSTITUTIONAL%20INVESTOR%20DATED%20%2014th%20%20DECEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759838219770-Intimation-Of-Meeting-With-Institutional-Investor-Dated-14th-December-2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Institutional Investor Dated 7th December 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20INSTITUTIONAL%20INVESTOR%20DATED%207th%20%20DECEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759838285168-Intimation-Of-Meeting-With-Institutional-Investor-Dated-7th-December-2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Institutional Investor Dated 2nd December 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20INSTITUTIONAL%20INVESTOR%20DATED%20%202nd%20DECEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759838343379-Intimation-Of-Meeting-With-Institutional-Investor-Dated-2nd-December-2016.pdf",
       },
       {
         text: "Submission Of Presentation To Be Shared With The Representative(s) Of An Institutional Investor Dated 11th September 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION%20OF%20PRESENTATION%20TO%20BE%20SHARED%20WITH%20REPRESENTATIVE%28S%29%20OF%20AN%20INSTITUTIONAL%20INVESTOR%20DATED%2011TH%20SEPTEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840390647-Submission-Of-Presentation-To-Be-Shared-With-The-Representative(s)-Of-An-Institutional-Investor-Dated-11th-September-2016.pdf",
       },
       {
         text: "Outcome Of Board Meeting Dated 11th November 2016 For Buy Back of Equity Shares",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/OUT%20COME%20OF%20BOARD%20MEETING%20%20DATED%2011112016%20FOR%20Buy%20BACK%20%20OF%20EQUITY%20SHARES.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840442093-Outcome-Of-Board-Meeting-Dated-11th-November-2016-For-Buy-Back-of-Equity-Shares.pdf",
       },
       {
         text: "Notice For Proposal For Buyback For Board Meeting Dated 11th November 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/NOTICE%20FOR%20%20PROPOSAL%20FOR%20BUY%20BACK%20FOR%20BOARD%20MEETING%20DATED%2011TH%20NOVEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840487540-Notice-For-Proposal-For-Buyback-For-Board-Meeting-Dated-11th-November-2016.pdf",
       },
       {
         text: "Intimation Of Trading Window Dated 19th October 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20TRADING%20WINDOW%20DATED%2019TH%20OCTOBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840530199-INTIMATION-OF-TRADING-WINDOW-DATED-19TH-OCTOBER,2016.pdf",
       },
       {
         text: "Intimation Of Trading Window Dated 19th October 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20TRADING%20WINDOW%20DATED%2019TH%20OCTOBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840570128-INTIMATION-OF-TRADING-WINDOW-DATED-19TH-OCTOBER,2016.pdf",
       },
       {
         text: "Intimation Of Trading Window Dated 28th September 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20TRADING%20WINDOW%20%20DATED%2028TH%20SEPTEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840608508-INTIMATION-OF-TRADING-WINDOW-DATED-28TH-SEPTEMBER,2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Institutional Investor Dated 1st September 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20INSTITUTIONAL%20INVESTOR%20DATED%20%201st%20SEPTEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840646843-INTIMATION-OF-MEETING-WITH-INSTITUTIONAL-INVESTOR-DATED-1st-SEPTEMBER,2016.pdf",
       },
       {
         text: "Submission Of Presentation To Be Shared With The Representative(s) Of An Institutional Investor Dated 1st September 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION%20OF%20PRESENTATION%20TO%20BE%20SHARED%20WITH%20REPRESENTATIVE%28S%29%20OF%20AN%20INSTITUTIONAL%20INVESTOR%20DATED%201ST%20SEPTEMBER%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840744121-Submission-Of-Presentation-To-Be-Shared-With-The-Representative(s)-Of-An-Institutional-Investor-Dated-11th-September-2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Institutional Investor Dated 29th August 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20INSTITUTIONAL%20INVESTOR%20DATED%2029TH%20AUGUST%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840789386-INTIMATION-OF-MEETING-WITH-INSTITUTIONAL-INVESTOR-DATED-29TH-AUGUST,2016.pdf",
       },
       {
         text: "Submission Of Presentation To Be Shared With The Representative(s) Of An Institutional Investor Dated 29th August 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION%20OF%20PRESENTATION%20TO%20BE%20SHARED%20WITH%20REPRESENTATIVE%28S%29%20OF%20AN%20INSTITUTIONAL%20INVESTOR%20DATED%2029TH%20AUGUST%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843359663-SUBMISSION-OF-PRESENTATION-TO-BE-SHARED-WITH-REPRESENTATIVE(S)-OF-AN-INSTITUTIONAL-INVESTOR-DATED-29TH-AUGUST,2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Institutional Investor Dated 25th August 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/INTIMATION%20OF%20MEETING%20WITH%20INSTITUTIONAL%20INVESTOR%20DATED%2025TH%20AUGUST%2c2016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759840966460-INTIMATION-OF-MEETING-WITH-INSTITUTIONAL-INVESTOR-DATED-25TH-AUGUST,2016.pdf",
       },
       {
         text: "Submission Of Presentation To Be Shared With Representative(s) Of An Institutional Investor",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/SUBMISSION%20OF%20PRESENTATION%20TO%20BE%20SHARED%20WITH%20REPRESENTATIVE%28S%29%20OF%20AN%20INSTITUTIONAL%20INVESTOR.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841009082-Submission-Of-Presentation-To-Be-Shared-With-The-Representative(s)-Of-An-Institutional-Investor-Dated-11th-September-2016.pdf",
       },
       {
         text: "Intimation Of Book Closure For The Purpose Of AGM To Be Held On 23rd 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BC_16.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841061641-Intimation-Of-Book-Closure-For-The-Purpose-Of-AGM-To-Be-Held-On-23rd-2016.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 8th August 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_080816.pdf",
+        link: "hhttps://img.modxcomputers.com/navneetpdf/1759841251692-Notice-For-Board-Meeting-Dated-8th-August-2016.pdf",
       },
       {
         text: "Intimation Of Meeting With Analyst Dated 26.07.2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_SMC_16.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841297564-Intimation-Of-Meeting-With-Analyst-Dated-26.07.2016.pdf",
       },
       {
         text: "Intimation Of Cancellation Of Meeting With Analyst",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_16_1.pdf",
+        link: "hhttps://img.modxcomputers.com/navneetpdf/1759841333307-Intimation-Of-Cancellation-Of-Meeting-With-Analyst.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 21st May 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_210516.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841367649-Notice-For-Board-Meeting-Dated-21st-May-2016.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board ARD Meeting Dated 21st May 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_210516.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841430571-Intimation-Of-Trading-Window-For-Board-ARD-Meeting-Dated-21st-May-2016.pdf",
       },
       {
         text: "Notice For Board Meeting",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_020216.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841547837-Notice-For-Board-Meeting.pdf",
       },
       {
         text: "Intimation Of Trading Window",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_020216.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841592945-Intimation-Of-Trading-Window.pdf",
       },
       {
         text: "Revised Board Meeting Dated 04th April 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_RevisedBM_040416_16.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841629421-Revised-Board-Meeting-Dated-04th-April-2016.pdf",
       },
       {
         text: "Intimation For Revised Trading Window",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_020216.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841673921-Intimation-For-Revised-Trading-Window.pdf",
       },
       {
         text: "Notice For Board Meeting Dated 05th March 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_BM_050316.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841705386-Notice-For-Board-Meeting-Dated-05th-March-2016.pdf",
       },
       {
         text: "Intimation Of Record Date For Interim Dividend – 2015-16",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_RD_150316.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841751645-Intimation-Of-Record-Date-For-Interim-Dividend-%E2%80%93-2015-16.pdf",
       },
       {
         text: "Intimation Of Trading Window For Board Meeting Dated 05th March 2016",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_TW_16.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759841787763-Intimation-Of-Trading-Window-For-Board-Meeting-Dated-05th-March-2016.pdf",
       },
       {
         text: "Declaration Of Interim Dividend For FY 2015-16",
-        link: "https://navneet.com/pdfs/Investop_Relations_Notice/BSE_ID_20151_16.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759843022640-BSE_ID_20151_16.pdf",
       },
     ],
   },
