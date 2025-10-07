@@ -2122,31 +2122,31 @@ export const announcementData = {
     items: [
       {
         text: "Regulation – 44(3) Voting Result At AGM Dated 29th September, 2021",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Regulation%20-%2044%283%29%20Voting%20Result%20At%20AGM%20Dated%2029th%20September%2C%202021.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819417149-Regulation---44(3)-Voting-Result-At-AGM-Dated-29th-September,-2021.pdf"
       },
       {
         text: "Regulation – 44(3) Voting Result At AGM Dated 28th September, 2020",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Regulation-%2044(3)-Voting-Result%20-At%20AGM-Dated-28thSeptember,%202020.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819445124-Regulation--44(3)-Voting-Result--At-AGM-Dated-28thSeptember,-2020.pdf"
       },
       {
         text: "Regulation- 44(3) Voting Results at AGM Dated 24th July,2019",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Reg_44(3)_240719.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819466467-Regulation--44(3)-Voting-Results-at-AGM-Dated-24th-July,2019.pdf",
       },
       {
         text: "Regulation -44(3) Voting results at agm dated 24th July,2018",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/BSE_44(3)_32agm_240718.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819497837-Regulation--44(3)-Voting-results-at-agm-dated-24th-July,2018.pdf",
       },
       {
         text: "Clause 35A – Voting results at agm dated 23RD August,2016",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Voting%20Result23082016.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819525688-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-23RD-August,2016.pdf",
       },
       {
         text: "Clause 35A – Voting results at agm dated 28TH September,2015",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Clause%20-35%20A%20VOTING%20RESULTS%20AGM%20DATED%2028TH%20SEPTEMBER,2015.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819546405-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-28TH-September,2015.pdf"
       },
       {
         text: "Clause 35A – Voting results at agm dated 29th September,2014",
-        link: "https://navneet.com/pdfs/e-voting_and_poll_at_AGM/Clause-35-A-AGM-dated-29th-September-2014.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759819580672-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-29th-September,2014.pdf"
       },
     ],
   },
