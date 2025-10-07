@@ -125,7 +125,10 @@ export default function ChildrenBooksPage() {
       <section className={styles.youtubeSection}>
         <video
           src="/videos/Childrens-book-Navneet-YT-Video.mp4"
-          controls
+          autoPlay
+          muted
+          loop
+          playsInline
           className={styles.bgImg}
         />
       </section>
