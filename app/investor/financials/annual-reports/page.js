@@ -10,6 +10,16 @@ export default function AnnualReports() {
     "2018-19",
   ];
 
+  
+  const links = {
+    "2023-24": "https://img.modxcomputers.com/navneetpdf/1759739790344-annual-report-24-25.pdf",
+    "2022-23": "https://img.modxcomputers.com/navneetpdf/1759739857238-annual-report-23-24.pdf",
+    "2021-22": "https://img.modxcomputers.com/navneetpdf/1759739957258-annualreport-2022-23.pdf",
+    "2020-21": "https://img.modxcomputers.com/navneetpdf/1759739994557-Navneet_AR-2021-22_Annual_Report.pdf",
+    "2019-20": "https://img.modxcomputers.com/navneetpdf/1759752597686-annual-report-20-21_compressed.pdf",
+    "2018-19": "https://img.modxcomputers.com/navneetpdf/1759740425343-Annual_Report_2018-2019.pdf",
+  };
+
   return (
     <section className={styles["annual-section"]}>
       {/* Breadcrumb */}
@@ -29,10 +39,14 @@ export default function AnnualReports() {
         <ul className={styles["report-list"]}>
           {years.map((year, index) => (
             <li key={index}>
-              <a href={`/${year}`} target="_blank" rel="noopener noreferrer">
-                <span>{year}</span>
-                <span className={styles["icon"]}>↗</span>
-              </a>
+              {links[year] ? (
+                <a href={links[year]} target="_blank" rel="noopener noreferrer">
+                  <span>{year}</span>
+                  <span className={styles["icon"]}>↗</span>
+                </a>
+              ) : (
+                <span>{year}</span> 
+              )}
             </li>
           ))}
         </ul>

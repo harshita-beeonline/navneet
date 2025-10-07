@@ -3,171 +3,171 @@ import styles from "../../../../styles/Investor/InvestorInformation/QuarterlySha
 const qspdata = [
   {
     text: "Share Holding Pattern As on 30th June 2025",
-    link: "https://navneet.com/wp-content/uploads/2025/08/Newspaper-Advertisement_Q126_Signed.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759752201088-Share-Holding-Pattern-as-on-30th-June-2025.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st March 2025",
-    link: "https://navneet.com/wp-content/uploads/2025/04/Share-Holding-Pattern-as-on-31st-Mar-2025.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759752894223-Share-Holding-Pattern-as-on-31st-Mar-2025.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st Dec 2024",
-    link: "https://navneet.com/wp-content/uploads/2025/01/Share-Holding-Pattern-as-on-31st-Dec-2024.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753124287-Share-Holding-Pattern-as-on-31st-Dec-2024.pdf",
   },
   {
     text: "Share Holding Pattern as on 30th Sept 2024",
-    link: "https://navneet.com/wp-content/uploads/2024/10/Share-Holding-Pattern-as-on-30th-Sept-2024.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753177742-Share-Holding-Pattern-as-on-30th-Sept-2024.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th June 2024",
-    link: "https://navneet.com/wp-content/uploads/2024/07/Share-Holding-Pattern-as-on-30th-June-2024.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753216134-Share-Holding-Pattern-as-on-30th-June-2024.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st Mar 2024",
-    link: "https://navneet.com/wp-content/uploads/2024/04/Share-Holding-Pattern-as-on-31st-Mar-2024.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753309897-Share-Holding-Pattern-as-on-31st-Mar-2024.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st Dec 2023",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-as-on-31s-Dec-2023.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753434732-Share-Holding-Pattern-as-on-31s-Dec-2023.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th September 2023",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-as-on-30th-Sept-2023.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753506090-Share-Holding-Pattern-as-on-30th-Sept-2023.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th June 2023",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-as-on-30th-June-2023.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753546175-Share-Holding-Pattern-as-on-30th-June-2023.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st March 2023",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%20as%20on%2031st%20Mar%202023.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753585806-Share-Holding-Pattern-as-on-31st-Mar-2023.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st December 2022",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-as-on-31st-Dec-2022.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753649029-Share-Holding-Pattern-as-on-31st-Dec-2022.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th September 2022",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-as-on-30th-Sept-2022.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753693454-Share-Holding-Pattern-as-on-30th-Sept-2022.pdf",
   },
   {
     text: "Share Holding Pattern As on 30 June 2022",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%20as%20on%2030th%20June%202022.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753850930-Share-Holding-Pattern-as-on-30th-June-2022.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st March 2022",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%20as%20on%2031st%20Mar%202022.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753890283-Share-Holding-Pattern-as-on-31st-Mar-2022.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st December 2021",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%20as%20on%2031st%20Dec%202021.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759753925881-Share-Holding-Pattern-as-on-31st-Dec-2021.pdf",
   },
   {
     text: "Share Holding Pattern As On 30th September 2021",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-as-on-30th-September-2021.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754009861-Share-Holding-Pattern-as-on-30th-September-2021.pdf",
   },
   {
     text: "Share Holding Pattern As On 30th June 2021",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-As-On-30th-June-2021.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754156677-Share-Holding-Pattern-As-On-30th-June-2021.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st March 2021",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-As-on-31-March-2021.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754235355-Share-Holding-Pattern-As-on-31-March-2021.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st December 2020",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-Pattern-As-On-31st-December-2020.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754540726-Share-Holding-Pattern-As-On-31st-December-2020.pdf",
   },
   {
     text: "Share  Holding  Pattern As on 30th September 2020",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%20as%20on%2030th%20Sept%202020.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754582077-Share-Holding-Pattern-as-on-30th-Sept-2020.pdf",
   },
   {
     text: "Share  Holding  Pattern As on 30th June 2020",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%20as%20on%2030th%20June%202020.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754755903-Share-Holding-Pattern-as-on-30th-June-2020.pdf",
   },
   {
     text: "Share Holding Pattern As On 31st March 2020",
-    link: "https://navneet.com/wp-content/uploads/2025/02/Reg-30-disclosure-Order-Passed.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754819547-Share-Holding-Pattern-As-On-31st-March-2020.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st December 2019",
-    link: "https://navneet.com/wp-content/uploads/2025/02/Disclousure-of-Credit-Ratings_Signed.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754897549-Share-Holding-Pattern-as-on-31st-Dec-2019.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th September 2019",
-    link: "#",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756901610-Share_Holding_Pattern_30_Sept_2019.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th June 2019",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE-HOLDING-PATTERN-AS-ON-30TH-JUNE-2019.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759754992433-SHARE-HOLDING-PATTERN-AS-ON-30TH-JUNE-2019.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st March 2019",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share_Holding_Pattern_As_On_31st_March_2019.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759755048088-Share_Holding_Pattern_As_On_31st_March_2019.pdf",
   },
   {
     text: "Share Holding Pattern As on 31st December 2018",
-    link: "https://navneet.com/wp-content/uploads/2025/01/Trading-Window-Closure-Q3_31122024.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759755184195-Share_Holding_Pattern_As_On_31_Dec_2018.pdf",
   },
   {
     text: "Share Holding Pattern As on 30th September 2018",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share_Holding_Pattern_30_Sept_2018.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759755234628-Share_Holding_Pattern_30_Sept_2018.pdf",
   },
   {
     text: "Share Holding Pattern as on 30TH JUNE 2018",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE%20HOLDING%20PATTERN%20AS%20ON%2030TH%20JUNE%202018.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759755288938-SHARE-HOLDING-PATTERN-AS-ON-30TH-JUNE-2018.pdf",
   },
   {
     text: "Share Holding Pattern as on 31ST MARCH 2018",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE%20HOLDING%20PATTERN%20AS%20ON%2031ST%20MARCH%202018.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759755335268-SHARE-HOLDING-PATTERN-AS-ON-31ST-MARCH-2018.pdf",
   },
   {
     text: "Share Holding Pattern as on 31ST December 2017",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE-HOLDING-PATTERN-AS-ON-31ST-DECEMBER-2017-.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759755772589-SHARE-HOLDING-PATTERN-AS-ON-31ST-DECEMBER-2017.pdf",
   },
   {
     text: "Share Holding Pattern as on 30TH September 2017",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE-HOLDING-PATTERN-AS-ON-30TH-SEPTEMBER-2017.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756121725-SHARE-HOLDING-PATTERN-AS-ON-30TH-SEPTEMBER-2017.pdf",
   },
   {
     text: "Share Holding Pattern as on 30TH JUNE 2017",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE-HOLDING-PATTERN-AS-ON-30TH-JUNE-2017.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756217892-SHARE-HOLDING-PATTERN-AS-ON-30TH-JUNE-2017.pdf",
   },
   {
     text: "Share Holding Pattern as on 31ST March 2017.",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE-HOLDING-PATTERN-AS-ON-31ST-MARCH-2017-.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756290366-SHARE-HOLDING-PATTERN-AS-ON-31ST-MARCH-2017.pdf",
   },
   {
     text: "Share Holding Pattern as on 20TH January 2017.",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/share-holding-pattern-as-on-20th-january-2017.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756337927-share-holding-pattern-as-on-20th-january-2017.pdf",
   },
   {
     text: "Share Holding Pattern as on 30TH September 2016.",
-    link: "https://navneet.com/wp-content/uploads/2024/07/Impact-Assessment-2023-24.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756381431-Share-Holding-Pattern-as-on-30-Sept-2016.pdf",
   },
   {
     text: "Share Holding Pattern as on 30TH June 2016.",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share%20Holding%20Pattern%2030%20June%202016.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756487498-Share-Holding-Pattern-30-June-2016.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st March 2016",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/SHARE%20HOLDING%20PATTERN%20AS%20ON%2031ST%20MARCH%202016.pdf",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756540629-SHARE-HOLDING-PATTERN-AS-ON-31ST-MARCH-2016.pdf",
   },
   {
     text: "Share Holding Pattern as on 31st December 2015",
-    link: "https://navneet.com/pdfs/Shareholding_Pattern/Share-Holding-pattern-as-on-31st-december-2015.pdf",
+    link: "hhttps://img.modxcomputers.com/navneetpdf/1759756611122-Share-Holding-pattern-as-on-31st-december-2015.pdf",
   },
   {
     text:"Share Holding Pattern as on 30th September 2015",
-    link:"https://navneet.com/pdfs/Shareholding_Pattern/SHARE%20HOLDING%20PATTERN%20AS%20ON%2030TH%20SEPTEMBER%202015.pdf"
+    link:"https://img.modxcomputers.com/navneetpdf/1759756662851-SHARE-HOLDING-PATTERN-AS-ON-30TH-SEPTEMBER-2015.pdf"
   },
   {
     text:"Share Holding Pattern as on 30th June 2015",
-    link:"https://navneet.com/wp-content/uploads/2024/05/IntimationLetterC.pdf"
+    link:"https://img.modxcomputers.com/navneetpdf/1759756710243-SHARE-HOLDING-PATTERN-AS-ON-30-JUNE-2015.pdf"
   },
   {
     text:"Share Holding Pattern as on 31st March 2015",
-    link:"https://navneet.com/wp-content/uploads/2024/05/cancellation.pdf"
+    link:"https://img.modxcomputers.com/navneetpdf/1759756751665-SHARE-HOLDING-PATTERN-AS-ON-31-ST-MARCH-2015.pdf"
   },
 ];
 

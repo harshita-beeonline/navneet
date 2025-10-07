@@ -1437,15 +1437,15 @@ export const announcementData = {
       },
       {
         text: "Intimation Of Trading Window For Board ARD Meeting Dated 21st May 2016",
-        link: "https://img.modxcomputers.com/navneetpdf/1759818942833-Intimation-Of-Trading-Window-For-Board-ARD-Meeting-Dated-21st-May-2016.pdf"
-},
+        link: "https://img.modxcomputers.com/navneetpdf/1759818942833-Intimation-Of-Trading-Window-For-Board-ARD-Meeting-Dated-21st-May-2016.pdf",
+      },
       {
         text: "Notice For Board Meeting",
-        link: "https://img.modxcomputers.com/navneetpdf/1759818963087-Notice-For-Board-Meeting.pdf"
-},
+        link: "https://img.modxcomputers.com/navneetpdf/1759818963087-Notice-For-Board-Meeting.pdf",
+      },
       {
         text: "Intimation Of Trading Window",
-        link: "https://img.modxcomputers.com/navneetpdf/1759818997959-Intimation-Of-Trading-Window.pdf"
+        link: "https://img.modxcomputers.com/navneetpdf/1759818997959-Intimation-Of-Trading-Window.pdf",
       },
       {
         text: "Revised Board Meeting Dated 04th April 2016",
@@ -2122,11 +2122,11 @@ export const announcementData = {
     items: [
       {
         text: "Regulation – 44(3) Voting Result At AGM Dated 29th September, 2021",
-        link: "https://img.modxcomputers.com/navneetpdf/1759819417149-Regulation---44(3)-Voting-Result-At-AGM-Dated-29th-September,-2021.pdf"
+        link: "https://img.modxcomputers.com/navneetpdf/1759819417149-Regulation---44(3)-Voting-Result-At-AGM-Dated-29th-September,-2021.pdf",
       },
       {
         text: "Regulation – 44(3) Voting Result At AGM Dated 28th September, 2020",
-        link: "https://img.modxcomputers.com/navneetpdf/1759819445124-Regulation--44(3)-Voting-Result--At-AGM-Dated-28thSeptember,-2020.pdf"
+        link: "https://img.modxcomputers.com/navneetpdf/1759819445124-Regulation--44(3)-Voting-Result--At-AGM-Dated-28thSeptember,-2020.pdf",
       },
       {
         text: "Regulation- 44(3) Voting Results at AGM Dated 24th July,2019",
@@ -2142,11 +2142,11 @@ export const announcementData = {
       },
       {
         text: "Clause 35A – Voting results at agm dated 28TH September,2015",
-        link: "https://img.modxcomputers.com/navneetpdf/1759819546405-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-28TH-September,2015.pdf"
+        link: "https://img.modxcomputers.com/navneetpdf/1759819546405-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-28TH-September,2015.pdf",
       },
       {
         text: "Clause 35A – Voting results at agm dated 29th September,2014",
-        link: "https://img.modxcomputers.com/navneetpdf/1759819580672-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-29th-September,2014.pdf"
+        link: "https://img.modxcomputers.com/navneetpdf/1759819580672-Clause-35A-%E2%80%93-Voting-results-at-agm-dated-29th-September,2014.pdf",
       },
     ],
   },
@@ -2156,23 +2156,23 @@ export const announcementData = {
     items: [
       {
         text: "Public Announcement for the Buyback of Equity Shares",
-        link: "https://navneet.com/wp-content/uploads/2024/08/Investor-corporate-announcement-buyback-2024.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830404016-Investor-corporate-announcement-buyback-2024.pdf",
       },
       {
         text: "NAVNEET EDUCATION LIMITED – LOF",
-        link: "https://navneet.com/wp-content/uploads/2024/08/NAVNEET-EDUCATION-LIMITED-LOF.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830432502-NAVNEET-EDUCATION-LIMITED-LOF.pdf",
       },
       {
         text: "Navneet LOF – Tender Form – Physical Shares",
-        link: "https://navneet.com/wp-content/uploads/2024/08/Navneet-LOF-Tender-Form-Physical-Shares.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830485662-Navneet-LOF-Tender-Form-Physical-Shares.pdf",
       },
       {
         text: "Navneet LOF – Tender Form – Demat Shares",
-        link: "https://navneet.com/wp-content/uploads/2024/08/Navneet-LOF-Tender-Form-Demat-Shares.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830468867-Navneet-LOF-Tender-Form-Demat-Shares.pdf",
       },
       {
         text: "Navneet LOF – Tender Form – Physical Shares",
-        link: "https://navneet.com/wp-content/uploads/2024/08/Navneet-LOF-Form-SH-4.pdf",
+        link: "https://img.modxcomputers.com/navneetpdf/1759830446797-Navneet-LOF-Form-SH-4.pdf",
       },
     ],
   },

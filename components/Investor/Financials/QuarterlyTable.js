@@ -11,41 +11,41 @@ export default function QuarterlyTable({ title, breadcrumb }) {
   ];
   const quarters = ["Q1", "Q2", "Q3", "Q4"];
 
-  // <-- ADDED: links for 21 quarters (placeholders). Keep 2025-26 Q2/Q3/Q4 intentionally absent.
+  
   const links = {
     "2025-26": {
-      Q1: "https://navneet.com/wp-content/uploads/2025/08/Stand-Conso-Results_SE-1.pdf",
-      // Q2, Q3, Q4 intentionally left out (plain text)
+      Q1: "https://img.modxcomputers.com/navneetpdf/1759730593560-2025-2056-Q1.pdf",
+      
     },
     "2024-25": {
-      Q1: "https://navneet.com/wp-content/uploads/2024/11/Q1.pdf",
-      Q2: "https://navneet.com/wp-content/uploads/2024/11/Results-Q2.pdf",
-      Q3: "https://navneet.com/wp-content/uploads/2025/04/Outcome-of-BM.pdf",
-      Q4: "https://navneet.com/wp-content/uploads/2025/05/Outcome-of-BM.pdf",
+      Q1: "https://img.modxcomputers.com/navneetpdf/1759730699654-2024-2025-Q1.pdf",
+      Q2: "https://img.modxcomputers.com/navneetpdf/1759731207310-2024-2025-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1759731634662-2024-2025-Q3.pdf",
+      Q4: "https://img.modxcomputers.com/navneetpdf/1759732101489-2024-2025-Q4.pdf",
     },
     "2023-24": {
-      Q1: "https://navneet.com/wp-content/uploads/2023/08/covering.pdf",
-      Q2: "https://navneet.com/wp-content/uploads/2023/11/uploadingdocument-navneet.pdf",
-      Q3: "https://navneet.com/wp-content/uploads/2024/02/Financialresults.pdf",
-      Q4: "https://navneet.com/wp-content/uploads/2024/11/Q4.pdf",
+      Q1: "https://img.modxcomputers.com/navneetpdf/1759730825740-2023_2024-Q1.pdf",
+      Q2: "https://img.modxcomputers.com/navneetpdf/1759731278809-2023_2024-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1759731683570-2023_2024-Q3.pdf",
+      Q4: "https://img.modxcomputers.com/navneetpdf/1759732152718-2023_2024-Q4.pdf",
     },
     "2022-23": {
-      Q1: "https://navneet.com/wp-content/uploads/2022/12/June_Final_Results.pdf",
-      Q2: "https://navneet.com/wp-content/uploads/2022/12/September_Final_Results.PDF",
-      Q3: "https://navneet.com/wp-content/uploads/2022/12/June_Final_Results.pdf",
-      Q4: "https://navneet.com/wp-content/uploads/2023/08/1.Financials-Results.pdf",
+      Q1: "https://img.modxcomputers.com/navneetpdf/1759730968656-2022-2023-Q1.pdf",
+      Q2: "https://img.modxcomputers.com/navneetpdf/1759731353711-2022-2023-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1759731758509-2022-2023-Q3.pdf",
+      Q4: "https://img.modxcomputers.com/navneetpdf/1759732241799-2022-2023-Q4.pdf",
     },
     "2021-22": {
-      Q1: "https://navneet.com/pdfs/Quarterly_Results/Quarter%20Ended%2030th%20June%202021.pdf",
-      Q2: "https://navneet.com/pdfs/Quarterly_Results/2nd%20quarter_300921.pdf",
-      Q3: "https://navneet.com/pdfs/Quarterly_Results/Quarter%20And%20Nine%20Month%20Ended%2031st%20December%2C%202021%20%28Unaudited%29.pdf",
-      Q4: "https://navneet.com/pdfs/Quarterly_Results/results20220518_14192484.pdf",
+      Q1: "https://img.modxcomputers.com/navneetpdf/1759731040818-2021-2022-Q1.pdf",
+      Q2: "https://img.modxcomputers.com/navneetpdf/1759731438924-2021-2022-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1759731840564-2021-2022-Q3.pdf",
+      Q4: "https://img.modxcomputers.com/navneetpdf/1759732325748-2021-2022-Q4.pdf",
     },
     "2020-21": {
-      Q1: "https://navneet.com/pdfs/Quarterly_Results/Quarter%20Ended%2030th%20June,%202020%209%20(Unaudited).pdf",
-      Q2: "https://navneet.com/pdfs/Quarterly_Results/Quarter%20And%20Half%20Year%20Ended%2030th%20September,%202020.PDF",
-      Q3: "https://navneet.com/pdfs/Quarter%20And%20Nine%20Month%20Ended%2031st%20December,%202020%20(Unaudited).pdf",
-      Q4: "https://navneet.com/pdfs/Quarterly_Results/Audited%20Financial%20Result%2031st%20March,%202021.pdf",
+      Q1: "https://img.modxcomputers.com/navneetpdf/1759731094136-2024-2025-Q1.pdf",
+      Q2: "https://img.modxcomputers.com/navneetpdf/1759731471939-2020-2021-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1759731893539-2020-2021-Q3.pdf",
+      Q4: "https://img.modxcomputers.com/navneetpdf/1759732396289-2020-2021-Q4.pdf",
     },
   };
 
