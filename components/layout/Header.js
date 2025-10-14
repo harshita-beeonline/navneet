@@ -12,6 +12,7 @@ import InvestorDropdown from "./InvestorDropdown";
 import MediaUpdatesDropdown from "./MediaUpdatesDropdown";
 import ContactDropdown from "./ContactDropdown";
 import { usePathname } from "next/navigation";
+import headernavneet from '../../public/images/headernavneet.svg';
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -204,7 +205,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Navneet AI
+          Navneet  <Image src={headernavneet} alt="svg"/>
         </a>
         <Link
           href="/career"
@@ -228,7 +229,7 @@ export default function Header() {
             aria-haspopup="true"
             aria-expanded={openDropdown === "contact"}
           >
-            Contact
+            <button>Contact</button>
           </Link>
 
           <div
