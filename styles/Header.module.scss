@@ -103,6 +103,11 @@
     mask-composite: exclude;
   }
 }
+.navDesktop a:hover {
+  font-weight: 500 !important;
+  scale: (1.1);
+  font-style: bold;
+}
 
 .dropdownParent {
   position: relative;
