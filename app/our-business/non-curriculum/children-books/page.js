@@ -11,7 +11,8 @@ import children_books_slider_1 from "../../../../public/images/our-business/chil
 import children_books_slider_2 from "../../../../public/images/our-business/children-books-slider-2.jpg";
 import children_books_slider_3 from "../../../../public/images/our-business/children-books-slider-3.jpg";
 import youtubeIcon from "../../../../public/images/our-business/child-youtube-stroke.png";
-
+import childbannerdesktop from "../../../../public/images/childbannerdesktop.jpg";
+import childbannermobile from "../../../../public/images/childbannermobile.jpg";
 const images = [
   children_books_slider_1,
   children_books_slider_2,
@@ -35,7 +36,7 @@ export default function ChildrenBooksPage() {
       <div className={styles.heroDesktop}>
         <div className={styles.heroWrapperDesktop}>
           <Image
-            src={heroBg}
+            src={childbannerdesktop}
             alt="children books hero background"
             fill
             style={{ objectFit: "cover" }}
@@ -54,7 +55,7 @@ export default function ChildrenBooksPage() {
       <div className={styles.heroMobile}>
         <div className={styles.heroWrapperMobile}>
           <Image
-            src={mobilebg}
+            src={childbannermobile}
             alt="children books hero background mobile"
             fill
             style={{ objectFit: "cover" }}
@@ -67,25 +68,25 @@ export default function ChildrenBooksPage() {
       {/* Content Section */}
       <section className={styles.contentSection}>
         <div className={styles.textWrapper}>
+          <h3 className={styles.textstrong}>
+            Nurturing Curiosity. Inspiring Learning.
+          </h3>
           <p className={styles.desc}>
-            Children are naturally curious — curious to know more about
-            everything, whether it&apos;s colors, objects, or language. To help
-            satiate this curiosity, Navneet has a treasure trove of beautifully
-            produced books for children.
+            At Navneet, we believe every child’s curiosity is the spark that
+            leads to lifelong learning. Our books are designed to turn that
+            spark into wonder -transforming everyday discovery into joyful
+            exploration.
           </p>
-          <p className={styles.desc}>
-            Children can pick from a wide spectrum, ranging from coloring,
-            drawing, art, craft, and magic painting to science topics like
-            planets and the human body. There is an exciting range of story
-            books which will give children the joy of reading and enrich their
-            minds with moral values while enlightening them about culture.
-          </p>
-          <p className={styles.desc}>
-            Navneet plans to keep on adding new books to its popular, existing
-            range. It is Navneet&apos;s firm belief that the citizens of
-            tomorrow need to be nurtured well.
-          </p>
-          <h3 className={styles.textstrong}>LEARN TODAY. LEAD TOMORROW.</h3>
+          <p className={styles.desc}>From art and craft to science and stories, every
+            Navneet book blends creativity, knowledge, and values. Beautifully
+            illustrated and thoughtfully developed, our collection inspires
+            children to imagine, question, and grow. For over six decades,
+            Navneet has been a trusted partner to parents, educators, and
+            schools - committed to shaping confident, curious learners who are
+            ready for tomorrow.</p>
+          <h3 className={styles.textstrong} style={{marginTop:"20px"}}>
+            Navneet - Turning curiosity into lifelong learning.
+          </h3>
         </div>
 
         {/* Carousel */}

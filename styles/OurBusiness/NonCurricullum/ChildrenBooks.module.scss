@@ -1,5 +1,5 @@
 .pageWrapper {
-  margin-top: 60px;
+  margin-top: 75px;
   padding: clamp(16px, 4vw, 32px) 80px;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -128,6 +128,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
+  padding: 20px 10px;
 }
 
 .textWrapper {
