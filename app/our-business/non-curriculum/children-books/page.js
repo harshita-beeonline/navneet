@@ -45,7 +45,7 @@ export default function ChildrenBooksPage() {
           />
           <div className={styles.heroContent}>
             <div className={styles.title}>
-              <h1 className={styles.heading}>Children&apos;s</h1>
+              {/* <h1 className={styles.heading}>Children&apos;s</h1> */}
             </div>
           </div>
         </div>
@@ -77,14 +77,15 @@ export default function ChildrenBooksPage() {
             spark into wonder -transforming everyday discovery into joyful
             exploration.
           </p>
-          <p className={styles.desc}>From art and craft to science and stories, every
-            Navneet book blends creativity, knowledge, and values. Beautifully
-            illustrated and thoughtfully developed, our collection inspires
-            children to imagine, question, and grow. For over six decades,
-            Navneet has been a trusted partner to parents, educators, and
-            schools - committed to shaping confident, curious learners who are
-            ready for tomorrow.</p>
-          <h3 className={styles.textstrong} style={{marginTop:"20px"}}>
+          <p className={styles.desc}>
+            From art and craft to science and stories, every Navneet book blends
+            creativity, knowledge, and values. Beautifully illustrated and
+            thoughtfully developed, our collection inspires children to imagine,
+            question, and grow. For over six decades, Navneet has been a trusted
+            partner to parents, educators, and schools - committed to shaping
+            confident, curious learners who are ready for tomorrow.
+          </p>
+          <h3 className={styles.textstrong} style={{ marginTop: "20px" }}>
             Navneet - Turning curiosity into lifelong learning.
           </h3>
         </div>
