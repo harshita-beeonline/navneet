@@ -43,7 +43,7 @@ const Awards = () => {
 
    const router = useRouter();
     const handleClick = () => {
-    router.push('/media&updates/award'); 
+    router.push('/media-updates/award'); 
   };
   return (
     <section

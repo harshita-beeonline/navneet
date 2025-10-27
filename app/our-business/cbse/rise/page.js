@@ -7,6 +7,7 @@ import rise_subject_crosslefttop from "../../../../public/images/our-business/ri
 import rise_subject_crossrightbottom from "../../../../public/images/our-business/rise-subject-crossrightbottom.png";
 
 import styles from "../../../../styles/OurBusiness/CBSE/Rise.module.scss";
+import Link from "next/link";
 
 const FEATURES = [
   "Book follows known to unknown method of learning",
@@ -146,9 +147,9 @@ export default function Rise() {
         </ul>
 
         <div className={styles.ctaWrap}>
-          <a href="#" className={styles.ctaBtn}>
+          <Link href={"https://ecatalogue.navneet.com/brand/rise/"} target="_blank" className={styles.ctaBtn}>
             Know More Details
-          </a>
+          </Link>
         </div>
       </div>
     </section>

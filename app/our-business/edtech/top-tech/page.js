@@ -8,12 +8,15 @@ import edtech_toptech_mobile_hero from "../../../../public/images/our-business/e
 import edtech_toptech_info from "../../../../public/images/our-business/edtech-toptech-info.png";
 import edtech_toptech_topclass_logo from "../../../../public/images/our-business/edtech-toptech-topclass-logo.png";
 import companion_bg from "../../../../public/images/our-business/companion-bg.png";
+import Link from "next/link";
 
 export default function Toptech() {
   return (
     <main className={styles.mainsection}>
-      <section className={styles.toptechSection} aria-labelledby="toptech-heading">
-
+      <section
+        className={styles.toptechSection}
+        aria-labelledby="toptech-heading"
+      >
         {/* ================= HERO ================= */}
         <div className={styles.heroWrapper}>
           {/* Desktop Hero */}
@@ -79,7 +82,11 @@ export default function Toptech() {
           />
 
           {/* Stats */}
-          <div className={styles.statsCard} role="list" aria-label="Key metrics">
+          <div
+            className={styles.statsCard}
+            role="list"
+            aria-label="Key metrics"
+          >
             <div className={styles.stat} role="listitem">
               <div className={styles.number}>18000+</div>
               <div className={styles.label}>Schools Reached</div>
@@ -104,7 +111,6 @@ export default function Toptech() {
 
         {/* ================= CARDS ================= */}
         <div className={styles.cardsSection}>
-
           {/* For Schools (Blue card) */}
           <div className={`${styles.card} ${styles.blueCard}`}>
             <div className={styles.cardHeader}>
@@ -123,7 +129,9 @@ export default function Toptech() {
               2020 compliant. The platform comes preloaded with lesson plans,
               curriculum and a self-updating syllabus system.
             </p>
-            <a href="#" className={styles.knowMore}>Know More</a>
+            <Link href="/our-business/edtech/top-tech/top-school" target="_blank" className={styles.knowMore}>
+              Know More
+            </Link>
           </div>
 
           {/* For Students (White card) */}
@@ -144,7 +152,13 @@ export default function Toptech() {
               classroom level. Our goal is to accelerate and simplify both
               learning and teaching for students and educators.
             </p>
-            <a href="#" className={styles.knowMore}>Know More</a>
+            <Link
+              href="https://navneettoptech.com/topclass-digital-classroom"
+              target="_blank"
+              className={styles.knowMore}
+            >
+              Know More
+            </Link>
           </div>
         </div>
 
