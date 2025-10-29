@@ -11,6 +11,7 @@ import NavneetAiSection from "@/components/Home/NavneetAI/NavneetAiSection";
 import DigibookSection from "@/components/Home/Digibook/DigibookSection";
 import NavneetCBSESection from "@/components/Home/NavneetCBSE/NavneetCBSESection";
 import HomeBanner from "@/components/Home/HomeBanner/HomeBanner";
+import OurJourney from "@/components/AboutUs/OurJourney/OurJourney";
 
 export default  function Page() {
 
@@ -23,7 +24,8 @@ export default  function Page() {
      <DigibookSection />
      <NavneetCBSESection />
      <TrendingProducts />
-     <JourneySection />
+     {/* <JourneySection /> */}
+     <OurJourney/>
      <Investors />
      {/* <EHSSection />
      <InternationalBusiness /> */}
