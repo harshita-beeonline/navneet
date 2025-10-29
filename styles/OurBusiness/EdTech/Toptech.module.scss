@@ -337,68 +337,80 @@
   }
 
   /* ================= CALL TO ACTION ================= */
-  .callSection {
-    position: relative;
-    width: 100%;
-    padding: 50px 0;
-    margin: 50px 0;
-    text-align: center;
-    background-image: var(--call-bg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
+.callSection {
+  position: relative;
+  width: 100%;
+  padding: 40px 20px;
+  text-align: center;
+  background-image: var(--call-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 
-  .callContent {
-    position: relative;
-    z-index: 2;
-    max-width: 900px;
-    margin: 0 auto;
+.callContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* space between text and button */
+  flex-wrap: wrap; /* helps with smaller screens */
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+  max-width: 1000px; /* keep it nicely centered */
+}
 
-    p {
-      font-weight: 600;
-      font-size: 40px;
-      line-height: 100%;
-      margin: 0 0 16px;
-      color: #233447;
-    }
-  }
+.callContent p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 1.2;
+  margin: 0;
+  color: #233447;
 
   .phone {
     color: #1776c8;
     font-weight: 700;
     text-decoration: none;
   }
+}
+
+.emailBtn {
+  display: inline-block;
+  padding: 10px 80px;
+  background: transparent;
+  border: 2px solid #1776c8;
+  border-radius: 30px;
+  font-weight: 600;
+  color: #1776c8;
+  text-decoration: none;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #1776c8;
+    color: #fff;
+  }
+}
+
+/* ✅ Responsive */
+@media (max-width: 768px) {
+  .callSection {
+    padding: 30px 16px;
+  }
+
+  .callContent {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .callContent p {
+    font-size: 30;
+  }
 
   .emailBtn {
-    display: inline-block;
-    padding: 8px 100px;
-    background: transparent;
-    border: 2px solid #1776c8;
-    border-radius: 30px;
-    font-weight: 600;
-    color: #1776c8;
-    text-decoration: none;
-    transition: all 0.2s ease;
-
-    &:hover {
-      background: #1776c8;
-      color: #fff;
-    }
+    padding: 8px 40px;
+    font-size: 16px;
   }
+}
 
-  /* Responsive */
-  @media (max-width: 768px) {
-    .callSection {
-      padding: 30px 16px;
-    }
-
-    .callContent p {
-      font-size: 20px;
-    }
-
-    .emailBtn {
-      padding: 8px 40px;
-    }
-  }
 }

@@ -24,7 +24,6 @@ $card-light: #d8eefc;
     padding: clamp(16px, 4vw, 32px) 0;
     margin: 0;
     gap: 0;
-
   }
 
   @media (max-width: 576px) {
@@ -39,7 +38,7 @@ $card-light: #d8eefc;
 .heroWrapperDesktop {
   width: 100%;
   position: relative;
-  height: 400px; 
+  height: 400px;
   overflow: hidden;
 }
 .heroImagesRow {
@@ -49,7 +48,7 @@ $card-light: #d8eefc;
 }
 
 .heroImagesRow :global(img) {
-  flex: 1;             
+  flex: 1;
   height: 100%;
   object-fit: cover;
 }
@@ -61,15 +60,15 @@ $card-light: #d8eefc;
   .heroWrapperMobile {
     width: 100%;
     position: relative;
-    height: 433px;             
-    margin-top: 20px;          
+    height: 433px;
+    margin-top: 20px;
     overflow: hidden;
-    margin-bottom:16px;
+    margin-bottom: 16px;
   }
 
   .heroWrapperMobile img {
-    object-fit: cover;         
-    object-position: center top;  
+    object-fit: cover;
+    object-position: center top;
   }
 }
 
@@ -105,7 +104,7 @@ $card-light: #d8eefc;
     font-weight: 600;
     font-size: clamp(22px, 2.4vw, 32px);
     margin: 0;
-     @media (max-width: 768px) {
+    @media (max-width: 768px) {
       text-align: left;
     }
   }
@@ -132,10 +131,10 @@ $card-light: #d8eefc;
 
     @media (max-width: 768px) {
       text-align: left;
+      margin-bottom: 16px;
     }
   }
 
-  // Shared buttonItem styles
   .buttonItem {
     display: flex;
     align-items: flex-start;
@@ -151,27 +150,27 @@ $card-light: #d8eefc;
     cursor: pointer;
     position: relative;
     text-align: left;
+    transition: all 0.2s ease-in-out;
 
     &::before {
       content: "";
-      width: 3px;
-      height: 3px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background: #000;
+      background: $primary;
       flex: 0 0 auto;
       margin-top: 8px;
     }
+
+    &:hover {
+      background: $card-light;
+    }
   }
 
-  // Columns grid
   .buttonsGrid {
     display: flex;
     gap: 24px;
     justify-content: center;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
 
     .csrColumn {
       display: flex;
@@ -179,34 +178,38 @@ $card-light: #d8eefc;
       gap: 12px;
       flex: 1;
     }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 16px; // space between the two column groups
+
+      .csrColumn {
+        gap: 12px; // equal spacing between each button
+      }
+    }
   }
 
-  // Center button
   .centerButton {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
     margin-top: 24px;
 
     .buttonItem {
-      width: 50%;              
-      text-align: center;     
+      width: 50%;
+      text-align: center;
     }
 
     @media (max-width: 768px) {
-      justify-content: flex-start; 
-      max-width: 100%;
-      margin-left: 0;
-      margin-right: 0;
+      justify-content: flex-start;
+      margin-top: 16px;
 
       .buttonItem {
-        width: 100%;           
-        text-align: left;     
+        width: 100%;
+        text-align: left;
       }
     }
   }
 }
-
-  
 
 /* ---------- Bottom Spacer ---------- */
 .bottomSpacer {
@@ -235,8 +238,8 @@ $card-light: #d8eefc;
 
   @media (max-width: 768px) {
     /* ✅ Reset on mobile */
-    width: 100%;              // stretch to viewport without overshooting
-    margin-left: 0;           // no breakout trick
+    width: 100%; // stretch to viewport without overshooting
+    margin-left: 0; // no breakout trick
     background-image: url("/images/our-business/bluebg-mobile.png");
     margin-top: 20px;
     padding: 20px;
@@ -250,4 +253,3 @@ $card-light: #d8eefc;
     line-height: 20px;
   }
 }
-
