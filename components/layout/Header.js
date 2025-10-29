@@ -12,7 +12,11 @@ import InvestorDropdown from "./InvestorDropdown";
 import MediaUpdatesDropdown from "./MediaUpdatesDropdown";
 import ContactDropdown from "./ContactDropdown";
 import { usePathname } from "next/navigation";
-import headernavneet from '../../public/images/headernavneet.svg';
+import headernavneet from "../../public/images/headernavneet.svg";
+import MegaMenuInvestor from "./MegaMenuInvestor";
+import MegaMenuBusiness from "./MegaMenuBusiness";
+import MegaMenuContact from "./MegaMenuContact";
+import MegaMenuMedia from "./MegaMenuMedia";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -95,62 +99,12 @@ export default function Header() {
           Company
         </Link>
 
-        <div
-          className={styles.dropdownParent}
-          onMouseEnter={() => setOpenDropdown("investor")}
-          onMouseLeave={() => setOpenDropdown(null)}
-          onFocus={() => setOpenDropdown("investor")}
-          onBlur={() => setOpenDropdown(null)}
-        >
-          <Link
-            href="/investor"
-            className={`${styles.dropdownToggle} ${
-              isActive("/investor") ? styles.activeLink : ""
-            }`}
-            aria-haspopup="true"
-            aria-expanded={openDropdown === "investor"}
-          >
-            Investors
-          </Link>
-
-          <div
-            className={`${styles.dropdownOpen} ${
-              openDropdown === "investor" ? styles.show : ""
-            }`}
-            role="menu"
-            aria-hidden={openDropdown !== "investor"}
-          >
-            <InvestorDropdown />
-          </div>
+        <div>
+          <MegaMenuInvestor />
         </div>
 
-        <div
-          className={styles.dropdownParent}
-          onMouseEnter={() => setOpenDropdown("business")}
-          onMouseLeave={() => setOpenDropdown(null)}
-          onFocus={() => setOpenDropdown("business")}
-          onBlur={() => setOpenDropdown(null)}
-        >
-          <Link
-            href="/"
-            className={`${styles.dropdownToggle} ${
-              isActive("/our-business") ? styles.activeLink : ""
-            }`}
-            aria-haspopup="true"
-            aria-expanded={openDropdown === "business"}
-          >
-            Our Businesses
-          </Link>
-
-          <div
-            className={`${styles.dropdownOpen} ${
-              openDropdown === "business" ? styles.show : ""
-            }`}
-            role="menu"
-            aria-hidden={openDropdown !== "business"}
-          >
-            <BusinessDropdown />
-          </div>
+        <div>
+          <MegaMenuBusiness />
         </div>
 
         <Link
@@ -164,33 +118,8 @@ export default function Header() {
           EHS
         </Link>
 
-        <div
-          className={styles.dropdownParent}
-          onMouseEnter={() => setOpenDropdown("media")}
-          onMouseLeave={() => setOpenDropdown(null)}
-          onFocus={() => setOpenDropdown("media")}
-          onBlur={() => setOpenDropdown(null)}
-        >
-          <Link
-            href="/"
-            className={`${styles.dropdownToggle} ${
-              isActive("/media-updates") ? styles.activeLink : ""
-            }`}
-            aria-haspopup="true"
-            aria-expanded={openDropdown === "media"}
-          >
-            Media & Updates
-          </Link>
-
-          <div
-            className={`${styles.dropdownOpen} ${
-              openDropdown === "media" ? styles.show : ""
-            }`}
-            role="menu"
-            aria-hidden={openDropdown !== "media"}
-          >
-            <MediaUpdatesDropdown />
-          </div>
+        <div>
+          <MegaMenuMedia/>
         </div>
 
         <a
@@ -205,7 +134,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Navneet  <Image src={headernavneet} alt="svg"/>
+          Navneet <Image src={headernavneet} alt="svg" />
         </a>
         <Link
           href="/career"
@@ -214,7 +143,7 @@ export default function Header() {
           Career
         </Link>
 
-        <div
+        {/* <div
           className={styles.dropdownParent}
           onMouseEnter={() => setOpenDropdown("contact")}
           onMouseLeave={() => setOpenDropdown(null)}
@@ -241,6 +170,9 @@ export default function Header() {
           >
             <ContactDropdown />
           </div>
+        </div> */}
+        <div>
+          <MegaMenuContact/>
         </div>
       </nav>
 

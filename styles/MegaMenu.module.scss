@@ -1,0 +1,103 @@
+/* ==================================================
+   BASE STYLE FOR FULL-WIDTH MEGA MENUS
+   ================================================== */
+
+.megaWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.triggerLink {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #4c4c4c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.activeLink {
+  color: #2f6db2 !important;
+  font-weight: 700 !important;
+}
+
+.triggerLink:hover {
+  color: #2f6db2;
+}
+
+/* === PANEL === */
+.megaPanel {
+  position: fixed;
+  top: 85px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  width: 90%;
+  max-width: 1400px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: 9999;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* === INNER === */
+.megaInner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 24px 40px;
+  gap: 24px;
+}
+
+/* === COLUMNS === */
+.column {
+  flex: 1;
+  min-width: 180px;
+}
+
+/* === HEADINGS === */
+.heading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #4c4c4c;
+  margin-bottom: 14px;
+}
+
+/* === LINKS === */
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  margin-bottom: 10px;
+
+  a {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #4c4c4c;
+    text-decoration: none;
+    transition: color 0.25s ease;
+
+    &:hover {
+      color: #2f6db2;
+    }
+  }
+}
+
+.activeSubLink {
+  color: #2f6db2;
+  font-weight: 600;
+}
