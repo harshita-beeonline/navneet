@@ -32,7 +32,7 @@
         font-family: "Montserrat", sans-serif;
         font-weight: 500;
         font-size: 14px;
-        color: #f9f9f9;
+        color: #696c6e;
 
         a {
           margin: 0;
@@ -74,7 +74,7 @@
               font-family: "Montserrat", sans-serif;
               font-weight: 500;
               font-size: 14px; /* default font-size */
-              color: #f9f9f9;
+              color: #696c6e;
               text-decoration: none;
             }
 
@@ -99,7 +99,7 @@
                   font-family: "Montserrat", sans-serif;
                   font-weight: 500;
                   font-size: 14px; /* default font-size */
-                  color: #f9f9f9;
+                  color: #696c6e;
                   text-decoration: none;
                 }
               }
@@ -139,7 +139,7 @@
   width: 95%;
   background: transparent;
   border: none;
-  color: #f9f9f9;
+  color: #696c6e;
   font-size: 12px;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
@@ -151,7 +151,7 @@
   padding: 0;
 
   a {
-    color: #f9f9f9;
+    color: #696c6e;
     font-size: 12px;
     font-family: "Montserrat", sans-serif;
     font-weight: 400;
@@ -169,6 +169,7 @@
 .arrow {
   transition: transform 0.2s ease;
   transform: rotate(-90deg); /* default: right */
+  filter: brightness(0) saturate(100%);
 }
 
 .arrow.open {
@@ -184,7 +185,7 @@
     a {
       display: block;
       padding: 6px 0;
-      color: #e3d3d3;
+      color: #696c6e;
       font-size: 12px;
       font-family: "Montserrat", sans-serif;
       font-weight: 400;
