@@ -66,7 +66,7 @@
 
     .ourjourney-heading {
       font-weight: 700;
-      font-size: clamp(26px, 4vw, 42px);
+      font-size: clamp(26px, 4vw, 38px);
       line-height: clamp(36px, 5vw, 56px);
       color: var(--text-dark);
       max-width: 520px;
@@ -92,12 +92,15 @@
     }
 
     .ourjourney-button {
-      margin-top: 15px;
-      color: #000;
-      border: none;
+      background: #2f6db2;
+      color: #fff;
+      font-size: 16px;
       font-weight: 600;
+      line-height: 100%;
+      padding: 12px 32px;
+      border-radius: 36px;
+      border: none;
       cursor: pointer;
-      text-decoration: underline;
     }
   }
 

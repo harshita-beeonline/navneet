@@ -47,12 +47,12 @@ const OurJourney = () => {
               at Walkeshwar.
             </p>
 
-            <div
-              className={styles["ourjourney-button"]}
-              onClick={handleKnowMoreClick}
-            >
+            <button className={styles["ourjourney-button"]}
+              aria-label="Read more"
+              onClick={handleKnowMoreClick}>
+           
               Know more
-            </div>
+            </button>
           </div>
         </div>
 

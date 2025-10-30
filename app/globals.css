@@ -12,7 +12,7 @@ html, body {
   overflow-x: hidden;
   width: 100%;
   max-width: 100%;
-    background: linear-gradient(174.05deg, #FFF7ED -1.72%, #E8F7FF 61.4%, #D9E9F8 106.39%);
+    /* background: linear-gradient(174.05deg, #FFF7ED -1.72%, #E8F7FF 61.4%, #D9E9F8 106.39%); */
     /* background: #1c1c1c; */
 }
 :root {
