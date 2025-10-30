@@ -107,7 +107,7 @@ export default function MegaMenuBusiness() {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 500);
+    timeoutRef.current = setTimeout(() => setOpen(false), 100);
   };
 
   return (

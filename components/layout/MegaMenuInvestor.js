@@ -119,7 +119,7 @@ export default function MegaMenuInvestor() {
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = setTimeout(() => setOpen(false), 500);
+    timeoutRef.current = setTimeout(() => setOpen(false), 100);
   };
 
   return (
@@ -140,7 +140,13 @@ export default function MegaMenuInvestor() {
         <div className={styles.megaInner}>
           {investorMenu.map((col, index) => (
             <div key={index} className={styles.column}>
-              <h4 className={styles.heading}>{col.label}</h4>
+              {col.href ? (
+                <Link href={col.href} className={styles.headingLink}>
+                  <h4 className={styles.heading}>{col.label}</h4>
+                </Link>
+              ) : (
+                <h4 className={styles.heading}>{col.label}</h4>
+              )}
               {col.subMenu ? (
                 <ul className={styles.list}>
                   {col.subMenu.map((item, i) => (
@@ -151,7 +157,7 @@ export default function MegaMenuInvestor() {
                 </ul>
               ) : (
                 <div className={styles.listItem}>
-                  <Link href={col.href}>{col.label}</Link>
+                  {/* <Link href={col.href}>{col.label}</Link> */}
                 </div>
               )}
             </div>
