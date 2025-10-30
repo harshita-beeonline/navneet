@@ -172,7 +172,7 @@ export default function OurStory() {
   }, []);
 
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="our-story">
       {/* Intro content */}
       <div className={styles.header}>
         <div className={styles.bar} />

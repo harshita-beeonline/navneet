@@ -1,9 +1,28 @@
+"use client";
+
 import React from "react";
 import styles from "../../../styles/AboutUs/OurJourney.module.scss";
 import Navneet_Founders from "../../../public/images/about/Navneet-Founders.png";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
 
 const OurJourney = () => {
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const handleKnowMoreClick = () => {
+    if (pathname === "/aboutus") {
+      // ✅ Same page → smooth scroll
+      const section = document.getElementById("our-story");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // ✅ Different page → navigate with hash
+      router.push("/aboutus#our-story");
+    }
+  };
+
   return (
     <section className={styles["ourjourney-section"]}>
       <div className={styles["ourjourney-inner"]}>
@@ -28,12 +47,12 @@ const OurJourney = () => {
               at Walkeshwar.
             </p>
 
-            <button
+            <div
               className={styles["ourjourney-button"]}
-              aria-label="Read more"
+              onClick={handleKnowMoreClick}
             >
-              Read more
-            </button>
+              Know more
+            </div>
           </div>
         </div>
 
@@ -44,6 +63,7 @@ const OurJourney = () => {
             src={Navneet_Founders}
             alt="Navneet founders"
             className={styles["image"]}
+            fill
             priority={false}
           />
         </div>

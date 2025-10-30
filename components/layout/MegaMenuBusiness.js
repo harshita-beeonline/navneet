@@ -142,7 +142,7 @@ export default function MegaMenuBusiness() {
                           style={{
                             paddingTop: "5px",
                             listStyleType: "none",
-                            paddingLeft: "0px",
+                            paddingLeft: "10px",
                             margin: 0,
                           }}
                         >

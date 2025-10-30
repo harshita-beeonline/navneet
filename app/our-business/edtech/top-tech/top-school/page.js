@@ -189,7 +189,7 @@ export default function TopSchool() {
                 1800 266 6676
               </a>
             </p>
-            <a href="mailto:info@navneet.com" className={styles.emailBtn}>
+            <a href="mailto:info@navneettoptech.com" className={styles.emailBtn}>
               Email Us
             </a>
           </div>

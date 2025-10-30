@@ -37,7 +37,7 @@
       background: var(--navneet-blue);
       margin-top: 4px;
       border-radius: 0;
-      height: clamp(96px, 14vw, 160px);
+      height: clamp(96px, 14vw, 250px);
 
       @media (max-width: 1024px) {
         height: 140px;
@@ -66,12 +66,12 @@
 
     .ourjourney-heading {
       font-weight: 700;
-      font-size: clamp(26px, 4vw, 48px);
+      font-size: clamp(26px, 4vw, 42px);
       line-height: clamp(36px, 5vw, 56px);
       color: var(--text-dark);
       max-width: 520px;
       letter-spacing: -0.02em;
-      margin-top: 10px;
+      margin-top: 0;
     }
 
     .accent {
@@ -84,23 +84,20 @@
 
     .ourjourney-para {
       font-size: 18px;
-      line-height: 32px;
+      line-height: 26px;
       font-weight: 500;
       color: var(--muted);
       max-width: 520px;
-      margin-top: 6px;
+      margin-top: 0;
     }
 
     .ourjourney-button {
-      margin-top: 12px;
-      background: var(--navneet-blue);
-      color: #fff;
+      margin-top: 15px;
+      color: #000;
       border: none;
-      padding: 12px 28px;
-      border-radius: 40px;
       font-weight: 600;
       cursor: pointer;
-      box-shadow: 0 4px 18px rgba(47, 109, 178, 0.12);
+      text-decoration: underline;
     }
   }
 
@@ -108,9 +105,8 @@
   .imageWrapper {
     flex: 0 0 auto;
     width: 745px;
-    aspect-ratio: 745 / 534;
+    aspect-ratio: 745 / 480;
     max-width: 100%;
-    border-radius: 6px;
     overflow: hidden;
     position: relative;
 
@@ -119,7 +115,6 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      filter: sepia(0.35) saturate(0.85) contrast(0.95);
     }
   }
 
@@ -167,10 +162,6 @@
         font-size: 15px;
         line-height: 24px;
         max-width: 100%;
-      }
-
-      .ourjourney-button {
-        padding: 10px 20px;
       }
     }
   }
