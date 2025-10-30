@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation"; // ✅ Import for route detection
-import styles from "../../styles/MegaMenu.module.scss";
+import styles from "../../styles/MegaMenuInvestors.module.scss";
 
 const investorMenu = [
   {
