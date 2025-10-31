@@ -16,7 +16,7 @@
       h2 {
         font-family: Montserrat;
         font-weight: 700;
-        font-size: 45px;
+        font-size: 38px;
         leading-trim: NONE;
         line-height: 55px;
         letter-spacing: 0%;
@@ -48,6 +48,15 @@
         letter-spacing: 0%;
         color: #ffffff;
         cursor: pointer;
+        // background: #2f6db2;
+        // color: #fff;
+        // font-size: 16px;
+        // font-weight: 600;
+        // line-height: 100%;
+        // padding: 12px 32px;
+        // border-radius: 36px;
+        // border: none;
+        // cursor: pointer;
       }
     }
     .cbse-section-right-content {
@@ -63,9 +72,10 @@
     }
   }
 }
+
 @media (max-width: 1280px) {
   .navneet-cbse-section-content {
-    padding: 0px 0px 0px 40px;
+    padding: 20px 20px 20px 40px;
     .cbse-section-left-right-content {
       display: flex;
       align-items: center;
@@ -104,10 +114,11 @@
     }
   }
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .navneet-cbse-section-content {
     margin-bottom: 20px;
-    padding: 0px 0px 0px 0px;
+    padding: 20px 0px 0px 0px;
     .cbse-section-left-right-content {
       flex-direction: column;
       .cbse-section-left-content {
