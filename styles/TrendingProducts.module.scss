@@ -50,8 +50,15 @@
 }
 
 .trendingProductsSection {
+  background: linear-gradient(
+    174.05deg,
+    #ffffff -1.72%,
+    #e8f7ff 61.4%,
+    #d9e9f8 106.39%
+  );
+
   margin: 0px 0;
-  padding: 0px 80px 20px;
+  padding: 20px 80px 20px;
 
   h4,
   p {

@@ -352,8 +352,8 @@ $panel-shadow: rgba(17, 24, 39, 0.06);
 
 .callContent p {
   font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 36px;
+  font-weight: 700;
+  font-size: 34px;
   line-height: 1.2;
   margin: 0;
   color: #233447;
@@ -370,7 +370,7 @@ $panel-shadow: rgba(17, 24, 39, 0.06);
   padding: 10px 80px;
   background: transparent;
   border: 2px solid #1776c8;
-  border-radius: 30px;
+  border-radius: 10px;
   font-weight: 600;
   color: #1776c8;
   text-decoration: none;
@@ -402,7 +402,6 @@ $panel-shadow: rgba(17, 24, 39, 0.06);
     font-size: 16px;
   }
 }
-
 
 /* ------------------------ small screens ------------------------ */
 @media (max-width: 480px) {
