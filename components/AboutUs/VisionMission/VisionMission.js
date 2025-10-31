@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import { motion } from "framer-motion"; // 👈 added
+import { motion } from "framer-motion";
 import styles from "../../../styles/AboutUs/VisionMission.module.scss";
 
 import vision_mission_bg from "../../../public/images/about/vision_mission_bg.jpg";
@@ -29,14 +29,14 @@ export default function VisionMission() {
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }} 
+          viewport={{ once: false, amount: 0.3 }}
         >
           <motion.div
             className={styles["iconWrap"]}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
           >
             <Image
               src={VisionIcon}
@@ -48,11 +48,11 @@ export default function VisionMission() {
           </motion.div>
 
           <motion.h2
-            className={styles["title"]}
+            className={styles["title-1"]}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
           >
             Vision
           </motion.h2>
@@ -62,7 +62,7 @@ export default function VisionMission() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
           >
             To provide the highest quality of educational products and services
             to customers in the language/medium of their choice.
@@ -77,30 +77,30 @@ export default function VisionMission() {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.3 }} 
+          viewport={{ once: false, amount: 0.3 }}
         >
           <motion.div
             className={styles["iconWrap"]}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
           >
             <Image
               src={MissionIcon}
               alt="mission icon"
               width={300}
-              height={217}
+              height={200}
               priority
             />
           </motion.div>
 
           <motion.h2
-            className={styles["title"]}
+            className={styles["title-2"]}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
           >
             Mission
           </motion.h2>
@@ -110,7 +110,7 @@ export default function VisionMission() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
-            viewport={{ once: false, amount: 0.3 }} 
+            viewport={{ once: false, amount: 0.3 }}
           >
             <li>
               To provide students with best quality supplementary study material
