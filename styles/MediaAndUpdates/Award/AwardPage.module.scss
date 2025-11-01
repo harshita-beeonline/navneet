@@ -3,7 +3,7 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 120px 24px 40px; // kept same top spacing as old wrapper
-  background: #ffffff;
+  // background: #ffffff;
   color: #111827;
   font-family: "Montserrat", sans-serif;
 
@@ -132,7 +132,7 @@
   max-width: 1300px;
   margin: 0 auto;
   padding: 0 24px 80px; // ✅ keeps spacing consistent
-  background: #ffffff;
+  // background: #ffffff;
 
   .awardsGridDesktop {
     display: grid;
@@ -178,7 +178,7 @@
 
 /* ---------------- Award Card ---------------- */
 .award {
-  background: #f6f6f6;
+  background: #ffffff;
   border-radius: 10px;
   padding: 22px;
   display: flex;
