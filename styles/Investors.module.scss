@@ -1,10 +1,14 @@
 .investors-section-main {
   background: linear-gradient(
-    174.05deg,
-    #ffffff -1.72%,
-    #e8f7ff 61.4%,
-    #d9e9f8 106.39%
+    90deg,
+    #fff8ec 0%,
+    /* lighter peach */ #fdf9ee 15%,
+    /* lighter cream */ #f6f6f3 35%,
+    /* lighter neutral */ #f1f3f6 60%,
+    /* softer cool gray */ #edf3f4 80%,
+    /* lighter blue-gray */ #e2f1fc 100% /* pale sky blue */
   );
+
   padding: 20px 80px;
   width: 100%;
   box-sizing: border-box;
