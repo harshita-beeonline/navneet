@@ -93,7 +93,7 @@ const TrendingProducts = () => {
         <Swiper
           modules={[Scrollbar, Autoplay]} // ✅ Added Autoplay
           slidesPerView={4}
-          spaceBetween={30}
+          spaceBetween={20}
           scrollbar={{ draggable: true }}
           autoplay={{
             delay: 2000, // Time between slides (ms)

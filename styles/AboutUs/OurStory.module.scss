@@ -3,7 +3,7 @@
   background: var(--bg);
   padding: var(--outer-pad);
   margin: var(--outer-margin);
-  border-radius: 12px;
+  // border-radius: 12px;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
 }
@@ -14,14 +14,14 @@
   grid-template-columns: 6px 1fr;
   gap: 16px;
   // padding: clamp(20px, 4vw, 40px);
-  padding: clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px) 0;
+  // padding: clamp(20px, 4vw, 40px) clamp(20px, 4vw, 40px) 0;
 }
 
 .bar {
   background: var(--white);
   border-radius: 4px;
   width: 6px;
-  height: clamp(80px, 14vw, 160px);
+  // height: clamp(80px, 14vw, 160px);
 }
 
 .copy .hint {
