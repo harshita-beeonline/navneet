@@ -2,6 +2,10 @@ import styles from "../../../../styles/Investor/InvestorInformation/QuarterlySha
 
 const qspdata = [
   {
+    text: "Share Holding Pattern As on 31th Dec 2025",
+    link: "https://img.modxcomputers.com/navneetpdf/1769519470142-Share-Holding-Pattern-as-on-31st-Dec-2025.pdf",
+  },
+  {
     text: "Share Holding Pattern As on 30th June 2025",
     link: "https://img.modxcomputers.com/navneetpdf/1759752201088-Share-Holding-Pattern-as-on-30th-June-2025.pdf",
   },
@@ -158,16 +162,16 @@ const qspdata = [
     link: "hhttps://img.modxcomputers.com/navneetpdf/1759756611122-Share-Holding-pattern-as-on-31st-december-2015.pdf",
   },
   {
-    text:"Share Holding Pattern as on 30th September 2015",
-    link:"https://img.modxcomputers.com/navneetpdf/1759756662851-SHARE-HOLDING-PATTERN-AS-ON-30TH-SEPTEMBER-2015.pdf"
+    text: "Share Holding Pattern as on 30th September 2015",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756662851-SHARE-HOLDING-PATTERN-AS-ON-30TH-SEPTEMBER-2015.pdf",
   },
   {
-    text:"Share Holding Pattern as on 30th June 2015",
-    link:"https://img.modxcomputers.com/navneetpdf/1759756710243-SHARE-HOLDING-PATTERN-AS-ON-30-JUNE-2015.pdf"
+    text: "Share Holding Pattern as on 30th June 2015",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756710243-SHARE-HOLDING-PATTERN-AS-ON-30-JUNE-2015.pdf",
   },
   {
-    text:"Share Holding Pattern as on 31st March 2015",
-    link:"https://img.modxcomputers.com/navneetpdf/1759756751665-SHARE-HOLDING-PATTERN-AS-ON-31-ST-MARCH-2015.pdf"
+    text: "Share Holding Pattern as on 31st March 2015",
+    link: "https://img.modxcomputers.com/navneetpdf/1759756751665-SHARE-HOLDING-PATTERN-AS-ON-31-ST-MARCH-2015.pdf",
   },
 ];
 
