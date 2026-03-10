@@ -46,7 +46,7 @@ $card-light: #d8eefc;
   @media (max-width: 1024px) {
     height: 320px;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 576px) {
     height: auto; /* let mobileHero control height */
   }
 }
@@ -66,17 +66,15 @@ $card-light: #d8eefc;
 /* Mobile hero */
 .mobileHero {
   display: none;
-  position: relative;
   width: 100%;
-  height: 380px; /* base mobile height */
-  overflow: hidden;
 }
 
-.mobileBg,
-.mobileTop {
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.mobileHeroImage {
+  display: block;
+  width: 100% !important;
+  height: auto !important;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 /* Blue background */
@@ -119,28 +117,12 @@ $card-light: #d8eefc;
 }
 
 /* Show only mobile */
-@media (max-width: 768px) {
+@media (max-width: 576px) {
   .desktopHero {
     display: none;
   }
   .mobileHero {
     display: block;
-  }
-}
-
-/* Small phones */
-@media (max-width: 480px) {
-  .mobileHero {
-    height: 420px;
-  }
-  .mobileBagImg {
-    top: 9%;
-    width: 32%;
-    left: 5%;
-  }
-  .mobileGirlImg {
-    width: 52%;
-    right: 3%;
   }
 }
 

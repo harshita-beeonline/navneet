@@ -2,11 +2,8 @@
 import React from "react";
 import Image from "next/image";
 
-import exports_hero_desktop from "../../../../public/images/our-business/exports-hero-desktop.png";
-import exports_hero_mobile_top from "../../../../public/images/our-business/exports-hero-mobile-top.png";
-import exports_hero_mobile_girl from "../../../../public/images/our-business/exports-hero-mobile-girl.png";
-import exports_hero_mobile_bg from "../../../../public/images/our-business/exports-hero-mobile-bg.png";
-import exports_hero_mobile_bag from "../../../../public/images/our-business/exports-hero-mobile-bag.png";
+import exports_hero_desktop from "../../../../public/images/our-business/export-desktop.png";
+import exports_hero_mobile from "../../../../public/images/our-business/export-mob.png";
 
 import styles from "../../../../styles/OurBusiness/Stationary/Exports.module.scss";
 
@@ -44,36 +41,13 @@ export default function Exports() {
             />
           </div>
 
-          {/* Mobile hero (layered images) */}
+          {/* Mobile hero (single image) */}
           <div className={styles.mobileHero} aria-hidden>
-            {/* blue background */}
-            <div
-              className={styles.mobileBg}
-              style={{ backgroundImage: `url(${exports_hero_mobile_bg.src})` }}
-              aria-hidden
-            />
-
-            {/* yellow top wave */}
-            <div
-              className={styles.mobileTop}
-              style={{ backgroundImage: `url(${exports_hero_mobile_top.src})` }}
-              aria-hidden
-            />
-
-            {/* bag */}
-            <img
-              src={exports_hero_mobile_bag.src}
-              alt="bag"
-              className={styles.mobileBagImg}
-              loading="eager"
-            />
-
-            {/* girl */}
-            <img
-              src={exports_hero_mobile_girl.src}
-              alt="girl"
-              className={styles.mobileGirlImg}
-              loading="eager"
+            <Image
+              src={exports_hero_mobile}
+              alt=""
+              priority
+              className={styles.mobileHeroImage}
             />
           </div>
         </div>
