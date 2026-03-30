@@ -1,0 +1,149 @@
+.big-goals-cards-section {
+  width: 100%;
+  background: #2f6db2;
+  padding: 60px 80px 40px 80px;
+  overflow: hidden;
+
+  h2 {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0%;
+    color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+  }
+
+  .static-goals-cards {
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+    width: 100%;
+  }
+
+  .all-goals-cards {
+    margin-top: 40px;
+    width: 100%;
+
+    :global(.swiper-slide) {
+      height: auto;
+    }
+  }
+
+  .goals-card {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 0px 30px 50px 30px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+    }
+
+    &::before {
+      background-image: var(--goal-card-image);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      transform: scale(1);
+      transition: transform 0.45s ease;
+      z-index: 0;
+    }
+    h5 {
+      position: relative;
+      z-index: 2;
+      font-family: Montserrat;
+      font-weight: 700;
+      font-style: Bold;
+      font-size: 28px;
+      line-height: 1.1;
+      letter-spacing: 0%;
+      color: #ffffff;
+      margin: 0px;
+      padding: 0px;
+    }
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .big-goals-cards-section {
+    .goals-card:hover {
+      &::before {
+        transform: scale(1.08);
+      }
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .big-goals-cards-section {
+    h2 {
+      font-size: 34px;
+    }
+
+    .static-goals-cards,
+    .all-goals-cards {
+      margin-top: 32px;
+    }
+
+    .goals-card {
+      height: 430px;
+      padding: 0px 24px 34px 24px;
+      h5 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .big-goals-cards-section {
+    h2 {
+      font-size: 30px;
+    }
+
+    .static-goals-cards {
+      margin-top: 24px;
+      gap: 14px;
+      overflow-x: auto;
+      padding: 0px 16px 8px 16px;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .goals-card {
+        min-width: 58vw;
+        flex: 0 0 auto;
+      }
+    }
+
+    .all-goals-cards {
+      margin-top: 24px;
+      padding: 0px 16px 8px 16px;
+    }
+
+    .goals-card {
+      height: 240px;
+      border-radius: 16px;
+      padding: 0px 18px 20px 18px;
+
+      h5 {
+        font-size: 18px;
+      }
+    }
+  }
+}
