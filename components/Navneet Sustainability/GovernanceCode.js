@@ -76,8 +76,8 @@ const GovernanceCode = () => {
           },
         }}
       >
-        {codeCards.map((item) => (
-          <SwiperSlide key={item.title} style={{ height: "auto" }}>
+        {codeCards.map((item,index) => (
+          <SwiperSlide key={index} style={{ height: "auto" }}>
             <div className={styles["code-card"]}>
               <h6>{item.mb}</h6>
               <div className={styles["download-part"]}>
