@@ -123,6 +123,30 @@ const BigGoalsKey = () => {
     restartAutoplay(swiperRef.current);
   }, [mounted]);
 
+  const renderGoalCard = (item, key) => (
+    <article
+      className={styles["goals-card"]}
+      key={key}
+      style={{ "--goal-card-image": `url(${item.image})` }}
+    >
+      <div className={styles["goals-card-content"]}>
+        <h5>{item.name}</h5>
+        <ul className={styles["goals-card-list"]}>
+          {item.list.map((point) => (
+            <li key={point.title}>
+              <span className={styles["goals-card-list-title"]}>
+                {point.title}
+              </span>{" "}
+              <span className={styles["goals-card-list-detail"]}>
+                {point.detail}
+              </span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </article>
+  );
+
   return (
     <div className={styles["big-goals-cards-section"]}>
       <h2>Big goals and key milestones</h2>
@@ -154,7 +178,7 @@ const BigGoalsKey = () => {
           }}
           breakpoints={{
             0: {
-              slidesPerView: 1.55,
+              slidesPerView: 1,
               spaceBetween: 20,
               centeredSlides: true,
             },
@@ -183,26 +207,13 @@ const BigGoalsKey = () => {
         >
           {swiperCardData.map((item, index) => (
             <SwiperSlide key={`${item.key}-${index}`}>
-              <article
-                className={styles["goals-card"]}
-                style={{ "--goal-card-image": `url(${item.image})` }}
-              >
-                <h5>{item.name}</h5>
-              </article>
+              {renderGoalCard(item)}
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
         <div className={styles["static-goals-cards"]}>
-          {cardData.map((item) => (
-            <article
-              className={styles["goals-card"]}
-              key={item.name}
-              style={{ "--goal-card-image": `url(${item.image})` }}
-            >
-              <h5>{item.name}</h5>
-            </article>
-          ))}
+          {cardData.map((item) => renderGoalCard(item, item.name))}
         </div>
       )}
     </div>

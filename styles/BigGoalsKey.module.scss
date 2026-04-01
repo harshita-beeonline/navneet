@@ -1,11 +1,38 @@
+@mixin reveal-goals-card {
+  &::before {
+    transform: scale(1.08);
+  }
+
+  &::after {
+    opacity: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(5, 18, 12, 0.18) 0%,
+      rgba(5, 14, 10, 0.58) 48%,
+      rgba(3, 8, 6, 0.9) 100%
+    );
+  }
+
+  .goals-card-content {
+    gap: 16px;
+  }
+
+  .goals-card-list {
+    opacity: 1;
+    max-height: 360px;
+    transform: translateY(0);
+  }
+}
+
 .big-goals-cards-section {
   width: 100%;
   background: #2f6db2;
   padding: 60px 80px 40px 80px;
-  @media (max-width:1280px) {
-   padding: 60px 20px 40px 20px; 
-  }
   overflow: hidden;
+
+  @media (max-width: 1280px) {
+    padding: 60px 20px 40px 20px;
+  }
 
   h2 {
     font-family: Montserrat;
@@ -44,8 +71,10 @@
     border-radius: 20px;
     overflow: hidden;
     display: flex;
-    align-items: flex-end;
+    align-items: stretch;
     padding: 0px 30px 50px 30px;
+    isolation: isolate;
+    background: #15281b;
 
     &::before,
     &::after {
@@ -64,12 +93,37 @@
       transition: transform 0.45s ease;
       z-index: 0;
     }
-    h5 {
+
+    &::after {
+      background: linear-gradient(
+        180deg,
+        rgba(7, 22, 14, 0.08) 0%,
+        rgba(5, 14, 10, 0.34) 55%,
+        rgba(3, 8, 6, 0.82) 100%
+      );
+      opacity: 0.92;
+      z-index: 1;
+      transition:
+        opacity 0.45s ease,
+        background 0.45s ease;
+    }
+
+    .goals-card-content {
       position: relative;
       z-index: 2;
+      width: 100%;
+      margin-top: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      transition: gap 0.45s ease;
+    }
+
+    h5 {
+      position: relative;
       font-family: Montserrat;
       font-weight: 700;
-      font-style: Bold;
+      font-style: normal;
       font-size: 28px;
       line-height: 1.1;
       letter-spacing: 0%;
@@ -77,32 +131,105 @@
       margin: 0px;
       padding: 0px;
     }
+
+    .goals-card-list {
+      margin: 0;
+      padding-left: 18px;
+      list-style: disc;
+      list-style-position: outside;
+      display: grid;
+      gap: 8px;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transform: translateY(16px);
+      transition:
+        opacity 0.35s ease,
+        max-height 0.45s ease,
+        transform 0.45s ease;
+
+      li {
+        color: #ffffff;
+
+        &::marker {
+          color: #ffffff;
+        }
+      }
+    }
+
+    .goals-card-list-title {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-style: normal;
+      font-size: 16px;
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: #ffffff;
+    }
+
+    .goals-card-list-detail {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 16px;
+      @media (max-width: 768px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: #ffffff;
+    }
   }
 }
 
 @media (hover: hover) and (pointer: fine) {
   .big-goals-cards-section {
     .goals-card:hover {
-      &::before {
-        transform: scale(1.08);
+      @include reveal-goals-card;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .big-goals-cards-section {
+    padding: 30px 20px;
+
+    h2 {
+      font-size: 24px;
+      padding: 0px 20px;
+    }
+
+    .all-goals-cards {
+      :global(.swiper-slide-active) {
+        .goals-card {
+          @include reveal-goals-card;
+        }
+      }
+    }
+
+    .static-goals-cards {
+      .goals-card:first-child {
+        @include reveal-goals-card;
+      }
+    }
+
+    .goals-card {
+      height: 390px;
+      border-radius: 10px;
+      padding: 0px 20px 26px 20px;
+
+      h5 {
+        font-size: 18px;
+      }
+
+      .goals-card-list {
+        gap: 6px;
       }
     }
   }
-}
-@media (max-width:768px) {
-.big-goals-cards-section {
-  padding: 30px 0px;
-  h2 {
-    font-size: 24px;
-    padding: 0px 20px;
-  }
-  .goals-card {
-    height: 320px;
-    border-radius: 10px;
-    padding: 0px 20px 30px 20px;
-    h5 {
-      font-size: 18px;
-    }
-  }
-}
 }
