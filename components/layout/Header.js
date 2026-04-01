@@ -118,6 +118,15 @@ export default function Header() {
           EHS
         </Link>
 
+        <Link
+          href="/navneet-sustainability"
+          className={
+            isActive("/navneet-sustainability") ? styles.activeLink : ""
+          }
+        >
+          ESG
+        </Link>
+
         <div>
           <MegaMenuMedia/>
         </div>
@@ -274,6 +283,13 @@ export default function Header() {
 
           <Link href="/ehs" onClick={() => setIsMenuOpen(false)}>
             EHS
+          </Link>
+
+          <Link
+            href="/navneet-sustainability"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            ESG
           </Link>
 
           <div className={styles.mobileAccordion}>
