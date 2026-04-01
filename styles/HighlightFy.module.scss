@@ -1,6 +1,9 @@
 .highlight-fy-section {
   width: 100%;
   padding: 20px 80px 40px 80px;
+  @media (max-width:1280px) {
+    padding: 20px 20px 40px 20px;
+  }
   h2 {
     font-family: Montserrat;
     font-weight: 600;
@@ -15,6 +18,9 @@
   .highlight-data {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    @media (max-width:1024px) {
+     grid-template-columns: repeat(2,1fr); 
+    }
     column-gap: 60px;
     row-gap: 40px;
     margin-top: 50px;
@@ -83,4 +89,49 @@
       }
     }
   }
+}
+@media (max-width:768px) {
+.highlight-fy-section {
+  padding: 20px;
+  h2 {
+    font-size: 24px;
+    line-height: normal;
+    text-align: center;
+  }
+  .highlight-data {
+    grid-template-columns: repeat(2,1fr);
+    @media (max-width:620px) {
+      grid-template-columns: repeat(1,1fr);
+      text-align: center;
+      row-gap: 20px;
+    }
+    column-gap: 40px;
+    row-gap: 40px;
+    margin-top: 40px;
+    .highlight-card {
+      padding: 0px 0px 20px 0px;
+      h4 {
+        font-size: 16px;
+      }
+      .highlight-stat-block {
+        h5 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+      .highlight-image-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .eco-image {
+          width: 82px;
+          height: 82px;
+        }
+      }
+    }
+  }
+}
 }

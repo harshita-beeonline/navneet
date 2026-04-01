@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
@@ -11,6 +11,7 @@ import goalscard3 from "../../public/images/goalscard3.png";
 
 const BigGoalsKey = () => {
   const [mounted, setMounted] = useState(false);
+  const swiperRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -31,25 +32,68 @@ const BigGoalsKey = () => {
     },
   ];
 
+  const minLoopSlides = 6;
+  const repeatCount = Math.max(1, Math.ceil(minLoopSlides / cardData.length));
+  const swiperCardData = Array.from({ length: repeatCount }, (_, repeatIndex) =>
+    cardData.map((item) => ({
+      ...item,
+      key: `${item.name}-${repeatIndex}`,
+    }))
+  ).flat();
+
+  const restartAutoplay = (swiper) => {
+    if (!swiper) {
+      return;
+    }
+
+    swiper.update();
+
+    if (swiper.autoplay && !swiper.autoplay.running) {
+      swiper.autoplay.start();
+    }
+  };
+
+  useEffect(() => {
+    if (!mounted || !swiperRef.current) {
+      return;
+    }
+
+    restartAutoplay(swiperRef.current);
+  }, [mounted]);
+
   return (
     <div className={styles["big-goals-cards-section"]}>
       <h2>Big goals and key milestones</h2>
       {mounted ? (
         <Swiper
           modules={[Autoplay]}
-          loop
+          rewind
           speed={900}
           grabCursor
           centeredSlides
+          watchOverflow={false}
+          observer
+          observeParents
           autoplay={{
             delay: 2400,
             disableOnInteraction: false,
-            pauseOnMouseEnter: true,
+            pauseOnMouseEnter: false,
+            stopOnLastSlide: false,
+          }}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+            restartAutoplay(swiper);
+          }}
+          onBreakpoint={restartAutoplay}
+          onAutoplayStop={restartAutoplay}
+          onReachEnd={(swiper) => {
+            swiper.slideTo(0);
+            restartAutoplay(swiper);
           }}
           breakpoints={{
             0: {
-              slidesPerView: 1.45,
-              spaceBetween: 14,
+              slidesPerView: 1.55,
+              spaceBetween: 20,
               centeredSlides: true,
             },
             480: {
@@ -75,8 +119,8 @@ const BigGoalsKey = () => {
           }}
           className={styles["all-goals-cards"]}
         >
-          {cardData.map((item) => (
-            <SwiperSlide key={item.name}>
+          {swiperCardData.map((item, index) => (
+            <SwiperSlide key={`${item.key}-${index}`}>
               <article
                 className={styles["goals-card"]}
                 style={{ "--goal-card-image": `url(${item.image})` }}

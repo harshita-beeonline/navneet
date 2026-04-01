@@ -6,6 +6,13 @@
   background-position: center;
   background-repeat: no-repeat;
   padding: 30px 120px 0px 120px;
+  @media (max-width: 1380px) {
+    padding: 30px 60px 0px 60px;
+  }
+  @media (max-width: 1280px) {
+    margin-top: 80px;
+    padding: 30px 20px 0px 20px;
+  }
   .banner-left-right-content {
     display: flex;
     align-items: center;
@@ -90,6 +97,9 @@
 .sustainability-vision-section {
   width: 100%;
   padding: 40px 80px;
+  @media (max-width: 1280px) {
+    padding: 40px 20px;
+  }
   .vision-left-right-content {
     display: flex;
     align-items: center;
@@ -139,6 +149,133 @@
         color: #42362c;
         margin-top: 20px;
         width: 80%;
+      }
+    }
+  }
+}
+@media (max-width: 1180px) {
+  .sustainability-banner-section {
+    .banner-left-right-content {
+      flex-direction: column;
+      .banner-left-content {
+        order: 2;
+        width: 50%;
+        @media (max-width: 1024px) {
+          width: 60%;
+        }
+        @media (max-width: 938px) {
+          width: 70%;
+        }
+        @media (max-width: 850px) {
+          width: 80%;
+        }
+      }
+      .banner-right-content {
+        order: 1;
+        h2 {
+          width: 70%;
+        }
+      }
+    }
+  }
+  .sustainability-vision-section {
+    .vision-left-right-content {
+      .vision-left-content {
+        .vision-image {
+          width: 468px;
+          height: auto;
+          @media (max-width: 938px) {
+            width: 368px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .sustainability-banner-section {
+    margin-top: 80px;
+    padding: 20px 20px 0px 20px;
+    .banner-left-right-content {
+      flex-direction: column;
+      gap: 20px;
+      .banner-left-content {
+        order: 2;
+        width: 100%;
+        .person-image {
+          width: 160px;
+          height: 263px;
+        }
+        .person-details {
+          right: 350px;
+          @media (max-width: 700px) {
+            right: 280px;
+          }
+          @media (max-width: 650px) {
+            right: 200px;
+          }
+          @media (max-width: 600px) {
+            right: 120px;
+          }
+          @media (max-width: 500px) {
+            right: 80px;
+          }
+          @media (max-width: 480px) {
+            right: 20px;
+          }
+          @media (max-width: 400px) {
+            right: 10px;
+          }
+          @media (max-width: 380px) {
+            right: 0px;
+          }
+          bottom: 30px;
+          padding: 12px;
+          h5 {
+            font-size: 20px;
+          }
+          h6 {
+            font-size: 14px;
+          }
+        }
+      }
+      .banner-right-content {
+        order: 1;
+        h2 {
+          font-size: 28px;
+          width: 100%;
+        }
+        h4 {
+          font-size: 16px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .sustainability-vision-section {
+    padding: 20px 0px;
+    .vision-left-right-content {
+      padding: 20px 10px;
+      .vision-left-content {
+        .vision-image {
+          width: 100%;
+          height: auto;
+          @media (max-width: 418px) {
+            width: 128px;
+            height: 70px;
+          }
+        }
+      }
+      .vision-right-content {
+        h4 {
+          font-size: 24px;
+        }
+        h6 {
+          font-size: 14px;
+          line-height: 20px;
+          width: 100%;
+          margin-top: 10px;
+        }
       }
     }
   }

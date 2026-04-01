@@ -1,6 +1,9 @@
 .feedback-esg-section {
   width: 100%;
   padding: 50px 80px;
+  @media (max-width:1280px) {
+    padding: 50px 20px;
+  }
   .feedback-content {
     background: #eaffd8;
     display: flex;
@@ -89,4 +92,45 @@
       }
     }
   }
+}
+@media (max-width:768px) {
+.feedback-esg-section {
+  padding: 30px 20px;
+  .feedback-content {
+    padding: 40px 10px;
+    h2 {
+      font-size: 24px;
+    }
+    h6 {
+      font-size: 16px;
+      margin-top: 16px;
+    }
+    .all-email-cards {
+      gap: 80px;
+      margin-top: 30px;
+      @media (max-width:620px) {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .email-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h4 {
+          font-size: 20px;
+        }
+        p {
+          font-size: 14px;
+        }
+        .icon-email {
+          h5 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
 }

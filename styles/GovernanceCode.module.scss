@@ -1,6 +1,9 @@
 .governance-code-section {
   width: 100%;
   padding: 20px 0px 60px 80px;
+  @media (max-width:1280px) {
+   padding: 20px 0px 60px 20px; 
+  }
   h2 {
     font-family: Montserrat;
     font-weight: 600;
@@ -98,4 +101,22 @@
       }
     }
   }
+}
+@media (max-width:768px) {
+.governance-code-section {
+  padding: 20px 0px 60px 20px;
+  h2 {
+    font-size: 24px;
+  }
+  .all-codes-cards {
+    .code-card {
+      height: 280px;
+      .download-part {
+        h4 {
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}
 }
