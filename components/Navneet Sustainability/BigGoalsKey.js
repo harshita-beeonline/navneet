@@ -11,7 +11,10 @@ import goalscard3 from "../../public/images/goalscard3.png";
 
 const BigGoalsKey = () => {
   const [mounted, setMounted] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const [shouldAutoReveal, setShouldAutoReveal] = useState(false);
   const swiperRef = useRef(null);
+  const revealTimeoutRef = useRef(null);
 
   useEffect(() => {
     setMounted(true);
@@ -28,7 +31,8 @@ const BigGoalsKey = () => {
         },
         {
           title: "Emission reduction:",
-          detail: "5,770 MT CO₂ offset through renewables and biodiversity initiatives",
+          detail:
+            "5,770 MT CO₂ offset through renewables and biodiversity initiatives",
         },
         {
           title: "Waste recovery:",
@@ -50,7 +54,8 @@ const BigGoalsKey = () => {
       list: [
         {
           title: "Training:",
-          detail: "3.72 hours per employee across safety, ethics, and operations",
+          detail:
+            "3.72 hours per employee across safety, ethics, and operations",
         },
         {
           title: "Safety:",
@@ -84,7 +89,8 @@ const BigGoalsKey = () => {
         },
         {
           title: "Policies:",
-          detail: "EHS, ESG, Code of Code of Conduct, Materiality Assessment, Supplier Code of Conduct & Site Assessments",
+          detail:
+            "EHS, ESG, Code of Code of Conduct, Materiality Assessment, Supplier Code of Conduct & Site Assessments",
         },
         {
           title: "Governance:",
@@ -94,38 +100,96 @@ const BigGoalsKey = () => {
     },
   ];
 
-  const minLoopSlides = 6;
-  const repeatCount = Math.max(1, Math.ceil(minLoopSlides / cardData.length));
+  const repeatCount = 3;
   const swiperCardData = Array.from({ length: repeatCount }, (_, repeatIndex) =>
     cardData.map((item) => ({
       ...item,
       key: `${item.name}-${repeatIndex}`,
+      realIndex: cardData.findIndex((card) => card.name === item.name),
     })),
   ).flat();
 
-  const restartAutoplay = (swiper) => {
-    if (!swiper) {
-      return;
+  useEffect(() => {
+    if (typeof window === "undefined") {
+      return undefined;
     }
 
-    swiper.update();
+    const updateRevealMode = () => {
+      const enableAutoReveal = window.innerWidth <= 1024;
+      setShouldAutoReveal(enableAutoReveal);
 
-    if (swiper.autoplay && !swiper.autoplay.running) {
-      swiper.autoplay.start();
-    }
-  };
+      if (!enableAutoReveal) {
+        setActiveIndex(-1);
+        if (revealTimeoutRef.current) {
+          clearTimeout(revealTimeoutRef.current);
+          revealTimeoutRef.current = null;
+        }
+        return;
+      }
+
+      const currentIndex =
+        typeof swiperRef.current?.realIndex === "number"
+          ? swiperRef.current.realIndex % cardData.length
+          : 0;
+      setActiveIndex(currentIndex);
+    };
+
+    updateRevealMode();
+    window.addEventListener("resize", updateRevealMode);
+
+    return () => {
+      window.removeEventListener("resize", updateRevealMode);
+    };
+  }, [cardData.length]);
 
   useEffect(() => {
-    if (!mounted || !swiperRef.current) {
+    return () => {
+      if (revealTimeoutRef.current) {
+        clearTimeout(revealTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const triggerReveal = (index) => {
+    if (!shouldAutoReveal) {
       return;
     }
 
-    restartAutoplay(swiperRef.current);
-  }, [mounted]);
+    if (revealTimeoutRef.current) {
+      clearTimeout(revealTimeoutRef.current);
+    }
 
-  const renderGoalCard = (item, key) => (
+    setActiveIndex(-1);
+    revealTimeoutRef.current = setTimeout(() => {
+      setActiveIndex(index % cardData.length);
+      revealTimeoutRef.current = null;
+    }, 700);
+  };
+
+  const handleSwiperReady = (swiper) => {
+    swiperRef.current = swiper;
+    triggerReveal(
+      typeof swiper.realIndex === "number"
+        ? swiper.realIndex
+        : swiper.activeIndex,
+    );
+  };
+
+  const handleSlideChange = (swiper) => {
+    triggerReveal(
+      typeof swiper.realIndex === "number"
+        ? swiper.realIndex
+        : swiper.activeIndex,
+    );
+  };
+
+  const renderGoalCard = (item, index, key) => (
     <article
-      className={styles["goals-card"]}
+      className={`${styles["goals-card"]} ${
+        shouldAutoReveal && activeIndex === index
+          ? styles["goals-card-active"]
+          : ""
+      }`}
       key={key}
       style={{ "--goal-card-image": `url(${item.image})` }}
     >
@@ -153,7 +217,9 @@ const BigGoalsKey = () => {
       {mounted ? (
         <Swiper
           modules={[Autoplay]}
-          rewind
+          loop={swiperCardData.length > 1}
+          loopAdditionalSlides={cardData.length}
+          loopPreventsSliding={false}
           speed={900}
           grabCursor
           centeredSlides
@@ -161,59 +227,58 @@ const BigGoalsKey = () => {
           observer
           observeParents
           autoplay={{
-            delay: 2400,
+            delay: 2600,
             disableOnInteraction: false,
             pauseOnMouseEnter: false,
-            stopOnLastSlide: false,
+            waitForTransition: true,
           }}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-            restartAutoplay(swiper);
-          }}
-          onBreakpoint={restartAutoplay}
-          onAutoplayStop={restartAutoplay}
-          onReachEnd={(swiper) => {
-            swiper.slideTo(0);
-            restartAutoplay(swiper);
-          }}
+          onSwiper={handleSwiperReady}
+          onSlideChange={handleSlideChange}
           breakpoints={{
             0: {
               slidesPerView: 1,
-              spaceBetween: 20,
+              spaceBetween: 10,
               centeredSlides: true,
             },
             480: {
-              slidesPerView: 1.7,
+              slidesPerView: 1.35,
               spaceBetween: 16,
               centeredSlides: true,
             },
             768: {
-              slidesPerView: 2.2,
+              slidesPerView: 1.75,
               spaceBetween: 20,
-              centeredSlides: false,
+              centeredSlides: true,
             },
             1024: {
+              slidesPerView: 2.25,
+              spaceBetween: 24,
+              centeredSlides: true,
+            },
+            1180: {
               slidesPerView: 3,
               spaceBetween: 24,
-              centeredSlides: false,
+              centeredSlides: true,
             },
             1440: {
               slidesPerView: 3,
-              spaceBetween: 32,
-              centeredSlides: false,
+              spaceBetween: 30,
+              centeredSlides: true,
             },
           }}
           className={styles["all-goals-cards"]}
         >
           {swiperCardData.map((item, index) => (
             <SwiperSlide key={`${item.key}-${index}`}>
-              {renderGoalCard(item)}
+              {renderGoalCard(item, item.realIndex)}
             </SwiperSlide>
           ))}
         </Swiper>
       ) : (
         <div className={styles["static-goals-cards"]}>
-          {cardData.map((item) => renderGoalCard(item, item.name))}
+          {cardData.map((item, index) =>
+            renderGoalCard(item, index, item.name),
+          )}
         </div>
       )}
     </div>

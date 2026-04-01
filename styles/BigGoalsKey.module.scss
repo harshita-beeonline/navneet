@@ -162,13 +162,14 @@
       font-weight: 500;
       font-style: normal;
       font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: #ffffff;
+
       @media (max-width: 768px) {
         font-size: 14px;
         line-height: 20px;
       }
-      line-height: 22px;
-      letter-spacing: 0%;
-      color: #ffffff;
     }
 
     .goals-card-list-detail {
@@ -176,14 +177,19 @@
       font-weight: 400;
       font-style: normal;
       font-size: 16px;
+      line-height: 22px;
+      letter-spacing: 0%;
+      color: #ffffff;
+
       @media (max-width: 768px) {
         font-size: 14px;
         line-height: 20px;
       }
-      line-height: 22px;
-      letter-spacing: 0%;
-      color: #ffffff;
     }
+  }
+
+  .goals-card-active {
+    @include reveal-goals-card;
   }
 }
 
@@ -195,6 +201,20 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .big-goals-cards-section {
+    .static-goals-cards {
+      .goals-card:first-child {
+        @include reveal-goals-card;
+      }
+    }
+
+    .goals-card {
+      height: 420px;
+    }
+  }
+}
+
 @media (max-width: 767px) {
   .big-goals-cards-section {
     padding: 30px 20px;
@@ -202,20 +222,6 @@
     h2 {
       font-size: 24px;
       padding: 0px 20px;
-    }
-
-    .all-goals-cards {
-      :global(.swiper-slide-active) {
-        .goals-card {
-          @include reveal-goals-card;
-        }
-      }
-    }
-
-    .static-goals-cards {
-      .goals-card:first-child {
-        @include reveal-goals-card;
-      }
     }
 
     .goals-card {
