@@ -13,6 +13,7 @@ const BigGoalsKey = () => {
   const [mounted, setMounted] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [shouldAutoReveal, setShouldAutoReveal] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   const swiperRef = useRef(null);
   const revealTimeoutRef = useRef(null);
 
@@ -115,7 +116,10 @@ const BigGoalsKey = () => {
     }
 
     const updateRevealMode = () => {
-      const enableAutoReveal = window.innerWidth <= 1024;
+      const desktopMode = window.innerWidth > 1024;
+      const enableAutoReveal = !desktopMode;
+
+      setIsDesktop(desktopMode);
       setShouldAutoReveal(enableAutoReveal);
 
       if (!enableAutoReveal) {
@@ -214,7 +218,7 @@ const BigGoalsKey = () => {
   return (
     <div className={styles["big-goals-cards-section"]}>
       <h2>Big goals and key milestones</h2>
-      {mounted ? (
+      {mounted && !isDesktop ? (
         <Swiper
           modules={[Autoplay]}
           loop={swiperCardData.length > 1}
