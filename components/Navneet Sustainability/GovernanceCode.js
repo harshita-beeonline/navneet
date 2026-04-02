@@ -48,7 +48,7 @@ const GovernanceCode = () => {
     {
       mb: "PDF, 9MB",
       title: "Supplier Code of Conduct",
-      pdfUrl: "",
+      pdfUrl: "/images/1. Supplier Code of Conduct_V3 040424.pdf",
       downloadName: "Supplier-Code-of-Conduct.pdf",
     },
     {
