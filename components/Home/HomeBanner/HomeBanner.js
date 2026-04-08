@@ -165,11 +165,11 @@ const HomeBanner = () => {
         <div className={`${styles["slide"]} ${styles["desktop-banner"]}`}>
           <Image src={Banner3Desktop} fill alt="Banner Desktop 3" />
         </div>
-        <div className={`${styles["slide"]} ${styles["mobile-banner"]}`}>
+        <div className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}>
           <Image src={NewBannerMobile1} fill alt="Banner Mobile 1" />
         </div>
         <div
-          className={`${styles["slide"]} ${styles["mobile-banner"]} ${styles["active"]}`}
+          className={`${styles["slide"]} ${styles["mobile-banner"]}`}
         >
           <Image src={Banner1Mobile} fill alt="Banner Mobile 1" />
         </div>

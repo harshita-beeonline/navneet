@@ -344,13 +344,14 @@
   }
 
   .header {
-    padding: 12px 40px;
+    padding: 12px 20px;
   }
 
   .navDesktop a,
   .navDesktop .dropdownToggle {
     font-size: 13px;
     padding: 4px 6px;
+    white-space: nowrap;
   }
 
   .dropdownOpen {
