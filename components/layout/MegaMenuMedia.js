@@ -41,7 +41,7 @@ export default function MegaMenuMedia() {
           isActive ? styles.activeLink : ""
         }`}
       >
-        Media & Upadtes
+        Media & Updates
       </Link>
 
       {/* Mega Menu Panel */}

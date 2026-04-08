@@ -32,7 +32,7 @@ export default function AwardsHeader() {
     <header className={styles.headerSection}>
       <div>
         <p className={styles.subHeading}>Awards</p>
-        <h1 className={styles.mainHeading}>Awards & accolades</h1>
+        <h1 className={styles.mainHeading}>Awards & Accolades</h1>
         <p className={styles.description}>
           Our Awards, our pride – The awards section determines the goodwill of
           Navneet and its products. It shows the year-by-year Navneet’s

@@ -54,7 +54,7 @@ const Awards = () => {
         {/* Section Header */}
         <div className={styles["awards-section-text"]}>
           <h2 id="awards-heading" className={styles["awards-section-heading"]}>
-            Awards & accolades
+            Awards & Accolades
           </h2>
           <p className={styles["awards-section-para"]}>
             Our Awards, our pride – The awards section determines the goodwill
@@ -80,7 +80,7 @@ const Awards = () => {
               <div className={styles["award-data"]}>
                 <p className={styles["award-title"]}>{award.title}</p>
                 <p className={styles["award-year"]}>{award.year}</p>
-                <p className={styles["award-name"]}>{award.name}</p>
+                {/* <p className={styles["award-name"]}>{award.name}</p> */}
               </div>
             </article>
           ))}

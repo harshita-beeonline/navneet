@@ -4,7 +4,7 @@ const About = () => {
   return (
     <section className={styles["about-section"]}>
       <div className={styles["about-section-content"]}>
-        <span className={styles["about-section-subheading"]}>About US</span>
+        <span className={styles["about-section-subheading"]}>About Us</span>
         <p className={styles["about-section-heading"]}>
           “Rooted in Trust, Growing with Innovation”
         </p>
