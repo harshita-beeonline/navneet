@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../../styles/Responsibility.module.scss";
-import { IoPlayOutline } from "react-icons/io5";
 
 const ResponsibilitySection = () => {
   return (
@@ -32,9 +31,6 @@ const ResponsibilitySection = () => {
                 Read more
               </button>
               </Link>
-              {/* <Link href="#" className={styles["watch-video"]}>
-                <IoPlayOutline size={20} className={styles["thick-icon"]} /> &nbsp; Watch video
-              </Link> */}
             </div>
           </div>
 
