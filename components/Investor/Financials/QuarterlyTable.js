@@ -15,7 +15,8 @@ export default function QuarterlyTable({ title, breadcrumb }) {
   const links = {
     "2025-26": {
       Q1: "https://img.modxcomputers.com/navneetpdf/1759730593560-2025-2056-Q1.pdf",
-      
+      Q2: "https://img.modxcomputers.com/navneetpdf/1775627745973-2025-2026-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1775628153740-2025-2026-Q3.pdf",
     },
     "2024-25": {
       Q1: "https://img.modxcomputers.com/navneetpdf/1759730699654-2024-2025-Q1.pdf",
@@ -59,23 +60,16 @@ export default function QuarterlyTable({ title, breadcrumb }) {
                 <td>{year}</td>
                 {quarters.map((q, qIndex) => (
                   <td key={qIndex}>
-                    {/* keep 2025-26 Q2/Q3/Q4 as plain text (unchanged) */}
-                    {year === "2025-26" &&
-                    (q === "Q2" || q === "Q3" || q === "Q4") ? (
-                      <span className={styles.blackText}>{q}</span>
-                    ) : (
-                      // for all other cells, use the links map and open in new tab
+                    {links[year]?.[q] ? (
                       <a
-                        href={
-                          links[year] && links[year][q]
-                            ? links[year][q]
-                            : `/${year}/${q.toLowerCase()}`
-                        }
+                        href={links[year][q]}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {q}
                       </a>
+                    ) : (
+                      <span className={styles.blackText}>{q}</span>
                     )}
                   </td>
                 ))}

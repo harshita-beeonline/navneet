@@ -14,6 +14,8 @@ export default function Transcripts() {
   const links = {
     "FY 2025-26": {
       Q1: "https://img.modxcomputers.com/navneetpdf/1759745752216-Transcript-of-Earning-Call-2025-2026-Q1.pdf",
+      Q2: "https://img.modxcomputers.com/navneetpdf/1775633439088-Transcript-of-Earning-Call-2025-2026-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1775633636976-Transcript-of-Earning-Call-2025-2026-Q3.pdf",
     },
     "FY 2024-25": {
       Q1: "https://img.modxcomputers.com/navneetpdf/1759745816921-Transcript-of-Earning-Call-2024-2025-Q1.pdf",
@@ -106,7 +108,7 @@ export default function Transcripts() {
                         Transcript
                       </a>
                     ) : (
-                      <span className={styles["blackText"]}>Transcript</span>
+                      <span className={styles["blackText"]} style={{color:"#777777"}}>Transcript</span>
                     )}
                   </td>
                 ))}

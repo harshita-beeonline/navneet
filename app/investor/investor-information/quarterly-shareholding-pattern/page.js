@@ -6,6 +6,10 @@ const qspdata = [
     link: "https://img.modxcomputers.com/navneetpdf/1769519470142-Share-Holding-Pattern-as-on-31st-Dec-2025.pdf",
   },
   {
+    text: "Share Holding Pattern As on 31st Sept 2025",
+    link: "https://img.modxcomputers.com/navneetpdf/1775634250975-Share-Holding-Pattern-as-on-30th-Sept-2025.pdf",
+  },
+  {
     text: "Share Holding Pattern As on 30th June 2025",
     link: "https://img.modxcomputers.com/navneetpdf/1759752201088-Share-Holding-Pattern-as-on-30th-June-2025.pdf",
   },

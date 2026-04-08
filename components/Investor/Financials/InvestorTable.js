@@ -14,7 +14,8 @@ export default function InvestorTable({ title, breadcrumb }) {
   const links = {
     "2025-26": {
       Q1: "https://img.modxcomputers.com/navneetpdf/1759733342592-2025-2026-Q1.pdf",
-      
+      Q2: "https://img.modxcomputers.com/navneetpdf/1775629657853-25-26-Q2.pdf",
+      Q3: "https://img.modxcomputers.com/navneetpdf/1775629688192-25-26-Q3.pdf",
     },
     "2024-25": {
       Q1: "https://img.modxcomputers.com/navneetpdf/1759733400022-2024-2025-Q1.pdf",
@@ -58,23 +59,16 @@ export default function InvestorTable({ title, breadcrumb }) {
                 <td>{year}</td>
                 {quarters.map((q, qIndex) => (
                   <td key={qIndex}>
-                  
-                    {year === "2025-26" &&
-                    (q === "Q2" || q === "Q3" || q === "Q4") ? (
-                      <span className={styles.blackText}>{q}</span>
-                    ) : (
-                      
+                    {links[year]?.[q] ? (
                       <a
-                        href={
-                          links[year] && links[year][q]
-                            ? links[year][q]
-                            : `/${year}/${q.toLowerCase()}`
-                        }
+                        href={links[year][q]}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
                         {q}
                       </a>
+                    ) : (
+                      <span className={styles.blackText}>{q}</span>
                     )}
                   </td>
                 ))}
