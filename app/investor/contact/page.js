@@ -1,9 +1,12 @@
 import styles from "../../../styles/Investor/Contact/Contact.module.scss";
 
+const complianceWhatsapp = "https://wa.me/912266626565";
+const mufgHelpdeskUrl =
+  "https://web.in.mpms.mufg.com/Helpdesk/Service_Request.html";
+
 export default function Contact() {
   return (
     <section className={styles["contact-section"]}>
-      {/* ===== Breadcrumb ===== */}
       <div className={styles["breadcrumb"]}>
         <p className={styles["crumbStrong"]}>Investor</p>
         <span className={styles["dot"]}></span>
@@ -12,34 +15,52 @@ export default function Contact() {
         <p className={styles["crumbStrong"]}>Contact</p>
       </div>
 
-      {/* ===== Page Title ===== */}
       <h1 className={styles["pageTitle"]}>Investors Contact</h1>
 
-      {/* ==== Compliance officer ==== */}
       <div>
         <div>Compliance officer</div>
-        <p>Company Secretary – Amit Buch</p>
+        <p>Company Secretary - Amit Buch</p>
         <p>
           Navneet Education Limited, Bhavani Shankar Road, Dadar (West), Mumbai
-          – 400028
+          - 400028
         </p>
-        <p>Contact Number – 022 66626565</p>
-        <p>Email id: secretarial@navneet.com</p>
+        <p>
+          Contact Number -{" "}
+          <a
+            href={complianceWhatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            022 66626565
+          </a>
+        </p>
+        <p>
+          Email id: <a href="mailto:secretarial@navneet.com">secretarial@navneet.com</a>
+        </p>
       </div>
 
-      {/* ==== Investor Relations/ Investor Grievances ==== */}
       <div>
         <div>Investor Relations/ Investor Grievances</div>
-        <p>Investor Relations – Mr. Roomy Mistry</p>
+        <p>Investor Relations - Mr. Roomy Mistry</p>
         <p>
           Navneet Education Limited, Bhavani Shankar Road, Dadar (West), Mumbai
-          – 400028
+          - 400028
         </p>
-        <p>Contact Number – 022 66626565</p>
-        <p>Email id: investors@navneet.com</p>
+        <p>
+          Contact Number -{" "}
+          <a
+            href={complianceWhatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            022 66626565
+          </a>
+        </p>
+        <p>
+          Email id: <a href="mailto:investors@navneet.com">investors@navneet.com</a>
+        </p>
       </div>
 
-      {/* ==== Registrar & Share Transfer Agent ==== */}
       <div>
         <div>Registrar & Share Transfer Agent</div>
         <p>
@@ -48,9 +69,15 @@ export default function Contact() {
         </p>
         <p>C-101, 247 Park,</p>
         <p>LBS Marg, Vikhroli (West),</p>
-        <p>Tel. No. 810 811 6767</p>
-        <p>Note – To raise an email query, following is the link</p>
-        <p>https://web.in.mpms.mufg.com/Helpdesk/Service_Request.html</p>
+        <p>
+          Tel. No. <a href="tel:+918108116767">810 811 6767</a>
+        </p>
+        <p>Note - To raise an email query, following is the link</p>
+        <p>
+          <a href={mufgHelpdeskUrl} target="_blank" rel="noopener noreferrer">
+            {mufgHelpdeskUrl}
+          </a>
+        </p>
         <p>
           Website -{" "}
           <a

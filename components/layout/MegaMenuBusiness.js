@@ -117,7 +117,7 @@ export default function MegaMenuBusiness() {
       onMouseLeave={handleMouseLeave}
     >
       <Link
-        href="/"
+        href=""
         className={`${styles.triggerLink} ${isActive ? styles.activeLink : ""}`}
       >
         Our Businesses
