@@ -32,9 +32,9 @@ const ResponsibilitySection = () => {
                 Read more
               </button>
               </Link>
-              <Link href="#" className={styles["watch-video"]}>
+              {/* <Link href="#" className={styles["watch-video"]}>
                 <IoPlayOutline size={20} className={styles["thick-icon"]} /> &nbsp; Watch video
-              </Link>
+              </Link> */}
             </div>
           </div>
 
