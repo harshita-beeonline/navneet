@@ -38,10 +38,9 @@ export default function ChildrenBooksPage() {
           <Image
             src={childbannerdesktop}
             alt="children books hero background"
-            fill
-            style={{ objectFit: "cover" }}
             priority
-            className={styles.heroBg}
+            className={styles.heroDesktopImage}
+            sizes="(max-width: 1024px) 100vw, 1200px"
           />
           <div className={styles.heroContent}>
             <div className={styles.title}>

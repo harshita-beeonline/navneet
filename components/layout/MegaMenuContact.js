@@ -36,7 +36,7 @@ export default function MegaMenuContact() {
     >
       {/* Trigger Link */}
       <Link
-        href="/"
+        href=""
         className={`${styles.triggerLink} ${
           isActive ? styles.activeLink : ""
         }`}

@@ -31,8 +31,12 @@
 .heroWrapperDesktop {
   width: 100%;
   position: relative;
-  height: 400px;
-  overflow: hidden;
+}
+
+.heroDesktopImage {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .heroMobile {
@@ -63,17 +67,6 @@
   }
   .heroMobile {
     display: block;
-  }
-
-  .heroWrapperDesktop {
-    height: 300px;
-  }
-}
-
-/* Tablet height adjustment */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .heroWrapperDesktop {
-    height: 300px;
   }
 }
 .intro {
