@@ -14,7 +14,6 @@ import youtubeIcon from "../../../../public/images/our-business/child-youtube-st
 import childbannerdesktop from "../../../../public/images/childbannerdesktop.jpg";
 import childbannermobile from "../../../../public/images/childbannermobile.jpg";
 const images = [
-  children_books_slider_1,
   children_books_slider_2,
   children_books_slider_3,
 ];

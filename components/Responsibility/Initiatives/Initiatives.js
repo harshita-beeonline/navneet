@@ -2,9 +2,19 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-
-import responsibility_initiative_eduaction from "../../../public/images/responsibility/responsibility-initiative-eduaction.png";
 import styles from "../../../styles/Responsibility/Initiatives.module.scss";
+import responseslide1 from '../../../public/images/responseslide1.jpg';
+import responseslide2 from '../../../public/images/responseslide2.jpg';
+import responseslide3 from '../../../public/images/responseslide3.jpg';
+import responseslide4 from '../../../public/images/responseslide4.jpg';
+import responseslide5 from '../../../public/images/responseslide5.jpg';
+import responseslide6 from '../../../public/images/responseslide6.jpg';
+import responseslide7 from '../../../public/images/responseslide7.jpg';
+import responseslide8 from '../../../public/images/responseslide8.jpg';
+import responseslide9 from '../../../public/images/responseslide9.jpg';
+import responseslide10 from '../../../public/images/responseslide10.jpg';
+import responseslide11 from '../../../public/images/responseslide11.jpg';
+import responseslide12 from '../../../public/images/responseslide12.png';
 
 const initiatives = [
   "Education",
@@ -14,9 +24,23 @@ const initiatives = [
   "Environment",
 ];
 
+const slides = [
+  responseslide1,
+  responseslide2,
+  responseslide3,
+  responseslide4,
+  responseslide5,
+  responseslide6,
+  responseslide7,
+  responseslide8,
+  responseslide9,
+  responseslide10,
+  responseslide11,
+  responseslide12,
+];
+
 export default function Initiatives() {
   const [current, setCurrent] = useState(0);
-  const slides = new Array(5).fill(responsibility_initiative_eduaction);
 
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
