@@ -64,30 +64,26 @@ export default function Domestic() {
           </a>
         </div>
       </div>
-
-      {/* PRODUCT RANGE */}
-      <div className={styles.productsSection}>
-        <div className={styles.productsInner}>
-          <h3 id="products-heading" className={styles.sectionTitle}>
-            The product range includes
-          </h3>
-
-          <div className={styles.productGrid}>
-            <ul className={styles.productColumn}>
-              {left.map((p, i) => (
-                <li key={i} className={styles.productItem}>
-                  {p}
-                </li>
-              ))}
-            </ul>
-
-            <ul className={styles.productColumn}>
-              {right.map((p, i) => (
-                <li key={i} className={styles.productItem}>
-                  {p}
-                </li>
-              ))}
-            </ul>
+      <div className={styles["nayi-classes-section"]}>
+        <div className={styles["nayi-classes-left-right"]}>
+          <div className={styles["nayi-classes-left"]}>
+            <div className={styles["nayi-class-youtubevideo"]}>
+              <iframe
+                src="https://www.youtube.com/embed/5uqj9x9uza8"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+          <div className={styles["nayi-classes-right"]}>
+            <h5>
+              We make sure your Nayi Class has Nayi Stationery. Youva is ready
+              to send you back to school with all your favourite stationery
+              items packed in one awesome surprise. Are you ready to go{" "}
+              <span>#BackToSchool?</span>
+            </h5>
           </div>
         </div>
       </div>
