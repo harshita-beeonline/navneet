@@ -5,7 +5,10 @@ $card-light: #d8eefc;
 
 /* ---------- Page Wrapper ---------- */
 .pageWrapper {
-  margin-top: 60px;
+  margin-top: 40px;
+  @media (max-width: 768px) {
+    margin-top: 0px;
+  }
   padding: clamp(16px, 4vw, 32px) 80px;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -22,7 +25,6 @@ $card-light: #d8eefc;
 
   @media (max-width: 768px) {
     padding: clamp(16px, 4vw, 32px) 0;
-    margin: 0;
     gap: 0;
   }
 

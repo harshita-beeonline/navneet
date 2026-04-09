@@ -2,7 +2,10 @@
 
 /* SECTION */
 .domesticSection {
-  margin-top: 60px;
+    margin-top: 40px;
+  @media (max-width:768px) {
+    margin-top: 20px;
+  }
   padding: clamp(16px, 4vw, 32px) 80px;
   @media (max-width: 1280px) {
     padding: clamp(16px, 4vw, 32px) 20px;

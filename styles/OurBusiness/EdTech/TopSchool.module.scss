@@ -13,7 +13,10 @@ $muted-blue: #e6f3ff;
 
 /* HERO */
 .heroWrapper {
-  margin-top: 60px;
+  margin-top: 40px;
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  }
   position: relative;
   width: 100%;
   height: 520px;

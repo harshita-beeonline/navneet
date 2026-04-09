@@ -1,5 +1,8 @@
 .mainsection {
-  margin-top: 60px;
+  margin-top: 40px;
+  @media (max-width:768px) {
+    margin-top: 20px;
+  }
   display: flex;
   flex-direction: column;
   gap: 32px;
