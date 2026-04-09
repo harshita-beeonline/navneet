@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "../../../styles/Responsibility/Initiatives.module.scss";
 import responseslide1 from '../../../public/images/responseslide1.jpg';
@@ -41,6 +41,14 @@ const slides = [
 
 export default function Initiatives() {
   const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+    }, 2500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const prevSlide = () => {
     setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
@@ -86,6 +94,14 @@ export default function Initiatives() {
                     width={600}
                     height={400}
                     className={styles.sliderImage}
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      height: "380px",
+                      objectFit: "contain",
+                      objectPosition: "center",
+                      backgroundColor: "#fff",
+                    }}
                   />
                 )}
               </div>
