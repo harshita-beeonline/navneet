@@ -103,11 +103,7 @@ export default function MegaMenuInvestor() {
 
   // ✅ Automatically open the menu when on any /investor route
   useEffect(() => {
-    if (pathname.startsWith("/investor")) {
-      setOpen(true);
-    } else {
-      setOpen(false);
-    }
+    setOpen(false);
   }, [pathname]);
 
   // ✅ Detect active route

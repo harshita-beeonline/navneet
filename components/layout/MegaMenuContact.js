@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "../../styles/MegaMenuContact.module.scss";
@@ -14,6 +14,10 @@ export default function MegaMenuContact() {
   const [open, setOpen] = useState(false);
   const timeoutRef = useRef(null);
   const pathname = usePathname();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   // ✅ Detect active route
   const isActive =

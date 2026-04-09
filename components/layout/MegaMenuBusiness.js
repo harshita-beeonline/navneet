@@ -92,11 +92,7 @@ export default function MegaMenuBusiness() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (pathname.startsWith("/our-business")) {
-      setOpen(true);
-    } else {
-      setOpen(false);
-    }
+    setOpen(false);
   }, [pathname]);
 
   const isActive = pathname.startsWith("/our-business");
