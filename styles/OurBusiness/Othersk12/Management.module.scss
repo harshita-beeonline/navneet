@@ -181,7 +181,7 @@ $card-light: #d8eefc;
 
     @media (max-width: 768px) {
       flex-direction: column;
-      gap: 16px; // space between the two column groups
+      gap: 12px; // space between the two column groups
 
       .csrColumn {
         gap: 12px; // equal spacing between each button
@@ -192,7 +192,7 @@ $card-light: #d8eefc;
   .centerButton {
     display: flex;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: 12px;
 
     .buttonItem {
       width: 50%;
@@ -201,7 +201,7 @@ $card-light: #d8eefc;
 
     @media (max-width: 768px) {
       justify-content: flex-start;
-      margin-top: 16px;
+      margin-top: 12px;
 
       .buttonItem {
         width: 100%;
@@ -213,7 +213,7 @@ $card-light: #d8eefc;
 
 /* ---------- Bottom Spacer ---------- */
 .bottomSpacer {
-  height: 48px;
+  height: 20px;
 }
 
 .blueBgSection {

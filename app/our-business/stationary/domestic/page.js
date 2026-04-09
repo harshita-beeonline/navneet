@@ -59,7 +59,7 @@ export default function Domestic() {
         </p>
 
         <div className={styles.ctaWrap}>
-          <a href="#" className={styles.ctaBtn}>
+          <a href="http://youvaworld.com/" className={styles.ctaBtn} target="_blank">
             Visit Website
           </a>
         </div>
