@@ -39,11 +39,15 @@
     }
 
     .crumbStrong {
-      font-weight: 600;
+      font-weight: 400;
     }
 
     .crumb {
       font-weight: 400;
+    }
+
+    > .crumbStrong:last-child {
+      font-weight: 600;
     }
 
     .dot {

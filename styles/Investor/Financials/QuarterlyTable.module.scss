@@ -40,7 +40,10 @@
     color: #2f6db2;
   }
 
-  .heading,
+  .heading {
+    font-weight: 400;
+  }
+
   .data {
     font-weight: 600;
   }
