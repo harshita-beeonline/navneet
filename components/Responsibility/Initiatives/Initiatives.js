@@ -97,7 +97,7 @@ export default function Initiatives() {
                     style={{
                       display: "block",
                       width: "100%",
-                      height: "380px",
+                      height: "auto",
                       objectFit: "contain",
                       objectPosition: "center",
                       backgroundColor: "#fff",
