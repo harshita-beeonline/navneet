@@ -11,8 +11,7 @@ export default function HeroSection() {
       <div className={styles["text-wrapper"]}>
         <div className={styles["heading"]}>Careers at Navneet</div>
         <div className={styles["heading-info"]}>
-          A career at Navneet is a value addition for your skills, it’s exciting
-          and full of opportunities to grow and learn
+          At Navneet, it is a never ending journey – Where Knowledge is Wealth
         </div>
       </div>
 

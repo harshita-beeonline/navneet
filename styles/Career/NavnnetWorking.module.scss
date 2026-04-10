@@ -17,7 +17,7 @@
     p {
       font-weight: 500;
       font-size: 18px;
-      max-width: 650px;
+      width: 100%;
     }
   }
 
@@ -170,7 +170,6 @@
         p {
           margin-top: 8px;
           margin-left: calc(36px + 12px); /* align with heading, not icon */
-          width: calc(100% - (36px + 12px));
           font-size: 14px;
           line-height: 22px;
         }

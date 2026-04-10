@@ -9,20 +9,20 @@ const workingData = [
   {
     id: 1,
     img: working_schedule,
-    heading: "Flexible schedules",
+    heading: "Health and well-being",
     text: "We ensure our work environment has a time schedules that is suitable for every employee working in. This arrangement allows the employees working within the time span. There is no overtime required for employees  to pursue work.",
   },
   {
     id: 2,
     img: working_friendly,
-    heading: "Friendly atmosphere",
-    text: "To engage its workforce Navneet includes celebrations of professional and personal milestones, reward and recognition events and team get-togethers.",
+    heading: "Ensuring access to nutritious food",
+    text: "We ensure our work environment has a time schedules that is suitable for every employee working in. This arrangement allows the employees working within the time span. There is no overtime required for employees  to pursue work.",
   },
   {
     id: 3,
     img: working_food,
-    heading: "Nutritious food at workspace",
-    text: "At the employee canteens, we have taken steps to ensure consistency in the quality of food at all our canteens. We also provide specialized training to canteen staff to improve service levels and have committees in place that are responsible for continuous improvement. ",
+    heading: "Families and celebrations",
+    text: "To engage its workforce Navneet includes celebrations of professional and personal milestones, reward and recognition events and team get-togethers.",
   },
 ];
 
@@ -31,10 +31,17 @@ export default function NavnnetWorking() {
     <div className={styles["working-section"]}>
       <div className={styles["text-wrapper"]}>
         <h1 className={styles["heading"]}>Joy of working at Navneet</h1>
+        <p>Navneet has an employee strength of over 2600 enterprise-wide.</p>
         <p>
-          The secret of running a successful organization is keeping the
-          atmosphere at work happy and motivated. The secret of motivation at
-          work is found by searching for the answers to the questions.
+          At Navneet, people are our greatest pride, resource and are central to
+          growth strategy. Our focus lies in giving opportunities with freedom
+          to inspire ideas and be inspired, opportunities to take up leadership
+          roles early in your career, freedom to experiment and be innovative.
+          If you have what it takes to become an integral part of an
+          organization that is built and driven by people, then you are the
+          person we are looking for. Simply access the “Careers” section to post
+          your resume on our site. It could be your first step towards getting
+          closer to an organization full of self-driven people.
         </p>
       </div>
 
