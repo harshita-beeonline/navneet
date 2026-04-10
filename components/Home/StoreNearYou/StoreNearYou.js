@@ -54,7 +54,7 @@ const StoreNearYou = () => {
                 variants={fadeUp}
                 transition={{ duration: 0.6, delay: 0.5 }}
               >
-                Find a Navneet store near you.
+                Explore our eCatagolue
               </motion.p>
 
               <motion.a
@@ -96,7 +96,7 @@ const StoreNearYou = () => {
             variants={fadeUp}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            Find a Navneet store near you.
+            Explore our eCatagolue
           </motion.p>
 
           <motion.a
