@@ -1,6 +1,6 @@
 import Image from "next/image";
 import career_hero1 from "../../../public/images/carrer/career-hero1.png";
-import career_hero2 from "../../../public/images/carrer/career-hero2.png";
+import career2 from "../../../public/images/carrer/career2.png";
 import career_hero3 from "../../../public/images/carrer/career-hero3.jpg";
 
 import styles from "../../../styles/Career/HeroSection.module.scss";
@@ -30,7 +30,7 @@ export default function HeroSection() {
         <div className={styles["image-right"]}>
           <div className={styles["image-hero2"]}>
             <Image
-              src={career_hero2}
+              src={career2}
               alt="Meeting"
               fill
               style={{ objectFit: "cover" }}
