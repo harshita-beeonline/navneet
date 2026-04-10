@@ -18,7 +18,7 @@ export default function NavneetLife() {
       <div className={styles["content-section"]}>
         <div className={styles["content"]}>
           <h4 className={styles["heading"]}>
-            Navneet has been pioneering employee well-being initiativest
+            Navneet has been pioneering employee well-being initiatives
           </h4>
           <p className={styles["info"]}>
             We recognise that our people are the primary source of our
