@@ -18,7 +18,7 @@ const GovernanceCode = () => {
     {
       mb: "PDF, 9MB",
       title: "Code of Conduct & ethics",
-      pdfUrl: "",
+      pdfUrl: "/images/Navneet Code of Conduct.pdf",
       downloadName: "Code-of-Conduct-and-Ethics.pdf",
     },
     {
@@ -28,9 +28,9 @@ const GovernanceCode = () => {
       downloadName: "Supplier-Code-of-Conduct.pdf",
     },
     {
-      mb: "PDF, 9MB",
+      mb: "PDF, 9MB",  
       title: "POSH Policy",
-      pdfUrl: "/images/SEXUAL-HARRASMENT-POLICY.pdf",
+      pdfUrl: "/images/Prevention of Sexual Harassment at the Workplace Policy.pdf",
       downloadName: "POSH-Policy.pdf",
     },
     {
@@ -42,7 +42,7 @@ const GovernanceCode = () => {
     {
       mb: "PDF, 9MB",
       title: "Code of Conduct & ethics",
-      pdfUrl: "",
+      pdfUrl: "/images/Navneet Code of Conduct.pdf",
       downloadName: "Code-of-Conduct-and-Ethics.pdf",
     },
     {
@@ -54,7 +54,7 @@ const GovernanceCode = () => {
     {
       mb: "PDF, 9MB",
       title: "POSH Policy",
-      pdfUrl: "/images/SEXUAL-HARRASMENT-POLICY.pdf",
+      pdfUrl: "/images/Prevention of Sexual Harassment at the Workplace Policy.pdf",
       downloadName: "POSH-Policy.pdf",
     },
   ];
