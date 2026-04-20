@@ -25,6 +25,16 @@ const nextConfig = {
     ],
   },
 
+  async redirects() {
+    return [
+      {
+        source: "/navneet-sustainability",
+        destination: "/esg",
+        permanent: true,
+      },
+    ];
+  },
+
   async headers() {
     return [
       {

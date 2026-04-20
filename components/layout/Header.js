@@ -9,10 +9,12 @@ import logo from "../../public/images/LogoNavneet.svg";
 import MenuIcon_Arrow from "../../public/images/menuicon-arrow.svg";
 import BusinessDropdown from "./BusinessDropdown";
 import InvestorDropdown from "./InvestorDropdown";
+import EhsEsgDropdown from "./EhsEsgDropdown";
 import MediaUpdatesDropdown from "./MediaUpdatesDropdown";
 import ContactDropdown from "./ContactDropdown";
 import { usePathname } from "next/navigation";
 import headernavneet from "../../public/images/headernavneet.svg";
+import MegaMenuEhsEsg from "./MegaMenuEhsEsg";
 import MegaMenuInvestor from "./MegaMenuInvestor";
 import MegaMenuBusiness from "./MegaMenuBusiness";
 import MegaMenuContact from "./MegaMenuContact";
@@ -114,18 +116,9 @@ export default function Header() {
           Responsibility
         </Link>
 
-        <Link href="/ehs" className={isActive("/ehs") ? styles.activeLink : ""}>
-          EHS
-        </Link>
-
-        <Link
-          href="/navneet-sustainability"
-          className={
-            isActive("/navneet-sustainability") ? styles.activeLink : ""
-          }
-        >
-          ESG
-        </Link>
+        <div>
+          <MegaMenuEhsEsg />
+        </div>
 
         <div>
           <MegaMenuMedia/>
@@ -281,16 +274,33 @@ export default function Header() {
             Responsibility
           </Link>
 
-          <Link href="/ehs" onClick={() => setIsMenuOpen(false)}>
-            EHS
-          </Link>
+          <div className={styles.mobileAccordion}>
+            <button
+              className={styles.accordionToggle}
+              onClick={() => toggleMobileDropdown("ehsEsg")}
+              aria-expanded={!!mobileDropdownOpen.ehsEsg}
+            >
+              EHS & ESG
+              <span
+                className={`${styles.chev} ${
+                  mobileDropdownOpen["ehsEsg"] ? styles.open : ""
+                }`}
+              >
+                <Image
+                  src={MenuIcon_Arrow}
+                  alt="chevron"
+                  width={10}
+                  height={10}
+                />
+              </span>
+            </button>
 
-          <Link
-            href="/navneet-sustainability"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            ESG
-          </Link>
+            {mobileDropdownOpen["ehsEsg"] && (
+              <div className={styles.accordionPanel}>
+                <EhsEsgDropdown isMobile />
+              </div>
+            )}
+          </div>
 
           <div className={styles.mobileAccordion}>
             <button
