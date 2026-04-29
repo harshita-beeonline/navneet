@@ -33,7 +33,9 @@
     /* lighter blue-gray */ #e2f1fc 100% /* pale sky blue */
   );
 
-  transition: background-color 200ms ease, box-shadow 200ms ease;
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease;
   font-family: "Montserrat", sans-serif;
 }
 .scrolled {
@@ -168,9 +170,10 @@
 
   &:hover,
   &:focus-visible {
-    scale: 1 !important;
     font-weight: 500 !important;
-    letter-spacing: 0.03em;
+    scale: (1.1);
+    font-style: bold;
+    // letter-spacing: 0.03em;
   }
 }
 
