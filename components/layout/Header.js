@@ -136,7 +136,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Navneet <Image src={headernavneet} alt="svg" />
+          Navneet AI
         </a>
         <Link
           href="/career"
