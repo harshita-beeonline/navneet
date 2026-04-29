@@ -33,7 +33,9 @@
     /* lighter blue-gray */ #e2f1fc 100% /* pale sky blue */
   );
 
-  transition: background-color 200ms ease, box-shadow 200ms ease;
+  transition:
+    background-color 200ms ease,
+    box-shadow 200ms ease;
   font-family: "Montserrat", sans-serif;
 }
 .scrolled {
@@ -136,6 +138,46 @@
   font-weight: 500 !important;
   scale: (1.1);
   font-style: bold;
+}
+
+.navneetAiLink {
+  position: relative;
+  display: inline-flex !important;
+  align-items: center;
+  padding: 4px 0 !important;
+  line-height: 1.2;
+  color: #166f75 !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.05em;
+  transition:
+    letter-spacing 220ms ease,
+    color 220ms ease;
+
+  span {
+    display: block;
+    background: linear-gradient(90deg, #13877c 0%, #1b7692 55%, #2f6db2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 12px rgba(19, 135, 124, 0.12);
+    transition:
+      filter 220ms ease,
+      text-shadow 220ms ease;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: #166f75 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.07em;
+    scale: 1 !important;
+  }
+
+  &:hover span,
+  &:focus-visible span {
+    filter: brightness(1.08);
+    text-shadow: 0 0 16px rgba(19, 135, 124, 0.2);
+  }
 }
 
 .dropdownParent {

@@ -135,8 +135,9 @@ export default function Header() {
           href="https://navneetedu.ai/"
           target="_blank"
           rel="noopener noreferrer"
+          className={styles.navneetAiLink}
         >
-          Navneet AI
+          <span>Navneet AI</span>
         </a>
         <Link
           href="/career"
