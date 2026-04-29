@@ -33,9 +33,7 @@
     /* lighter blue-gray */ #e2f1fc 100% /* pale sky blue */
   );
 
-  transition:
-    background-color 200ms ease,
-    box-shadow 200ms ease;
+  transition: background-color 200ms ease, box-shadow 200ms ease;
   font-family: "Montserrat", sans-serif;
 }
 .scrolled {
@@ -141,42 +139,47 @@
 }
 
 .navneetAiLink {
-  position: relative;
   display: inline-flex !important;
   align-items: center;
   padding: 4px 0 !important;
-  line-height: 1.2;
-  color: #166f75 !important;
+  line-height: 1.1;
+  color: #2f6db2 !important;
   font-weight: 500 !important;
-  letter-spacing: 0.05em;
-  transition:
-    letter-spacing 220ms ease,
-    color 220ms ease;
+  letter-spacing: 0.03em;
+  scale: 1 !important;
 
   span {
-    display: block;
-    background: linear-gradient(90deg, #13877c 0%, #1b7692 55%, #2f6db2 100%);
+    display: inline-block;
+    color: transparent;
+    background: linear-gradient(
+      110deg,
+      rgba(47, 109, 178, 0.42) 0%,
+      rgba(47, 109, 178, 0.82) 38%,
+      #ffffff 40%,
+      rgba(47, 109, 178, 0.88) 62%,
+      rgba(47, 109, 178, 0.46) 100%
+    );
+    background-size: 220% 100%;
+    background-position: 100% 0;
     -webkit-background-clip: text;
     background-clip: text;
-    color: transparent;
-    text-shadow: 0 0 12px rgba(19, 135, 124, 0.12);
-    transition:
-      filter 220ms ease,
-      text-shadow 220ms ease;
+    animation: navneetAiShinyText 3.2s linear infinite;
   }
 
   &:hover,
   &:focus-visible {
-    color: #166f75 !important;
-    font-weight: 600 !important;
-    letter-spacing: 0.07em;
     scale: 1 !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.03em;
   }
+}
 
-  &:hover span,
-  &:focus-visible span {
-    filter: brightness(1.08);
-    text-shadow: 0 0 16px rgba(19, 135, 124, 0.2);
+@keyframes navneetAiShinyText {
+  0% {
+    background-position: 120% 0;
+  }
+  100% {
+    background-position: -120% 0;
   }
 }
 
